@@ -1,13 +1,18 @@
 import { reloadRoutes } from 'react-static/node'
 import jdown from 'jdown'
 import chokidar from 'chokidar'
+import Document from './src/components/document/document'
 
 chokidar.watch('content').on('all', () => reloadRoutes())
 
 export default {
+  
+  Document,
+  
   getSiteData: () => ({
     title: 'Appstem',
   }),
+  
   getRoutes: async () => {
     const { work, home, services, culture, contact } = await jdown('content')
     console.log(work);
