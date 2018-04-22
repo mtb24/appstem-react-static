@@ -1,3 +1,23 @@
-.section-wrapper {
+.page-section-wrapper {
     width: 100%;
+}
+@media print, screen and (min-width: 40em) {
+    height: 600px;
+}
+
+.mask-slope-top-left {
+    -webkit-clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+}
+.mask-slope-top-right {
+    -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+}
+.mask-slope-bottom-right {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+}
+.mask-slope-bottom-left {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%);
 }
