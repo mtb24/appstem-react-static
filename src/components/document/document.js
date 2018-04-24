@@ -4,34 +4,34 @@ import {any, node, object} from 'prop-types';
 // import gtag from '../../modules/gtag.js';
 
 const websiteData = {
-    "@context": "http:\/\/schema.org",
-    "@type": "WebSite",
-    "@id": "#website",
-    url: "https:\/\/appstem.com\/",
-    name: "Appstem",
+    '@context': 'http:\/\/schema.org',
+    '@type': 'WebSite',
+    '@id': '#website',
+    url: 'https:\/\/appstem.com\/',
+    name: 'Appstem',
     potentialAction: {
-        "@type": "SearchAction",
-        target: "https:\/\/appstem.com\/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
+        '@type': 'SearchAction',
+        target: 'https:\/\/appstem.com\/?s={search_term_string}',
+        'query-input': 'required name=search_term_string'
     }
 };
 const organizationData = {
-    "@context": "http:\/\/schema.org",
-    "@type": "Organization",
-    url: "https:\/\/appstem.com\/",
+    '@context': 'http:\/\/schema.org',
+    '@type': 'Organization',
+    url: 'https:\/\/appstem.com\/',
     sameAs: [
-        "https:\/\/www.facebook.com\/appstemmedia", "https:\/\/www.instagram.com\/appstem",
-        "https:\/\/www.linkedin.com\/company\/appstem-media-llc",
-        "https:\/\/www.youtube.com\/channel\/UCqo39kRwYoiTkvWYXC4ug0g", "https:\/\/twitter.com\/appstem"
+        'https:\/\/www.facebook.com\/appstemmedia', 
+        'https:\/\/www.instagram.com\/appstem',
+        'https:\/\/www.linkedin.com\/company\/appstem-media-llc',
+        'https:\/\/www.youtube.com\/channel\/UCqo39kRwYoiTkvWYXC4ug0g', 
+        'https:\/\/twitter.com\/appstem'
     ],
-    "@id": "#organization",
-    name: "Appstem",
-    //logo: "https:\/\/appstem.com\/Appstem_Sq_280x280.jpg"
+    '@id': '#organization',
+    name: 'Appstem',
+    //logo: 'https:\/\/appstem.com\/Appstem_Sq_280x280.jpg'
 };
 const JsonLd = ({ data }) => (
-    <script type="application/ld+json">
-        { JSON.stringify(data) }
-    </script>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
 );
 const Document = ({Html, Head, Body, children, renderMeta}) => (
     <html>
