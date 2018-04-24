@@ -1,7 +1,8 @@
 /* TODO: icon paths and google tag code */
 import React from 'react';
 import {any, node, object} from 'prop-types';
-// import gtag from '../../modules/gtag.js';
+import JsonLd from './jsonld'
+// import gtag from './gtag.js';
 
 const websiteData = {
     '@context': 'http:\/\/schema.org',
@@ -30,9 +31,7 @@ const organizationData = {
     name: 'Appstem',
     //logo: 'https:\/\/appstem.com\/Appstem_Sq_280x280.jpg'
 };
-const JsonLd = ({ data }) => (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
-);
+
 const Document = ({Html, Head, Body, children, renderMeta}) => (
     <html>
         <head>
