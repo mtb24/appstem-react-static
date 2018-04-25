@@ -11,6 +11,12 @@ export default {
   
   getSiteData: () => ({
     title: 'Appstem',
+    email: 'info@appstem',
+    phone: '415.956.7400',
+    address1: '133 Kearny St.',
+    address2: 'Suite 202',
+    address3: 'San Francisco, CA 94105',
+    copyright: '© 2018 APPSTEM MEDIA LLC',
   }),
   
   getRoutes: async () => {
