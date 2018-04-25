@@ -1,3 +1,2 @@
-## Jdown
-Convert a directory of markdown files to structured and usable JSON
+--- nothing to see here... move along
 
