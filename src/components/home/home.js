@@ -1,16 +1,12 @@
 import React from 'react'
-import { withRouteData } from 'react-static'
-import convert from 'htmr'
+import AppstemLogo from '../social/icons/appstem-logo'
 
 import './home.css'
 
-export default withRouteData(({ jdown, reactStatic }) => (
+export default props => (
   <div>
     <section>
-      {convert(reactStatic.contents)}
-    </section>
-    <section>
-      {convert(jdown.contents)}
+      <AppstemLogo width='180' height='34'/>
     </section>
   </div>
-))
+)
