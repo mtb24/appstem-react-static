@@ -8,15 +8,23 @@ import Footer from './components/footer/footer'
 import './app.css'
 
 const App = () => (
+
   <Router>
+
     <div>
+
       <Header />
+
       <div className="content">
         <Routes />
       </div>
+      
       <Footer />
+    
     </div>
+  
   </Router>
+
 )
 
 export default hot(module)(App)
