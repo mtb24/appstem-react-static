@@ -2,10 +2,16 @@
 .header-wrapper {
     height: 40px;
     width: 100%;
-    color: white;
+    color: #fefefe;
     background: inherit;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.header-logo {
+    padding-left: 2rem;
+}
+.header-wrapper nav a:hover {
+    text-decoration: underline;
 }
