@@ -56,8 +56,13 @@ body {
   padding: 0;
   color: var(--body-text-color);
   background-color: var(--body-background-color);
+  max-width: 1400px;
 }
-
+@media print, screen and (min-width: 1401px) {
+  body {
+    margin: 0 auto;
+  }
+}
 a {
   text-decoration: none;
   color: var(--link-color);
