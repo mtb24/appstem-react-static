@@ -1,3 +1,8 @@
+:root {
+  --body-background-color: #1e1e1e;
+  --body-text-color: #fefefe;
+  --link-color: #fefefe;
+}
 @font-face {
   font-family: brandon-grotesque;
   src: url(https://use.typekit.net/af/39f077/0000000000000000000132df/27/l?primer=b997bcdf54b83a9f7b731c29130c4fbe326c83acb7cf220896c6041d3c02ba6a&fvd=n4&v=3) format("woff2"), 
@@ -40,20 +45,22 @@
 .tk-fira-sans {
   font-family: "fira-sans", sans-serif;
 }
-
+.all-caps {
+  text-transform: uppercase;
+}
 body {
   font-family: 'brandon-grotesque', sans-serif;
   font-weight: 300;
   font-size: 16px;
   margin: 0;
   padding: 0;
-  color: #fefefe;
-  background-color: #1e1e1e;
+  color: var(--body-text-color);
+  background-color: var(--body-background-color);
 }
 
 a {
   text-decoration: none;
-  color: #108db8;
+  color: var(--link-color);
   font-weight: bold;
 }
 
