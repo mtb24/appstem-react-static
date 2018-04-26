@@ -3,8 +3,8 @@ import { Link } from 'react-static'
 
 import './nav.css'
 
-export default () => (
-    <nav>
+export default (props) => (
+    <nav className={props.className}>
         <Link to="/work">Work</Link>
         <Link to="/services">Services</Link>
         <Link to="/culture">Culture</Link>
