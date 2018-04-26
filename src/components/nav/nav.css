@@ -8,3 +8,7 @@ nav a {
   padding: 1rem;
   display: inline-block;
 }
+nav a:last-child {
+  border: 1px solid var(--link-color);
+  margin-left: 1em;
+}
