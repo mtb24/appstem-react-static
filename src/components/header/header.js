@@ -5,8 +5,15 @@ import AppstemLogo from '../social/icons/appstem-logo'
 import './header.css'
 
 export default () => (
+
     <div className={ 'header-wrapper' }>
-        <Link to="/"><AppstemLogo className='header-logo' width='180' height='34' fillColor='#ffffff'/></Link>
-        <Nav />
+
+        <Link to="/">
+            <AppstemLogo className='header-logo' width='175' height='40' fillColor='#fefefe'/>
+        </Link>
+
+        <Nav className='all-caps' />
+
     </div>
+
 );
