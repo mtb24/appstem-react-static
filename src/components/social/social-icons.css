@@ -12,13 +12,17 @@
 }
 .social-icon-twitter :hover {
     fill: var(--twitterIconHoverColor);
+    transition: .3s;
 }
 .social-icon-facebook :hover {
     fill: var(--facebookIconHoverColor);
+    transition: .3s;
 }
 .social-icon-instagram :hover {
     fill: var(--instagramIconHoverColor);
+    transition: .3s;
 }
 .social-icon-medium :hover {
     fill: var(--mediumIconHoverColor);
+    transition: .3s;
 }
