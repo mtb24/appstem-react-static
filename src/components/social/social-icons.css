@@ -1,3 +1,24 @@
+:root {
+    --twitterIconHoverColor: #60b5f0;
+    --facebookIconHoverColor: #4463a3;
+    --instagramIconHoverColor: #e8496a;
+    --mediumIconHoverColor: #00c080;
+}
 .social-icons-wrapper {
     height: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1rem;
+}
+.social-icon-twitter :hover {
+    fill: var(--twitterIconHoverColor);
+}
+.social-icon-facebook :hover {
+    fill: var(--facebookIconHoverColor);
+}
+.social-icon-instagram :hover {
+    fill: var(--instagramIconHoverColor);
+}
+.social-icon-medium :hover {
+    fill: var(--mediumIconHoverColor);
 }
