@@ -1,7 +1,7 @@
 :root {
   --body-background-color: #1e1e1e;
-  --body-text-color: #fefefe;
-  --link-color: #fefefe;
+  --body-text-color: #fafafa;
+  --link-color: #fafafa;
 }
 @font-face {
   font-family: brandon-grotesque;
@@ -62,6 +62,10 @@ body {
   body {
     margin: 0 auto;
   }
+}
+#root {
+  position: relative;
+  top: -40px;
 }
 a {
   text-decoration: none;
