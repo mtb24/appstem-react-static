@@ -1,5 +1,8 @@
 
 .header-wrapper {
+    position: relative;
+    top: 60px;
+    z-index: 1;
     height: 40px;
     width: 100%;
     color: #fefefe;
@@ -10,7 +13,10 @@
     align-items: center;
 }
 .header-logo {
-    padding-left: 2rem;
+    margin-left: 2rem;
+}
+.header-wrapper nav {
+    margin-right: 7em;
 }
 .header-wrapper nav a:hover {
     text-decoration: underline;
