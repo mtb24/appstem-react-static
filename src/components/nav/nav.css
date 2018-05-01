@@ -12,3 +12,23 @@ nav a:last-child {
   border: 1px solid var(--link-color);
   margin-left: 1em;
 }
+@media print, screen and (max-width: 805px) {
+  .header-wrapper nav {
+    display: none;
+  }
+  .header-wrapper .hamburger {
+    display: flex;
+  }
+  .footer-wrapper .hamburger {
+    display: none;
+  }
+}
+@media print, screen and (min-width: 806px) {
+  /* .header-wrapper nav {
+    display: none;
+  } */
+  .header-wrapper .hamburger,
+  .footer-wrapper .hamburger {
+    display: none;
+  }
+}
