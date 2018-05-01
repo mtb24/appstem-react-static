@@ -1,0 +1,10 @@
+.contact-wrapper {
+    width: 100%;
+    z-index: -1;
+    position: relative;
+    top: -80px;
+}
+.hero-wrapper {
+    width: 100%;
+    height: 40em;
+}
