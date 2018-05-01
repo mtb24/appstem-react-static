@@ -21,7 +21,7 @@ export default {
   
   getRoutes: async () => {
     const { work, home, services, culture, contact } = await jdown('content')
-    console.log(work);
+
     return [
       {
         path: '/',
