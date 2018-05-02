@@ -16,8 +16,8 @@ export default () => (
             <TwitterIcon
                 fillColor='#fefefe'
                 className='social-icon-twitter'
-                width='40'
-                height='40'
+                width='36'
+                height='36'
             />
 
         </Link>
@@ -27,8 +27,8 @@ export default () => (
             <FacebookIcon
                 fillColor='#fefefe'
                 className='social-icon-facebook'
-                width='40'
-                height='40'
+                width='36'
+                height='36'
             />
 
         </Link>
@@ -38,8 +38,8 @@ export default () => (
             <InstagramIcon
                 fillColor='#fefefe'
                 className='social-icon-instagram'
-                width='40'
-                height='40'
+                width='36'
+                height='36'
             />
 
         </Link>
@@ -49,8 +49,8 @@ export default () => (
             <MediumIcon
                 fillColor='#fefefe'
                 className='social-icon-medium'
-                width='40'
-                height='40'
+                width='36'
+                height='36'
             />
             
         </Link>
