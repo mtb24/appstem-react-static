@@ -3,7 +3,7 @@ import './hero.css'
 
 export default props => (
 
-    <div className='hero-wrapper' style={ {backgroundImage: `url(${props.backgroundImage})`,backgroundRepeat: 'no-repeat', backgroundSize: 'contain'}}>
+    <div className='hero-wrapper' style={ {backgroundImage: `url(${props.backgroundImage})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center bottom'}}>
         <h1 className='title'>{ props.title }</h1>
     </div>
 )
