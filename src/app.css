@@ -1,7 +1,10 @@
 :root {
+  --page-background-color: #fafafa;
+  --page-text-color: #1e1e1e;
   --body-background-color: #1e1e1e;
   --body-text-color: #fafafa;
   --link-color: #fafafa;
+  --appstem-green: #3cd52e;
   /* heading sizes */
   --min-header-font-size: 24px;
   --max-header-font-size: 32px;
