@@ -13,7 +13,9 @@ export default () => (
         <div className='footer-body'>
 
             <Nav className={'all-caps footer-nav'} />
+
             <div className='footer-contact-info'>
+
                 <div className='footer-addresses'>
                     <p className='all-caps footer-heading'>Contact</p>
                     <SiteData>
@@ -45,6 +47,7 @@ export default () => (
                         )}
                     </SiteData>
                 </div>
+
                 <div className='footer-email-form-wrapper'>
                     <p className='all-caps'>Join Our Mail List</p>
                     <Form>
@@ -56,8 +59,10 @@ export default () => (
                         </form>
                         )}
                     </Form>
-                    <SocialIcons/>
                 </div>
+
+                <SocialIcons />
+
             </div>
 
         </div>
