@@ -45,6 +45,7 @@
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--form-inactive-border-color);
+    background-color: inherit;
 }
 #contact-form input:focus,
 #contact-form textarea:focus {
