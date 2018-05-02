@@ -5,7 +5,8 @@
     --mediumIconHoverColor: #00c080;
 }
 .social-icons-wrapper {
-    height: 40px;
+    height: 36px;
+    width: 192px;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 1rem;
