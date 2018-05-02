@@ -93,3 +93,11 @@
 address {
     font-style: normal;
 }
+
+/* Breakpoints */
+@media print, screen and (max-width: 800px) {
+    .footer-wrapper .nav-wrapper {
+        display: none;
+    }
+    
+}
