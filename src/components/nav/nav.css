@@ -24,9 +24,6 @@ nav a:last-child {
   }
 }
 @media print, screen and (min-width: 806px) {
-  /* .header-wrapper nav {
-    display: none;
-  } */
   .header-wrapper .hamburger,
   .footer-wrapper .hamburger {
     display: none;
