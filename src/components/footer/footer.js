@@ -17,16 +17,16 @@ export default () => (
             <div className='footer-contact-info'>
 
                 <div className='footer-addresses'>
-                    <p className='all-caps footer-heading'>Contact</p>
+                    <h4 className='all-caps footer-heading'>Contact</h4>
                     <SiteData>
                         {({ email, phone }) => (
                             <div>
-                                <Link to='hello@appstem.com'>{ email }</Link><br/>
-                                <Link to='https://appstem.com/tel:4159567400'>{ phone }</Link>
+                                <Link to='hello@appstem.com' className='email-link'>{ email }</Link><br/>
+                                <Link to='https://appstem.com/tel:4159567400' className='phone-mumber'>{ phone }</Link>
                             </div>
                         )}
                     </SiteData>
-                    <p className='all-caps footer-heading'>San Francisco</p>
+                    <h4 className='all-caps footer-heading'>San Francisco</h4>
                     <SiteData>
                         {({ address1SF, address2SF, address3SF }) => (
                             <div className='footer-body-address-block'>
@@ -36,7 +36,7 @@ export default () => (
                             </div>
                         )}
                     </SiteData>
-                    <p className='all-caps footer-heading'>Portland</p>
+                    <h4 className='all-caps footer-heading'>Portland</h4>
                     <SiteData>
                         {({ address1PT, address2PT }) => (
                             <div className='footer-body-address-block'>
@@ -49,13 +49,13 @@ export default () => (
                 </div>
 
                 <div className='footer-email-form-wrapper'>
-                    <p className='all-caps'>Join Our Mail List</p>
+                    <h4 className='all-caps'>Join Our Mail List</h4>
                     <Form>
                         {formApi => (
-                        <form onSubmit={formApi.submitForm} id="footer-email-form">
-                            <Text field="footerEmail" id="footerEmail" />
+                        <form action="mailto:kendowney.com@gmail.com" method="post" enctype="text/plain" id="footer-email-form">
+                            <Text field="footerEmail" id="footerEmail" name='add-to-email-list' />
                             <label htmlFor="footerEmail" className='footer-email-label'>Your email...</label>
-                            <button type="submit" className="footer-email-submit-button">-></button>
+                            <button type="submit" className="footer-email-submit-button"></button>
                         </form>
                         )}
                     </Form>
