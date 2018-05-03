@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-static'
-import TwitterIcon from './icons/twitter-icon'
-import FacebookIcon from './icons/facebook-icon'
-import InstagramIcon from './icons/instagram-icon'
-import MediumIcon from './icons/medium-icon'
+import TwitterIcon from './icons/ic_footer_twitter'
+import FacebookIcon from './icons/ic_footer_fb'
+import InstagramIcon from './icons/ic_footer_instagram'
+import MediumIcon from './icons/ic_footer_medium'
 
 import './social-icons.css'
 
@@ -14,7 +14,7 @@ export default () => (
         <Link to='https://twitter.com/appstem'>  
 
             <TwitterIcon
-                fillColor='#fefefe'
+                fillColor='#fafafa'
                 className='social-icon-twitter'
                 width='36'
                 height='36'
@@ -25,7 +25,7 @@ export default () => (
         <Link to='https://www.facebook.com/appstemmedia'>
 
             <FacebookIcon
-                fillColor='#fefefe'
+                fillColor='#000000'
                 className='social-icon-facebook'
                 width='36'
                 height='36'
