@@ -8,7 +8,7 @@ import './app.css'
 
 const App = () => (
   <Router>
-    <div>
+    <div className='app-wrapper'>
       <Header />
       <Routes />
       <Footer />
