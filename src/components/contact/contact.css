@@ -2,6 +2,7 @@
     --form-heading-color: ##1B252F;
     --form-active-border-color: #3CD52E;
     --form-inactive-border-color: #A29E9E;
+    --form-text-color-mobile: #4A4A4A;
 }
 .contact-wrapper {
     display: flex;
@@ -12,11 +13,6 @@
     top: -80px;
     color: var(--page-text-color);
     background: var(--page-background-color) url('./mask.png') no-repeat;
-    padding-bottom: 3em;
-}
-.hero-wrapper {
-    width: 100%;
-    height: 40em;
 }
 .hr-contact-heading {
     width: 3em;
@@ -28,34 +24,36 @@
     align-items: center;
     justify-content: space-between;
     width: 80%;
+    max-width: 800px;
 }
 
 .contact-form-field-wrapper {
     width: 100%;
 }
-.contact-form-field-wrapper > label {
+.contact-form-field-wrapper label {
     position: relative;
-    top: 1em;
-    left: 1em;
-    transition: transform .2s;
+    top: -2em;
+    left: 5px;
+    transition: all .2s linear;
 }
 
-#contact-form input,
-#contact-form textarea {
+.contact-form-field-wrapper input,
+.contact-form-field-wrapper textarea {
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--form-inactive-border-color);
     background-color: inherit;
 }
-#contact-form input:focus,
-#contact-form textarea:focus {
+.contact-form-field-wrapper input:focus + label,
+.contact-form-field-wrapper textarea:focus + label {
+    transform: scale(0.75);
+    color: var(--appstem-green);
+}
+.contact-form-field-wrapper input:focus,
+.contact-form-field-wrapper textarea:focus {
     border-bottom: 1px solid var(--form-active-border-color);
 }
-label[for]:focus {
-    -ms-transform: translate(-15px,-15px); /* IE 9 */
-    -webkit-transform: translate(-15px,-15px); /* Safari */
-    transform: translate(-15px,-15px) scale(.25);
-}
+
 #contact-form .contact-form-submit {
     height: 72px;
     width: 221px;
@@ -74,8 +72,14 @@ label[for]:focus {
     color: var(--page-text-color);
 }
 
-@media print, screen and (min-width: 1000px) {
-    #contact-form {
-        max-width: 800px;
+
+/* Breakpoints */
+
+@media print, screen and (max-width: 800px) {
+    .contact-form-field-wrapper > label {
+        color: var(--form-text-color-mobile);
+        font-size: 14px;
+        letter-spacing: 1.75px;
+        line-height: 20px;
     }
 }
