@@ -2,7 +2,10 @@
     --footerNavHoverColor: #36cd1d;
 }
 .footer-wrapper {
-    padding: 1rem;
+    padding: 0 1em;
+}
+.footer-wrapper .nav-wrapper {
+    justify-self: center;
 }
 .footer-wrapper nav {
     display: flex;
@@ -22,82 +25,167 @@
     margin: 0;
 }
 .footer-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1rem;
-    margin: 5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'left right';
+    padding-bottom: 5em;
 }
 .footer-body a:hover {
     text-decoration: underline;
 }
 .footer-contact-info {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 55vw;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 'addresses form';
+    grid-gap: 25%;
 }
 .footer-addresses {
+    grid-area: addresses;
     opacity: 0.7;
     font-family: brandon-grotesque;
     font-size: 13px;
     line-height: 19px;
+    margin-left: 3em;
 }
 .footer-heading {
     letter-spacing: 3.25px;
     line-height: 24px;
 }
 .footer-email-form-wrapper {
+    grid-area: form;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 3.25px;
     line-height: 24px;
+    position: relative;
+    margin-right: 5em;
 }
 #footer-email-form {
-    margin: 4em auto;
+    position: relative;
+    display: grid;
+}
+#footer-email-form input:focus + label {
+    transform: translate(-50px, -15px) scale(0.75);
+    color: var(--appstem-green);
+}
+.footer-email-label {
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 29px;
+    position: relative;
+    transition: all .2s linear;
+    top: -25px;
+}
+.footer-email-submit-button {
+    position: relative;
+    top: -47px;
+    left: 296px;
+    background: url('./ic_arrow_green.png');
+    background-repeat: no-repeat;
+    border: 0;
+    display: inline-block;
+    height: 20px;
+    width: 22px;
 }
 #footerEmail {
     border: none;
     border-bottom: 1px solid #9B9B9B;
     background-color: inherit;
-    width: 80%;
+    width: 310px;
+    color: var(--appstem-green);
 }
-.footer-email-label {
-    opacity: 0.5;
-    font-size: 20px;
-    line-height: 29px;
+.social-icons-wrapper {
+    grid-area: form;
     position: relative;
-    left: 0;
-    top: -35px;
-    display: inline-block;
+    top: 10em;
 }
-.footer-email-submit-button {
-    position: relative;
-    top: -35px;
-    display: inline-block;
-    left: 90px;
-}
-
 .footer-bottom {
+    width: 100%;
+    height: 48px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1rem;
 }
 .footer-copyright {
-    font-size: .75rem;
+    height: 16px;
+    color: #8E8E8E;
+    font-family: brandon-grotesque;
+    font-size: 11px;
+    letter-spacing: 0.85px;
+    line-height: 16px;
 }
 address {
     font-style: normal;
 }
 
 /* Breakpoints */
+
 @media print, screen and (max-width: 800px) {
     .footer-wrapper .nav-wrapper {
         display: none;
     }
-    
+    .footer-body {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'left';
+        padding-bottom: 3em;
+    }
+    .footer-contact-info {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'form'
+                              'addresses'
+                              'social';
+        grid-gap: unset;
+        grid-template-rows: 15vh 1fr 10vh;
+        justify-items: center;
+    }
+    .footer-email-form-wrapper {
+        display: grid;
+        grid-auto-rows: 1fr;
+        justify-items: center;
+        margin: 0;
+    }
+    #footer-email-form {
+        grid-template-areas: 'button' 'input';
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    .footer-email-label {
+        grid-area: button;
+        left: -50px;
+        top: 35px;
+    }
+    .footer-email-submit-button {
+        grid-area: button;
+        left: 110px;
+        top: 35px;
+    }
+    #footerEmail {
+        grid-area: input;
+        width: 231px;
+        color: var(--appstem-green);
+    }
+    .footer-addresses {
+        margin-left: 0;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: normal;
+    }
+    .phone-number {
+        letter-spacing: 0.89px;
+        line-height: 28px;
+    }
+    .footer-heading {
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: 2.89px;
+    }
+    .social-icons-wrapper {
+        grid-area: social;
+        top: 2em;
+    }
+    address {
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
