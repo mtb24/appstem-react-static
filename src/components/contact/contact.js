@@ -4,7 +4,7 @@ import convert from 'htmr'
 import Hero from '../hero/hero'
 import './contact.css'
 import backgroundImage from './contact-background.png'
-import { Form, Text, TextArea } from 'react-form'
+import { Form, Text } from 'react-form'
 
 const validate = value => ({
   error: !value || !/Hello World/.test(value) ? "Input must contain 'Hello World'" : null,
@@ -24,7 +24,7 @@ export default withRouteData(({ contact }) => (
     <hr className='hr-contact-heading' />
     <Form onSubmit={ submittedValues => handleFormSubmit(submittedValues) }>
     {formApi => (
-      <form action="mailto:kendowney.com@gmail.com" method="post" enctype="text/plain"  id="contact-form" className="contact-form" >
+      <form action="mailto:kendowney.com@gmail.com" method="post" enctype="text/plain" id="contact-form" className="contact-form" >
 
         <div className='contact-form-field-wrapper'>
           <Text field="name" id="name" name='name' validate={validate} />
@@ -47,7 +47,7 @@ export default withRouteData(({ contact }) => (
         </div>
         
         <div className='contact-form-field-wrapper'>
-          <TextArea field="project" id="project" name='project' validate={validate} />
+          <Text field="project" id="project" name='project' validate={validate} />
           <label className='all-caps' htmlFor="project">Tell us about your project</label>
         </div>
 
@@ -56,6 +56,6 @@ export default withRouteData(({ contact }) => (
       </form>
     )}
     </Form>
-    <Link to='#' style={{ margin: '25vh auto' }}>{convert(contact.contents)}</Link>
+    <Link to='#' style={{ margin: '20vh auto' }}>{convert(contact.contents)}</Link>
   </div>
 ))
