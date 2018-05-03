@@ -24,7 +24,7 @@ export default withRouteData(({ contact }) => (
     <hr className='hr-contact-heading' />
     <Form onSubmit={ submittedValues => handleFormSubmit(submittedValues) }>
     {formApi => (
-      <form action="mailto:kendowney.com@gmail.com" method="post" enctype="text/plain" id="contact-form" className="contact-form" >
+      <form action="mailto:kendowney.com@gmail.com" method="post" encType="text/plain" id="contact-form" className="contact-form" >
 
         <div className='contact-form-field-wrapper'>
           <Text field="name" id="name" name='name' validate={validate} />
