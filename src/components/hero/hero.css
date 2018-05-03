@@ -18,3 +18,21 @@ h1.title {
     text-align: center;
     margin: 0 auto;
 }
+
+/* Breakpoints */
+
+@media print, screen and (max-width: 800px) {
+    .hero-wrapper {
+        height: 60vh;
+        background-size: 185%;
+        background-position-x: 100%;
+    }
+    h1.title {
+        top: 135px;
+        height: 82px;
+        width: 232px;
+        font-size: 24px;
+        letter-spacing: 3.64px;
+        line-height: 92px;
+    }
+}
