@@ -12,7 +12,8 @@
     position: relative;
     top: -80px;
     color: var(--page-text-color);
-    background: var(--page-background-color) url('./mask.png') no-repeat;
+    background: url('./mask.png') no-repeat;
+    background-color: var(--page-background-color);
 }
 .hr-contact-heading {
     width: 3em;
@@ -37,17 +38,17 @@
     transition: all .2s linear;
 }
 
-.contact-form-field-wrapper input,
-.contact-form-field-wrapper textarea {
+.contact-form-field-wrapper input {
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--form-inactive-border-color);
     background-color: inherit;
 }
-.contact-form-field-wrapper input:focus + label,
-.contact-form-field-wrapper textarea:focus + label {
-    transform: scale(0.75);
+.contact-form-field-wrapper input:focus + label {
+    /* transform: scale(0.5) translate(-50%, -50%); */
     color: var(--appstem-green);
+    top: -40px;
+    font-size: 0.75em;
 }
 .contact-form-field-wrapper input:focus,
 .contact-form-field-wrapper textarea:focus {
