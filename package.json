@@ -12,6 +12,7 @@
   "dependencies": {
     "chokidar": "2.0.3",
     "htmr": "0.6.3",
+    "http-server": "^0.11.1",
     "jdown": "0.1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
