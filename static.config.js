@@ -6,6 +6,7 @@ import Document from './src/components/document/document'
 chokidar.watch('content').on('all', () => reloadRoutes())
 
 export default {
+  siteRoot: 'https://www.appstem.com',
   
   Document,
   
