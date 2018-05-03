@@ -12,38 +12,43 @@ const validate = value => ({
   success: value && /Hello World/.test(value) ? "Thanks for entering 'Hello World'!" : null
 })
 
+const handleFormSubmit = (values, e, formApi) => {
+  // how to handle form in react-form?
+  console.log('submitted values: ', values)
+}
+
 export default withRouteData(({ contact }) => (
   <div className='contact-wrapper'>
     <Hero title={ contact.title } backgroundImage={ backgroundImage } />
     <h1>{convert(contact.heading)}</h1>
     <hr className='hr-contact-heading' />
-    <Form>
+    <Form onSubmit={ submittedValues => handleFormSubmit(submittedValues) }>
     {formApi => (
-      <form onSubmit={formApi.submitForm} id="contact-form" className="contact-form">
+      <form action="mailto:kendowney.com@gmail.com" method="post" enctype="text/plain"  id="contact-form" className="contact-form" >
 
         <div className='contact-form-field-wrapper'>
-          <label className='all-caps' htmlFor="name">First name</label>
           <Text field="name" id="name" name='name' validate={validate} />
+          <label className='all-caps' htmlFor="name">Name</label>
         </div>
         
         <div className='contact-form-field-wrapper'>
-          <label className='all-caps' htmlFor="email">Email</label>
           <Text field="email" id="email" name='email' validate={validate} />
+          <label className='all-caps' htmlFor="email">Email</label>
         </div>
         
         <div className='contact-form-field-wrapper'>
+          <Text field="phone" id="phone" name='phone' validate={validate} />
           <label className='all-caps' htmlFor="phone">Phone</label>
-          <Text field="phone" id="phone" validate={validate} />
         </div>
         
         <div className='contact-form-field-wrapper'>
+          <Text field="company" id="company" name='company' validate={validate} />
           <label className='all-caps' htmlFor="company">Company/Organization</label>
-          <Text field="company" id="company" validate={validate} />
         </div>
         
         <div className='contact-form-field-wrapper'>
+          <TextArea field="project" id="project" name='project' validate={validate} />
           <label className='all-caps' htmlFor="project">Tell us about your project</label>
-          <TextArea field="project" id="project" validate={validate} />
         </div>
 
         <button type="submit" className="contact-form-submit all-caps">Send</button>
