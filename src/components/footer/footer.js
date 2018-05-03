@@ -55,7 +55,7 @@ export default () => (
                         <form action="mailto:kendowney.com@gmail.com" method="post" enctype="text/plain" id="footer-email-form">
                             <Text field="footerEmail" id="footerEmail" name='add-to-email-list' />
                             <label htmlFor="footerEmail" className='footer-email-label'>Your email...</label>
-                            <button type="submit" className="footer-email-submit-button"></button>
+                            <button type="submit" className="footer-email-submit-button" />
                         </form>
                         )}
                     </Form>
