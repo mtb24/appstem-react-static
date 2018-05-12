@@ -55,11 +55,11 @@ export default {
         getData: () => ({
           work,
         }),
-        children: work.map(spotlight => ({
-          path: `/work/${spotlight.slug}`,
-          component: 'src/components/spotlight/spotlight',
+        children: work.map(caseStudy => ({
+          path: `/work/${caseStudy.slug}`,
+          component: 'src/components/case-study/case-study',
           getData: () => ({
-            spotlight,
+            caseStudy,
           }),
         })),
       },

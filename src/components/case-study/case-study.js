@@ -2,13 +2,13 @@ import React from 'react'
 import { withRouteData, Link } from 'react-static'
 import convert from 'htmr'
 
-import './spotlight.css'
+import './case-study.css'
 
-export default withRouteData(({ spotlight }) => (
+export default withRouteData(({ caseStudy }) => (
   <div>
     <Link to="/blog/">{'<'} Back</Link>
     <br />
-    <h3>{spotlight.title}</h3>
-    {convert(spotlight.contents)}
+    <h3>{caseStudy.title}</h3>
+    {convert(caseStudy.contents)}
   </div>
 ))
