@@ -1,0 +1,13 @@
+.work-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -80px;
+    background: url('./mask.png') no-repeat;
+    background-color: var(--body-background-color);
+}
+.work-wrapper li {
+    list-style: none;
+}
