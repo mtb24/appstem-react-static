@@ -1,0 +1,9 @@
+.feature-block-wrapper {
+    display: flex;
+}
+.feature-image-left {
+    flex-direction: row;
+}
+.feature-image-right {
+    flex-direction: row-reverse;
+}
