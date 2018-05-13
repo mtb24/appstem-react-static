@@ -12,7 +12,6 @@
     position: relative;
     top: -80px;
     color: var(--page-text-color);
-    background: url('./mask.png') no-repeat;
     background-color: var(--page-background-color);
 }
 .hr-contact-heading {

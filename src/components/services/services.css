@@ -5,6 +5,5 @@
     width: 100%;
     position: relative;
     top: -80px;
-    background: url('./mask.png') no-repeat;
     background-color: var(--body-background-color);
 }
