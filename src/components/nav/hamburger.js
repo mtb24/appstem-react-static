@@ -1,5 +1,5 @@
 import React from 'react'
-import './hamburger.css'
+import './hamburger.scss'
 
 export default () => (
     <div className='hamburger'>

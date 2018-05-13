@@ -4,7 +4,7 @@ import convert from 'htmr'
 import Hero from '../hero/hero'
 import backgroundImage from './culture-background.png'
 
-import './culture.css'
+import './culture.scss'
 
 export default withRouteData(({ culture }) => (
   <div className='culture-wrapper'>

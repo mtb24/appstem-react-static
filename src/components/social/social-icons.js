@@ -5,7 +5,7 @@ import FacebookIcon from './icons/ic_footer_fb'
 import InstagramIcon from './icons/ic_footer_instagram'
 import MediumIcon from './icons/ic_footer_medium'
 
-import './social-icons.css'
+import './social-icons.scss'
 
 export default () => (
 

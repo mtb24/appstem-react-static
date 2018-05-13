@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouteData, Link } from 'react-static'
 import convert from 'htmr'
 import Hero from '../hero/hero'
-import './contact.css'
+import './contact.scss'
 import backgroundImage from './contact-background.png'
 import { Form, Text } from 'react-form'
 

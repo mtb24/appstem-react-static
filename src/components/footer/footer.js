@@ -4,7 +4,7 @@ import { Form, Text } from 'react-form'
 import Nav from '../nav/nav'
 import SocialIcons from '../social/social-icons'
 
-import './footer.css'
+import './footer.scss'
 
 export default () => (
 

@@ -4,7 +4,7 @@ import convert from 'htmr'
 import Hero from '../hero/hero'
 import backgroundImage from './services-background.png'
 
-import './services.css'
+import './services.scss'
 
 export default withRouteData(({ services }) => (
   <div className='services-wrapper'>

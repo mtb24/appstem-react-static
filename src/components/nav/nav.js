@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-static'
 import Hamburger from './hamburger'
 
-import './nav.css'
+import './nav.scss'
 
 export default (props) => (
     <div className='nav-wrapper'>

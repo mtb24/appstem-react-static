@@ -3,7 +3,7 @@ import { withRouteData, Link } from 'react-static'
 import Hero from '../hero/hero'
 import Section from '../layout/page-section/section'
 import backgroundImage from './work-background.png'
-import './work.css'
+import './work.scss'
 import FeatureBlock from '../feature-block/feature-block';
 
 export default withRouteData(({ work }) => (

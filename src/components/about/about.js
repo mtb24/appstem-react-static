@@ -3,7 +3,7 @@ import React from 'react'
 import { withRouteData } from 'react-static'
 import convert from 'htmr'
 
-import './about.css'
+import './about.scss'
 
 
 export default withRouteData(({ about }) => (

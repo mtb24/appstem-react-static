@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-static'
 import Nav from '../nav/nav'
 import AppstemLogo from '../social/icons/appstem-logo'
-import './header.css'
+import './header.scss'
 
 export default () => (
 

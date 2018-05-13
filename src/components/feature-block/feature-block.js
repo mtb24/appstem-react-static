@@ -3,7 +3,7 @@ import convert from 'htmr'
 import { Link } from 'react-static'
 import Arrow from './arrow_white.png'
 
-import './feature-block.css'
+import './feature-block.scss'
 
 export default props => {
 

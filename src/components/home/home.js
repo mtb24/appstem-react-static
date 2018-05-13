@@ -1,7 +1,7 @@
 import React from 'react'
 import AppstemLogo from '../social/icons/appstem-logo'
 
-import './home.css'
+import './home.scss'
 
 export default props => (
   <div>
