@@ -1,0 +1,81 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.testimonial-slider {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 30em;
+
+    h2 {
+        color: #1B252F;
+        font-family: brandon-grotesque;
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 6.4px;
+        line-height: 46px;
+        text-align: center;
+    }
+    .slick-slider {
+        width: 50vw;
+
+        .slick-arrow,
+        .slick-arrow:before {
+            display: none;
+            color: inherit;
+        }
+        .slick-dots {
+            position: relative;
+            bottom: -15px;
+
+            button:hover {
+                &:before {
+                    border-color: var(--appstem-green);
+                }
+            }
+            button:before {
+                color: transparent;
+                font-size: 16px;
+                border: 2px solid grey;
+                border-radius: 12px;
+            }
+            li.slick-active {
+                button:before {
+                    color: var(--appstem-green);
+                    border: 2px solid var(--appstem-green);
+                    background-color: var(--appstem-green);
+                }
+            }
+        }
+    }
+}
+.testimonial-content {
+    color: #222222;
+    font-family: brandon-grotesque;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 36px;
+    text-align: center;
+}
+.testimonial-author {
+    color: #222222;
+    font-family: brandon-grotesque;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 1em;
+}
+.testimonial-company {
+    color: #A7A7A7;
+    font-family: brandon-grotesque;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+}
