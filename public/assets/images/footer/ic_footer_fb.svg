@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_footer_fb@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ic_footer_fb" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Facebook">
+            <circle id="Oval" fill="#000000" cx="18.5" cy="18.5" r="18.5"></circle>
+            <path d="M19.734628,26.4759505 L19.734628,18.9605285 L22.3394969,18.9605285 L22.7294888,16.0315572 L19.734628,16.0315572 L19.734628,14.1615772 C19.734628,13.313554 19.9777878,12.7356902 21.233476,12.7356902 L22.8349811,12.7349879 L22.8349811,10.1153812 C22.557866,10.0797516 21.6073144,10 20.5012934,10 C18.1922645,10 16.6115281,11.3649079 16.6115281,13.8715598 L16.6115281,16.0315572 L14,16.0315572 L14,18.9605285 L16.6115281,18.9605285 L16.6115281,26.4759505 L19.734628,26.4759505 Z" id="ic-facebook" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
