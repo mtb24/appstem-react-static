@@ -8,8 +8,7 @@ import './services.scss'
 
 export default withRouteData(({ services }) => (
   <div className='services-wrapper'>
-    <Hero title='Service' backgroundImage={ backgroundImage } />
-
+    <Hero title='Service' backgroundImage={ backgroundImage } className='angle--both-left-right' />
     {convert(services.contents)}
   </div>
 ))
