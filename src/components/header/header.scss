@@ -11,16 +11,20 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    .header-logo {
+        margin-left: 2rem;
+    }
+    
+    nav {
+        margin-right: 7em;
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    }
 }
-.header-logo {
-    margin-left: 2rem;
-}
-.header-wrapper nav {
-    margin-right: 7em;
-}
-.header-wrapper nav a:hover {
-    text-decoration: underline;
-}
+
 
 /* Breakpoints */
 @media print, screen and (max-width: 805px) {
