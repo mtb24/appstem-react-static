@@ -1,5 +1,6 @@
 :root {
     --footerNavHoverColor: #36cd1d;
+    --footerBottomBackgroundColor: #000000;
 }
 .footer-wrapper {
     padding: 0 1em;
@@ -105,6 +106,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--footerBottomBackgroundColor);
 }
 .footer-copyright {
     height: 16px;
