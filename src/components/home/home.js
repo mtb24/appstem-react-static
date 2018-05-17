@@ -3,10 +3,12 @@ import AppstemLogo from '../social/icons/appstem-logo'
 
 import './home.scss'
 
-export default props => (
+export default props => {
+
+  return (
   <div>
     <section>
       
     </section>
   </div>
-)
+)}
