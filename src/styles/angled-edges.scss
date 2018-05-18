@@ -120,7 +120,6 @@ $angled-section-even-background: radial-gradient(circle, rgba(62,62,62,0.52) 0%,
     @return round($angle*2.22);
 }
 
-
 // Classes
 .angle--top-left {
     @include angle-edge($angle: 3, $angle-position-y: 'top', $angle-position-x: 'left');
