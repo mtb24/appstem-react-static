@@ -1,29 +1,36 @@
+@import '../../styles/styles.scss';
+
 nav {
-    height: auto;
-    width: auto;
-  }
+  height: auto;
+  width: auto;
   
-nav a {
-  color: #fefefe;
-  padding: 1rem;
-  display: inline-block;
-}
-nav a:last-child {
-  border: 1px solid var(--link-color);
-  margin-left: 1em;
-}
-@media print, screen and (max-width: 805px) {
-  .header-wrapper nav {
-    display: none;
+  & > a {
+    color: $link-color;
+    padding: 1rem;
+    display: inline-block;
+    
+    &:last-child {
+      border: 1px solid $link-color;
+      margin-left: 1em;
+    }
   }
-  .header-wrapper .hamburger {
-    display: flex;
+}
+  
+@media (max-width: 805px) {
+  .header-wrapper {
+
+    nav {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
   }
   .footer-wrapper .hamburger {
     display: none;
   }
 }
-@media print, screen and (min-width: 806px) {
+@media (min-width: 806px) {
   .header-wrapper .hamburger,
   .footer-wrapper .hamburger {
     display: none;

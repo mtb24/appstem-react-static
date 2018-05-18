@@ -1,3 +1,4 @@
+@import '../../styles/styles.scss';
 
 .header-wrapper {
     position: relative;
@@ -5,7 +6,7 @@
     z-index: 1;
     height: 40px;
     width: 100%;
-    color: #fefefe;
+    color: $body-text-color;
     background: inherit;
     display: flex;
     flex-direction: row;
@@ -27,7 +28,7 @@
 
 
 /* Breakpoints */
-@media print, screen and (max-width: 805px) {
+@media (max-width: 805px) {
     .header-logo {
         margin-left: -2em;
     }

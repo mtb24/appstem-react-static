@@ -1,37 +1,41 @@
+@import '../../styles/styles.scss';
+
 .hero-wrapper {
     width: 100%;
     height: 30em;
-}
-.title {
-    position: relative;
-    top: 5em;
-    text-transform: uppercase;
-    border: 1px solid var(--body-text-color);
-	max-width: 8em;
-	color: var(--body-text-color);
-	font-family: 'brandon-grotesque', sans-serif;
-	font-size: 50px;
-	font-weight: bold;
-	letter-spacing: 7.59px;
-	line-height: 92px;
-    text-align: center;
-    margin: 0 auto;
+    
+    .title {
+        position: relative;
+        top: 5em;
+        text-transform: uppercase;
+        border: 1px solid $body-text-color;
+        max-width: 8em;
+        color: $body-text-color;
+        font-family: brandon-grotesque, sans-serif;
+        font-size: 50px;
+        font-weight: bold;
+        letter-spacing: 7.59px;
+        line-height: 92px;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 /* Breakpoints */
 
-@media print, screen and (max-width: 800px) {
+@media (max-width: 800px) {
     .hero-wrapper {
         height: 30em;
         background-size: 185%;
         background-position-x: 100%;
-    }
-    h1.title {
-        top: 135px;
-        height: 82px;
-        width: 232px;
-        font-size: 24px;
-        letter-spacing: 3.64px;
-        line-height: 92px;
+        
+        h1.title {
+            top: 135px;
+            height: 82px;
+            width: 232px;
+            font-size: 24px;
+            letter-spacing: 3.64px;
+            line-height: 92px;
+        }
     }
 }

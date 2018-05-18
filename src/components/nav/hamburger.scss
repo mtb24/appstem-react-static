@@ -1,3 +1,5 @@
+@import '../../styles/styles.scss';
+
 .hamburger {
 	display: none;
 	margin-right: 7em;
@@ -6,19 +8,20 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
-.line {
-	box-sizing: border-box;
-	height: 2px;
-	background-color: #fafafa;
-	margin: 1px 0;
-}
-.line-1 {
-	width: 28px;
-}
-.line-2 {
-	width: 20px;
-}
-.line-3 {
-	width: 32px;
+	
+	.line {
+		box-sizing: border-box;
+		height: 2px;
+		background-color: $page-background-color;
+		margin: 1px 0;
+	}
+	.line-1 {
+		width: 28px;
+	}
+	.line-2 {
+		width: 20px;
+	}
+	.line-3 {
+		width: 32px;
+	}
 }

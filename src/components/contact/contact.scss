@@ -1,9 +1,5 @@
-:root {
-    --form-heading-color: ##1B252F;
-    --form-active-border-color: #3CD52E;
-    --form-inactive-border-color: #A29E9E;
-    --form-text-color-mobile: #4A4A4A;
-}
+@import '../../styles/styles.scss';
+
 .contact-wrapper {
     display: flex;
     flex-direction: column;
@@ -11,13 +7,15 @@
     width: 100%;
     position: relative;
     top: -80px;
-    color: var(--page-text-color);
-    background-color: var(--page-background-color);
+    color: $page-text-color;
+    background-color: $page-background-color;
+
+
+    .link {
+        color: $page-text-color;
+    }
 }
-.hr-contact-heading {
-    width: 3em;
-    color: var(--appstem-green);
-}
+
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -25,59 +23,56 @@
     justify-content: space-between;
     width: 80%;
     max-width: 800px;
+
+    .contact-form-submit {
+        height: 72px;
+        width: 221px;
+        color: $body-text-color;
+        background-color: $appstem-green;
+        font-family: brandon-grotesque;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 3.2px;
+        text-align: center;
+        border: none;
+        border-radius: 3px;
+        margin-top: 5em;
+    }
 }
 
 .contact-form-field-wrapper {
     width: 100%;
+    
+    label {
+        position: relative;
+        top: -2em;
+        left: 5px;
+        transition: all .2s linear;
+    }
+    input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $form-inactive-border-color;
+        background-color: inherit;
+        
+        &:focus + label {
+            /* transform: scale(0.5) translate(-50%, -50%); */
+            color: $appstem-green;
+            top: -40px;
+            font-size: 0.75em;
+        }
+        &:focus,
+        textarea:focus {
+            border-bottom: 1px solid $form-active-border-color;
+        }
+    }
 }
-.contact-form-field-wrapper label {
-    position: relative;
-    top: -2em;
-    left: 5px;
-    transition: all .2s linear;
-}
-
-.contact-form-field-wrapper input {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid var(--form-inactive-border-color);
-    background-color: inherit;
-}
-.contact-form-field-wrapper input:focus + label {
-    /* transform: scale(0.5) translate(-50%, -50%); */
-    color: var(--appstem-green);
-    top: -40px;
-    font-size: 0.75em;
-}
-.contact-form-field-wrapper input:focus,
-.contact-form-field-wrapper textarea:focus {
-    border-bottom: 1px solid var(--form-active-border-color);
-}
-
-#contact-form .contact-form-submit {
-    height: 72px;
-    width: 221px;
-    color: var(--body-text-color);
-	background-color: var(--appstem-green);
-    font-family: brandon-grotesque;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 3.2px;
-    text-align: center;
-    border: none;
-    border-radius: 3px;
-    margin-top: 5em;
-}
-.link {
-    color: var(--page-text-color);
-}
-
 
 /* Breakpoints */
 
-@media print, screen and (max-width: 800px) {
+@media (max-width: 800px) {
     .contact-form-field-wrapper > label {
-        color: var(--form-text-color-mobile);
+        color: $form-text-color-mobile;
         font-size: 14px;
         letter-spacing: 1.75px;
         line-height: 20px;

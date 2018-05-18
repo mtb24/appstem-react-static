@@ -1,9 +1,11 @@
+@import '../../../styles/styles.scss';
+
 .angled-section {
     width: 100%;
     position: relative;
     top: -130px;
     margin-bottom: -130px;
-    background-color: #1C1819;
+    background-color: $angled-section-bg-color;
 
     // >:first-child {
     //     padding-top: 10em;

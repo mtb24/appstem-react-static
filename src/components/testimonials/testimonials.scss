@@ -1,8 +1,9 @@
+@import '../../styles/styles.scss';
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 .testimonial-slider {
-    background-color: #ffffff;
+    background-color: $page-background-color;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -11,7 +12,7 @@
     height: 30em;
 
     h2 {
-        color: #1B252F;
+        color: $testimonials-H2-color;
         font-family: brandon-grotesque;
         font-size: 32px;
         font-weight: bold;
@@ -33,7 +34,7 @@
 
             button:hover {
                 &:before {
-                    border-color: var(--appstem-green);
+                    border-color: $appstem-green;
                 }
             }
             button:before {
@@ -44,16 +45,16 @@
             }
             li.slick-active {
                 button:before {
-                    color: var(--appstem-green);
-                    border: 2px solid var(--appstem-green);
-                    background-color: var(--appstem-green);
+                    color: $appstem-green;
+                    border: 2px solid $appstem-green;
+                    background-color: $appstem-green;
                 }
             }
         }
     }
 }
 .testimonial-content {
-    color: #222222;
+    color: $testimonials-test-color;
     font-family: brandon-grotesque;
     font-size: 24px;
     font-style: italic;
@@ -62,7 +63,7 @@
     text-align: center;
 }
 .testimonial-author {
-    color: #222222;
+    color: $testimonials-test-color;
     font-family: brandon-grotesque;
     font-size: 20px;
     font-weight: 500;
@@ -71,7 +72,7 @@
     margin-top: 1em;
 }
 .testimonial-company {
-    color: #A7A7A7;
+    color: $testimonials-company-color;
     font-family: brandon-grotesque;
     font-size: 16px;
     font-style: italic;

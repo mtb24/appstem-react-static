@@ -1,7 +1,4 @@
-:root {
-    --footerNavHoverColor: #36cd1d;
-    --footerBottomBackgroundColor: #000000;
-}
+@import '../../styles/styles.scss';
 
 .footer-wrapper {
     display: flex;
@@ -30,7 +27,7 @@
                 flex-direction: column;
                 
                 a:hover {
-                    color: var(--footerNavHoverColor);
+                    color: $footerNavHoverColor;
                     text-decoration: none;
                 }
                 a:last-child {
@@ -80,11 +77,11 @@
                         border-bottom: 1px solid #9B9B9B;
                         background-color: inherit;
                         width: 310px;
-                        color: var(--appstem-green);
+                        color: $appstem-green;
 
                         &:focus + label {
                             transform: translate(-50px, -15px) scale(0.75);
-                            color: var(--appstem-green);
+                            color: $appstem-green;
                         }
                     }
                     
@@ -125,7 +122,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--footerBottomBackgroundColor);
+        background-color: $footerBottomBackgroundColor;
 
         .footer-copyright {
             height: 16px;
@@ -140,7 +137,7 @@
 
 /* Breakpoints */
 
-@media print, screen and (max-width: 800px) {
+@media (max-width: 800px) {
     .footer-wrapper .nav-wrapper {
         display: none;
     }
@@ -157,55 +154,59 @@
         grid-gap: unset;
         grid-template-rows: 15vh 1fr 10vh;
         justify-items: center;
-    }
-    .footer-email-form-wrapper {
-        display: grid;
-        grid-auto-rows: 1fr;
-        justify-items: center;
-        margin: 0;
-    }
-    #footer-email-form {
-        grid-template-areas: 'button' 'input';
-        grid-template-rows: 1fr 1fr;
-        justify-items: center;
-        align-items: center;
-    }
-    .footer-email-label {
-        grid-area: button;
-        left: -50px;
-        top: 25px;
-    }
-    .footer-email-submit-button {
-        grid-area: button;
-        left: 110px;
-        top: 35px;
-    }
-    #footerEmail {
-        grid-area: input;
-        width: 231px;
-        color: var(--appstem-green);
-    }
-    .footer-addresses {
-        margin-left: 0;
-        font-size: 16px;
-        line-height: 28px;
-        letter-spacing: normal;
-    }
-    .phone-number {
-        letter-spacing: 0.89px;
-        line-height: 28px;
-    }
-    .footer-heading {
-        font-size: 13px;
-        line-height: 24px;
-        letter-spacing: 2.89px;
-    }
-    .social-icons-wrapper {
-        grid-area: social;
-        top: 2em;
-    }
-    address {
-        font-size: 14px;
-        line-height: 24px;
+
+        .footer-addresses {
+            margin-left: 0;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: normal;
+
+            .footer-heading {
+                font-size: 13px;
+                line-height: 24px;
+                letter-spacing: 2.89px;
+            }
+            .phone-number {
+                letter-spacing: 0.89px;
+                line-height: 28px;
+            }
+            address {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+        .footer-email-form-wrapper {
+            display: grid;
+            grid-auto-rows: 1fr;
+            justify-items: center;
+            margin: 0;
+
+            #footer-email-form {
+                grid-template-areas: 'button' 'input';
+                grid-template-rows: 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+                
+                #footerEmail {
+                    grid-area: input;
+                    width: 231px;
+                    color: $appstem-green;
+                }
+                .footer-email-label {
+                    grid-area: button;
+                    left: -50px;
+                    top: 25px;
+                }
+                .footer-email-submit-button {
+                    grid-area: button;
+                    left: 110px;
+                    top: 35px;
+                }
+            }
+        }
+        .social-icons-wrapper {
+            grid-area: social;
+            top: 2em;
+        }
     }
 }

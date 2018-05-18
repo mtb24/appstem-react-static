@@ -1,4 +1,7 @@
 
+$angled-section-odd-background: radial-gradient(circle, rgba(255,255,255,0.52) 0%, rgba(86,86,86,0.52) 45.07%, rgba(12,12,12,0) 100%);
+$angled-section-even-background: radial-gradient(circle, rgba(62,62,62,0.52) 0%, rgba(12,12,12,0.38) 100%);
+
 // $angle: The angle in degrees: 1 - 45
 // $angle-position-y: The Y position of the angle: top | bottom | both
 // $angle-position-x: The X position of the angle: left | right
@@ -151,16 +154,31 @@
     @include angle-edge($angle: 3, $angle-position-y: 'both', $angle-position-x: 'right', $angle-position-bottom-x: 'left');
 }
 
-
-    .angle__content {
-    display: block;
-    width: 100%;
-    height: auto;
-    }
+.angle__content {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 .angle--colour {
     color: #fff;
     background-color: #2196F3;
     text-align: center;
     padding: 10% 0;
+}
+
+.angled-section {
+  position: relative;
+  top: -130px;
+  margin-bottom: -100px;
+  background: $angled-section-odd-background;
+
+  &:first {
+      padding-top: 10em;
+  }
+  
+  &:nth-child(even) {
+      background: $angled-section-even-background;
+      background-color: #1C1819;
+  }
 }
