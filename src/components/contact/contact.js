@@ -21,7 +21,7 @@ export default withRouteData(({ contact }) => (
   <div className='contact-wrapper'>
     <Hero title={ contact.title } backgroundImage={ backgroundImage } />
     <h1>{convert(contact.heading)}</h1>
-    <hr className='hr-contact-heading' />
+    <hr className='hr-green' />
     <Form onSubmit={ submittedValues => handleFormSubmit(submittedValues) }>
     {formApi => (
       <form action="mailto:kendowney.com@gmail.com" method="post" encType="text/plain" id="contact-form" className="contact-form" >
