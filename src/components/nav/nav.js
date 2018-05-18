@@ -11,6 +11,7 @@ export default (props) => (
             <Link to="/work">Work</Link>
             <Link to="/services">Services</Link>
             <Link to="/culture">Culture</Link>
+            <Link to="/#">Careers</Link>
             <Link to="/#">Blog</Link>
             <Link to="/contact">Contact</Link>
         </nav>
