@@ -3,7 +3,7 @@ import { withRouteData, Link } from 'react-static'
 import convert from 'htmr'
 import Hero from '../hero/hero'
 import './contact.scss'
-import backgroundImage from './contact-background.png'
+import backgroundImage from './bg_top_contact.png'
 import { Form, Text } from 'react-form'
 
 const validate = value => ({
@@ -13,13 +13,22 @@ const validate = value => ({
 })
 
 const handleFormSubmit = (values, e, formApi) => {
-  // how to handle form in react-form?
+  // API token
+  const token = 'e3da9972-9ac2-4577-b725-ddc217585148'
   console.log('submitted values: ', values)
+  Email.send(
+    "from@you.com",
+    "to@them.com",
+    "This is a subject",
+    "this is the body",
+    {token: "63cb3a19-2684-44fa-b76f-debf422d8b00"},
+    function done(message) { alert("sent") }    
+  )
 }
 
 export default withRouteData(({ contact }) => (
-  <div className='contact-wrapper'>
-    <Hero title={ contact.title } backgroundImage={ backgroundImage } />
+  <div className='contact-wrapper angle--bottom-right'>
+    <Hero title={ contact.title } backgroundImage={ backgroundImage } className='angle--bottom-right' />
     <h1>{convert(contact.heading)}</h1>
     <hr className='hr-green' />
     <Form onSubmit={ submittedValues => handleFormSubmit(submittedValues) }>
@@ -56,6 +65,11 @@ export default withRouteData(({ contact }) => (
       </form>
     )}
     </Form>
-    <Link to='#' style={{ margin: '20vh auto' }}>{convert(contact.contents)}</Link>
+    <div className='view-openings-wrapper'>
+      <h2 className='all-caps'>Join Us</h2>
+      <hr className='hr-green'/>
+      <p>Join Appstem! We are always looking for new talents. Check out our openings.<br/>If you can’t find what are you looking for send us an email. </p>
+      <Link to='/careers' className='all-caps openings-link'>View Openings <span className='openings-link-arrow'> > </span></Link>
+    </div>
   </div>
 ))
