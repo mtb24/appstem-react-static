@@ -1,17 +1,23 @@
 @import '../../styles/styles.scss';
 
-nav {
-  height: auto;
-  width: auto;
-  
-  & > a {
-    color: $link-color;
-    padding: 1rem;
-    display: inline-block;
+.nav-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  nav {
+    height: auto;
+    width: auto;
     
-    &:last-child {
-      border: 1px solid $link-color;
-      margin-left: 1em;
+    & > a {
+      color: $link-color;
+      padding: 1em;
+      display: inline-block;
+      
+      &:last-child {
+        border: 1px solid $link-color;
+        margin-left: 1em;
+      }
     }
   }
 }

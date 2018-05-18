@@ -16,23 +16,34 @@
         grid-template-areas: 'left right';
         padding-bottom: 5em;
         
-        a:hover {
-            text-decoration: underline;
-        }
+        // a:hover {
+        //     text-decoration: underline;
+        // }
         .nav-wrapper {
             justify-self: center;
             
-            nav {
+            .footer-nav {
                 display: flex;
                 flex-direction: column;
+                color: $link-color;
+                font-family: brandon-grotesque;
+                font-size: 13px;
+                font-weight: normal;
+                letter-spacing: 3.25px;
+                line-height: 24px;
                 
-                a:hover {
-                    color: $footerNavHoverColor;
-                    text-decoration: none;
-                }
-                a:last-child {
-                    border: none;
-                    margin: 0;
+                a {
+                    padding: 0 0 0.5em 0;
+
+                    &:hover {
+                        color: $footerNavHoverColor;
+                        text-decoration: none;
+                    }
+                    
+                    &:last-child {
+                        border: none;
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -44,21 +55,42 @@
 
             .footer-addresses {
                 grid-area: addresses;
-                opacity: 0.7;
                 font-family: brandon-grotesque;
-                font-size: 13px;
-                line-height: 19px;
-                margin-left: 3em;
 
-                .footer-heading {
+                .footer-address-block {
+                    opacity: 0.7;
+                    font-size: 13px;
+                    line-height: 19px;
+                    margin-bottom: 1em;
+
+                    a {
+                        color: $link-color;
+                        &:hover {
+                            color: $footerNavHoverColor;
+                        }
+                        
+                        address {
+                            font-style: normal;
+                        }
+                    }
+                }
+
+                h4.footer-heading {
+                    color: $footer-heading-color;
+                    font-family: brandon-grotesque;
+                    font-size: 13px;
+                    font-weight: normal;
+                    line-height: 19px;
+                    opacity: 1;
+                    margin: 0;
+                }
+                h4.footer-heading:first-of-type {
                     letter-spacing: 3.25px;
                     line-height: 24px;
                 }
-
-                address {
-                    font-style: normal;
-                }
+                
             }
+            
             .footer-email-form-wrapper {
                 grid-area: form;
                 font-size: 13px;
@@ -82,6 +114,7 @@
                         &:focus + label {
                             transform: translate(-50px, -15px) scale(0.75);
                             color: $appstem-green;
+                            opacity: 1;
                         }
                     }
                     
@@ -166,10 +199,7 @@
                 line-height: 24px;
                 letter-spacing: 2.89px;
             }
-            .phone-number {
-                letter-spacing: 0.89px;
-                line-height: 28px;
-            }
+            
             address {
                 font-size: 14px;
                 line-height: 24px;
