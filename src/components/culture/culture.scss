@@ -5,7 +5,190 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 1400px;
     position: relative;
     top: -80px;
     background-color: $body-background-color;
+    
+    p {
+        color: $services-page-p-color;
+        font-family: $primary-font-family;
+        font-size: 28px;
+        line-height: 42px;
+        padding: 0 19%;
+
+        // if sibling p's, add margin
+        &:nth-of-type(2) {
+            margin-top: 2em;
+        }
+        
+        @include phone {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 0 8.5%;
+        }
+        @include tablet {
+            padding: 0 5em;
+        }
+    }
+
+    section {
+        width: 100%;
+        margin-top: 6em;
+
+        @include phone {
+            margin-top: 85px;
+        }
+    }
+
+    .video-react {
+        width: 100%;
+        max-width: 960px;
+        margin-top: 12em;
+        padding-top: 54em;
+        @include phone {
+            margin-top: 85px;
+        }
+    }
+    .culture-work-as-team {
+        margin-top: 234px;
+
+        @include phone {
+            margin-top: 85px;
+        }
+    }
+
+    .culture-our-team {
+        @include desktop {
+            margin: 15em 0 5em 0;
+        }
+
+        .culture-team-images {
+            width: 100%;
+            margin-top: 6em;
+            display: grid;
+
+            @include phone {
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1em;
+                justify-items: center;
+                margin-top: 34px;
+
+                // .imagebox-wrapper:last-of-type {
+                //     position: relative;
+                //     left: 25%;
+                // }
+
+            }
+            @include tablet {
+                grid-template-columns: repeat(4,1fr);
+                grid-gap: 1em;
+
+                .imagebox-wrapper {
+                    margin-bottom: 3em;
+                }
+                .imagebox-wrapper:nth-of-type(5),
+                .imagebox-wrapper:nth-of-type(6),
+                .imagebox-wrapper:nth-of-type(7) {
+                    position: relative;
+                    left: 14vw;
+                }
+            }
+            @include desktop {
+                grid-gap: 2em;
+                grid-template-columns: repeat(24, 1fr);
+                
+                .imagebox-wrapper {
+                    grid-column: span 6;
+                    margin-bottom: 5em;
+                }
+                .imagebox-wrapper:nth-of-type(1) {
+                    grid-column-start: 0;
+                }
+                .imagebox-wrapper:nth-of-type(2) {
+                    grid-column-end: 13;
+                }
+                .imagebox-wrapper:nth-of-type(3) {
+                    grid-column-end: 19;
+                }
+                .imagebox-wrapper:nth-of-type(4) {
+                    grid-column-end: 25;
+                }
+                .imagebox-wrapper:nth-last-of-type(3) {
+                    grid-column-end: 10;
+                }
+            }
+            
+        }
+    }
+    .culture-join-us {
+        padding: 5em 0 10em 0;
+        text-align: center;
+
+        p {
+            width: 549px;
+            margin: 0 auto;
+        }
+        .view-openings-link {
+            border: 1px solid #fafafa;
+            color: #fafafa;
+            padding: 1em;
+            position: relative;
+            font-size: 16px;
+            letter-spacing: 3.29px;
+            line-height: 24px;
+            top: 8em;
+
+            &:hover {
+                color: $appstem-green;
+                border-color: $appstem-green;
+            }
+            
+            @include phone {
+                font-size: 15px;
+                letter-spacing: 3.08px;
+            }
+        }
+
+        @include phone {
+            p {
+                width: 260px;
+                padding: 0px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+        }
+    }
+}
+.testimonial-slider {
+    @include phone {
+        margin-top: 134px;
+        height: 40em;
+        justify-content: normal;
+        align-items: unset;
+        h2 {
+            font-size: 20px;
+            letter-spacing: 3.33px;
+            line-height: 29px;
+            margin-top: 110px;
+        }
+        hr {
+            width: 43px;
+        }
+        .slick-slider {
+            width: 100%;
+            margin: 70px 0 0 0;
+            padding: 0 4em;
+            
+            .testimonial-content {
+                color: #222222;
+                font-size: 16px;
+                font-style: italic;
+                font-weight: 300;
+                line-height: 24px;
+                text-align: center;
+            }
+        }
+    }
 }
