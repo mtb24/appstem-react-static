@@ -1,0 +1,40 @@
+@import '../../../styles/styles.scss';
+
+.cta-wrapper {
+    width: 100%;
+    position: relative;
+    align-items: center;
+
+    h2 {
+        color: $cta-heading-color;
+        font-family: $primary-font-family;
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 6.4px;
+        line-height: 46px;
+        margin: 0;
+        text-align: center;
+
+        @include phone {
+            font-size: 20px;
+            letter-spacing: 4px;
+            line-height: 29px;     
+        }
+        @include tablet {
+            padding: 0 5em;
+        }
+
+    }
+
+    hr {
+        width: 63px;
+        height: 3px;
+        border: none;
+        margin-bottom: 3em;
+
+        @include phone {
+            width: 31px;
+            height: 2px;
+        }
+    }
+}
