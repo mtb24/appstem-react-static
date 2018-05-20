@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 import './angled-section.scss'
 
 export default props => {
