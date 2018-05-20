@@ -1,0 +1,26 @@
+@import '../../styles/styles.scss';
+
+.imagebox-wrapper {
+    max-width: 265px;
+
+    .ib-image {
+        width: 100%;
+    }
+
+    .ib-title {
+        color: $secondary-font-color;
+        font-family: $primary-font-family;
+        font-size: 20px;
+        font-weight: normal;
+        letter-spacing: 1.7px;
+        line-height: 42px;
+    }
+    .ib-desc {
+        color: #9B9B9B;
+        font-family: $primary-font-family;
+        font-size: 16px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        line-height: 27px;
+    }
+}
