@@ -29,7 +29,7 @@ const handleFormSubmit = (values, e, formApi) => {
 export default withRouteData(({ contact }) => (
   <div className='contact-wrapper angle--bottom-right'>
     <Hero title={ contact.title } backgroundImage={ backgroundImage } className='angle--bottom-right' />
-    <h1>{convert(contact.heading)}</h1>
+    <h2>{convert(contact.heading)}</h2>
     <hr className='hr-green' />
     <Form onSubmit={ submittedValues => handleFormSubmit(submittedValues) }>
     {formApi => (
