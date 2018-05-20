@@ -10,6 +10,13 @@
     color: $page-text-color;
     background-color: $page-background-color;
 
+    .cta-wrapper {
+        margin-top: 3em;
+        h2 {
+            color: $page-text-color;
+        }
+    }
+
     #contact-form {
         display: flex;
         flex-direction: column;

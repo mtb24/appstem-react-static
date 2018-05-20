@@ -5,6 +5,7 @@ import Hero from '../hero/hero'
 import './contact.scss'
 import backgroundImage from './bg_top_contact.png'
 import { Form, Text } from 'react-form'
+import Cta from '../layout/page-section/cta'
 
 const validate = value => ({
   error: !value || !/Hello World/.test(value) ? "Input must contain 'Hello World'" : null,
@@ -29,8 +30,7 @@ const handleFormSubmit = (values, e, formApi) => {
 export default withRouteData(({ contact }) => (
   <div className='contact-wrapper angle--bottom-right'>
     <Hero title={ contact.title } backgroundImage={ backgroundImage } className='angle--bottom-right' />
-    <h2>{convert(contact.heading)}</h2>
-    <hr className='hr-green' />
+    <Cta heading={convert(contact.heading)} />
     <Form onSubmit={ submittedValues => handleFormSubmit(submittedValues) }>
     {formApi => (
       <form action="mailto:kendowney.com@gmail.com" method="post" encType="text/plain" id="contact-form" className="contact-form" >
@@ -65,11 +65,9 @@ export default withRouteData(({ contact }) => (
       </form>
     )}
     </Form>
-    <div className='view-openings-wrapper'>
-      <h2 className='all-caps'>Join Us</h2>
-      <hr className='hr-green'/>
+    <Cta className='view-openings-wrapper' heading='Join Us'>
       <p>Join Appstem! We are always looking for new talents. Check out our openings.<br/>If you can’t find what are you looking for send us an email. </p>
       <Link to='/careers' className='all-caps openings-link'>View Openings <span className='openings-link-arrow'> > </span></Link>
-    </div>
+    </Cta>
   </div>
 ))
