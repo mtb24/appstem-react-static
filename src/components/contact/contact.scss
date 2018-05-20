@@ -57,7 +57,7 @@
             width: 221px;
             color: $body-text-color;
             background-color: $appstem-green;
-            font-family: brandon-grotesque;
+            font-family: $primary-font-family;
             font-size: 16px;
             font-weight: bold;
             letter-spacing: 3.2px;
@@ -76,7 +76,7 @@
 
         h2 {
             color: $form-heading-color;
-            font-family: brandon-grotesque;
+            font-family: $primary-font-family;
             font-size: 32px;
             font-weight: normal;
             letter-spacing: 6.4px;
