@@ -4,6 +4,9 @@ $min-header-font-size: 24px;
 $max-header-font-size: 32px;
 
 // Font Families
+$primary-font-family: brandon-grotesque;
+$secondary-font-family: fira-sans;
+
 @font-face {
     font-family: brandon-grotesque;
     src: url(https://use.typekit.net/af/39f077/0000000000000000000132df/27/l?primer=b997bcdf54b83a9f7b731c29130c4fbe326c83acb7cf220896c6041d3c02ba6a&fvd=n4&v=3) format("woff2"), 
