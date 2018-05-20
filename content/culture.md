@@ -1,21 +1,11 @@
-## Who We Are
-Our mission is to make purpose-built apps that serve real needs in people’s lives. We use metrics-driven mobile strategies, human-centered design and efficient development to create apps that people want to use.
-
-![video]()
-
-## We work as a team
-Whether your goal is to be featured in the App Store, build new relationships with your customers, or even to save lives, our metrics and research-driven approach enables us to deliver apps with the right outcome. Every single day we’re determined to make our apps special enough to get used. 
-
-Then, we want your users to become fans. From pre-discovery research to post-launch, marketing and user acquisition, our team is driven to build a better app world. We build apps that people love.
-
-## Our Leadership Team
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-
-## Join us
-We’ are hiring! If you can’t find what you are looking for, send us an email hello@appstem.com.
+---
+title: Culture
+video-1: 'noneExistentVideo.mp4'
+image-1: ['img_Robert_Armstrong.jpg','Image of Robert Armstrong','Robert Armstrong', 'Co-Founder & CEO']
+image-2: ['img_CHris_Newhouse.jpg','Image of Chris Newhouse','Chris Newhouse', 'CTO']
+image-3: ['img_Chris_Harris.jpg','Image of Chris Harris','Chris Harris', 'Creative Director']
+image-4: ['img_John_Mavraides.jpg','Image of John Mavraides','John Mavraides', 'VP of Sales']
+image-5: ['img_Eric_Gallegos.jpg','Image of Eric Gallegos','Eric Gallegos', 'Lead Mobile Dev']
+image-6: ['img_Andrew.jpg','Image of Andrew','Andrew', 'Lead Web Dev']
+image-7: ['img_Mark_Alban.jpg','Image of Mark Alban','Mark Alban', 'QA Manager']
+---
