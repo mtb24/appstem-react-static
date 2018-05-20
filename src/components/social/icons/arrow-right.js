@@ -4,8 +4,8 @@ export default props => {
     const fillcolor = props.fillColor || 'cadetblue'
 
     return (
-        <svg id='arrow-right' className={ props.className } viewBox={'0 0 40 40'} width={props.width} height={props.height}  aria-labelledby="title" xmlns="http://www.w3.org/2000/svg">
-            <title id='title'>Button to submit your email</title>
+        <svg id='arrow-right' className={ props.className } viewBox={'0 0 40 40'} width={props.width} height={props.height}  aria-labelledby="arrow-right" xmlns="http://www.w3.org/2000/svg">
+            <title id='arrow-right-title'>Button to submit your email</title>
             <g transform="translate(0.000000,68.000000) scale(0.100000,-0.100000)"
 fill={fillcolor} stroke="none">
             <path fill={fillcolor} d="M0 340 l0 -340 340 0 340 0 0 340 0 340 -340 0 -340 0 0 -340z m440

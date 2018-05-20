@@ -5,7 +5,7 @@ export default props => {
 
     return (
         <svg className={ props.className } width={props.width || "36px"} height={props.height || "36px"} viewBox="0 0 36 36"  aria-labelledby="title" xmlns="http://www.w3.org/2000/svg">
-            <title id='title'>Link to our Twitter page</title>
+            <title id='medium-title'>Link to our Medium page</title>
             <g id="ic_footer_medium" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="Medium">
                     <circle id="Oval" fill="#000000" cx="18" cy="18" r="18"></circle>

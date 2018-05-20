@@ -5,7 +5,7 @@ export default props => {
 
     return (
         <svg id="facebook-icon" className={ props.className } width={props.width || "37px"} height={props.height || "37px"} viewBox="0 0 37 37"  aria-labelledby="title" xmlns="http://www.w3.org/2000/svg">
-            <title id='title'>Link to our Facebook page</title>
+            <title id='facebook-title'>Link to our Facebook page</title>
             <g id="ic_footer_fb" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="Facebook">
                     <circle id="Oval" fill='#000000' cx="18.5" cy="18.5" r="18.5"></circle>
