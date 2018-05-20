@@ -3,7 +3,6 @@ import { withRouteData } from 'react-static'
 import convert from 'htmr'
 import Hero from '../hero/hero'
 import backgroundImage from './services-background.png'
-
 import './services.scss'
 
 export default withRouteData(({ services }) => (
