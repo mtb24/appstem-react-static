@@ -12,6 +12,9 @@ const App = () => (
       <Header />
       <Routes />
       <Footer />
+      <div className='page-bottom'>
+        <div className='footer-copyright all-caps'>© 2018 APPSTEM MEDIA LLC. All Rights Reserved.</div>
+      </div>
     </div>
   </Router>
 )
