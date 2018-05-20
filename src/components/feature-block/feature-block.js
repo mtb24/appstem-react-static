@@ -2,7 +2,7 @@ import React from 'react'
 import convert from 'htmr'
 import { Link } from 'react-static'
 import Arrow from './arrow_white.png'
-import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
+//import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
 import './feature-block.scss'
 
 export default props => {
@@ -14,7 +14,7 @@ export default props => {
 
         return (
             <section className={ `angled-section feature-block-wrapper feature-image-${ props.imagePosition } angle--both-left-right `}> 
-
+{/* 
                 <ResponsiveImage
                     className='feature-block-image'
                     alt={ props.caseStudy.imageAlt || 'an image' }
@@ -33,7 +33,7 @@ export default props => {
                         path={ `${pathToImages}/large/${props.caseStudy.imageName}` }
                     />
                 </ResponsiveImage>
-
+ */}
                 <div className='feature-block-details'>
 
                     <h2>{ props.caseStudy.title }</h2>
