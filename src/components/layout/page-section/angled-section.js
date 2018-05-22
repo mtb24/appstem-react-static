@@ -3,10 +3,10 @@ import './angled-section.scss'
 
 export default props => {
 
-    const mask = props.mask || 'angle--both-left-right';
+    const mask = props.mask || 'angle--bottom-right';
     
     return (
-        <section className={ `angled-section ${mask}` }>
+        <section className={ `angled-section ${ props.className } ${ mask }` }>
             { props.children }
         </section>
     )
