@@ -25,11 +25,9 @@ class ImageBox extends React.Component {
             <div className='imagebox-wrapper'>
                 <Img
                     className='ib-image'
-                    src={ `assets/images/main-pages/small/${this.props.image[0]}` }
-                    alt={ this.props.image[1] }
+                    src={ this.props.image }
+                    alt={ this.props.alt }
                     loader={ <BeatLoader color={'#3cd52e'} loading={this.state.loading} /> } />
-                <div className='ib-title'>{ this.props.image[2] || 'Title' }</div>
-                <div className='ib-desc'>{ this.props.image[3] || 'Description' }</div>
             </div>
         )
     }
