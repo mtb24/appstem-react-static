@@ -1,1 +1,31 @@
 @import '../../styles/styles.scss';
+
+.home-wrapper {
+    width: 100%;
+
+    .home-text {
+        height: 727px;
+        color: $white;
+        font-family: $primary-font-family;
+        font-size: 36px;
+        line-height: 72px;
+        text-align: center;
+        
+        @include phone {
+            height: 3.3%;
+            width: 89.33%;
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+    .case-study-1 {
+        height: 876px;
+    }
+    .case-study-2 {
+        height: 876px;
+    }
+    .case-study-3 {
+        height: 1045px;
+    }
+
+}
