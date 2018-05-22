@@ -1,0 +1,23 @@
+@import '../../../styles/styles.scss';
+
+.link-outlined {
+    border: 1px solid $primary-font-color;
+    color: $primary-font-color;
+    padding: 1em;
+    position: relative;
+    font-size: 16px;
+    letter-spacing: 3.29px;
+    line-height: 24px;
+    width: fit-content;
+    width: -moz-fit-content;
+
+    &:hover {
+        color: $appstem-green;
+        border-color: $appstem-green;
+    }
+    
+    @include phone {
+        font-size: 15px;
+        letter-spacing: 3.08px;
+    }
+}
