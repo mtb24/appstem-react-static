@@ -5,7 +5,9 @@ import backgroundImage from './work-background.png'
 import './work.scss'
 import FeatureBlock from '../feature-block/feature-block';
 
-export default withRouteData(({ work }) => (
+export default withRouteData(({ work }) => {
+  
+  return (
 
   <React.Fragment>
 
@@ -17,7 +19,6 @@ export default withRouteData(({ work }) => (
     <div className='work-wrapper'>
 
       {
-
         work.map( (caseStudy, i) => {
 
           let imagePosition = ( i % 2 == 0 )? 'left' : 'right'
@@ -35,4 +36,4 @@ export default withRouteData(({ work }) => (
     </div>
 
   </React.Fragment>
-))
+)})
