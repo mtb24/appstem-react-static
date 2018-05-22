@@ -6,11 +6,11 @@ import Hero from '../hero/hero'
 import Testimonials from '../testimonials/testimonials'
 import LinkOutlined from '../buttons/link-outlined/link-outlined'
 import AngledSection from '../layout/page-section/angled-section'
+import FeatureBlock from '../feature-block/feature-block'
 import './home.scss'
 
-export default withRouteData(({ home }) => {
-  console.log('home props: ', home)
-
+export default withRouteData(({ home, caseStudiesForHomePage }) => {
+  
   return (
     <React.Fragment>
       
@@ -24,15 +24,17 @@ export default withRouteData(({ home }) => {
 
       </Hero>
 
-      <div className='home-wrapper angle--bottom-right'>
-      
-          <AngledSection className='home-text' mask='angle--bottom-right'> { convert(home.contents) } </AngledSection>
+      <div className='home-wrapper'>
 
-          <AngledSection className='case-study-1' mask='angle--bottom-right'>  </AngledSection>
-          <AngledSection className='case-study-2' mask='angle--bottom-right'>  </AngledSection>
-          <AngledSection className='case-study-3' mask='angle--bottom-right'>
-            <LinkOutlined linkTo="/work" className="view-portfolio-link">View Full Portfolio</LinkOutlined>
-          </AngledSection>
+          <AngledSection className='home-text' mask='angle--both-left-right'> { convert(home.contents) } </AngledSection>
+
+          <FeatureBlock key={ 'case-study-1' } className='angle--both-left-right case-study-1' imagePosition={ 'left' } caseStudy={ caseStudiesForHomePage[0] } />
+          
+          <FeatureBlock key={ 'case-study-2' } className='angle--both-left-right case-study-2' imagePosition={ 'right' } caseStudy={ caseStudiesForHomePage[1] } />
+          
+          <FeatureBlock key={ 'case-study-3' } className='angle--both-left-right case-study-3' imagePosition={ 'left' } caseStudy={ caseStudiesForHomePage[2] } />
+          
+          <LinkOutlined linkTo="/work" className="view-portfolio-link">View Full Portfolio</LinkOutlined>
 
       </div>
 
