@@ -7,7 +7,7 @@
     width: 100%;
     max-width: 1400px;
     position: relative;
-    top: -80px;
+    top: 80px;
     background-color: $body-background-color;
     
     p {
@@ -133,24 +133,7 @@
             margin: 0 auto;
         }
         .view-openings-link {
-            border: 1px solid #fafafa;
-            color: #fafafa;
-            padding: 1em;
-            position: relative;
-            font-size: 16px;
-            letter-spacing: 3.29px;
-            line-height: 24px;
             top: 8em;
-
-            &:hover {
-                color: $appstem-green;
-                border-color: $appstem-green;
-            }
-            
-            @include phone {
-                font-size: 15px;
-                letter-spacing: 3.08px;
-            }
         }
 
         @include phone {

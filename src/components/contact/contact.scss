@@ -6,7 +6,8 @@
     align-items: center;
     width: 100%;
     position: relative;
-    top: -80px;
+    top: -122px;
+    padding-top: 120px;
     color: $page-text-color;
     background-color: $page-background-color;
 
@@ -18,10 +19,6 @@
     }
 
     #contact-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
         width: 80%;
         max-width: 800px;
         margin-top: 7em;
@@ -29,6 +26,7 @@
         .contact-form-field-wrapper {
             width: 100%;
             margin-bottom: 2em;
+            text-align: left;
             
             label {
                 position: relative;
@@ -39,6 +37,13 @@
                 letter-spacing: 2px;
                 line-height: 23px;
                 transition: all .2s linear;
+
+                @include phone {
+                    color: $form-text-color-mobile;
+                    font-size: 14px;
+                    letter-spacing: 1.75px;
+                    line-height: 20px;
+                }
             }
             input {
                 width: 100%;
@@ -111,19 +116,4 @@
         }
     }
         
-}
-
-
-
-
-
-/* Breakpoints */
-
-@media (max-width: 800px) {
-    .contact-form-field-wrapper > label {
-        color: $form-text-color-mobile;
-        font-size: 14px;
-        letter-spacing: 1.75px;
-        line-height: 20px;
-    }
 }
