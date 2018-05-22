@@ -13,7 +13,7 @@ export default (props) => {
     }
     return (
         <section className={`testimonial-slider ${props.className || ''}`}>
-            <Cta heading='Testimonials'>
+            <Cta heading={`${props.heading || 'Testimonials'}`}>
                 <Slider {...settings}>
                     <div>
                         <div className='testimonial-content'>Appstem did an exceptional job building Tesla’s Marketing iPad App. We are tough customers, expecting the same excellence in our app designs and interactions as our cars, and Appstem delivered a fantastic product.</div>
