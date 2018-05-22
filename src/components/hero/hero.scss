@@ -3,8 +3,8 @@
 .hero-wrapper {
     width: 100%;
     max-width: 1400px;
-    height: 45em;
-    z-index: 99;
+    // height: 45em;
+    z-index: 1;
 
     @include phone {
         height: 30em;
