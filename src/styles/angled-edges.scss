@@ -165,18 +165,3 @@ $angled-section-even-background: radial-gradient(circle, rgba(62,62,62,0.52) 0%,
     text-align: center;
     padding: 10% 0;
 }
-
-.angled-section {
-  position: relative;
-  margin-bottom: -100px;
-  background: $angled-section-odd-background;
-
-  &:first {
-      padding-top: 10em;
-  }
-  
-  &:nth-child(even) {
-      background: $angled-section-even-background;
-      background-color: #1C1819;
-  }
-}
