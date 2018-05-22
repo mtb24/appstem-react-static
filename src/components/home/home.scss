@@ -1,15 +1,31 @@
 @import '../../styles/styles.scss';
 
+.header-wrapper {
+    position: absolute;
+    z-index: 99;
+}
+h1.title {
+    position: absolute;
+    top: 2em;
+    width: 42%;
+    z-index: 99;
+    color: $primary-font-color;
+    font-family: $secondary-font-family;
+    font-size: 96px;
+    font-weight: 200;
+    letter-spacing: -0.83px;
+    line-height: 96px;
+    text-align: center;
+}
+
 .home-wrapper {
     width: 100%;
+    top: -113px;
+    padding-bottom: 200px;
 
     .home-text {
-        height: 727px;
-        color: $white;
-        font-family: $primary-font-family;
-        font-size: 36px;
-        line-height: 72px;
-        text-align: center;
+        height: 675px;
+        top: -111px;
         
         @include phone {
             height: 3.3%;
@@ -17,15 +33,41 @@
             font-size: 20px;
             line-height: 32px;
         }
+
+        p {
+            width: 68%;
+            color: $white;
+            font-family: $primary-font-family;
+            font-size: 36px;
+            line-height: 72px;
+            text-align: center;
+            margin: 250px auto;
+        }
     }
     .case-study-1 {
-        height: 876px;
+        height: 500px;
+        padding: 10% 0;
+        top: -222px;
     }
     .case-study-2 {
-        height: 876px;
+        height: 500px;
+        padding: 10% 0;
+        background-color: #1C1819;
+        top: -333px;
     }
     .case-study-3 {
-        height: 1045px;
+        height: 500px;
+        padding: 10% 0;
+        top: -444px;   
+    }
+    .view-portfolio-link {
+        top: -444px;
     }
 
+}
+.testimonial-slider {
+    top: -444px;
+}
+.footer-body {
+    margin-top: -20em !important;
 }
