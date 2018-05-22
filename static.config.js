@@ -39,7 +39,7 @@ export default {
         path: '/',
         component: 'src/components/home/home',
         getData: () => ({
-          ...home,
+          home,
         }),
       },
       {
