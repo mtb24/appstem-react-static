@@ -21,6 +21,9 @@ export default props => {
         case 'video': 
             console.log('Hero video loading...')
             return (
+                <React.Fragment>
+                <Header/>
+                <h1 className='title'>{ props.title || 'Default Title' }</h1> 
                 <video
                     mute='1'
                     autoPlay='1'
@@ -33,9 +36,8 @@ export default props => {
                         width: '100%',
                     }}>
                     <source src={ `assets/videos/${ props.backgroundVideo || '' }` }/>
-                    <Header/>
-                    <h1 className='title'>{ props.title || 'Default Title' }</h1> 
                 </video>
+                </React.Fragment>
             )
             break
         default:
