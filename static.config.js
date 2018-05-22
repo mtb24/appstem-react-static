@@ -34,12 +34,15 @@ export default {
       services
     } = await jdown('content')
 
+    const caseStudiesForHomePage = work.filter( caseStudy => caseStudy.slug === 'hubbub' || caseStudy.slug === 'jetsuite-x' || caseStudy.slug === 'tesla-motors' )
+
     return [
       {
         path: '/',
         component: 'src/components/home/home',
         getData: () => ({
           home,
+          caseStudiesForHomePage,
         }),
       },
       {
