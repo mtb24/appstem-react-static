@@ -7,9 +7,9 @@ import ImageBox from '../image-box/image-box'
 import { Player, BigPlayButton, PosterImage } from 'video-react';
 import posterImage from '../../../public/assets/images/main-pages/full/culture-video-poster.png'
 import Cta from '../layout/page-section/cta'
-
+import LinkOutlined from '../buttons/link-outlined/link-outlined'
 import './culture.scss'
-import { Link } from 'react-router-dom';
+
 
 export default withRouteData(({ culture, testimonials }) => {
   
@@ -30,9 +30,13 @@ export default withRouteData(({ culture, testimonials }) => {
   
   return (
     <React.Fragment>
-      <div className='culture-wrapper'>
 
-        <Hero title={culture.title} backgroundImage={ backgroundImage } className='angle--bottom-right' />
+      <Hero title={culture.title} 
+            heroType='image' 
+            backgroundImage={ backgroundImage } 
+            className='angle--bottom-right' />
+
+      <div className='culture-wrapper'>
 
         <Cta className='culture-who-we-are' heading='Who We Are'>
           <p>Our mission is to make purpose-built apps that serve real needs in people’s lives. We use metrics-driven mobile strategies, human-centered design and efficient development to create apps that people want to use.</p>
@@ -57,7 +61,7 @@ export default withRouteData(({ culture, testimonials }) => {
         
         <Cta className='culture-join-us' heading='Join us'>
           <p>We’ are hiring! If you can’t find what you are looking for, send us an email hello@appstem.com.</p>
-          <Link to='/careers' className='view-openings-link all-caps'>View Openings</Link>
+          <LinkOutlined linkTo='/careers' className='view-openings-link'>View Openings</LinkOutlined>
         </Cta>
 
       </div>
