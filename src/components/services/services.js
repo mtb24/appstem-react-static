@@ -6,10 +6,22 @@ import backgroundImage from './services-background.png'
 import './services.scss'
 
 export default withRouteData(({ services }) => (
+<React.Fragment>
+
+  <Hero title='Service' 
+        heroType='image' 
+        backgroundImage={ backgroundImage } 
+        className='angle--bottom-right' />
+  
   <div className='services-wrapper'>
-    <Hero title='Service' backgroundImage={ backgroundImage } className='angle--bottom-right' />
+  
     <div className='services-body'>
+    
       {convert(services.contents)}
+    
     </div>
+  
   </div>
+
+  </React.Fragment>
 ))
