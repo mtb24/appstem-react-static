@@ -1,6 +1,7 @@
 @import '../../../styles/styles.scss';
 
 .link-outlined {
+    display: inline-block;
     border: 1px solid $primary-font-color;
     color: $primary-font-color;
     padding: 1em;
