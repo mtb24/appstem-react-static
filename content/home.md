@@ -1,5 +1,5 @@
 ---
-heroHeading: We make apps people love
+title: We make apps people love
 videoURL: HEROv3-optimized.mp4
 posterImg: posterimage-home.jpg
 ---
