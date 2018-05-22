@@ -2,38 +2,24 @@ import React from 'react'
 import convert from 'htmr'
 import { Link } from 'react-static'
 import Arrow from './arrow_white.png'
-//import { ResponsiveImage, ResponsiveImageSize } from 'react-responsive-image'
+import ImageBox from '../image-box/image-box'
 import './feature-block.scss'
 
 export default props => {
     
     if(!props.caseStudy) return null 
     else {
-
+        console.log('caseStudy from work page: ', props.caseStudy)
         const pathToImages = `assets/images/case-studies/${props.caseStudy.slug}`
 
         return (
-            <section className={ `angled-section feature-block-wrapper feature-image-${ props.imagePosition } angle--both-left-right `}> 
-{/* 
-                <ResponsiveImage
-                    className='feature-block-image'
-                    alt={ props.caseStudy.imageAlt || 'an image' }
-                    imageStyle={{ width: '100%' }} >
-                    <ResponsiveImageSize
-                        default={ true }
-                        minWidth={ 0 }
-                        path={ `${pathToImages}/small/${props.caseStudy.imageName}` }
-                    />
-                    <ResponsiveImageSize
-                        minWidth={ 768 }
-                        path={ `${pathToImages}/medium/${props.caseStudy.imageName}` }
-                    />
-                    <ResponsiveImageSize
-                        minWidth={ 1100 }
-                        path={ `${pathToImages}/large/${props.caseStudy.imageName}` }
-                    />
-                </ResponsiveImage>
- */}
+            <div className={ `feature-block-wrapper feature-image-${ props.imagePosition } ${ props.className }`}>
+
+                <ImageBox key={ `image-${props.caseStudy.slug}` } 
+                          image={ `${pathToImages}/medium/${props.caseStudy.imageName}` }
+                          className='feature-block-image'
+                          alt={ props.caseStudy.imageAlt || 'an image' } />
+
                 <div className='feature-block-details'>
 
                     <h2>{ props.caseStudy.title }</h2>
@@ -46,7 +32,7 @@ export default props => {
 
                 </div>
 
-            </section>
+            </div>
         )
     }
 }
