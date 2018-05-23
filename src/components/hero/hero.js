@@ -9,7 +9,7 @@ export default props => {
     switch( props.heroType ) {
 
         case 'image':
-            console.log('Hero image loading...')
+            // console.log('Hero image loading...')
             return (
                 <div className={`hero-wrapper ${props.className || ''}`} style={ {backgroundImage: `url(${props.backgroundImage})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center bottom'}}>
                     <Header/>
