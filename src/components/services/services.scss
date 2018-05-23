@@ -10,81 +10,156 @@
     margin-bottom: 80px;
     background-color: $body-background-color;
 
-    .services-body {
-        .what-we-do {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
+    .what-we-do {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
 
-            h2 {
-                color: $services-page-heading-color;
+        h2 {
+            color: $services-page-heading-color;
+            font-family: $primary-font-family;
+            font-size: 32px;
+            font-weight: normal;
+            letter-spacing: 6.4px;
+            line-height: 46px;
+            text-align: center;
+        }
+        hr {
+            width: 63px;
+            height: 3px;
+            border: none;
+            margin-bottom: 3em;
+        }
+        p {
+            height: 280px;
+            width: 780px;
+            color: $services-page-p-color;
+            font-family: $primary-font-family;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 40px;
+            opacity: 0.9;
+        }
+
+        .services-block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10em;
+
+            img {
+                height: 85px;
+                width: 85px;
+                margin-right: 111px;
+            }
+            .services-block-text {
+                h2 {
+                    color: $services-page-heading-color;
+                    font-family: $primary-font-family;
+                    font-size: 35px;
+                    font-weight: normal;
+                    letter-spacing: 7px;
+                    line-height: 50px;
+                    text-align: left;
+                }
+                p {
+                    height: 72px;
+                    width: 483px;
+                    color: $services-page-block-p-color;
+                    font-family: $primary-font-family;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+
+        }
+    }
+    .our-expertise {
+        background-color: $page-background-color;
+        width: 100vw; // must extend past wrapper
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        justify-items: center;
+        padding: 10em 0;
+        
+        h2 {
+            color: $services-page-exertise-heading-color;
+            font-family: $primary-font-family;
+            font-size: 32px;
+            font-weight: normal;
+            letter-spacing: 6.4px;
+            line-height: 46px;
+            grid-column: span 2;
+        }
+        hr {
+            grid-column: span 2;
+        }
+
+        .expertise-block {
+            color: $services-page-exertise-block-color;
+            font-family: $primary-font-family;
+            font-size: 35px;
+            font-weight: normal;
+            letter-spacing: 7px;
+            line-height: 50px;
+            text-align: center;
+            width: 10em;
+
+            p.description {
+                color: $services-page-exertise-block-color;
                 font-family: $primary-font-family;
-                font-size: 32px;
-                font-weight: normal;
-                letter-spacing: 6.4px;
-                line-height: 46px;
+                font-size: 18px;
+                letter-spacing: 0.5px;
+                line-height: 30px;
                 text-align: center;
             }
-            hr {
-                width: 63px;
-                height: 3px;
-                border: none;
-                margin-bottom: 3em;
-            }
-            p {
-                height: 280px;
-                width: 780px;
-                color: $services-page-p-color;
+            p.project-type {
+                color: $services-page-exertise-project-type-color;
                 font-family: $primary-font-family;
-                font-weight: normal;
-                font-size: 24px;
-                line-height: 40px;
-                opacity: 0.9;
-            }
-    
-            .services-block {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                margin-bottom: 10em;
-    
-                img {
-                    height: 85px;
-                    width: 85px;
-                    margin-right: 111px;
-                }
-                .services-block-text {
-                    h2 {
-                        color: $services-page-heading-color;
-                        font-family: $primary-font-family;
-                        font-size: 35px;
-                        font-weight: normal;
-                        letter-spacing: 7px;
-                        line-height: 50px;
-                        text-align: left;
-                    }
-                    p {
-                        height: 72px;
-                        width: 483px;
-                        color: $services-page-block-p-color;
-                        font-family: $primary-font-family;
-                        font-size: 16px;
-                        line-height: 24px;
-                    }
-                }
-    
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                line-height: 30px;
+                text-align: center;
+                text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
             }
         }
-        .our-expertise {
-            background-color: $page-background-color;
-            width: 100vw; // must extend past wrapper
-
-            .expertise-block {
-    
-            }
-        }
-        
-        
     }
+    .see-what-we-made {
+        height: 580px;
+        width: 100%;
+        background-color: $services-page-see-what-we-made-block-color;
+        color: $white;
+        font-family: $primary-font-family;
+        font-size: 35px;
+        font-weight: normal;
+        letter-spacing: 7px;
+        line-height: 50px;
+        margin-bottom: 400px;
+
+        .swm-top-left {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            height: 100px;
+            margin-left: 185px;
+            margin-top: 157px;
+        }
+        .swm-bottom-right {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 185px;
+            margin-top: 50px;
+        }
+    }
+}
+
+// hack
+.footer-body > .nav-wrapper {
+    z-index: 1;
 }
