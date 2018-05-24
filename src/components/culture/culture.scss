@@ -8,7 +8,11 @@
     max-width: 1400px;
     position: relative;
     top: 80px;
+    margin-bottom: 13em;
     background-color: $body-background-color;
+    @include phone {
+        margin-bottom: 137px;
+    }
     
     p {
         color: $services-page-p-color;
@@ -32,14 +36,14 @@
         }
     }
 
-    section {
-        width: 100%;
-        margin-top: 6em;
+    // section {
+    //     width: 100%;
+    //     margin-top: 6em;
 
-        @include phone {
-            margin-top: 85px;
-        }
-    }
+    //     @include phone {
+    //         margin-top: 85px;
+    //     }
+    // }
 
     .video-react {
         width: 100%;
@@ -144,37 +148,6 @@
                 text-align: center;
             }
             
-        }
-    }
-}
-.testimonial-slider {
-    @include phone {
-        margin-top: 134px;
-        height: 40em;
-        justify-content: normal;
-        align-items: unset;
-        h2 {
-            font-size: 20px;
-            letter-spacing: 3.33px;
-            line-height: 29px;
-            margin-top: 110px;
-        }
-        hr {
-            width: 43px;
-        }
-        .slick-slider {
-            width: 100%;
-            margin: 70px 0 0 0;
-            padding: 0 4em;
-            
-            .testimonial-content {
-                color: #222222;
-                font-size: 16px;
-                font-style: italic;
-                font-weight: 300;
-                line-height: 24px;
-                text-align: center;
-            }
         }
     }
 }
