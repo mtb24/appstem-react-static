@@ -26,7 +26,7 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
 
       <div className='home-wrapper'>
 
-          <AngledSection className='home-text' mask='angle--both-left-right'> { convert(home.contents) } </AngledSection>
+          <AngledSection className='home-text' mask='angle--bottom-right'> { convert(home.contents) } </AngledSection>
 
           <FeatureBlock key={ 'case-study-1' } className='angle--both-left-right case-study-1' imagePosition={ 'left' } caseStudy={ caseStudiesForHomePage[0] } />
           
