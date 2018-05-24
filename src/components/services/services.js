@@ -20,18 +20,17 @@ export default withRouteData(({ services }) => (
           backgroundImage={ backgroundImage } 
           className='angle--bottom-right' />
     
-    <div className='services-wrapper'>
+    <div className='services-wrapper angle--bottom-right'>
       
       <Cta className='what-we-do' heading='What We Do'>
 
         <p>Each member of our team is an expert in mobile technology. From product development, design, native development, QA, and ongoing support, we specialize in all phases of the project lifecycle. After 6 years and over 150 mobile apps, we have a proven track record of designing and developing innovative mobile products that are better, faster, and more cost-effective than the majority of our competition.</p>
         
         <div className='services-block'>
-          <ImageBox key={ `image-${ new Date() }` } 
-                    image={ startupImage }
-                    className='services-block-image'
-                    alt='an icon for startup section' />
-
+          <img src={ startupImage }
+              className='services-block-image'
+              alt='an icon for startup section' />
+          
           <div className='services-block-text'>
             <h2 className='all-caps'>Startup</h2>
             <p>We develop natively across iOS, Android, and Windows platforms using the latest mobile technology. Leveraging years of experience, we build performance-critical mobile apps tailored to the nuances of each platform.</p>
@@ -39,10 +38,9 @@ export default withRouteData(({ services }) => (
         </div>
         
         <div className='services-block'>
-          <ImageBox key={ `image-${ new Date() }` } 
-                    image={ redesignImage }
-                    className='services-block-image'
-                    alt='an icon for redesign section' />
+          <img src={ redesignImage }
+               className='services-block-image'
+               alt='an icon for redesign section' />
 
           <div className='services-block-text'>
             <h2 className='all-caps'>Re-Design</h2>
@@ -51,10 +49,9 @@ export default withRouteData(({ services }) => (
         </div>
         
         <div className='services-block'>
-          <ImageBox key={ `image-${ new Date() }` } 
-                    image={ revolutionImage }
-                    className='services-block-image'
-                    alt='an icon for revolution section' />
+          <img src={ revolutionImage }
+              className='services-block-image'
+              alt='an icon for revolution section' />
 
           <div className='services-block-text'>
             <h2 className='all-caps'>Revolution</h2>
