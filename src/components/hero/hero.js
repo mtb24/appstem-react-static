@@ -24,19 +24,17 @@ export default props => {
                 <React.Fragment>
                 <Header/>
                 <h1 className='title'>{ props.title || 'Default Title' }</h1> 
-                <video
-                    mute='1'
-                    autoPlay='1'
-                    loop='1'
-                    playsInline='1'
-                    poster={`assets/images/${ props.posterImg || ''}`}
-                    className={`hero-wrapper ${props.className || ''}`}
-                    style={{
-                        maxWidth: '1400px',
-                        width: '100%',
-                    }}>
-                    <source src={ `assets/videos/${ props.backgroundVideo || '' }` }/>
-                </video>
+                <div className={`hero-video-wrapper ${props.className || ''}`}>
+                    <video
+                        mute='1'
+                        autoPlay='1'
+                        loop='1'
+                        playsInline='1'
+                        poster={`assets/images/${ props.posterImg || ''}`}
+                        className='hero-video'>
+                        <source src={ `assets/videos/${ props.backgroundVideo || '' }` }/>
+                    </video>
+                </div>
                 </React.Fragment>
             )
             break
