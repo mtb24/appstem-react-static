@@ -7,7 +7,7 @@ import './footer.scss'
 
 export default () => (
 
-    <footer className='footer-body'>
+    <footer className='footer-body angle--top-left'>
 
         <Nav className={'all-caps footer-nav'} />
 
