@@ -2,7 +2,7 @@
 
 .feature-block-wrapper {
     width: 100%;
-    padding: 20% 0;
+    padding: 10% 0;
     justify-items: center;
     align-items: center;
     background-color: $featureblocks-bg-color;
@@ -10,7 +10,8 @@
 
     @include phone {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        margin: 1em auto;
     }
     @include tablet {
         display: grid;
@@ -20,7 +21,7 @@
     @include desktop {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 5em;
+        grid-gap: 0;
     }
 
     .feature-block-image {
@@ -29,20 +30,36 @@
 
     .feature-block-details {
         grid-area: details;
+        text-align: left;
+
+        @include phone {
+            width: 89%;
+        }
 
         h2 {
             color: $featureblocks-heading-color;
             font-family: $primary-font-family;
             font-size: 35px;
-            font-weight: bold;
+            font-weight: normal;
             letter-spacing: 7px;
             line-height: 50px;
+            @include phone {
+                font-size: 18px;
+                letter-spacing: 3.6px;
+                line-height: 26px;
+                margin-bottom: 0;
+            }
         }
         .feature-block-project-type {
             color: $featureblocks-project-type-color;
             font-family: $primary-font-family;
             font-size: 24px;
             line-height: 42px;
+            @include phone {
+                font-size: 13px;
+                line-height: 16px;
+                margin: 0;
+            }
         }
         .feature-block-project-description {
             color: $featureblocks-project-desc-color;
@@ -50,14 +67,22 @@
             font-size: 24px;
             line-height: 42px;
             max-width: 500px;
+            @include phone {
+                font-size: 16px;
+                line-height: 24px;
+            }
         }
         a {
             color: $featureblocks-link-color;
             font-family: $primary-font-family;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: normal;
             letter-spacing: 5px;
             line-height: 25px;
+            @include phone {
+                font-size: 13px;
+                letter-spacing: 4.06px;
+            }
         }
     }
 }

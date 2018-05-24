@@ -6,8 +6,7 @@
     align-items: center;
     width: 100%;
     position: relative;
-    top: 80px;
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
     background-color: $body-background-color;
 
     .what-we-do {
@@ -15,6 +14,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        top: 4em;
 
         h2 {
             color: $services-page-heading-color;
@@ -24,12 +24,22 @@
             letter-spacing: 6.4px;
             line-height: 46px;
             text-align: center;
+            @include phone {
+                font-size: 20px;
+                letter-spacing: 4px;
+                line-height: 29px;
+            }
         }
         hr {
             width: 63px;
             height: 3px;
             border: none;
             margin-bottom: 3em;
+            @include phone {
+                width: 31px;
+                height: 2px;
+                margin-bottom: 0;
+            }
         }
         p {
             height: 280px;
@@ -40,6 +50,14 @@
             font-size: 24px;
             line-height: 40px;
             opacity: 0.9;
+            @include phone {
+                width: 81%;
+                text-align: left;
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 32px;
+                margin-bottom: 76px;
+            }
         }
 
         .services-block {
@@ -47,13 +65,23 @@
             flex-direction: row;
             align-items: center;
             margin-bottom: 10em;
+            @include phone {
+                flex-direction: column;
+            }
 
             img {
                 height: 85px;
                 width: 85px;
                 margin-right: 111px;
+                @include phone {
+                    margin-right: 0;
+                    height: 60px;
+                    width: 50px;
+                }
             }
             .services-block-text {
+                margin-top: 25px;
+                
                 h2 {
                     color: $services-page-heading-color;
                     font-family: $primary-font-family;
@@ -62,6 +90,12 @@
                     letter-spacing: 7px;
                     line-height: 50px;
                     text-align: left;
+                    @include phone {
+                        font-size: 18px;
+                        letter-spacing: 3.6px;
+                        line-height: 50px;
+                        text-align: center;
+                    }
                 }
                 p {
                     height: 72px;
@@ -70,6 +104,13 @@
                     font-family: $primary-font-family;
                     font-size: 16px;
                     line-height: 24px;
+                    @include phone {
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-align: center;
+                        width: 89%;
+                        margin: 0 auto;
+                    }
                 }
             }
 
@@ -83,6 +124,13 @@
         grid-gap: 1em;
         justify-items: center;
         padding: 10em 0;
+        @include phone {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 4em;
+            padding-bottom: 0;
+        }
         
         h2 {
             color: $services-page-exertise-heading-color;
@@ -92,6 +140,12 @@
             letter-spacing: 6.4px;
             line-height: 46px;
             grid-column: span 2;
+            @include phone {
+                font-size: 20px;
+                letter-spacing: 4px;
+                line-height: 29px;
+                text-align: center;
+            }
         }
         hr {
             grid-column: span 2;
@@ -106,6 +160,17 @@
             line-height: 50px;
             text-align: center;
             width: 10em;
+            @include phone {
+                width: 89%;
+                margin-bottom: 90px;
+            }
+            h2 {
+                @include phone {
+                    font-size: 18px;
+                    letter-spacing: 3.6px;
+                    line-height: 50px;
+                }
+            }
 
             p.description {
                 color: $services-page-exertise-block-color;
@@ -114,6 +179,12 @@
                 letter-spacing: 0.5px;
                 line-height: 30px;
                 text-align: center;
+                @include phone {
+                    font-size: 16px;
+                    color: $services-page-exertise-block-color-mobile;
+                    letter-spacing: 0.44px;
+                    line-height: 30px;
+                }
             }
             p.project-type {
                 color: $services-page-exertise-project-type-color;
@@ -124,6 +195,13 @@
                 line-height: 30px;
                 text-align: center;
                 text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                @include phone {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $services-page-exertise-project-type-color-mobile;
+                    letter-spacing: 0.44px;
+                    line-height: 30px;
+                }
             }
         }
     }
@@ -137,7 +215,9 @@
         font-weight: normal;
         letter-spacing: 7px;
         line-height: 50px;
-        margin-bottom: 400px;
+        @include phone {
+            display: none;
+        }
 
         .swm-top-left {
             display: flex;

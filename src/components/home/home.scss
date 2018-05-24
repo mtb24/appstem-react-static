@@ -3,11 +3,19 @@
 .header-wrapper {
     position: absolute;
     z-index: 99;
+    @include phone {
+        .header-logo {
+            margin-left: -1em;
+        }
+        .hamburger {
+            margin-top: 0.5em;
+        }
+    }
 }
 h1.title {
     position: absolute;
     top: 2em;
-    width: 42%;
+    width: 7em;
     z-index: 99;
     color: $primary-font-color;
     font-family: $secondary-font-family;
@@ -16,25 +24,36 @@ h1.title {
     letter-spacing: -0.83px;
     line-height: 96px;
     text-align: center;
-}
-.hero-wrapper {
-    height: 787px !important;
+    @include tablet {
+        // width: 90%;
+    }
+    @include phone {
+        // width: 89%;
+        font-size: 36px;
+        font-weight: 200;
+        letter-spacing: -0.31px;
+        line-height: 48px;
+        margin: 0;
+        top: 3em;
+    }
 }
 
 .home-wrapper {
     width: 100%;
-    top: -113px;
+    position: relative;
     padding-bottom: 200px;
+    @include phone {
+        padding-bottom: 0;
+    }
 
     .home-text {
         height: 675px;
         top: -111px;
         
         @include phone {
-            height: 3.3%;
-            width: 89.33%;
-            font-size: 20px;
-            line-height: 32px;
+            height: 275px;
+            width: 100%;
+            top: 0;
         }
 
         p {
@@ -45,32 +64,57 @@ h1.title {
             line-height: 72px;
             text-align: center;
             margin: 250px auto;
+            
+            @include phone {
+                width: 89%;
+                font-size: 20px;
+                line-height: 32px;
+                margin: 2em auto;
+            }
         }
     }
     .case-study-1 {
         height: 500px;
         padding: 10% 0;
         top: -222px;
+        @include phone {
+            top: 0;
+            height: 475px;
+            padding-top: 4em;
+            .feature-block-image {
+                width: 60%;
+            }
+        }
     }
     .case-study-2 {
         height: 500px;
         padding: 10% 0;
         background-color: #1C1819;
         top: -333px;
+        @include phone {
+            top: 0;
+            padding: 1em 0;
+            height: 420px;
+        }
     }
     .case-study-3 {
         height: 500px;
         padding: 10% 0;
-        top: -444px;   
+        top: -444px;
+        @include phone {
+            top: 0;
+            height: 430px;
+            .feature-block-image {
+                max-width: 320px;
+            }
+        }
     }
     .view-portfolio-link {
         top: -444px;
+        @include phone {
+            top: 0;
+            margin-bottom: 4em;
+        }
     }
 
-}
-.testimonial-slider {
-    top: -444px;
-}
-.footer-body {
-    margin-top: -20em !important;
 }
