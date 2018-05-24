@@ -42,6 +42,10 @@
     @include phone {
         height: 17em;
     }
+
+    .hero-video {
+        width: 100%;
+    }
     
     .title {
         position: relative;
