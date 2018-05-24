@@ -26,8 +26,9 @@ export default withRouteData(({ culture, testimonials }) => {
       videos.push(val)
     }
   });
+
   const renderedImages = images.length && images.map((image, index) => (<ImageBox key={ index } image={ image } />))
-  
+
   return (
     <React.Fragment>
 
@@ -66,7 +67,7 @@ export default withRouteData(({ culture, testimonials }) => {
 
       </div>
 
-      <Testimonials className='angle--both-left-right' />
+      <Testimonials className='culture-testimonials angle--both-left-right' />
 
     </React.Fragment>
   )
