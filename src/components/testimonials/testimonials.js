@@ -12,7 +12,7 @@ export default (props) => {
         slidesToScroll: 1,
     }
     return (
-        <section className={`testimonial-slider ${props.className || ''}`}>
+        <div className={`testimonial-slider ${props.className || ''}`}>
             <Cta heading={`${props.heading || 'Testimonials'}`}>
                 <Slider {...settings}>
                     <div>
@@ -42,5 +42,5 @@ export default (props) => {
                     </div>
                 </Slider>
             </Cta>
-        </section>
+        </div>
 )}
