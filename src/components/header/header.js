@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-static'
 import Nav from '../nav/nav'
-//import AppstemLogo from '../social/icons/appstem-logo'
-import Logo from '../../../public/assets/images/main-pages/icons/Appstem Logo_white.png'
+import AppstemLogo from '../social/icons/appstem-logo'
 import './header.scss'
 
 export default () => (
@@ -10,8 +9,7 @@ export default () => (
     <div className={ 'header-wrapper' }>
 
         <Link to="/">
-            {/* <AppstemLogo className='header-logo' width='175' height='40' fillColor='#fefefe'/> */}
-            <img src={ Logo } alt='Appstem Logo' />
+            <AppstemLogo className='header-logo' width='175' height='40' fillColor='#fefefe'/>
         </Link>
 
         <Nav className='all-caps' />
