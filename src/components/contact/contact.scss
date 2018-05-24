@@ -8,9 +8,19 @@
     position: relative;
     top: -122px;
     padding-top: 120px;
-    margin-bottom: 17em;
+    margin-bottom: -159px;
     color: $page-text-color;
     background-color: $page-background-color;
+    z-index: -1;
+    @include tablet {
+        top: -72px;
+        margin-bottom: 0;
+    }
+    @include phone {
+        top: -25px;
+        padding-top: 60px;
+        margin-bottom: 0;
+    }
 
     .cta-wrapper {
         margin-top: 3em;
@@ -101,6 +111,9 @@
             font-size: 20px;
             line-height: 40px;
             color: $form-heading-color;
+            @include phone {
+                padding: 0 1em;
+            }
         }
         .openings-link {
             color: $form-text-color-mobile;
