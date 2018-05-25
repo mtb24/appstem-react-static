@@ -1,0 +1,67 @@
+@import '../../styles/styles.scss';
+
+.careers-wrapper {
+    width: 100%;
+    text-align: left;
+    background-color: $white;
+    color: $careers-page-text-color;
+
+    @include desktop {
+        top: -8.5em;
+        padding-top: 8.5em;
+        padding-bottom: 8.5em;
+    }
+    @include tablet {
+        top: -4.5em;
+        padding-top: 4.5em;
+        padding-bottom: 4.5em;
+    }
+    @include phone {
+        top: -3.5em;
+        padding-top: 3.5em;
+        padding-bottom: 3.5em;
+    }
+
+    h2 {
+        color: $careers-page-heading-color;
+    }
+
+    .about-appstem {
+        margin: 0 auto;
+        padding-top: 80px;
+
+        p {
+            width: 49%;
+            max-width: 545px;
+            margin: 3.5em auto 8em auto;
+
+            @include phone {
+                width: 89%;
+            }
+        }
+    }
+    .why-appstem {
+        width: 55%;
+        margin: 0 auto;
+
+        ul {
+            padding-left: 10px;
+            list-style: '- ';
+        }
+
+    }
+    .open-positions {
+        margin-top: 10em;
+    }
+
+    .send-an-email {
+        font-size: 24px;
+        line-height: 42px;
+        text-align: center;
+        margin-top: 10em;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}
