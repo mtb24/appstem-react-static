@@ -28,10 +28,12 @@ export default {
   getRoutes: async () => {
     const {
       work,
+      openings,
       home,
       contact,
       culture,
-      services
+      services,
+      careers
     } = await jdown('content')
 
     const caseStudiesForHomePage = work.filter( caseStudy => caseStudy.slug === 'hubbub' || caseStudy.slug === 'jetsuite-x' || caseStudy.slug === 'tesla-motors' )
@@ -78,6 +80,14 @@ export default {
         component: 'src/components/contact/contact',
         getData: () => ({
           contact,
+        }),
+      },
+      {
+        path: '/careers',
+        component: 'src/components/careers/careers',
+        getData: () => ({
+          careers,
+          openings,
         }),
       },
       {
