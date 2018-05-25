@@ -4,8 +4,9 @@ import convert from 'htmr'
 import Hero from '../hero/hero'
 import backgroundImage from '../../../public/assets/images/main-pages/large/bg_careers.jpg'
 import Cta from '../layout/page-section/cta'
+import './careers.scss'
 
-export default withRouteData(({ work }) => {
+export default withRouteData(({ careers, openings }) => {
   
     return (
 
@@ -16,7 +17,7 @@ export default withRouteData(({ work }) => {
                     backgroundImage={ backgroundImage } 
                     className='angle--bottom-right' />
 
-            <div className='careers-wrapper angle--bottom-right'>
+            <div className='careers-wrapper angle--both-left-right'>
 
                 <Cta heading='About Appstem' className='about-appstem'>
                     <p>Our mission is to make purpose-built apps that serve real needs in people’s lives. We use metrics-driven mobile strategies, human-centered design and efficient development to create apps that people want to use.</p>
@@ -27,10 +28,13 @@ export default withRouteData(({ work }) => {
                 </Cta>
 
                 <Cta heading='Open Positions' className='open-positions'>
-                    {/* accordion here */}
+                    {
+                        /* accordion here */
+                        console.log('open positions: ', openings)
+                    }
                 </Cta>
 
-                <p className='send-an-email'>You can’t find what you are looking for, send us an email <span>careers@appstem.com</span></p>
+                <p className='send-an-email'>You can’t find what you are looking for, send us an email <br/><span>careers@appstem.com</span></p>
 
             </div>
 
