@@ -24,16 +24,24 @@
 
     h2 {
         color: $careers-page-heading-color;
+        @include phone {}
+        @include tablet {
+            padding: 0;
+        }
     }
 
     .about-appstem {
-        margin: 0 auto;
-        padding-top: 80px;
+        margin: 0 auto 70px auto;
+        padding-top: 70px;
+        @include phone {
+            margin-bottom: 3em;
+            padding-top: 56px;
+        }
 
         p {
             width: 49%;
             max-width: 545px;
-            margin: 3.5em auto 8em auto;
+            margin: 3.5em auto 0 auto;
 
             @include phone {
                 width: 89%;
@@ -43,15 +51,30 @@
     .why-appstem {
         width: 55%;
         margin: 0 auto;
+        @include phone {
+            width: 85%;
+        }
 
         ul {
             padding-left: 10px;
             list-style: '- ';
         }
 
+        p {
+            @include phone {
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 3.2px;
+                line-height: 27px;
+            }
+        }
+
     }
     .open-positions {
-        margin-top: 10em;
+        margin-top: 70px;
+        @include phone {
+            margin-top: 5em;
+        }
     }
 
     .send-an-email {
@@ -59,6 +82,12 @@
         line-height: 42px;
         text-align: center;
         margin-top: 10em;
+        @include phone {
+            font-size: 16px;
+            line-height: 24px;
+            width: 76%;
+            margin: 10em auto 2em auto;
+        }
 
         span {
             font-weight: bold;
