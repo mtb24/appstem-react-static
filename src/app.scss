@@ -11,7 +11,7 @@ body {
   height: 100vh;
   min-height: 100vh;
   width: 100%;
-  max-width: 1400px;
+  max-width: 100vw;
 
   a {
     text-decoration: none;
@@ -22,7 +22,7 @@ body {
   }
 
   .app-wrapper {
-    max-width: 1400px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,18 +35,35 @@ body {
   }
 
   .page-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 48px;
+    padding-top: 15px;
     background-color: $footerBottomBackgroundColor;
+    color: $footer-copywrite-color;
+    font-size: 11px;
+    letter-spacing: 0.85px;
+    line-height: 16px;
+
 
     .footer-copyright {
-        color: #8E8E8E;
-        font-family: $primary-font-family;
-        font-size: 11px;
-        letter-spacing: 0.85px;
-        line-height: 16px;
-        text-align: center;
-        padding-top: 15px;
+        margin-left: 22.25em;
+    }
+    .footer-legal {
+      display: flex;
+      flex-direction: row;
+      margin-right: 22.5em;
+
+      a {
+        color: inherit;
+      }
+
+      .footer-terms {
+        margin-right: 32px;
+      }
     }
     @include tablet {
       

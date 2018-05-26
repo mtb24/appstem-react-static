@@ -2,11 +2,10 @@
 
 .header-wrapper {
     position: relative;
-    top: 20px;
+    top: 81px;
     z-index: 1;
     height: 40px;
     width: 100%;
-    max-width: 1400px;
     color: $body-text-color;
     background: transparent;
     display: flex;
@@ -15,11 +14,13 @@
     align-items: center;
 
     .header-logo {
-        margin-left: 2rem;
+        margin-left: 7.5em;
+        width: 148px;
+        height: 24px;
     }
     
     nav {
-        margin-right: 7em;
+        margin-right: 8em;
         
         a:hover {
             text-decoration: underline;

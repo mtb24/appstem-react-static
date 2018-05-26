@@ -66,6 +66,7 @@
             grid-area: addresses;
             font-family: $primary-font-family;
             width: 7em;
+            text-align: left;
 
             @include phone {
                 margin-top: 6em;
