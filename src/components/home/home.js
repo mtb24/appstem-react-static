@@ -5,7 +5,6 @@ import AppstemLogo from '../social/icons/appstem-logo'
 import Hero from '../hero/hero'
 import Testimonials from '../testimonials/testimonials'
 import LinkOutlined from '../buttons/link-outlined/link-outlined'
-import AngledSection from '../layout/page-section/angled-section'
 import FeatureBlock from '../feature-block/feature-block'
 import './home.scss'
 
@@ -18,15 +17,11 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
             heroType='video' 
             backgroundVideo={ home.videoURL || '' } 
             posterImg={ home.posterImg || '' } 
-            className='angle--bottom-right'>
-
-        <h1 className='hero-heading'>{ home.heroHeading }</h1>
-
-      </Hero>
+            className='angle--bottom-right'/>
 
       <div className='home-wrapper'>
 
-          <AngledSection className='home-text' mask='angle--bottom-right'> { convert(home.contents) } </AngledSection>
+          <div className='home-text angle--both-left-right'> { convert(home.contents) } </div>
 
           <FeatureBlock key={ 'case-study-1' } className='angle--both-left-right case-study-1' imagePosition={ 'left' } caseStudy={ caseStudiesForHomePage[0] } />
           
