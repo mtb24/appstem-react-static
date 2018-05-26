@@ -22,8 +22,6 @@ export default props => {
             console.log('Hero video loading...')
             return (
                 <React.Fragment>
-                <Header/>
-                <h1 className='title'>{ props.title || 'Default Title' }</h1> 
                 <div className={`hero-video-wrapper ${props.className || ''}`}>
                     <video
                         mute='1'
@@ -35,6 +33,8 @@ export default props => {
                         <source src={ `assets/videos/${ props.backgroundVideo || '' }` }/>
                     </video>
                 </div>
+                <Header/>
+                <h1 className='title'>{ props.title || 'Default Title' }</h1>
                 </React.Fragment>
             )
             break
