@@ -12,32 +12,25 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 99;
+
+    @include phone {
+        top: 31px;
+    }
 
     .header-logo {
         margin-left: 7.5em;
         width: 148px;
         height: 24px;
-    }
-    
-    nav {
-        margin-right: 8em;
-        
-        a:hover {
-            text-decoration: underline;
+
+        @include phone {
+            margin-left: 1.25em;
+            width: 124px;
+            height: 21px;
         }
-        a:nth-of-type(4) {
-            display: none;
+        @include tablet {
+            margin-left: 4.5em;
         }
     }
-}
 
-
-/* Breakpoints */
-@media (max-width: 805px) {
-    .header-logo {
-        margin-left: -2em;
-    }
-    .hamburger {
-        margin-right: 2em;
-    }
 }
