@@ -25,13 +25,13 @@ export default props => {
 
                 <div className='feature-block-details'>
 
-                    <h2>{ props.caseStudy.title }</h2>
+                    <h2 className='all-caps'>{ props.caseStudy.title }</h2>
 
                     <p className='feature-block-project-type'>{ props.caseStudy.type }</p>
 
                     <div className='feature-block-project-description'>{ convert( props.caseStudy.contents ) }</div>
 
-                    <Link to={`/work/${ props.caseStudy.slug }/`}>View the case study <img src={ Arrow } alt='White arrow icon' /></Link>
+                    <Link to={`/work/${ props.caseStudy.slug }/`} className='all-caps'>View the case study <img src={ Arrow } alt='Link to case studies' /></Link>
 
                 </div>
 
