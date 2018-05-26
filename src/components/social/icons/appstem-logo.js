@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props => {
-    const fillcolor = props.fillColor || 'cadetblue'
+    const fillcolor = props.fillColor || '#3cd52e'
 
     return (
         <svg id="appstem-icon" className={ props.className } viewBox={`0 -25 150 80`} width={props.width} height={props.height}  aria-labelledby="appstem-icon" xmlns="http://www.w3.org/2000/svg">
