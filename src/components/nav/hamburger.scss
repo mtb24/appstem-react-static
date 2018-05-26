@@ -7,6 +7,10 @@
 	width: 33px;
 	flex-direction: column;
 	justify-content: space-between;
+
+	@include phone {
+		margin-right: 24px;
+	}
 	
 	.line {
 		box-sizing: border-box;
