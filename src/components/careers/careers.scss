@@ -75,6 +75,67 @@
         @include phone {
             margin-top: 5em;
         }
+
+        .Collapsible {
+            margin: 67px auto;
+            width: 56%;
+
+            .job-opening-trigger {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+    
+                .job-title {
+                    color: $careers-page-job-title-color;
+                    font-size: 24px;
+                    font-weight: bold;
+                    letter-spacing: 1.8px;
+                    line-height: 24px;
+                }
+    
+                .job-meta {
+                    display: flex;
+                    flex-direction: row;
+    
+                    .job-type {
+                        color: $careers-page-job-meta-color;
+                        font-size: 24px;
+                        letter-spacing: 1.8px;
+                        line-height: 24px;
+    
+                        img {
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
+                    .job-location {
+                        color: $careers-page-job-meta-color;
+                        font-size: 24px;
+                        letter-spacing: 1.8px;
+                        line-height: 24px;
+    
+                        img {
+                            height: 16px;
+                            width: 10px;
+                        }
+                    }
+                    .trigger-button {
+                        height: 19px;
+                        width: 19px;
+                    }
+                }
+            }
+        }
+        .collapsible-divider {
+            box-sizing: border-box;
+            height: 3px;
+            width: 56%;
+            border: 1px solid #B9B9B9;
+            opacity: 0.5;
+        }
+
+        
     }
 
     .send-an-email {
