@@ -33,4 +33,11 @@
         }
     }
 
+    .nav-wrapper nav {
+        
+        a:nth-of-type(4) {
+            display: none;
+        }
+    }
+
 }

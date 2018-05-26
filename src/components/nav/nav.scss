@@ -46,10 +46,6 @@
         text-decoration: underline;
       }
 
-      &:nth-of-type(4) {
-          display: none;
-      }
-
       &:last-child {
         border: 1px solid $link-color;
         margin-left: 1em;
