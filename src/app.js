@@ -11,7 +11,11 @@ const App = () => (
       <Routes />
       <Footer />
       <div className='page-bottom'>
-        <div className='footer-copyright all-caps'>© 2018 APPSTEM MEDIA LLC. All Rights Reserved.</div>
+        <div className='footer-copyright'>© 2018 Appstem Media LLC. All Rights Reserved.</div>
+        <div className='footer-legal'>
+          <div className='footer-terms'><Link to='#'>Terms</Link></div>
+          <div className='footer-sitemap'><Link to='#'>Site Map</Link></div>
+        </div>
       </div>
     </div>
   </Router>
