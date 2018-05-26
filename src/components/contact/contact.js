@@ -3,7 +3,7 @@ import { withRouteData, Link } from 'react-static'
 import convert from 'htmr'
 import Hero from '../hero/hero'
 import './contact.scss'
-import backgroundImage from './bg_top_contact.png'
+import backgroundImage from '../../../public/assets/images/main-pages/large/bg_contact_page.jpg'
 import { Form, Text } from 'react-form'
 import Cta from '../layout/page-section/cta'
 

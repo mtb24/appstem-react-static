@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouteData, Link } from 'react-static'
 import Hero from '../hero/hero'
-import backgroundImage from './work-background.png'
+import backgroundImage from '../../../public/assets/images/main-pages/large/bg_portfolio.png'
 import './work.scss'
 import FeatureBlock from '../feature-block/feature-block';
 

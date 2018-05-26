@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouteData } from 'react-static'
 import Hero from '../hero/hero'
 import Testimonials from '../testimonials/testimonials'
-import backgroundImage from './culture-background.png'
+import backgroundImage from '../../../public/assets/images/main-pages/large/bg_culture.jpg'
 import ImageBox from '../image-box/image-box'
 import { Player, BigPlayButton, PosterImage } from 'video-react';
 import posterImage from '../../../public/assets/images/main-pages/full/culture-video-poster.png'
