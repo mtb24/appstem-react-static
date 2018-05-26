@@ -50,12 +50,20 @@ body {
 
 
     .footer-copyright {
-        margin-left: 22.25em;
+        margin-left: 21%;
+
+        @include phone {
+          margin: 0 auto;
+        }
     }
     .footer-legal {
       display: flex;
       flex-direction: row;
-      margin-right: 22.5em;
+      margin-right: 21%;
+
+      @include phone {
+        display: none;
+      }
 
       a {
         color: inherit;
@@ -65,12 +73,7 @@ body {
         margin-right: 32px;
       }
     }
-    @include tablet {
-      
-    }
+
   }
 
-  @media (min-width: 1401px) {
-      margin: 0 auto;
-  }
 }
