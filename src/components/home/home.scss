@@ -1,69 +1,46 @@
 @import '../../styles/styles.scss';
 
-.header-wrapper {
-    position: absolute;
-    z-index: 99;
-    @include phone {
-        .header-logo {
-            margin-left: -1em;
-        }
-        .hamburger {
-            margin-top: 0.5em;
-        }
-    }
-}
-h1.title {
-    position: absolute;
-    top: 2em;
-    width: 7em;
-    z-index: 99;
-    color: $primary-font-color;
-    font-family: $secondary-font-family;
-    font-size: 96px;
-    font-weight: 200;
-    letter-spacing: -0.83px;
-    line-height: 96px;
-    text-align: center;
-    @include tablet {
-        // width: 90%;
-    }
-    @include phone {
-        // width: 89%;
-        font-size: 36px;
-        font-weight: 200;
-        letter-spacing: -0.31px;
-        line-height: 48px;
-        margin: 0;
-        top: 3em;
-    }
-}
-
 .home-wrapper {
     width: 100%;
     position: relative;
-    padding-bottom: 200px;
+    
+    @include desktop {
+        top: 32em;
+    }
+    @include tablet {
+        top: 31.5em;
+    }
     @include phone {
-        padding-bottom: 0;
+        top: 13em;
     }
 
     .home-text {
-        height: 675px;
-        top: -111px;
+        position: relative;
+        height: 727px;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         
         @include phone {
-            height: 275px;
-            width: 100%;
-            top: 0;
+            height: 341px;
         }
 
         p {
-            width: 68%;
+            width: 60%;
             color: $white;
             font-family: $primary-font-family;
             font-size: 36px;
             line-height: 72px;
             text-align: center;
-            margin: 250px auto;
+            margin: 0 auto;
+
+            @include tablet {
+                width: 75%;
+                font-size: 28px;
+                line-height: 62px;
+            }
             
             @include phone {
                 width: 89%;
@@ -74,12 +51,21 @@ h1.title {
         }
     }
     .case-study-1 {
-        height: 500px;
+        position: relative;
+        height: 876px;
         padding: 10% 0;
-        top: -222px;
+        top: -7.25em;
+        @include tablet {
+            padding-bottom: 20%;
+
+            .feature-block-image {
+                width: 45%;
+            }
+        }
+        
         @include phone {
-            top: 0;
-            height: 475px;
+            top: -39px;
+            height: 574px;
             padding-top: 4em;
             .feature-block-image {
                 width: 60%;
@@ -87,34 +73,71 @@ h1.title {
         }
     }
     .case-study-2 {
-        height: 500px;
+        position: relative;
+        height: 876px;
         padding: 10% 0;
         background-color: #1C1819;
-        top: -333px;
+        top: -15.25em;
+
         @include phone {
-            top: 0;
+            top: -78px;
             padding: 1em 0;
-            height: 420px;
+            height: 574px;
         }
     }
     .case-study-3 {
-        height: 500px;
-        padding: 10% 0;
-        top: -444px;
+        position: relative;
+        height: 876px;
+        padding: 10% 0 20%;
+        @include desktop {
+            top: -23em;
+        }
+        @include tablet {
+            top: -19em;
+        }
         @include phone {
-            top: 0;
-            height: 430px;
+            top: -117px;
+            height: 574px;
             .feature-block-image {
                 max-width: 320px;
             }
         }
     }
     .view-portfolio-link {
-        top: -444px;
+        position: relative;
+        top: -38em;
+
+        @include tablet {
+            top: -27em;
+            margin-bottom: 8em;
+        }
+        
         @include phone {
-            top: 0;
-            margin-bottom: 4em;
+            top: -185px;
+            margin-bottom: 10em;
         }
     }
 
 }
+.home-wrapper ~ .testimonial-slider {
+    @include phone {
+        top: -4em;
+    }
+    @include tablet {
+        height: 725px;
+    }
+}
+// .home-wrapper ~ .footer-body {
+//     @include tablet {
+//         // padding: 15% 0;
+//     }
+// }
+// .home-wrapper ~ .page-bottom {
+//     position: relative;
+//     @include phone {
+//         // top: -23px;
+//     }
+//     @include tablet {
+//         // margin-bottom: 12em;
+//     }
+// }
