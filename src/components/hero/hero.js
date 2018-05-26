@@ -11,7 +11,7 @@ export default props => {
         case 'image':
             // console.log('Hero image loading...')
             return (
-                <div className={`hero-wrapper ${props.className || ''}`} style={ {backgroundImage: `url(${props.backgroundImage})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center bottom'}}>
+                <div className={`hero-wrapper ${props.className || ''}`} style={ {backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${props.backgroundImage})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
                     <Header/>
                     <h1 className='title'>{ props.title || 'Default Title' }</h1>
                 </div>
