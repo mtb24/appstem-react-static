@@ -17,6 +17,7 @@
     "jdown": "0.4.0",
     "node-sass": "^4.9.0",
     "react": "^16.3.2",
+    "react-collapsible": "^2.2.0",
     "react-dom": "^16.3.2",
     "react-form": "^3.5.5",
     "react-hot-loader": "^4.1.3",
