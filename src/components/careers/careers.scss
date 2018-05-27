@@ -39,9 +39,11 @@
         }
 
         p {
-            width: 49%;
-            max-width: 545px;
             margin: 3.5em auto 0 auto;
+            width: 706px;
+            color: #1B252F;
+            font-size: 20px;
+            line-height: 40px;
 
             @include phone {
                 width: 89%;
@@ -49,8 +51,12 @@
         }
     }
     .why-appstem {
-        width: 55%;
-        margin: 0 auto;
+        margin: 163px auto 0;
+        width: 785px;
+        color: #1B252F;
+        font-size: 20px;
+        line-height: 40px;
+
         @include phone {
             width: 85%;
         }
@@ -71,14 +77,14 @@
 
     }
     .open-positions {
-        margin-top: 70px;
+        margin-top: 307px;
         @include phone {
             margin-top: 5em;
         }
 
         .Collapsible {
             margin: 67px auto;
-            width: 56%;
+            width: 65%;
 
             .job-opening-trigger {
                 display: flex;
@@ -95,8 +101,10 @@
                 }
     
                 .job-meta {
+                    width: 22em;
                     display: flex;
                     flex-direction: row;
+                    justify-content: space-between;
     
                     .job-type {
                         color: $careers-page-job-meta-color;
@@ -126,10 +134,64 @@
                     }
                 }
             }
+            .Collapsible__contentInner {
+
+                p:first-of-type {
+                    color: #000000;
+                    font-size: 20px;
+                    letter-spacing: 0.29px;
+                    line-height: 42px;
+                    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                }
+
+                .about-role {
+                    color: #000000;
+                    font-size: 20px;
+                    letter-spacing: 0.29px;
+                    line-height: 42px;
+                    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                    display: flex;
+                    flex-direction: row;
+                    margin: 124px auto 160px;
+
+                    h2 {
+                        color: #4A4A4A;
+                        font-size: 35px;
+                        letter-spacing: 7px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        margin-right: 96px;
+                        text-align: left;
+                    }
+                }
+                .skills {
+                    display: flex;
+                    flex-direction: row;
+
+                    h2 {
+                        color: #4A4A4A;
+                        font-size: 35px;
+                        letter-spacing: 7px;
+                        line-height: 50px;
+                        font-weight: bold;
+                        margin-right: 96px;
+                        text-align: left;
+                        width: 8em;
+                    }
+                    ul {
+                        color: #000000;
+                        font-size: 20px;
+                        line-height: 42px;
+                    }
+                }
+                .apply-button {
+                    margin: 80px 40% 0;
+                }
+            }
         }
-        .collapsible-divider {
+        .job-opening-seperator {
             box-sizing: border-box;
-            height: 3px;
+            height: 2px;
             width: 56%;
             border: 1px solid #B9B9B9;
             opacity: 0.5;
