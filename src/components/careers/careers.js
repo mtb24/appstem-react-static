@@ -8,6 +8,7 @@ import backgroundImage from '../../../public/assets/images/main-pages/large/bg_c
 import timeIcon from '../../../public/assets/images/main-pages/icons/ic-time@2x.png'
 import locationIcon from '../../../public/assets/images/main-pages/icons/ic-destination-outline@2x.png'
 import circleButton from '../buttons/circle-button/circle-button'
+import ApplyButton from '../buttons/apply-button/apply-button'
 import './careers.scss'
 
 export default withRouteData(({ careers, openings }) => {
@@ -33,8 +34,7 @@ export default withRouteData(({ careers, openings }) => {
 
                 <Cta heading='Open Positions' className='open-positions'>
                     {
-                        /* accordion here */
-                        //console.log('open positions: ', openings)
+
                         openings.map( (job, i) => {
                             const triggerEl = (
                                 <div className='job-opening-trigger'>
@@ -47,9 +47,13 @@ export default withRouteData(({ careers, openings }) => {
                                 </div>
                             )
                             return (
-                                <Collapsible key={ `job-${i}` } trigger={ triggerEl }>
-                                    { convert( job.contents ) }
-                                </Collapsible>
+                                <React.Fragment>
+                                    <Collapsible key={ `job-${i}` } trigger={ triggerEl }>
+                                        { convert( job.contents ) }
+                                        <ApplyButton linkTo='#'/>
+                                    </Collapsible>
+                                    { i < openings.length - 1 ? <hr className='job-opening-seperator'/> : null }
+                                </React.Fragment>
                         )})
                     }
                 </Cta>
