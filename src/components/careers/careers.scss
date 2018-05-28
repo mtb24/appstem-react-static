@@ -47,23 +47,34 @@
 
             @include phone {
                 width: 89%;
+                font-size: 16px;
+                line-height: 24px;
             }
         }
     }
     .why-appstem {
         margin: 163px auto 0;
-        width: 785px;
+        width: 39.5em;
         color: #1B252F;
         font-size: 20px;
         line-height: 40px;
 
+        @include tablet {
+            width: 30em;
+        }
+
         @include phone {
             width: 85%;
+            margin-top: 30px;
         }
 
         ul {
             padding-left: 10px;
             list-style: '- ';
+            @include phone {
+                font-size: 16px;
+                line-height: 24px;
+            }
         }
 
         p {
@@ -77,20 +88,44 @@
 
     }
     .open-positions {
-        margin-top: 307px;
+        @include desktop {
+            margin-top: 307px;
+        }
+        @include tablet {
+            margin-top: 163px;
+        }
         @include phone {
             margin-top: 5em;
         }
 
         .Collapsible {
             margin: 67px auto;
-            width: 65%;
+            @include desktop {
+                width: 65%;
+            }
+            @include tablet {
+                width: 89%;
+            }
+            @include phone {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .rotate {
+                .trigger-button {
+                    transform: rotate(90deg);
+                }
+            }
 
             .job-opening-trigger {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                @include phone {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
     
                 .job-title {
                     color: $careers-page-job-title-color;
@@ -98,6 +133,10 @@
                     font-weight: bold;
                     letter-spacing: 1.8px;
                     line-height: 24px;
+                    @include phone {
+                        font-size: 14px;
+                        letter-spacing: 1.05px;
+                    }
                 }
     
                 .job-meta {
@@ -105,12 +144,20 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
+                    @include phone {
+                        width: 100%;
+                        margin-top: 7px;
+                    }
     
                     .job-type {
                         color: $careers-page-job-meta-color;
                         font-size: 24px;
                         letter-spacing: 1.8px;
                         line-height: 24px;
+                        @include phone {
+                            font-size: 16px;
+                            letter-spacing: 1.2px;
+                        }
     
                         img {
                             height: 16px;
@@ -122,6 +169,10 @@
                         font-size: 24px;
                         letter-spacing: 1.8px;
                         line-height: 24px;
+                        @include phone {
+                            font-size: 16px;
+                            letter-spacing: 1.2px;
+                        }
     
                         img {
                             height: 16px;
@@ -136,12 +187,17 @@
             }
             .Collapsible__contentInner {
 
-                p:first-of-type {
+                & > p:first-of-type {
                     color: #000000;
                     font-size: 20px;
                     letter-spacing: 0.29px;
                     line-height: 42px;
                     text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                    @include phone {
+                        color: #1B252F;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
                 }
 
                 .about-role {
@@ -153,6 +209,12 @@
                     display: flex;
                     flex-direction: row;
                     margin: 124px auto 160px;
+                    @include phone {
+                        flex-direction: column;
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin: 18px auto 34px;
+                    }
 
                     h2 {
                         color: #4A4A4A;
@@ -162,11 +224,23 @@
                         font-weight: bold;
                         margin-right: 96px;
                         text-align: left;
+                        @include tablet {
+                            margin-right: 35px;
+                            font-size: 32px;
+                        }
+                        @include phone {
+                            font-size: 18px;
+                            letter-spacing: 3.6px;
+                            margin-right: 0;
+                        }
                     }
                 }
                 .skills {
                     display: flex;
                     flex-direction: row;
+                    @include phone {
+                        flex-direction: column;
+                    }
 
                     h2 {
                         color: #4A4A4A;
@@ -177,15 +251,59 @@
                         margin-right: 96px;
                         text-align: left;
                         width: 8em;
+                        @include tablet {
+                            margin-right: 35px;
+                            font-size: 32px;
+                        }
+                        @include phone {
+                            font-size: 18px;
+                            letter-spacing: 3.6px;
+                            margin-right: 0;
+                            line-height: 30px;
+                            width: 100%;
+                        }
+
                     }
                     ul {
                         color: #000000;
                         font-size: 20px;
                         line-height: 42px;
+                        
+                        @include phone {
+                            color: #1B252F;
+                            font-size: 16px;
+                            line-height: 24px;
+                            padding-left: 16px;
+                        }
+                    }
+                    & > div > p {
+                        @include desktop {
+                            font-size: 20px;
+                            line-height: 42px;
+                        }
+                        @include tablet {
+                            font-size: 20px;
+                            line-height: 42px;
+                        }
+                        @include phone {
+                            font-size: 18px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            letter-spacing: 3.6px;
+                            line-height: 30px;
+                        }
                     }
                 }
                 .apply-button {
-                    margin: 80px 40% 0;
+                    @include desktop {
+                        margin: 80px auto 0 13em;
+                    }
+                    @include tablet {
+                        margin: 80px 33% 0;
+                    }
+                    @include phone {
+                        margin: 66px auto 0 auto;
+                    }
                 }
             }
         }
@@ -195,6 +313,13 @@
             width: 56%;
             border: 1px solid #B9B9B9;
             opacity: 0.5;
+            @include tablet {
+                width: 89%;
+            }
+            @include phone {
+                width: 80%;
+                margin: 17px auto;
+            }
         }
 
         
@@ -209,7 +334,7 @@
             font-size: 16px;
             line-height: 24px;
             width: 76%;
-            margin: 10em auto 2em auto;
+            margin: 96px auto 12px auto;
         }
 
         span {
