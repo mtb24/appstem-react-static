@@ -6,7 +6,7 @@
     align-items: center;
     width: 100%;
     position: relative;
-    top: -122px;
+    top: -160px;
     padding-top: 120px;
     margin-bottom: -159px;
     color: $page-text-color;
@@ -41,7 +41,7 @@
             
             label {
                 position: relative;
-                top: -2em;
+                top: -45px;
                 left: 5px;
                 color: $form-inactive-border-color;
                 font-size: 16px;
@@ -55,6 +55,11 @@
                     letter-spacing: 1.75px;
                     line-height: 20px;
                 }
+
+                label.has-value {
+                    // force label to stay in elevated position if input has a value
+                    top: -45px;
+                }
             }
             input {
                 width: 100%;
@@ -65,7 +70,7 @@
                 &:focus + label {
                     /* transform: scale(0.5) translate(-50%, -50%); */
                     color: $appstem-green;
-                    top: -40px;
+                    top: -45px;
                     font-size: 0.75em;
                 }
                 &:focus,
