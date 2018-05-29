@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-static';
 import './link-outlined.scss'
 
 export default (props) => (
