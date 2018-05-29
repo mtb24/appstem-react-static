@@ -50,6 +50,15 @@
             margin: 70px 0 0 0;
             padding: 0 4em;
         }
+        &:before {
+            content: "\201C";
+            color: $appstem-green;
+            font-size: 700%;
+            position: relative;
+            top: 95px;
+            left: -435px;
+
+        }
         .testimonial-content {
             color: $testimonials-text-color;
             font-family: $primary-font-family;
