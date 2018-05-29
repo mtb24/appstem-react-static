@@ -296,7 +296,7 @@
                 }
                 .apply-button {
                     @include desktop {
-                        margin: 80px auto 0 13em;
+                        margin: 80px auto auto;
                     }
                     @include tablet {
                         margin: 80px 33% 0;
