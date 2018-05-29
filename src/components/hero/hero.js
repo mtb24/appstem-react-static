@@ -1,6 +1,4 @@
 import React from 'react'
-import Header from '../header/header'
-
 import './hero.scss'
 
 export default props => {
@@ -12,7 +10,6 @@ export default props => {
             // console.log('Hero image loading...')
             return (
                 <div className={`hero-wrapper ${props.className || ''}`} style={ {backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${props.backgroundImage})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
-                    <Header/>
                     <h1 className='title'>{ props.title || 'Default Title' }</h1>
                 </div>
             )
@@ -33,7 +30,6 @@ export default props => {
                         <source src={ `assets/videos/${ props.backgroundVideo || '' }` }/>
                     </video>
                 </div>
-                <Header/>
                 <h1 className='title'>{ props.title || 'Default Title' }</h1>
                 </React.Fragment>
             )
