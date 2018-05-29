@@ -2,10 +2,13 @@ import React from 'react'
 import { withRouteData, Link } from 'react-static'
 import convert from 'htmr'
 import Hero from '../hero/hero'
-import './contact.scss'
 import backgroundImage from '../../../public/assets/images/main-pages/large/bg_contact_page.jpg'
 import { Form, Text } from 'react-form'
 import Cta from '../layout/page-section/cta'
+import { ClipLoader } from 'react-spinners'
+import ConfirmationModal from '../confirmationModal/confirmation-modal'
+import Button from '../buttons/base-button/button'
+import './contact.scss'
 
 const validate = value => ({
   
@@ -17,17 +20,7 @@ const validate = value => ({
 })
 
 const handleFormSubmit = (values, e, formApi) => {
-  // API token
-  const token = 'e3da9972-9ac2-4577-b725-ddc217585148'
   console.log('submitted values: ', values)
-  Email.send(
-    "from@you.com",
-    "to@them.com",
-    "This is a subject",
-    "this is the body",
-    {token: "63cb3a19-2684-44fa-b76f-debf422d8b00"},
-    function done(message) { alert("sent") }    
-  )
 }
 
 export default withRouteData(({ contact }) => (
@@ -71,7 +64,7 @@ export default withRouteData(({ contact }) => (
           <label className='all-caps' htmlFor="project">Tell us about your project</label>
         </div>
 
-        <button type="submit" className="contact-form-submit all-caps">Send</button>
+        <Button linkTo='#' className="contact-form-submit" buttonText='Send'/>
 
       </form>
     )}
