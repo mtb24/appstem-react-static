@@ -1,3 +1,4 @@
+@import "~video-react/styles/scss/video-react";
 @import '../../styles/styles.scss';
 
 .culture-wrapper {
@@ -13,43 +14,46 @@
     @include phone {
         margin-bottom: 137px;
     }
-    
-    p {
-        color: $services-page-p-color;
-        font-family: $primary-font-family;
-        font-size: 28px;
-        line-height: 42px;
-        padding: 0 19%;
 
-        // if sibling p's, add margin
-        &:nth-of-type(2) {
-            margin-top: 2em;
-        }
+    .culture-who-we-are {
         
         @include phone {
-            font-size: 16px;
-            line-height: 24px;
-            padding: 0 8.5%;
+            margin-bottom: 0;
         }
-        @include tablet {
-            padding: 0 5em;
+
+        p {
+            color: $services-page-p-color;
+            font-family: $primary-font-family;
+            font-size: 28px;
+            line-height: 42px;
+    
+            // if sibling p's, add margin
+            &:nth-of-type(2) {
+                margin-top: 2em;
+            }
+            @include desktop {
+                padding: 0 28%;
+            }
+            @include phone {
+                font-size: 16px;
+                line-height: 24px;
+                padding: 0 8.5%;
+            }
+            @include tablet {
+                padding: 0 5em;
+            }
         }
     }
-
-    // section {
-    //     width: 100%;
-    //     margin-top: 6em;
-
-    //     @include phone {
-    //         margin-top: 85px;
-    //     }
-    // }
+    
 
     .video-react {
         width: 100%;
         max-width: 960px;
-        margin-top: 12em;
-        padding-top: 54em;
+        // margin-top: 124px;
+        // padding-top: 54em;
+        @include tablet {
+            margin: 124px auto 124px auto;
+        }
         @include phone {
             margin-top: 85px;
         }
@@ -58,7 +62,33 @@
         }
     }
     .culture-work-as-team {
-        margin-top: 234px;
+        
+        p {
+            color: $services-page-p-color;
+            font-family: $primary-font-family;
+    
+            // if sibling p's, add margin
+            &:nth-of-type(2) {
+                margin-top: 2em;
+            }
+            @include desktop {
+                width: 815px;
+                margin: 0 auto;
+                font-size: 24px;
+                line-height: 42px;
+                text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+            }
+            @include tablet {
+                font-size: 24px;
+                line-height: 42px;
+                padding: 0 5em;
+            }
+            @include phone {
+                font-size: 16px;
+                line-height: 24px;
+                padding: 0 8.5%;
+            }
+        }
 
         @include phone {
             margin-top: 85px;
@@ -69,16 +99,23 @@
         @include desktop {
             margin: 15em 0 5em 0;
         }
+        @include tablet {
+            margin-top: 7em;
+        }
+        @include phone {
+            margin-top: 78px;
+        }
 
         .culture-team-images {
             width: 100%;
-            margin-top: 6em;
+            max-width: 970px;
+            margin: 0 auto;
             display: grid;
+            justify-items: center;
 
             @include phone {
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 1em;
-                justify-items: center;
                 margin-top: 34px;
 
                 // .imagebox-wrapper:last-of-type {
@@ -135,19 +172,24 @@
         p {
             width: 549px;
             margin: 0 auto;
-        }
-        .view-openings-link {
-            top: 8em;
-        }
-
-        @include phone {
-            p {
+            
+            @include desktop {
+                    width: 549px;
+                    font-size: 24px;
+                    line-height: 42px;
+                    text-align: center;
+                    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+            }
+            @include phone {
                 width: 260px;
                 padding: 0px;
                 margin: 0 auto;
                 text-align: center;
             }
-            
         }
+        .view-openings-link {
+            top: 8em;
+        }
+
     }
 }
