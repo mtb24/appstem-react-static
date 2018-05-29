@@ -9,7 +9,7 @@ import timeIcon from '../../../public/assets/images/main-pages/icons/ic-time@2x.
 import locationIcon from '../../../public/assets/images/main-pages/icons/ic-destination-outline@2x.png'
 import openButton from '../../../public/assets/images/icons/chevron-right.svg'
 import closeButton from '../../../public/assets/images/icons/circle-outline-with-x.svg'
-import ApplyButton from '../buttons/apply-button/apply-button'
+import Button from '../buttons/base-button/button'
 import './careers.scss'
 
 export default withRouteData(({ careers, openings }) => {
@@ -53,7 +53,7 @@ export default withRouteData(({ careers, openings }) => {
                                 <React.Fragment>
                                     <Collapsible key={ i } trigger={ triggerEl } triggerOpenedClassName='rotate' >
                                         { convert( job.contents ) }
-                                        <ApplyButton linkTo='#'/>
+                                        <Button linkTo='#' buttonText='Apply' className='apply-button'/>
                                     </Collapsible>
                                     { i < openings.length - 1 ? <hr className='job-opening-seperator'/> : null }
                                 </React.Fragment>
