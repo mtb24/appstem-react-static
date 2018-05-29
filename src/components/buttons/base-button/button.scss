@@ -1,0 +1,22 @@
+@import '../../../styles/styles.scss';
+
+.button-wrapper {
+    text-align: center;
+
+    a {
+        .button {
+            height: 72px;
+            width: 221px;
+            background-color: $appstem-green;
+            color: $body-text-color;
+            font-family: $primary-font-family;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 3.2px;
+            line-height: 23px;
+            text-align: center;
+            border: none;
+            border-radius: 3px;
+        }
+    }
+}
