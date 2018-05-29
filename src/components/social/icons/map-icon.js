@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props => {
-    const fillcolor = props.fillColor || 'cadetblue'
+    const fillcolor = props.fillColor || '#3cd52e'
 
     return (
         <svg id="map-icon" className={ props.className } width={props.width} height={props.height} viewBox='0 -35 400 600' aria-labelledby="title" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio='xMidYMid meet'>

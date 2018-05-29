@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props => {
-    const fillcolor = props.fillColor || 'cadetblue'
+    const fillcolor = props.fillColor || '#3cd52e'
 
     return (
         <svg id="email-icon" className={ props.className } viewBox='-5 -13 30 20' width={props.width} height={props.height}  aria-labelledby="title" xmlns="http://www.w3.org/2000/svg">

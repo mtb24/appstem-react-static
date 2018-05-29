@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props => {
-    const fillcolor = props.fillColor || 'cadetblue'
+    const fillcolor = props.fillColor || '#3cd52e'
 
     return (
         <svg className={ props.className } width={props.width || "36px"} height={props.height || "36px"} viewBox="0 0 36 36"  aria-labelledby="title" xmlns="http://www.w3.org/2000/svg">

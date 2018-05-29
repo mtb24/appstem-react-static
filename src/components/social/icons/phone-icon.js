@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props => {
-    const fillcolor = props.fillColor || 'cadetblue'
+    const fillcolor = props.fillColor || '#3cd52e'
 
     return (
         <svg id="phone-icon" className={ props.className } viewBox='-7 -14 30 30' width={props.width} height={props.height}  aria-labelledby="title" xmlns="http://www.w3.org/2000/svg">

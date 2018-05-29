@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props => {
-    const fillcolor = props.fillColor || 'cadetblue'
+    const fillcolor = props.fillColor || '#3cd52e'
 
     return (
         <svg id="facebook-icon" className={ props.className } width={props.width || "37px"} height={props.height || "37px"} viewBox="0 0 37 37"  aria-labelledby="title" xmlns="http://www.w3.org/2000/svg">
