@@ -24,11 +24,11 @@
     "react-router": "^4.2.0",
     "react-slick": "^0.23.1",
     "react-spinners": "^0.3.2",
-    "react-static": "^5.9.5",
+    "react-static": "^5.9.6",
     "react-visibility-sensor": "^3.11.0",
     "sass-loader": "^7.0.1",
     "slick-carousel": "^1.8.1",
-    "video-react": "^0.10.5"
+    "video-react": "^0.10.9"
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",
