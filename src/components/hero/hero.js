@@ -16,7 +16,7 @@ export default props => {
             break
         
         case 'video': 
-            console.log('Hero video loading...')
+            // console.log('Hero video loading...')
             return (
                 <React.Fragment>
                 <div className={`hero-video-wrapper ${props.className || ''}`}>
