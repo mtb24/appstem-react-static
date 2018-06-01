@@ -23,6 +23,17 @@ const handleFormSubmit = (values, e, formApi) => {
   console.log('submitted values: ', values)
 }
 
+// const checkForValue = inputEl => {
+//   console.log('el changed: ', inputEl)
+//   if (inputEl) {
+//     if(inputEl.value) {
+//       inputEl.classList.add('has-value')
+//     } else {
+//       inputEl.classList.remove('has-value')
+//     }
+//   }
+// }
+
 export default withRouteData(({ contact }) => (
 <React.Fragment>
   
@@ -37,7 +48,7 @@ export default withRouteData(({ contact }) => (
 
     <Form onSubmit={ submittedValues => handleFormSubmit(submittedValues) }>
     {formApi => (
-      <form action="mailto:kendowney.com@gmail.com" method="post" encType="text/plain" id="contact-form" className="contact-form" >
+      <form action='#' id="contact-form" className="contact-form" >
 
         <div className='contact-form-field-wrapper'>
           <Text field="name" id="name" name='name' validate={validate} />
