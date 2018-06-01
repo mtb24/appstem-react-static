@@ -1,7 +1,7 @@
 import { reloadRoutes } from 'react-static/node'
 import jdown from 'jdown'
 import chokidar from 'chokidar'
-import Document from './src/components/document/document'
+//import Document from './src/components/document/document'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 chokidar.watch('content').on('all', () => reloadRoutes())
@@ -10,7 +10,7 @@ export default {
   /* bundleAnalyzer: true, // use with 'yarn build' */
   siteRoot: 'http://localhost:3000',
 
-  Document,
+  //Document,
 
   getSiteData: () => ({
     title: 'Appstem',
@@ -100,11 +100,7 @@ export default {
     let loaders = []
 
     if (stage === 'dev') {
-      loaders = [
-        {  loader: 'style-loader'}, 
-        {  loader: 'css-loader'}, 
-        {  loader: 'sass-loader'}
-      ]
+      loaders = [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }]
     } else {
       loaders = [
         {
@@ -117,9 +113,7 @@ export default {
         },
         {
           loader: 'sass-loader',
-          options: {
-            includePaths: ['src/']
-          },
+          options: { includePaths: ['src/'] },
         },
       ]
 
