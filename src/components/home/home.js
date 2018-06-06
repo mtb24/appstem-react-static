@@ -21,13 +21,13 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
 
       
       <AngledSection className='section-1' mask='angle--both-left-right' style={{ background: 'red' }}>
-        <div className='grid-wrapper home-text-wrapper'> { convert(home.contents) } </div>
+        <div className='home-text-wrapper'> { convert(home.contents) } </div>
       </AngledSection>
 
       <AngledSection className='section-2' mask='angle--both-left-right'>
         <FeatureBlock 
           key={ 'case-study-1' } 
-          className='grid-wrapper case-study-1' 
+          className='case-study-1' 
           imagePosition={ 'left' } 
           caseStudy={ caseStudiesForHomePage[0] } />
       </AngledSection>
@@ -35,7 +35,7 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
       <AngledSection className='section-3' mask='angle--both-left-right'>
         <FeatureBlock 
           key={ 'case-study-2' } 
-          className='grid-wrapper case-study-2' 
+          className='case-study-2' 
           imagePosition={ 'right' }
           caseStudy={ caseStudiesForHomePage[1] } />
       </AngledSection>
@@ -43,7 +43,7 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
       <AngledSection className='section-4' mask='angle--both-left-right'>
         <FeatureBlock 
           key={ 'case-study-3' } 
-          className='grid-wrapper case-study-3' 
+          className='case-study-3' 
           imagePosition={ 'left' } 
           caseStudy={ caseStudiesForHomePage[2] } />
           

@@ -50,7 +50,6 @@
             }
             @include phone {
                 width: 100%;
-                padding: 0 4em;
             }
             
             .slick-slide:before {
@@ -60,10 +59,17 @@
                 position: relative;
                 top: 75px;
                 left: 250px;
+                @include tablet {
+                    left: 0;
+                }
+                @include phone {
+                    left: 0;
+                    top: 30px;
+                    font-size: 250%;
+                }
     
             }
             .testimonial-content {
-                width: 52%;
                 margin: 0 auto;
                 color: $testimonials-text-color;
                 font-size: 24px;
@@ -71,6 +77,12 @@
                 font-weight: 300;
                 line-height: 36px;
                 text-align: center;
+                @include desktop {
+                    width: 52%;
+                }
+                @include tablet {
+                    width: auto;
+                }
                 @include phone {
                     font-size: 16px;
                     font-style: italic;
@@ -83,10 +95,17 @@
                 position: relative;
                 left: 65%;
                 margin-top: 60px;
+                @include phone {
+                    left: 0;
+                    text-align: center;
+                }
 
                 hr {
                     position: relative;
                     left: 52.75%;
+                    @include phone {
+                        left: 0;
+                    }
                 }
 
                 .testimonial-author {

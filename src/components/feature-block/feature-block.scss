@@ -4,14 +4,15 @@
     grid-template-columns: 1fr 1fr !important;
     grid-template-areas: 'details''image';
     padding: 10% 0;
-    justify-items: center;
-    align-items: center;
+    // justify-items: center;
+    // align-items: center;
 
     @include phone {
         display: flex;
         flex-direction: column;
         margin: 1em auto;
         justify-content: center;
+        align-items: center;
     }
     @include tablet {
         grid-template-columns: 1fr !important;
@@ -26,6 +27,14 @@
 
     .feature-block-image {
         grid-area: image;
+
+        @include tablet {
+            width: 60%;
+            justify-self: center;
+        }
+        @include phone {
+            width: 47.5%;
+        }
     }
 
     .feature-block-details {

@@ -5,7 +5,7 @@
     background: $featureblocks-bg-color;
 
     @include phone {
-        // height: 341px;
+        height: 341px;
     }
     
     .home-text-wrapper {
@@ -48,14 +48,7 @@
                 width: 45%;
             }
         }
-        
-        @include phone {
-            padding-top: 4em;
-            
-            .feature-block-image {
-                width: 60%;
-            }
-        }
+
     }
 }
 .section-3 {
@@ -99,9 +92,10 @@
 .section-5 {
     height: 876.28px;
     background: $white;
+    padding-bottom: 4em;
 
     @include phone {
-
+        height: auto;
     }
     @include tablet {
         height: 725px;

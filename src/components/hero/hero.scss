@@ -24,6 +24,7 @@
         text-align: center;
         margin: 0 auto;
 
+
         @include phone {
             top: 4em;
             height: 82px;
@@ -44,12 +45,17 @@
     z-index: 1;
 
     @include tablet {
-        height: 430px;
         margin-bottom: -13%;
     }
 
     @include phone {
-        // height: 17em;
+        height: 20em;
+        margin-bottom: -16%;
+        background: url('/assets/images/posterimage-home.jpg');
+        video {
+            display: none;
+        }
+
     }
 
     video {
@@ -74,19 +80,19 @@
 
     @include tablet {
         width: 60%;
-        top: 3em;
         left: 20%;
         margin: 0 auto;
         font-size: 52px;
         line-height: 72px;
     }
     @include phone {
-        width: 89%;
+        width: 73%;
         font-size: 36px;
         font-weight: 200;
         letter-spacing: -0.31px;
         line-height: 48px;
         margin: 0;
         top: 3em;
+        left: 13.5%;
     }
 }
