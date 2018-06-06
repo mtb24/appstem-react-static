@@ -6,13 +6,20 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 100%;
     position: relative;
-    top: 80px;
-    margin-bottom: 13em;
     background-color: $body-background-color;
+
+    @include desktop {
+        margin-top: -11%;
+        padding: 10% 0;
+    }
+    @include tablet {
+        margin-top: -12.5%;
+        padding: 15% 0;
+    }
     @include phone {
-        margin-bottom: 137px;
+        margin-top: -19%;
+        padding: 20% 0;
     }
 
     .culture-who-we-are {
@@ -67,7 +74,7 @@
             color: $services-page-p-color;
             font-family: $primary-font-family;
     
-            // if sibling p's, add margin
+            // if there are sibling p's, add margin
             &:nth-of-type(2) {
                 margin-top: 2em;
             }
@@ -191,5 +198,14 @@
             top: 8em;
         }
 
+    }
+}
+.testimonials-wrapper {
+    background: $white;
+    margin-top: -7%;
+
+    .culture-testimonials {
+        background: $white;
+        padding: 10% 0;
     }
 }
