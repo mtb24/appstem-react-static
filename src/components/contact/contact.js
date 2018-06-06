@@ -42,7 +42,7 @@ export default withRouteData(({ contact }) => (
         backgroundImage={ backgroundImage } 
         className='angle--bottom-right' />
 
-  <div className='contact-wrapper angle--bottom-right'>
+  <div className='contact-wrapper angle--both-left-right'>
 
     <Cta heading={convert(contact.heading)} />
 
