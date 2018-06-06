@@ -1,39 +1,39 @@
 @import '../../styles/styles.scss';
 
 .feature-block {
-    grid-template-columns: 1fr 1fr !important;
-    grid-template-areas: 'details''image';
+    display: grid;
     padding: 10% 0;
-    // justify-items: center;
-    // align-items: center;
+    justify-items: center;
+    align-items: center;
 
     @include phone {
-        display: flex;
-        flex-direction: column;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'image' 'details';
+        grid-gap: 0;
         margin: 1em auto;
         justify-content: center;
         align-items: center;
     }
     @include tablet {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
         grid-template-areas: 'image' 'details';
-        grid-gap: 0px !important;
+        grid-gap: 0;
     }
     @include desktop {
-        // display: grid;
-        // grid-template-columns: 1fr 1fr !important;
-        // grid-gap: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'details''image';
+    
     }
 
     .feature-block-image {
         grid-area: image;
 
         @include tablet {
-            width: 60%;
+            // width: 48%;
             justify-self: center;
         }
         @include phone {
-            width: 47.5%;
+            justify-self: center;
         }
     }
 
@@ -42,7 +42,8 @@
         text-align: left;
 
         @include phone {
-            width: 89%;
+            width: 67%;
+            margin: 0 auto;
         }
 
         h2 {

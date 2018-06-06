@@ -36,8 +36,11 @@
 .section-2 {
     height: 876.28px;
     
+    @include tablet {
+        height: auto;
+    }
     @include phone {
-        height: 574px;
+        height: auto;
     }
 
     .case-study-1 {
@@ -45,7 +48,15 @@
         @include tablet {
     
             .feature-block-image {
-                width: 45%;
+                width: 48%;
+                justify-items: center;
+            }
+        }
+        @include phone {
+    
+            .feature-block-image {
+                width: 48%;
+                justify-items: center;
             }
         }
 
@@ -55,14 +66,34 @@
     height: 876.28px;
     background: $featureblocks-bg-color;
 
+    @include tablet {
+        height: auto;
+    }
     @include phone {
-        height: 574px;
+        height: auto;
     }
     
     .case-study-2 {
 
-        @include phone {
+        @include desktop {
             padding: 1em 0;
+            justify-items: center;
+
+            .feature-block-image {
+                width: 122%;
+                position: relative;
+                left: 9.5%;
+            }
+        }
+        @include tablet {
+            .feature-block-image {
+                width: 80%;
+            }
+        }
+        @include phone {
+            .feature-block-image {
+                width: 80%;
+            }
         }
     }
 
@@ -70,15 +101,32 @@
 .section-4 {
     height: 876.28px;
     padding-bottom: 135px;
+    @include tablet {
+        height: auto;
+    }
+    @include phone {
+        height: auto;
+    }
 
     .case-study-3 {
 
-        @include desktop {}
-        @include tablet {}
-        @include phone {
-    
+        @include desktop {
             .feature-block-image {
-                max-width: 320px;
+                position: relative;
+                left: -190px;
+                width: 160%;
+            }
+        }
+        @include tablet {
+            .feature-block-image {
+                width: 120%;
+                justify-items: center;
+            }
+        }
+        @include phone {
+            .feature-block-image {
+                width: 120%;
+                justify-items: center;
             }
         }
     }

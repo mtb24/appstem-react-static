@@ -19,7 +19,7 @@ export default props => {
                 <Img
                     key={ `image-${ props.caseStudy.slug }` }
                     className='feature-block-image'
-                    src={ `${ pathToImages }/medium/${ props.caseStudy.imageName }` }
+                    src={ `${ pathToImages }/full/${ props.caseStudy.imageName }` }
                     alt={ props.caseStudy.imageAlt || 'an image' }
                     loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
 

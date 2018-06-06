@@ -52,7 +52,7 @@
                 width: 100%;
             }
             
-            .slick-slide:before {
+            &:before {
                 content: "\201C";
                 color: $appstem-green;
                 font-size: 600%;
@@ -89,6 +89,7 @@
                     font-weight: 300;
                     line-height: 24px;
                     text-align: center;
+                    margin: 0 0.25em;
                 }
             }
             .quote-author-wrapper {
