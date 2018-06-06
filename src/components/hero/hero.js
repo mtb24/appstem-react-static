@@ -9,7 +9,7 @@ export default props => {
         case 'image':
             // console.log('Hero image loading...')
             return (
-                <div className={`hero-wrapper ${props.className || ''}`} style={ {backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${props.backgroundImage})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
+                <div className={`hero ${props.className || ''}`} style={ {backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${props.backgroundImage})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
                     <h1 className='title'>{ props.title || 'Default Title' }</h1>
                 </div>
             )
@@ -19,7 +19,7 @@ export default props => {
             // console.log('Hero video loading...')
             return (
                 <React.Fragment>
-                <div className={`hero-video-wrapper ${props.className || ''}`}>
+                <div className={`hero-video ${props.className || ''}`}>
                     <video
                         mute='1'
                         autoPlay='1'

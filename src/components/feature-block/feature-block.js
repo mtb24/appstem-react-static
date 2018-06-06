@@ -14,7 +14,7 @@ export default props => {
         const pathToImages = `assets/images/case-studies/${props.caseStudy.slug}`
 
         return (
-            <div className={ `feature-block-wrapper feature-image-${ props.imagePosition } ${ props.className || '' }`}>
+            <div className={ `${ props.className || '' } feature-block feature-image-${ props.imagePosition }`}>
             
                 <Img
                     key={ `image-${ props.caseStudy.slug }` }

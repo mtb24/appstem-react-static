@@ -1,41 +1,23 @@
 @import '../../styles/styles.scss';
 
-.home-wrapper {
-    width: 100%;
-    position: relative;
-    
-    @include desktop {
-        top: 32em;
-    }
-    @include tablet {
-        top: 31.5em;
-    }
+.section-1 {
+    height: 727.5px;
+    background: $featureblocks-bg-color;
+
     @include phone {
-        top: 13em;
+        // height: 341px;
     }
-
-    .home-text {
-        position: relative;
-        height: 727px;
-        top: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    
+    .home-text-wrapper {
         
-        @include phone {
-            height: 341px;
-        }
-
         p {
             width: 60%;
             color: $white;
-            font-family: $primary-font-family;
             font-size: 36px;
             line-height: 72px;
             text-align: center;
             margin: 0 auto;
-
+    
             @include tablet {
                 width: 75%;
                 font-size: 28px;
@@ -50,94 +32,82 @@
             }
         }
     }
-    .case-study-1 {
-        position: relative;
-        height: 876px;
-        padding: 10% 0;
-        top: -7.25em;
-        @include tablet {
-            padding-bottom: 20%;
+}
+.section-2 {
+    height: 876.28px;
+    
+    @include phone {
+        height: 574px;
+    }
 
+    .case-study-1 {
+
+        @include tablet {
+    
             .feature-block-image {
                 width: 45%;
             }
         }
         
         @include phone {
-            top: -39px;
-            height: 574px;
             padding-top: 4em;
+            
             .feature-block-image {
                 width: 60%;
             }
         }
     }
+}
+.section-3 {
+    height: 876.28px;
+    background: $featureblocks-bg-color;
+
+    @include phone {
+        height: 574px;
+    }
+    
     .case-study-2 {
-        position: relative;
-        height: 876px;
-        padding: 10% 0;
-        background-color: #1C1819;
-        top: -15.25em;
 
         @include phone {
-            top: -78px;
             padding: 1em 0;
-            height: 574px;
         }
     }
+
+}
+.section-4 {
+    height: 876.28px;
+    padding-bottom: 135px;
+
     .case-study-3 {
-        position: relative;
-        height: 876px;
-        padding: 10% 0 20%;
-        @include desktop {
-            top: -23em;
-        }
-        @include tablet {
-            top: -19em;
-        }
+
+        @include desktop {}
+        @include tablet {}
         @include phone {
-            top: -117px;
-            height: 574px;
+    
             .feature-block-image {
                 max-width: 320px;
             }
         }
     }
+
     .view-portfolio-link {
-        position: relative;
-        top: -38em;
-
-        @include tablet {
-            top: -27em;
-            margin-bottom: 8em;
-        }
-        
-        @include phone {
-            top: -185px;
-            margin-bottom: 10em;
-        }
+        display: block;
+        margin: 0 auto;
+        text-decoration: none;
     }
-
 }
-.home-wrapper ~ .testimonial-slider {
+.section-5 {
+    height: 876.28px;
+    background: $white;
+
     @include phone {
-        top: -4em;
+
     }
     @include tablet {
         height: 725px;
     }
+    
+    .testimonials-wrapper {
+    
+    }
 }
-// .home-wrapper ~ .footer-body {
-//     @include tablet {
-//         // padding: 15% 0;
-//     }
-// }
-// .home-wrapper ~ .page-bottom {
-//     position: relative;
-//     @include phone {
-//         // top: -23px;
-//     }
-//     @include tablet {
-//         // margin-bottom: 12em;
-//     }
-// }

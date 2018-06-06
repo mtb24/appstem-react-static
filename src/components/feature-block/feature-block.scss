@@ -1,12 +1,11 @@
 @import '../../styles/styles.scss';
 
-.feature-block-wrapper {
-    width: 100%;
+.feature-block {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-areas: 'details''image';
     padding: 10% 0;
     justify-items: center;
     align-items: center;
-    background-color: $featureblocks-bg-color;
-    background: radial-gradient(circle, rgba(62,62,62,0.52) 0%, rgba(12,12,12,0.38) 100%);
 
     @include phone {
         display: flex;
@@ -15,14 +14,14 @@
         justify-content: center;
     }
     @include tablet {
-        display: grid;
-        grid-gap: 0px;
-        grid-template-areas: 'details''image';
+        grid-template-columns: 1fr !important;
+        grid-template-areas: 'image' 'details';
+        grid-gap: 0px !important;
     }
     @include desktop {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr !important;
+        // grid-gap: 0;
     }
 
     .feature-block-image {
@@ -86,6 +85,7 @@
             }
         }
     }
+    
 }
 .feature-image-left {
     @include desktop {

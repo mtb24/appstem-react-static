@@ -1,42 +1,44 @@
 @import '../../styles/styles.scss';
 
-.header-wrapper {
+.header {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 12% 1fr;
     position: relative;
     top: 62px;
-    z-index: 1;
     height: 40px;
-    width: 100%;
+    max-width: 1200px;
     color: $body-text-color;
     background: transparent;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     z-index: 99;
+    align-items: center;
+    margin: 0 1.25em;
+    @media (min-width: 1260px) {
+        margin: 0 auto;
+    }
 
     @include phone {
         top: 31px;
     }
 
     .header-logo {
-        margin-left: 7.5em;
         width: 148px;
         height: 24px;
 
         @include phone {
-            margin-left: 1.25em;
             width: 124px;
             height: 21px;
         }
-        @include tablet {
-            margin-left: 4.5em;
-        }
     }
 
-    .nav-wrapper nav {
+    .nav-wrapper {
+        justify-self: end;
+
+        nav {
         
-        a:nth-of-type(4) {
-            display: none;
+            a:nth-of-type(4) {
+                display: none;
+            }
         }
     }
 

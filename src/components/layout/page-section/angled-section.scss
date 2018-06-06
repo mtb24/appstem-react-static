@@ -1,7 +1,16 @@
 @import '../../../styles/styles.scss';
 
 .angled-section {
-    width: 100%;
-    position: relative;
-    background-color: $angled-section-bg-color;
-}
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: 0;
+    width: 100vw;
+    margin-bottom: -7%;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(62,62,62,0.52) 0%, rgba(12,12,12,0.38) 100%);
+  
+    & > * {
+        grid-column: col-start / span 12;
+    }
+  }

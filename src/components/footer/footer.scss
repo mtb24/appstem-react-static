@@ -1,11 +1,11 @@
 @import '../../styles/styles.scss';
 
-.footer-body {
-    position: relative;
-    width: 100%;
+.footer {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: 'left right';
+    position: relative;
+    width: 100%;
     margin: -4em auto 4em auto;
     padding-top: 8em;
 

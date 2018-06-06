@@ -8,19 +8,15 @@ import './header.scss'
 
 export default () => (
 
-    <div className={ 'header-wrapper' }>
+    <div className={ 'header' }>
+            <Link to="/">
+                <Img className='header-logo'
+                    src={ Logo }
+                    alt='Appstem company logo'
+                    loader={ <BeatLoader color={'#3cd52e'} loading={ true } /> } />
+            </Link>
 
-        <Link to="/">
-
-            <Img className='header-logo'
-                 src={ Logo }
-                 alt='Appstem company logo'
-                 loader={ <BeatLoader color={'#3cd52e'} loading={ true } /> } />
-
-        </Link>
-
-        <Nav className='all-caps' />
-
+            <Nav className='all-caps' />
     </div>
 
 );

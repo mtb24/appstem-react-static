@@ -2,14 +2,13 @@
 
 .hamburger {
 	display: none;
-	margin-right: 7em;
 	height: 20px;
 	width: 33px;
 	flex-direction: column;
 	justify-content: space-between;
 
 	@include phone {
-		margin-right: 24px;
+
 	}
 	
 	.line {

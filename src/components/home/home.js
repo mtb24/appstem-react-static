@@ -1,8 +1,8 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
 import convert from 'htmr'
-import AppstemLogo from '../social/icons/appstem-logo'
 import Hero from '../hero/hero'
+import AngledSection from '../layout/page-section/angled-section'
 import Testimonials from '../testimonials/testimonials'
 import LinkOutlined from '../buttons/link-outlined/link-outlined'
 import FeatureBlock from '../feature-block/feature-block'
@@ -19,21 +19,41 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
             posterImg={ home.posterImg || '' } 
             className='angle--bottom-right'/>
 
-      <div className='home-wrapper'>
+      
+      <AngledSection className='section-1' mask='angle--both-left-right' style={{ background: 'red' }}>
+        <div className='grid-wrapper home-text-wrapper'> { convert(home.contents) } </div>
+      </AngledSection>
 
-          <div className='home-text angle--both-left-right'> { convert(home.contents) } </div>
-
-          <FeatureBlock key={ 'case-study-1' } className='angle--both-left-right case-study-1' imagePosition={ 'left' } caseStudy={ caseStudiesForHomePage[0] } />
+      <AngledSection className='section-2' mask='angle--both-left-right'>
+        <FeatureBlock 
+          key={ 'case-study-1' } 
+          className='grid-wrapper case-study-1' 
+          imagePosition={ 'left' } 
+          caseStudy={ caseStudiesForHomePage[0] } />
+      </AngledSection>
+      
+      <AngledSection className='section-3' mask='angle--both-left-right'>
+        <FeatureBlock 
+          key={ 'case-study-2' } 
+          className='grid-wrapper case-study-2' 
+          imagePosition={ 'right' }
+          caseStudy={ caseStudiesForHomePage[1] } />
+      </AngledSection>
+      
+      <AngledSection className='section-4' mask='angle--both-left-right'>
+        <FeatureBlock 
+          key={ 'case-study-3' } 
+          className='grid-wrapper case-study-3' 
+          imagePosition={ 'left' } 
+          caseStudy={ caseStudiesForHomePage[2] } />
           
-          <FeatureBlock key={ 'case-study-2' } className='angle--both-left-right case-study-2' imagePosition={ 'right' } caseStudy={ caseStudiesForHomePage[1] } />
-          
-          <FeatureBlock key={ 'case-study-3' } className='angle--both-left-right case-study-3' imagePosition={ 'left' } caseStudy={ caseStudiesForHomePage[2] } />
-          
-          <LinkOutlined linkTo="/work" className="view-portfolio-link">View Full Portfolio</LinkOutlined>
+        <LinkOutlined linkTo="/work" className="view-portfolio-link">View Full Portfolio</LinkOutlined>
+      </AngledSection>
+      
 
-      </div>
-
-      <Testimonials heading='From our Clients' className='angle--both-left-right' />
+      <AngledSection className='section-5' mask='angle--both-left-right'>
+        <Testimonials heading='From our Clients' className='grid-wrapper testimonials-wrapper' />
+      </AngledSection>
 
     </React.Fragment>
   )

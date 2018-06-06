@@ -6,8 +6,8 @@ export default props => {
     const mask = props.mask || 'angle--bottom-right';
     
     return (
-        <section className={ `angled-section ${ props.className } ${ mask }` }>
+        <div className={ `${ props.className || '' } angled-section ${ mask }` }>
             { props.children }
-        </section>
+        </div>
     )
 }

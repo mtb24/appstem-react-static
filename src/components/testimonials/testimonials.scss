@@ -3,17 +3,15 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .testimonial-slider {
-    background-color: $page-background-color;
+    grid-column: col-start / span 12;
+    background-color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 55em;
+    height: 100%;
+
     @include phone {
-        height: 40em;
-        top: 0;
-        margin-top: 0;
         justify-content: normal;
         align-items: unset;
         
@@ -25,13 +23,13 @@
 
     h2 {
         color: $testimonials-H2-color;
-        font-family: $primary-font-family;
         font-size: 32px;
         font-weight: normal;
         letter-spacing: 6.4px;
         line-height: 46px;
         text-align: center;
         margin-top: 3em;
+
         @include phone {
             font-size: 20px;
             letter-spacing: 3.33px;
@@ -39,89 +37,104 @@
             margin-top: 110px;
         }
     }
-    .slick-slider {
-        width: 50vw;
-        margin: 7em auto;
-        @include tablet {
-            width: 65%;
+    .cta-wrapper {
+        hr {
+            margin: 0 auto;
         }
-        @include phone {
-            width: 100%;
-            margin: 70px 0 0 0;
-            padding: 0 4em;
-        }
-        &:before {
-            content: "\201C";
-            color: $appstem-green;
-            font-size: 700%;
-            position: relative;
-            top: 95px;
-            left: -435px;
 
-        }
-        .testimonial-content {
-            color: $testimonials-text-color;
-            font-family: $primary-font-family;
-            font-size: 24px;
-            font-style: italic;
-            font-weight: 300;
-            line-height: 36px;
-            text-align: center;
+        .slick-slider {
+            margin: 0 auto;
+    
+            @include tablet {
+                width: 65%;
+            }
             @include phone {
-                font-size: 16px;
+                width: 100%;
+                padding: 0 4em;
+            }
+            
+            .slick-slide:before {
+                content: "\201C";
+                color: $appstem-green;
+                font-size: 600%;
+                position: relative;
+                top: 75px;
+                left: 250px;
+    
+            }
+            .testimonial-content {
+                width: 52%;
+                margin: 0 auto;
+                color: $testimonials-text-color;
+                font-size: 24px;
                 font-style: italic;
                 font-weight: 300;
-                line-height: 24px;
+                line-height: 36px;
                 text-align: center;
-            }
-        }
-        .testimonial-author {
-            color: $testimonials-text-color;
-            font-family: $primary-font-family;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 24px;
-            text-align: center;
-            margin-top: 1em;
-        }
-        .testimonial-company {
-            color: $testimonials-company-color;
-            font-family: $primary-font-family;
-            font-size: 16px;
-            font-style: italic;
-            font-weight: 500;
-            line-height: 24px;
-            text-align: center;
-        }
-
-        .slick-arrow,
-        .slick-arrow:before {
-            display: none;
-            color: inherit;
-        }
-        .slick-dots {
-            position: relative;
-            bottom: 0;
-            margin-top: 5em;
-
-            button:hover {
-                &:before {
-                    border-color: $appstem-green;
+                @include phone {
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 300;
+                    line-height: 24px;
+                    text-align: center;
                 }
             }
-            button:before {
-                color: transparent;
-                font-size: 16px;
-                border: 2px solid grey;
-                border-radius: 12px;
+            .quote-author-wrapper {
+                position: relative;
+                left: 65%;
+                margin-top: 60px;
+
+                hr {
+                    position: relative;
+                    left: 52.75%;
+                }
+
+                .testimonial-author {
+                    color: $testimonials-text-color;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    margin-top: 1em;
+                }
+                .testimonial-company {
+                    color: $testimonials-company-color;
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 500;
+                    line-height: 24px;
+                }
             }
-            li.slick-active {
+    
+            .slick-arrow,
+            .slick-arrow:before {
+                display: none;
+                color: inherit;
+            }
+            .slick-dots {
+                position: relative;
+                bottom: 0;
+                margin-top: 49px;
+    
+                button:hover {
+                    &:before {
+                        border-color: $appstem-green;
+                    }
+                }
                 button:before {
-                    color: $appstem-green;
-                    border: 2px solid $appstem-green;
-                    background-color: $appstem-green;
+                    color: transparent;
+                    font-size: 16px;
+                    border: 2px solid grey;
+                    border-radius: 12px;
+                }
+                li.slick-active {
+                    button:before {
+                        color: $appstem-green;
+                        border: 2px solid $appstem-green;
+                        background-color: $appstem-green;
+                    }
                 }
             }
         }
     }
+    
 }

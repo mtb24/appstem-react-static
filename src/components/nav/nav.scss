@@ -1,13 +1,11 @@
 @import '../../styles/styles.scss';
 
 .nav-wrapper {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-
+  display: block;
+  
   @include phone {
     .hamburger {
-      display: flex;
+      display: inline-block;
     }
     .footer-wrapper .hamburger {
       display: none;
@@ -21,6 +19,7 @@
   }
 
   nav {
+    display: flex;
     height: auto;
     width: auto;
     color: $primary-font-color;
@@ -28,10 +27,9 @@
     font-size: 14px;
     letter-spacing: 1.75px;
     line-height: 20px;
-    margin-right: 8em;
     
     @include tablet {
-      margin-right: 4em;
+      
     }
     @include phone {
       display: none;
