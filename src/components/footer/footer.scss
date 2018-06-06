@@ -1,202 +1,214 @@
 @import '../../styles/styles.scss';
 
 .footer {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 'left right';
-    position: relative;
-    width: 100%;
-    margin: -4em auto 4em auto;
-    padding-top: 8em;
+    width: 100vw;
 
-    @include phone {
-        grid-template-columns: 1fr;
-        padding: 7em 0 0 0;
-    }
-    
-    .nav-wrapper {
-        justify-self: center;
-        
-        @include phone {
-            display: none;
-        }
-
-        .footer-nav {
-            display: flex;
-            flex-direction: column;
-            color: $link-color;
-            font-family: $primary-font-family;
-            font-size: 13px;
-            font-weight: normal;
-            letter-spacing: 3.25px;
-            line-height: 24px;
-            text-align: left;
-            
-            a {
-                padding: 0 0 0.5em 0;
-
-                &:hover {
-                    color: $footerNavHoverColor;
-                    text-decoration: none;
-                }
-                
-                &:last-child {
-                    border: none;
-                    margin: 0;
-                }
-            }
-        }
-    }
-    .footer-contact-info {
+    .footer-grid {
         display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-template-areas: 'addresses form';
-        grid-gap: 25%;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 'left right';
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
         
-        @include phone {
-            grid-template-columns: 1fr;
-            grid-template-areas: 'form''social''addresses';
-            grid-gap: unset;
-            justify-items: center;
+        @include desktop {
+            margin-top: 7%;
+            padding: 5em 0;
         }
         @include tablet {
-            grid-gap: 5em;
+            grid-template-columns: 1fr;
+            padding: 7em 0 0 0;
         }
-
-        .footer-addresses {
-            grid-area: addresses;
-            font-family: $primary-font-family;
-            width: 7em;
-            text-align: left;
-
+        @include phone {
+            grid-template-columns: 1fr;
+            padding: 7em 0 0 0;
+        }
+        
+        .nav-wrapper {
+            justify-self: center;
+            
             @include phone {
-                margin-top: 6em;
-                text-align: center;
-                width: 100%;
+                display: none;
             }
 
-            .footer-address-block {
-                opacity: 0.7;
-                font-size: 13px;
-                line-height: 19px;
-                margin-bottom: 1em;
-
-                a {
-                    color: $white;
-                    &:hover {
-                        color: $footerNavHoverColor;
-                    }
-                    
-                    address {
-                        font-style: normal;
-                    }
-                }
-            }
-
-            h4.footer-heading {
-                color: $footer-heading-color;
+            .footer-nav {
+                display: flex;
+                flex-direction: column;
+                color: $link-color;
                 font-family: $primary-font-family;
                 font-size: 13px;
                 font-weight: normal;
-                line-height: 19px;
-                opacity: 1;
-                margin: 0;
-            }
-            h4.footer-heading:first-of-type {
                 letter-spacing: 3.25px;
                 line-height: 24px;
+                text-align: left;
+                
+                a {
+                    padding: 0 0 0.5em 0;
+
+                    &:hover {
+                        color: $footerNavHoverColor;
+                        text-decoration: none;
+                    }
+                    
+                    &:last-child {
+                        border: none;
+                        margin: 0;
+                    }
+                }
             }
-            
         }
-        
-        .footer-email-form-wrapper {
-            grid-area: form;
-            position: relative;
-            margin-right: 5em;
-            height: 65px;
-            text-align: left;
+        .footer-contact-info {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas: 'addresses form';
+            grid-gap: 25%;
             
             @include phone {
-                margin: 0 0;
+                grid-template-columns: 1fr;
+                grid-template-areas: 'form''social''addresses';
+                grid-gap: unset;
+                justify-items: center;
             }
             @include tablet {
-                margin: 0 0;
+                grid-gap: 5em;
             }
 
-            .footer-form-heading {
-                color: #FFFFFF;
-                font-family: brandon-grotesque;
-                font-size: 13px;
-                font-weight: normal;
-                letter-spacing: 3.25px;
-                line-height: 24px;
-                margin-bottom: 19px;
+            .footer-addresses {
+                grid-area: addresses;
+                font-family: $primary-font-family;
+                width: 7em;
+                text-align: left;
 
                 @include phone {
+                    margin-top: 6em;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                .footer-address-block {
+                    opacity: 0.7;
+                    font-size: 13px;
+                    line-height: 19px;
+                    margin-bottom: 1em;
+
+                    a {
+                        color: $white;
+                        &:hover {
+                            color: $footerNavHoverColor;
+                        }
+                        
+                        address {
+                            font-style: normal;
+                        }
+                    }
+                }
+
+                h4.footer-heading {
+                    color: $footer-heading-color;
+                    font-family: $primary-font-family;
+                    font-size: 13px;
+                    font-weight: normal;
+                    line-height: 19px;
+                    opacity: 1;
+                    margin: 0;
+                }
+                h4.footer-heading:first-of-type {
+                    letter-spacing: 3.25px;
+                    line-height: 24px;
+                }
+                
+            }
+            
+            .footer-email-form-wrapper {
+                grid-area: form;
+                position: relative;
+                margin-right: 5em;
+                height: 65px;
+                text-align: left;
+                
+                @include phone {
+                    margin: 0 0;
+                }
+                @include tablet {
+                    margin: 0 0;
+                }
+
+                .footer-form-heading {
+                    color: #FFFFFF;
+                    font-family: brandon-grotesque;
                     font-size: 13px;
                     font-weight: normal;
                     letter-spacing: 3.25px;
                     line-height: 24px;
-                    text-align: center;
-                    margin-bottom: 16px;
-                }
-            }
+                    margin-bottom: 19px;
 
-            #footer-email-form {
-                position: relative;
-                display: grid;
-
-                #footerEmail {
-                    border: none;
-                    border-bottom: 1px solid #9B9B9B;
-                    background-color: inherit;
-                    width: 310px;
-                    color: $appstem-green;
                     @include phone {
-                        width: 231px;
+                        font-size: 13px;
+                        font-weight: normal;
+                        letter-spacing: 3.25px;
+                        line-height: 24px;
+                        text-align: center;
+                        margin-bottom: 16px;
                     }
+                }
 
-                    &:focus + label {
-                        transform: translate(-50px, -15px) scale(0.75);
+                #footer-email-form {
+                    position: relative;
+                    display: grid;
+
+                    #footerEmail {
+                        border: none;
+                        border-bottom: 1px solid #9B9B9B;
+                        background-color: inherit;
+                        width: 310px;
                         color: $appstem-green;
-                        opacity: 1;
+                        @include phone {
+                            width: 231px;
+                        }
+
+                        &:focus + label {
+                            transform: translate(-50px, -15px) scale(0.75);
+                            color: $appstem-green;
+                            opacity: 1;
+                        }
                     }
-                }
-                
-                .footer-email-label {
-                    opacity: 0.5;
-                    font-size: 20px;
-                    line-height: 29px;
-                    position: relative;
-                    transition: all .2s linear;
-                    top: -25px;
-                    @include phone {
-                        line-height: 23px;
+                    
+                    .footer-email-label {
+                        opacity: 0.5;
+                        font-size: 20px;
+                        line-height: 29px;
+                        position: relative;
+                        transition: all .2s linear;
+                        top: -25px;
+                        @include phone {
+                            line-height: 23px;
+                        }
                     }
-                }
-                .footer-email-submit-button {
-                    position: relative;
-                    top: -47px;
-                    left: 296px;
-                    background: url('./ic_arrow_green.png');
-                    background-repeat: no-repeat;
-                    border: 0;
-                    display: inline-block;
-                    height: 20px;
-                    width: 22px;
-                    @include phone {
-                        left: 217px;
+                    .footer-email-submit-button {
+                        position: relative;
+                        top: -47px;
+                        left: 296px;
+                        background: url('./ic_arrow_green.png');
+                        background-repeat: no-repeat;
+                        border: 0;
+                        display: inline-block;
+                        height: 20px;
+                        width: 22px;
+                        @include phone {
+                            left: 217px;
+                        }
                     }
                 }
             }
-        }
-        .social-icons-wrapper {
-            grid-area: form;
-            position: relative;
-            top: 80px;
-            @include phone {
-                grid-area: social;
-                top: 2em;
+            .social-icons-wrapper {
+                grid-area: form;
+                position: relative;
+                top: 80px;
+                @include phone {
+                    grid-area: social;
+                    top: 2em;
+                }
             }
         }
     }
