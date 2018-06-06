@@ -100,12 +100,14 @@
 }
 .section-4 {
     height: 876.28px;
-    padding-bottom: 135px;
+    padding-bottom: 20em;
     @include tablet {
         height: auto;
+        padding-bottom: 10em;
     }
     @include phone {
         height: auto;
+        padding-bottom: 5em;
     }
 
     .case-study-3 {
