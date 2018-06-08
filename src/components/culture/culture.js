@@ -6,7 +6,7 @@ import AngledSection from '../layout/page-section/angled-section'
 import backgroundImage from '../../../public/assets/images/main-pages/large/bg_culture.jpg'
 import ImageBox from '../image-box/image-box'
 import { Player, BigPlayButton, PosterImage } from 'video-react';
-import posterImage from '../../../public/assets/images/main-pages/full/culture-video-poster.png'
+import posterImage from '../../../public/assets/images/culture-video-poster.png'
 import Cta from '../layout/page-section/cta'
 import LinkOutlined from '../buttons/link-outlined/link-outlined'
 import './culture.scss'
