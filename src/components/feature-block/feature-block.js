@@ -1,7 +1,7 @@
 import React from 'react'
 import convert from 'htmr'
 import { Link } from 'react-static'
-import Arrow from './arrow_white.png'
+import Arrow from '../../../public/assets/images/icons/arrow_white.png'
 import Img from 'react-image'
 import { BeatLoader } from 'react-spinners'
 import './feature-block.scss'
@@ -11,7 +11,7 @@ export default props => {
     if(!props.caseStudy) return null 
     else {
 
-        const pathToImages = `assets/images/case-studies/${props.caseStudy.slug}`
+        const pathToImages = `/assets/images/case-studies/${props.caseStudy.slug}`
 
         return (
             <div className={ `${ props.className || '' } feature-block feature-image-${ props.imagePosition }`}>
