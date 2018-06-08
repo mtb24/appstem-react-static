@@ -4,6 +4,7 @@ import Hero from '../hero/hero'
 import backgroundImage from '../../../public/assets/images/main-pages/large/bg_portfolio.png'
 import './work.scss'
 import FeatureBlock from '../feature-block/feature-block';
+import AngledSection from '../layout/page-section/angled-section'
 
 export default withRouteData(({ work }) => {
   
@@ -16,17 +17,19 @@ export default withRouteData(({ work }) => {
           backgroundImage={ backgroundImage }
           className='angle--bottom-right' />
 
-    <div className='work-wrapper angle--top-left'>
+    <div className='work content-wrapper'>
 
       {
         work.map( (caseStudy, i) => {
 
-          let imagePosition = ( i % 2 == 0 )? 'left' : 'right'
+          const imagePosition = ( i % 2 == 0 )? 'left' : 'right'
+          const backgroundColor = ( i % 2 == 0 )? 'bg-regular' : 'bg-alternate'
 
           return (
 
-            <FeatureBlock key={ caseStudy.slug } imagePosition={imagePosition} caseStudy={caseStudy} />
-
+            <AngledSection className={`work-section-${i} ${backgroundColor}`} mask='angle--both-left-right'>
+              <FeatureBlock key={ caseStudy.slug } imagePosition={imagePosition} caseStudy={caseStudy} />
+            </AngledSection>
           )
 
         })
