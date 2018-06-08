@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-static'
 import Nav from '../nav/nav'
 import Img from 'react-image'
-import Logo from '../../../public/assets/images/icons/Appstem Logo_white.png'
+import Logo from '../../../public/assets/images/icons/Appstem-Logo_white.png'
 import { BeatLoader } from 'react-spinners'
 import './header.scss'
 
