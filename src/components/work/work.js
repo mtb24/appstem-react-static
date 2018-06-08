@@ -27,7 +27,7 @@ export default withRouteData(({ work }) => {
 
           return (
 
-            <AngledSection className={`work-section-${i} ${backgroundColor}`} mask='angle--both-left-right'>
+            <AngledSection key={i} className={`work-section-${i} ${backgroundColor}`} mask='angle--both-left-right'>
               <FeatureBlock key={ caseStudy.slug } imagePosition={imagePosition} caseStudy={caseStudy} />
             </AngledSection>
           )
