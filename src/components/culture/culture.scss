@@ -1,26 +1,9 @@
 @import "~video-react/styles/scss/video-react";
 @import '../../styles/styles.scss';
 
-.culture-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    background-color: $body-background-color;
-
-    @include desktop {
-        margin-top: -11%;
-        padding: 10% 0;
-    }
-    @include tablet {
-        margin-top: -12.5%;
-        padding: 15% 0;
-    }
-    @include phone {
-        margin-top: -19%;
-        padding: 20% 0;
-    }
+.culture {
+    color: $primary-font-color;
+    background-color: $primary-background-color;
 
     .culture-who-we-are {
         
@@ -30,28 +13,27 @@
 
         p {
             color: $services-page-p-color;
-            font-family: $primary-font-family;
             font-size: 28px;
             line-height: 42px;
+            margin: 0 auto;
     
             // if sibling p's, add margin
             &:nth-of-type(2) {
                 margin-top: 2em;
             }
             @include desktop {
-                padding: 0 28%;
-            }
-            @include phone {
-                font-size: 16px;
-                line-height: 24px;
-                padding: 0 8.5%;
+                width: 65%;
             }
             @include tablet {
-                padding: 0 5em;
+                width: 65%;
+            }
+            @include phone {
+                width: 85%;
+                font-size: 16px;
+                line-height: 24px;
             }
         }
     }
-    
 
     .video-react {
         width: 100%;
@@ -68,37 +50,36 @@
             background-color: #1e1e1e;
         }
     }
+
     .culture-work-as-team {
+        
+        @include phone {
+            margin-top: 85px;
+        }
         
         p {
             color: $services-page-p-color;
-            font-family: $primary-font-family;
-    
+            margin: 0 auto;
+
             // if there are sibling p's, add margin
             &:nth-of-type(2) {
                 margin-top: 2em;
             }
             @include desktop {
-                width: 815px;
-                margin: 0 auto;
+                width: 65%;
                 font-size: 24px;
                 line-height: 42px;
-                text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
             }
             @include tablet {
                 font-size: 24px;
                 line-height: 42px;
-                padding: 0 5em;
+                width: 65%;
             }
             @include phone {
                 font-size: 16px;
                 line-height: 24px;
-                padding: 0 8.5%;
+                width: 85%;
             }
-        }
-
-        @include phone {
-            margin-top: 85px;
         }
     }
 
@@ -111,11 +92,11 @@
         }
         @include phone {
             margin-top: 78px;
+            width: 95%;
         }
 
         .culture-team-images {
             width: 100%;
-            max-width: 970px;
             margin: 0 auto;
             display: grid;
             justify-items: center;
@@ -125,10 +106,10 @@
                 grid-gap: 1em;
                 margin-top: 34px;
 
-                // .imagebox-wrapper:last-of-type {
-                //     position: relative;
-                //     left: 25%;
-                // }
+                .imagebox-wrapper:last-of-type {
+                    grid-column: -3 / span 2;
+                    width: 47.5%;
+                }
 
             }
             @include tablet {
@@ -173,8 +154,11 @@
         }
     }
     .culture-join-us {
-        padding: 5em 0 10em 0;
+        padding: 5em 0 20em 0;
         text-align: center;
+        @include phone {
+            padding: 5em 0 15em 0;
+        }
 
         p {
             width: 549px;
@@ -203,6 +187,9 @@
 .testimonials-wrapper {
     background: $white;
     margin-top: -7%;
+    @include phone {
+        padding-bottom: 2rem;
+    }
 
     .culture-testimonials {
         background: $white;
