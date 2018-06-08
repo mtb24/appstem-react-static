@@ -28,11 +28,15 @@
     .feature-block-image {
         grid-area: image;
 
+        @include desktop {
+            width: 60%;
+        }
         @include tablet {
-            // width: 48%;
+            width: 48%;
             justify-self: center;
         }
         @include phone {
+            width: 75%;
             justify-self: center;
         }
     }
