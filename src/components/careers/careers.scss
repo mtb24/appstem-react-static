@@ -1,344 +1,333 @@
 @import '../../styles/styles.scss';
 
 .careers-wrapper {
-    width: 100%;
-    text-align: left;
-    background-color: $white;
-    color: $careers-page-text-color;
+    background: $secondary-background-color;
+    padding-bottom: 8rem;
 
-    @include desktop {
-        top: -8.5em;
-        padding-top: 8.5em;
-        padding-bottom: 8.5em;
-    }
-    @include tablet {
-        top: -4.5em;
-        padding-top: 4.5em;
-        padding-bottom: 4.5em;
-    }
-    @include phone {
-        top: -3.5em;
-        padding-top: 3.5em;
-        padding-bottom: 3.5em;
-    }
+    .careers {
+        width: 100%;
+        text-align: left;
+        background-color: $secondary-background-color;
+        color: $careers-page-text-color;
 
-    h2 {
-        color: $careers-page-heading-color;
-        @include phone {}
-        @include tablet {
-            padding: 0;
-        }
-    }
-
-    .about-appstem {
-        margin: 0 auto 70px auto;
-        padding-top: 70px;
-        @include phone {
-            margin-bottom: 3em;
-            padding-top: 56px;
+        h2 {
+            color: $careers-page-heading-color;
+            @include phone {}
+            @include tablet {
+                padding: 0;
+            }
         }
 
-        p {
-            margin: 3.5em auto 0 auto;
-            width: 706px;
+        .about-appstem {
+            margin: 0 auto 70px auto;
+            padding-top: 70px;
+            @include phone {
+                margin-bottom: 3em;
+                padding-top: 56px;
+            }
+
+            p {
+                margin: 3.5em auto 0 auto;
+                width: 65%;
+                color: #1B252F;
+                font-size: 20px;
+                line-height: 40px;
+
+                @include phone {
+                    width: 89%;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .why-appstem {
+            margin: 163px auto 0;
+            width: 39.5em;
             color: #1B252F;
             font-size: 20px;
             line-height: 40px;
 
-            @include phone {
-                width: 89%;
-                font-size: 16px;
-                line-height: 24px;
+            @include tablet {
+                width: 30em;
             }
-        }
-    }
-    .why-appstem {
-        margin: 163px auto 0;
-        width: 39.5em;
-        color: #1B252F;
-        font-size: 20px;
-        line-height: 40px;
 
-        @include tablet {
-            width: 30em;
-        }
-
-        @include phone {
-            width: 85%;
-            margin-top: 30px;
-        }
-
-        ul {
-            padding-left: 10px;
-            list-style: '- ';
             @include phone {
-                font-size: 16px;
-                line-height: 24px;
+                width: 85%;
+                margin-top: 30px;
             }
-        }
 
-        p {
-            @include phone {
-                font-size: 16px;
-                font-weight: bold;
-                letter-spacing: 3.2px;
-                line-height: 27px;
+            ul {
+                padding-left: 10px;
+                list-style: '- ';
+                @include phone {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
-        }
 
-    }
-    .open-positions {
-        @include desktop {
-            margin-top: 307px;
-        }
-        @include tablet {
-            margin-top: 163px;
-        }
-        @include phone {
-            margin-top: 5em;
-        }
+            p {
+                @include phone {
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 3.2px;
+                    line-height: 27px;
+                }
+            }
 
-        .Collapsible {
-            margin: 67px auto;
+        }
+        .open-positions {
             @include desktop {
-                width: 65%;
+                margin-top: 307px;
             }
             @include tablet {
-                width: 89%;
+                margin-top: 163px;
             }
             @include phone {
-                width: 80%;
-                margin: 0 auto;
+                margin-top: 5em;
             }
 
-            .rotate {
-                .trigger-button {
-                    transform: rotate(90deg);
+            .Collapsible {
+                margin: 67px auto;
+                @include desktop {
+                    width: 65%;
                 }
-            }
-
-            .job-opening-trigger {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
+                @include tablet {
+                    width: 89%;
+                }
                 @include phone {
-                    flex-direction: column;
-                    align-items: flex-start;
+                    width: 80%;
+                    margin: 0 auto;
                 }
-    
-                .job-title {
-                    color: $careers-page-job-title-color;
-                    font-size: 24px;
-                    font-weight: bold;
-                    letter-spacing: 1.8px;
-                    line-height: 24px;
-                    @include phone {
-                        font-size: 14px;
-                        letter-spacing: 1.05px;
+
+                .rotate {
+                    .trigger-button {
+                        transform: rotate(90deg);
                     }
                 }
-    
-                .job-meta {
-                    width: 22em;
+
+                .job-opening-trigger {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
+                    align-items: center;
                     @include phone {
-                        width: 100%;
-                        margin-top: 7px;
+                        flex-direction: column;
+                        align-items: flex-start;
                     }
-    
-                    .job-type {
-                        color: $careers-page-job-meta-color;
+        
+                    .job-title {
+                        color: $careers-page-job-title-color;
                         font-size: 24px;
+                        font-weight: bold;
                         letter-spacing: 1.8px;
                         line-height: 24px;
                         @include phone {
-                            font-size: 16px;
-                            letter-spacing: 1.2px;
-                        }
-    
-                        img {
-                            height: 16px;
-                            width: 16px;
+                            font-size: 14px;
+                            letter-spacing: 1.05px;
                         }
                     }
-                    .job-location {
-                        color: $careers-page-job-meta-color;
-                        font-size: 24px;
-                        letter-spacing: 1.8px;
-                        line-height: 24px;
+        
+                    .job-meta {
+                        width: 22em;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
                         @include phone {
-                            font-size: 16px;
-                            letter-spacing: 1.2px;
-                        }
-    
-                        img {
-                            height: 16px;
-                            width: 10px;
-                        }
-                    }
-                    .trigger-button {
-                        height: 19px;
-                        width: 19px;
-                    }
-                }
-            }
-            .Collapsible__contentInner {
-
-                & > p:first-of-type {
-                    color: #000000;
-                    font-size: 20px;
-                    letter-spacing: 0.29px;
-                    line-height: 42px;
-                    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-                    @include phone {
-                        color: #1B252F;
-                        font-size: 16px;
-                        line-height: 24px;
-                    }
-                }
-
-                .about-role {
-                    color: #000000;
-                    font-size: 20px;
-                    letter-spacing: 0.29px;
-                    line-height: 42px;
-                    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-                    display: flex;
-                    flex-direction: row;
-                    margin: 124px auto 160px;
-                    @include phone {
-                        flex-direction: column;
-                        font-size: 16px;
-                        line-height: 24px;
-                        margin: 18px auto 34px;
-                    }
-
-                    h2 {
-                        color: #4A4A4A;
-                        font-size: 35px;
-                        letter-spacing: 7px;
-                        line-height: 50px;
-                        font-weight: bold;
-                        margin-right: 96px;
-                        text-align: left;
-                        @include tablet {
-                            margin-right: 35px;
-                            font-size: 32px;
-                        }
-                        @include phone {
-                            font-size: 18px;
-                            letter-spacing: 3.6px;
-                            margin-right: 0;
-                        }
-                    }
-                }
-                .skills {
-                    display: flex;
-                    flex-direction: row;
-                    @include phone {
-                        flex-direction: column;
-                    }
-
-                    h2 {
-                        color: #4A4A4A;
-                        font-size: 35px;
-                        letter-spacing: 7px;
-                        line-height: 50px;
-                        font-weight: bold;
-                        margin-right: 96px;
-                        text-align: left;
-                        width: 8em;
-                        @include tablet {
-                            margin-right: 35px;
-                            font-size: 32px;
-                        }
-                        @include phone {
-                            font-size: 18px;
-                            letter-spacing: 3.6px;
-                            margin-right: 0;
-                            line-height: 30px;
                             width: 100%;
+                            margin-top: 7px;
                         }
-
+        
+                        .job-type {
+                            color: $careers-page-job-meta-color;
+                            font-size: 24px;
+                            letter-spacing: 1.8px;
+                            line-height: 24px;
+                            @include phone {
+                                font-size: 16px;
+                                letter-spacing: 1.2px;
+                            }
+        
+                            img {
+                                height: 16px;
+                                width: 16px;
+                            }
+                        }
+                        .job-location {
+                            color: $careers-page-job-meta-color;
+                            font-size: 24px;
+                            letter-spacing: 1.8px;
+                            line-height: 24px;
+                            @include phone {
+                                font-size: 16px;
+                                letter-spacing: 1.2px;
+                            }
+        
+                            img {
+                                height: 16px;
+                                width: 10px;
+                            }
+                        }
+                        .trigger-button {
+                            height: 19px;
+                            width: 19px;
+                        }
                     }
-                    ul {
+                }
+                .Collapsible__contentInner {
+
+                    & > p:first-of-type {
                         color: #000000;
                         font-size: 20px;
+                        letter-spacing: 0.29px;
                         line-height: 42px;
-                        
+                        text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
                         @include phone {
                             color: #1B252F;
                             font-size: 16px;
                             line-height: 24px;
-                            padding-left: 16px;
                         }
                     }
-                    & > div > p {
-                        @include desktop {
+
+                    .about-role {
+                        color: #000000;
+                        font-size: 20px;
+                        letter-spacing: 0.29px;
+                        line-height: 42px;
+                        text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                        display: flex;
+                        flex-direction: row;
+                        margin: 124px auto 160px;
+                        @include phone {
+                            flex-direction: column;
+                            font-size: 16px;
+                            line-height: 24px;
+                            margin: 18px auto 34px;
+                        }
+
+                        h2 {
+                            color: #4A4A4A;
+                            font-size: 35px;
+                            letter-spacing: 7px;
+                            line-height: 50px;
+                            font-weight: bold;
+                            margin-right: 96px;
+                            text-align: left;
+                            @include tablet {
+                                margin-right: 35px;
+                                font-size: 32px;
+                            }
+                            @include phone {
+                                font-size: 18px;
+                                letter-spacing: 3.6px;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    .skills {
+                        display: flex;
+                        flex-direction: row;
+                        @include phone {
+                            flex-direction: column;
+                        }
+
+                        h2 {
+                            color: #4A4A4A;
+                            font-size: 35px;
+                            letter-spacing: 7px;
+                            line-height: 50px;
+                            font-weight: bold;
+                            margin-right: 96px;
+                            text-align: left;
+                            width: 8em;
+                            @include tablet {
+                                margin-right: 35px;
+                                font-size: 32px;
+                            }
+                            @include phone {
+                                font-size: 18px;
+                                letter-spacing: 3.6px;
+                                margin-right: 0;
+                                line-height: 30px;
+                                width: 100%;
+                            }
+
+                        }
+                        ul {
+                            color: #000000;
                             font-size: 20px;
                             line-height: 42px;
+                            
+                            @include phone {
+                                color: #1B252F;
+                                font-size: 16px;
+                                line-height: 24px;
+                                padding-left: 16px;
+                            }
+                        }
+                        & > div > p {
+                            @include desktop {
+                                font-size: 20px;
+                                line-height: 42px;
+                            }
+                            @include tablet {
+                                font-size: 20px;
+                                line-height: 42px;
+                            }
+                            @include phone {
+                                font-size: 18px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                letter-spacing: 3.6px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                    .apply-button {
+                        @include desktop {
+                            margin: 80px auto auto;
                         }
                         @include tablet {
-                            font-size: 20px;
-                            line-height: 42px;
+                            margin: 80px 33% 0;
                         }
                         @include phone {
-                            font-size: 18px;
-                            font-weight: bold;
-                            text-transform: uppercase;
-                            letter-spacing: 3.6px;
-                            line-height: 30px;
+                            margin: 66px auto 0 auto;
                         }
                     }
                 }
-                .apply-button {
-                    @include desktop {
-                        margin: 80px auto auto;
-                    }
-                    @include tablet {
-                        margin: 80px 33% 0;
-                    }
-                    @include phone {
-                        margin: 66px auto 0 auto;
-                    }
+            }
+            .job-opening-seperator {
+                box-sizing: border-box;
+                height: 2px;
+                width: 56%;
+                border: 1px solid #B9B9B9;
+                opacity: 0.5;
+                @include tablet {
+                    width: 89%;
+                }
+                @include phone {
+                    width: 80%;
+                    margin: 17px auto;
                 }
             }
+
+            
         }
-        .job-opening-seperator {
-            box-sizing: border-box;
-            height: 2px;
-            width: 56%;
-            border: 1px solid #B9B9B9;
-            opacity: 0.5;
-            @include tablet {
-                width: 89%;
-            }
+
+        .send-an-email {
+            font-size: 24px;
+            line-height: 42px;
+            text-align: center;
+            margin-top: 10em;
             @include phone {
-                width: 80%;
-                margin: 17px auto;
+                font-size: 16px;
+                line-height: 24px;
+                width: 76%;
+                margin: 96px auto 12px auto;
             }
-        }
 
-        
-    }
-
-    .send-an-email {
-        font-size: 24px;
-        line-height: 42px;
-        text-align: center;
-        margin-top: 10em;
-        @include phone {
-            font-size: 16px;
-            line-height: 24px;
-            width: 76%;
-            margin: 96px auto 12px auto;
-        }
-
-        span {
-            font-weight: bold;
+            span {
+                font-weight: bold;
+            }
         }
     }
 }
