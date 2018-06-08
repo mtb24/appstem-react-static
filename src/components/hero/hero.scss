@@ -9,7 +9,7 @@
         height: 37rem;
     }
     @include tablet {
-        height: 32rem;
+        height: 33rem;
     }
     @include phone {
         height: 20rem;
@@ -52,8 +52,7 @@
         margin-bottom: -11rem;
     }
     @include tablet {
-        // height: 28rem;
-        margin-bottom: -14%;
+        margin-bottom: -12%;
     }
 
     @include phone {
@@ -92,9 +91,9 @@
 
     }
     @include tablet {
-        top: 3em;
-        width: 60%;
-        left: 20%;
+        top: 2.5em;
+        width: 50%;
+        left: 28%;
         margin: 0 auto;
         font-size: 52px;
         line-height: 72px;
