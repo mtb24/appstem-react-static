@@ -1,29 +1,22 @@
 @import '../../styles/styles.scss';
 
-.services-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    // margin-bottom: 80px;
-    background-color: $body-background-color;
+.services {
+    color: $primary-font-color;
+    background: $primary-background-color;
 
     .what-we-do {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        top: 4em;
 
         h2 {
-            color: $services-page-heading-color;
-            font-family: $primary-font-family;
             font-size: 32px;
             font-weight: normal;
             letter-spacing: 6.4px;
             line-height: 46px;
             text-align: center;
+            
             @include phone {
                 font-size: 20px;
                 letter-spacing: 4px;
@@ -35,6 +28,7 @@
             height: 3px;
             border: none;
             margin-bottom: 3em;
+            
             @include phone {
                 width: 31px;
                 height: 2px;
@@ -43,13 +37,13 @@
         }
         p {
             height: 280px;
-            width: 780px;
+            width: 65%;
             color: $services-page-p-color;
-            font-family: $primary-font-family;
             font-weight: normal;
             font-size: 24px;
             line-height: 40px;
             opacity: 0.9;
+            
             @include phone {
                 width: 81%;
                 text-align: left;
@@ -65,6 +59,10 @@
             flex-direction: row;
             align-items: center;
             margin-bottom: 10em;
+            
+            @include tablet {
+                margin: 3rem auto;
+            }
             @include phone {
                 flex-direction: column;
             }
@@ -83,8 +81,6 @@
                 margin-top: 25px;
                 
                 h2 {
-                    color: $services-page-heading-color;
-                    font-family: $primary-font-family;
                     font-size: 35px;
                     font-weight: normal;
                     letter-spacing: 7px;
@@ -101,7 +97,6 @@
                     height: 72px;
                     width: 483px;
                     color: $services-page-block-p-color;
-                    font-family: $primary-font-family;
                     font-size: 16px;
                     line-height: 24px;
                     @include phone {
@@ -116,30 +111,36 @@
 
         }
     }
+}
+.expertise {
+    background: $secondary-background-color;
+
     .our-expertise {
-        background-color: $page-background-color;
-        width: 100vw; // must extend past wrapper
+        background: $secondary-background-color;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1em;
         justify-items: center;
         padding: 10em 0;
+        
         @include phone {
             width: 100%;
             display: flex;
             flex-direction: column;
-            padding-top: 4em;
-            padding-bottom: 0;
+            padding: 4em 0;
         }
         
         h2 {
-            color: $services-page-exertise-heading-color;
-            font-family: $primary-font-family;
+            color: $services-page-exertise-block-color;
             font-size: 32px;
             font-weight: normal;
             letter-spacing: 6.4px;
             line-height: 46px;
             grid-column: span 2;
+            
             @include phone {
                 font-size: 20px;
                 letter-spacing: 4px;
@@ -153,7 +154,6 @@
 
         .expertise-block {
             color: $services-page-exertise-block-color;
-            font-family: $primary-font-family;
             font-size: 35px;
             font-weight: normal;
             letter-spacing: 7px;
@@ -162,7 +162,7 @@
             width: 10em;
             @include phone {
                 width: 89%;
-                margin-bottom: 90px;
+                margin: 1rem auto;
             }
             h2 {
                 @include phone {
@@ -174,7 +174,6 @@
 
             p.description {
                 color: $services-page-exertise-block-color;
-                font-family: $primary-font-family;
                 font-size: 18px;
                 letter-spacing: 0.5px;
                 line-height: 30px;
@@ -188,7 +187,6 @@
             }
             p.project-type {
                 color: $services-page-exertise-project-type-color;
-                font-family: $primary-font-family;
                 font-size: 18px;
                 font-weight: 500;
                 letter-spacing: 0.5px;
@@ -205,19 +203,25 @@
             }
         }
     }
+}
+
+.last-section {
+    background: $services-page-see-what-we-made-block-color;
+
+    @include phone {
+        display: none;
+    }
     .see-what-we-made {
         height: 580px;
         width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
         background-color: $services-page-see-what-we-made-block-color;
         color: $white;
-        font-family: $primary-font-family;
         font-size: 35px;
         font-weight: normal;
         letter-spacing: 7px;
         line-height: 50px;
-        @include phone {
-            display: none;
-        }
 
         .swm-top-left {
             display: flex;
@@ -225,7 +229,7 @@
             justify-content: start;
             align-items: center;
             height: 100px;
-            margin-left: 185px;
+            margin-left: 1em;
             margin-top: 157px;
         }
         .swm-bottom-right {
@@ -233,13 +237,15 @@
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
-            margin-right: 185px;
+            margin-right: 1em;
             margin-top: 50px;
         }
     }
 }
-
 // hack
+.footer {
+    margin-top: -2rem;
+}
 .footer-body > .nav-wrapper {
     z-index: 1;
 }

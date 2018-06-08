@@ -3,6 +3,7 @@ import { withRouteData } from 'react-static'
 import convert from 'htmr'
 import Hero from '../hero/hero'
 import Cta from '../layout/page-section/cta'
+import AngledSection from '../layout/page-section/angled-section'
 import ImageBox from '../image-box/image-box'
 import backgroundImage from '../../../public/assets/images/main-pages/large/bg_services.jpg'
 import startupImage from '../../../public/assets/images/main-pages/icons/ic_startup.png'
@@ -19,8 +20,8 @@ export default withRouteData(({ services }) => (
           heroType='image' 
           backgroundImage={ backgroundImage } 
           className='angle--bottom-right' />
-    
-    <div className='services-wrapper angle--bottom-right'>
+
+    <div className='services content-wrapper angle--bottom-right'>
       
       <Cta className='what-we-do' heading='What We Do'>
 
@@ -60,8 +61,10 @@ export default withRouteData(({ services }) => (
         </div>
 
       </Cta>
-      
-      <Cta className='our-expertise angle--top-left' heading='Our Expertise'>
+    </div>
+
+    <AngledSection className='expertise' mask='angle--top-left'> 
+      <Cta className='our-expertise' heading='Our Expertise'>
 
         <div className='expertise-block'>
           <h2 className='all-caps'>Strategy</h2>
@@ -88,12 +91,14 @@ export default withRouteData(({ services }) => (
         </div>
 
       </Cta>
-      <div className='see-what-we-made angle--bottom-right'>
+    </AngledSection>
+
+    <AngledSection className='last-section' mask='angle--bottom-right'> 
+      <div className='see-what-we-made'>
         <div className='swm-top-left all-caps'><img src={ leftArrow } alt='Left arrow icon'/> See What We Made</div>
         <div className='swm-bottom-right all-caps'>Let's Get In Touch <img src={ rightArrow } alt='Right arrow icon'/></div>
       </div>
-    
-    </div>
+    </AngledSection>
 
-    </React.Fragment>
+  </React.Fragment>
 ))
