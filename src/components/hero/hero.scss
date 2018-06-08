@@ -1,21 +1,27 @@
 @import '../../styles/styles.scss';
 
 .hero {
-    height: 700px;
-    top: -40px;
-    grid-column: col-start / span 12;
-
+    position: absolute !important;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+    @include desktop {
+        height: 37rem;
+    }
+    @include tablet {
+        height: 32rem;
+    }
     @include phone {
-        height: 320px;
+        height: 20rem;
     }
 
     h1.title {
         position: relative;
         top: 5em;
         text-transform: uppercase;
-        border: 1px solid $body-text-color;
+        border: 1px solid $primary-font-color;
         max-width: 8em;
-        color: $body-text-color;
+        color: $primary-font-color;
         font-family: $primary-font-family, sans-serif;
         font-size: 50px;
         font-weight: bold;
@@ -26,7 +32,6 @@
 
 
         @include phone {
-            top: 4em;
             height: 82px;
             width: 232px;
             font-size: 24px;
@@ -40,18 +45,22 @@
     position: relative;
     top: -40px;
     width: 100vw;
-    height: auto;
-    margin-bottom: -175px;
-    z-index: 1;
-
+    z-index: -1;
+    
+    @include desktop {
+        height: auto;
+        margin-bottom: -11rem;
+    }
     @include tablet {
-        margin-bottom: -13%;
+        // height: 28rem;
+        margin-bottom: -14%;
     }
 
     @include phone {
         height: 20em;
-        margin-bottom: -16%;
+        margin-bottom: -6rem;
         background: url('/assets/images/posterimage-home.jpg');
+        background-size: cover;
         video {
             display: none;
         }
@@ -66,19 +75,24 @@
 .hero-video ~ h1.title {
     grid-column: col-start / span 12;
     position: absolute;
-    top: 2.5em;
-    width: 60%;
-    margin: 0 20%;
     z-index: 1;
     color: $primary-font-color;
     font-family: $secondary-font-family;
-    font-size: 96px;
     font-weight: 200;
-    letter-spacing: -0.83px;
-    line-height: 96px;
     text-align: center;
+    
+    
+    @include desktop {
+        top: 10rem;
+        width: 60%;
+        margin: 0 20%;
+        font-size: 96px;
+        letter-spacing: -0.83px;
+        line-height: 96px;
 
+    }
     @include tablet {
+        top: 3em;
         width: 60%;
         left: 20%;
         margin: 0 auto;
@@ -95,4 +109,10 @@
         top: 3em;
         left: 13.5%;
     }
+    // @media (min-width: 1301px) and (max-width: 1400px) {
+    //     top: 250px !important;
+    // }
+    // @media (min-width: 1200px) and (max-width: 1300px) {
+    //     top: 150px !important;
+    // }
 }

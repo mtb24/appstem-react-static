@@ -3,6 +3,7 @@
 .section-1 {
     height: 727.5px;
     background: $featureblocks-bg-color;
+    margin-bottom: -7%;
 
     @include phone {
         height: 341px;
@@ -35,6 +36,7 @@
 }
 .section-2 {
     height: 876.28px;
+    margin-bottom: -7%;
     
     @include tablet {
         height: auto;
@@ -65,6 +67,7 @@
 .section-3 {
     height: 876.28px;
     background: $featureblocks-bg-color;
+    margin-bottom: -7%;
 
     @include tablet {
         height: auto;
@@ -100,7 +103,9 @@
 }
 .section-4 {
     height: 876.28px;
-    padding-bottom: 20em;
+    padding-bottom: 32em;
+    margin-bottom: -7%;
+
     @include tablet {
         height: auto;
         padding-bottom: 10em;

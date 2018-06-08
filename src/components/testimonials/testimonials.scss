@@ -93,13 +93,17 @@
                     font-weight: 300;
                     line-height: 24px;
                     text-align: center;
-                    margin: 0 0.25em;
+                    margin: 0 1.25em;
                 }
             }
             .quote-author-wrapper {
                 position: relative;
                 left: 65%;
                 margin-top: 60px;
+                @include tablet {
+                    left: 0;
+                    text-align: center;
+                }
                 @include phone {
                     left: 0;
                     text-align: center;
@@ -107,7 +111,12 @@
 
                 hr {
                     position: relative;
-                    left: 52.75%;
+                    @include desktop {
+                        left: 52.75%;
+                    }
+                    @include tablet {
+                        left: 0;
+                    }
                     @include phone {
                         left: 0;
                     }
