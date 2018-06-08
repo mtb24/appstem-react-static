@@ -6,7 +6,7 @@ import SocialIcons from '../social/social-icons'
 import './footer.scss'
 
 export default () => (
-    <footer className='footer angle--top-left'>
+    <footer className='footer'>
         <div className='footer-grid'>
             <Nav className={'all-caps footer-nav'} />
 
