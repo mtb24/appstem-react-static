@@ -1,33 +1,18 @@
 @import '../../styles/styles.scss';
 
-.contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    color: $page-text-color;
-    background-color: $page-background-color;
-    z-index: -1;
-    @include desktop {
-        margin-top: -12%;
-        padding-top: 15%;
-        // margin-bottom: -18%;
-    }
-    @include tablet {
-        margin-top: -12%;
-        padding-top: 15%;
-    }
-    @include phone {
-        margin-top: -17%;
-        padding-top: 15%;
-        // margin-bottom: 0;
-    }
-
+.contact {
+    color: $third-font-color;
+    background: $secondary-background-color;
+    
     .cta-wrapper {
         margin-top: 3em;
+
         h2 {
-            color: $page-text-color;
+            @include phone {
+                font-size: 20px;
+                line-height: 29px;
+                letter-spacing: 4px;
+            }
         }
     }
 
@@ -35,6 +20,9 @@
         width: 80%;
         max-width: 800px;
         margin-top: 7em;
+        @include phone {
+            margin-top: 3rem;
+        }
 
         .contact-form-field-wrapper {
             width: 100%;
@@ -92,23 +80,32 @@
         width: 100%;
         text-align: center;
         margin: 220px 0;
+        @include phone {
+            margin: 6rem auto;
+        }
 
         h2 {
-            color: $form-heading-color;
-            font-family: $primary-font-family;
             font-size: 32px;
             font-weight: normal;
             letter-spacing: 6.4px;
             line-height: 46px;
             text-align: center;
+            
+            @include phone {
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 4px;
+                line-height: 29px;
+            }
         }
         p {
             margin: 70px 0 80px 0;
             font-size: 20px;
             line-height: 40px;
-            color: $form-heading-color;
             @include phone {
                 padding: 0 1em;
+                font-size: 16px;
+                line-height: 24px;
             }
         }
         .openings-link {
@@ -116,13 +113,18 @@
             font-size: 16px;
             letter-spacing: 3.29px;
             line-height: 24px;
-            & > .openings-link-arrow {
-                color: $form-text-color-mobile;
-                position: relative;
-                top: -2px;
-                left: 2px;
-                font-size: 1em;
+            @include phone {
+                font-size: 15px;
+                line-height: 3.08px;
+                font-weight: bold;
             }
+        }
+        .openings-link-arrow {
+            color: $form-text-color-mobile;
+            position: relative;
+            top: -2px;
+            left: 5px;
+            font-size: 1em;
         }
     }
         
