@@ -6,9 +6,8 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  color: $body-text-color;
-  //background-color: $body-background-color;
-  background: cadetblue;
+  color: $primary-font-color;
+  background-color: $primary-background-color;
   height: 100%;
   min-height: 100vh;
   width: 100%;
@@ -65,6 +64,31 @@ body {
     }
   }
 }
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include desktop {
+      margin-top: 27rem;
+      padding-top: 10%;
+  }
+  @include tablet {
+      margin-top: 25rem;
+      padding-top: 15%;
+  }
+  @include phone {
+      margin-top: 15rem;
+      padding-top: 20%;
+  }
+  
+}
+
 .grid-wrapper {
   max-width: 1200px;
   display: grid;
