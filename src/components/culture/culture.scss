@@ -4,6 +4,7 @@
 .culture {
     color: $primary-font-color;
     background-color: $primary-background-color;
+    top: -9.5em;
 
     .culture-who-we-are {
         
@@ -38,8 +39,8 @@
     .video-react {
         width: 100%;
         max-width: 960px;
-        // margin-top: 124px;
-        // padding-top: 54em;
+        margin: 0 auto;
+        
         @include tablet {
             margin: 124px auto 124px auto;
         }
