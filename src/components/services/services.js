@@ -4,13 +4,11 @@ import convert from 'htmr'
 import Hero from '../hero/hero'
 import Cta from '../layout/page-section/cta'
 import AngledSection from '../layout/page-section/angled-section'
-import ImageBox from '../image-box/image-box'
+import SectionLinks from '../nav/section-links/section-links'
 import backgroundImage from '../../../public/assets/images/main-pages/large/bg_services.jpg'
 import startupImage from '../../../public/assets/images/icons/ic_startup.png'
 import redesignImage from '../../../public/assets/images/icons/ic_redesign.png'
 import revolutionImage from '../../../public/assets/images/icons/ic_revolution.png'
-import leftArrow from '../../../public/assets/images/icons/left-arrow.png'
-import rightArrow from '../../../public/assets/images/icons/right-arrow.png'
 import './services.scss'
 
 export default withRouteData(({ services }) => (
@@ -21,47 +19,49 @@ export default withRouteData(({ services }) => (
           backgroundImage={ backgroundImage } 
           className='angle--bottom-right' />
 
-    <div className='services content-wrapper angle--bottom-right'>
+    <AngledSection className='services' mask='angle--bottom-right'>
+      <div className='content-wrapper'>
       
-      <Cta className='what-we-do' heading='What We Do'>
+        <Cta className='what-we-do' heading='What We Do'>
 
-        <p>Each member of our team is an expert in mobile technology. From product development, design, native development, QA, and ongoing support, we specialize in all phases of the project lifecycle. After 6 years and over 150 mobile apps, we have a proven track record of designing and developing innovative mobile products that are better, faster, and more cost-effective than the majority of our competition.</p>
-        
-        <div className='services-block'>
-          <img src={ startupImage }
-              className='services-block-image'
-              alt='an icon for startup section' />
+          <p>Each member of our team is an expert in mobile technology. From product development, design, native development, QA, and ongoing support, we specialize in all phases of the project lifecycle. After 6 years and over 150 mobile apps, we have a proven track record of designing and developing innovative mobile products that are better, faster, and more cost-effective than the majority of our competition.</p>
           
-          <div className='services-block-text'>
-            <h2 className='all-caps'>Startup</h2>
-            <p>We develop natively across iOS, Android, and Windows platforms using the latest mobile technology. Leveraging years of experience, we build performance-critical mobile apps tailored to the nuances of each platform.</p>
+          <div className='services-block'>
+            <img src={ startupImage }
+                className='services-block-image'
+                alt='an icon for startup section' />
+            
+            <div className='services-block-text'>
+              <h2 className='all-caps'>Startup</h2>
+              <p>We develop natively across iOS, Android, and Windows platforms using the latest mobile technology. Leveraging years of experience, we build performance-critical mobile apps tailored to the nuances of each platform.</p>
+            </div>
           </div>
-        </div>
+          
+          <div className='services-block'>
+            <img src={ redesignImage }
+                className='services-block-image'
+                alt='an icon for redesign section' />
+
+            <div className='services-block-text'>
+              <h2 className='all-caps'>Re-Design</h2>
+              <p>We develop natively across iOS, Android, and Windows platforms using the latest mobile technology. Leveraging years of experience, we build performance-critical mobile apps tailored to the nuances of each platform.</p>
+            </div>
+          </div>
+          
+          <div className='services-block'>
+            <img src={ revolutionImage }
+                className='services-block-image'
+                alt='an icon for revolution section' />
+
+            <div className='services-block-text'>
+              <h2 className='all-caps'>Revolution</h2>
+              <p>We develop natively across iOS, Android, and Windows platforms using the latest mobile technology. Leveraging years of experience, we build performance-critical mobile apps tailored to the nuances of each platform.</p>
+            </div>
+          </div>
+        </Cta>
         
-        <div className='services-block'>
-          <img src={ redesignImage }
-               className='services-block-image'
-               alt='an icon for redesign section' />
-
-          <div className='services-block-text'>
-            <h2 className='all-caps'>Re-Design</h2>
-            <p>We develop natively across iOS, Android, and Windows platforms using the latest mobile technology. Leveraging years of experience, we build performance-critical mobile apps tailored to the nuances of each platform.</p>
-          </div>
-        </div>
-        
-        <div className='services-block'>
-          <img src={ revolutionImage }
-              className='services-block-image'
-              alt='an icon for revolution section' />
-
-          <div className='services-block-text'>
-            <h2 className='all-caps'>Revolution</h2>
-            <p>We develop natively across iOS, Android, and Windows platforms using the latest mobile technology. Leveraging years of experience, we build performance-critical mobile apps tailored to the nuances of each platform.</p>
-          </div>
-        </div>
-
-      </Cta>
-    </div>
+      </div>
+    </AngledSection>
 
     <AngledSection className='expertise' mask='angle--top-left'> 
       <Cta className='our-expertise' heading='Our Expertise'>
@@ -94,10 +94,7 @@ export default withRouteData(({ services }) => (
     </AngledSection>
 
     <AngledSection className='last-section' mask='angle--bottom-right'> 
-      <div className='see-what-we-made'>
-        <div className='swm-top-left all-caps'><img src={ leftArrow } alt='Left arrow icon'/> See What We Made</div>
-        <div className='swm-bottom-right all-caps'>Let's Get In Touch <img src={ rightArrow } alt='Right arrow icon'/></div>
-      </div>
+      <SectionLinks className='see-what-we-made' leftText='See What We Made' rightText={`Let's Get In Touch`} />
     </AngledSection>
 
   </React.Fragment>
