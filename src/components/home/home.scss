@@ -1,15 +1,23 @@
 @import '../../styles/styles.scss';
 
+[class^=section-] {
+    .feature-block {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+}
 .section-1 {
     height: 727.5px;
     background: $featureblocks-bg-color;
-    margin-bottom: -7%;
 
     @include phone {
         height: 341px;
     }
     
     .home-text-wrapper {
+        padding-top: 0;
         
         p {
             width: 60%;
@@ -35,8 +43,8 @@
     }
 }
 .section-2 {
-    height: 876.28px;
-    margin-bottom: -7%;
+    // height: 876.28px;
+    top: -129px;
     
     @include tablet {
         height: auto;
@@ -47,27 +55,25 @@
 
     .case-study-1 {
 
-        @include tablet {
-    
             .feature-block-image {
-                width: 48%;
                 justify-items: center;
-            }
-        }
-        @include phone {
-    
-            .feature-block-image {
-                width: 48%;
-                justify-items: center;
-            }
-        }
 
+                @include desktop {
+                    width: 100% !important;
+                }
+                @include tablet {
+                    width: 60%;
+                }
+                @include phone {
+                    width: 48%;
+                }   
+            }
     }
 }
 .section-3 {
     height: 876.28px;
     background: $featureblocks-bg-color;
-    margin-bottom: -7%;
+    top: -257px;
 
     @include tablet {
         height: auto;
@@ -83,9 +89,9 @@
             justify-items: center;
 
             .feature-block-image {
-                width: 122%;
+                width: 175%;
                 position: relative;
-                left: 9.5%;
+                left: 15.5%;
             }
         }
         @include tablet {
@@ -103,8 +109,8 @@
 }
 .section-4 {
     height: 876.28px;
-    padding-bottom: 32em;
-    margin-bottom: -7%;
+    padding-bottom: 20em;
+    top: -385px;
 
     @include tablet {
         height: auto;
@@ -142,18 +148,27 @@
         display: block;
         margin: 0 auto;
         text-decoration: none;
+        @include phone {
+            margin-bottom: 7em;
+        }
     }
 }
 .section-5 {
+    top: -513px;
     height: 876.28px;
     background: $white;
     padding-bottom: 4em;
 
+    @include desktop {
+        margin-bottom: -30em;
+    }
     @include phone {
         height: auto;
+        margin-bottom: -32em;
     }
     @include tablet {
         height: 725px;
+        margin-bottom: -32em;
     }
     
     .testimonials-wrapper {
