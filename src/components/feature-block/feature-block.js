@@ -31,7 +31,7 @@ export default props => {
 
                     <div className='feature-block-project-description'>{ convert( props.caseStudy.contents ) }</div>
 
-                    <Link to={`/work/${ props.caseStudy.slug }/`} className='all-caps'>View the case study <img src={ Arrow } alt='Link to case studies' /></Link>
+                    <Link to={`/portfolio/${ props.caseStudy.slug }/`} className='all-caps'>View the case study <img src={ Arrow } alt='Link to case studies' /></Link>
 
                 </div>
 
