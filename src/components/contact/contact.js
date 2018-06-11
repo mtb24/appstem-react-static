@@ -43,7 +43,7 @@ export default withRouteData(({ contact }) => (
         backgroundImage={ backgroundImage } 
         className='angle--bottom-right' />
   <AngledSection className='contact' mask='angle--both-left-right'>
-    <div className='contact content-wrapper'>
+    <div className='content-wrapper'>
 
       <Cta heading={convert(contact.heading)} />
 
