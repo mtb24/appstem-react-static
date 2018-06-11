@@ -38,7 +38,8 @@ export default withRouteData(({ culture, testimonials }) => {
             backgroundImage={ backgroundImage } 
             className='angle--bottom-right' />
 
-      <div className='culture content-wrapper angle--both-left-right'>
+      <AngledSection className='culture' mask='angle--both-left-right'>
+        <div className='content-wrapper'>
 
         <Cta className='culture-who-we-are' heading='Who We Are'>
           <p>Our mission is to make purpose-built apps that serve real needs in people’s lives. We use metrics-driven mobile strategies, human-centered design and efficient development to create apps that people want to use.</p>
@@ -66,7 +67,8 @@ export default withRouteData(({ culture, testimonials }) => {
           <LinkOutlined linkTo='/careers' className='view-openings-link'>View Openings</LinkOutlined>
         </Cta>
 
-      </div>
+        </div>
+      </AngledSection>
 
       <AngledSection className='testimonials-wrapper' mask='angle--both-left-right'>
         <Testimonials className='grid-wrapper culture-testimonials' />
