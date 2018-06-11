@@ -1,1 +1,12 @@
 @import '../../styles/styles.scss';
+
+.case-study {
+
+}
+.case-study ~ .section-link-wrapper {
+    background: $off-black;
+    .section-links {
+        height: 500px;
+        max-width: 1200px;
+    }
+}
