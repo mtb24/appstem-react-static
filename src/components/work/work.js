@@ -17,26 +17,28 @@ export default withRouteData(({ work }) => {
           backgroundImage={ backgroundImage }
           className='angle--bottom-right' />
 
-    <div className='work content-wrapper'>
+    <AngledSection className='work' mask='angle--both-left-right'>
+      <div className='content-wrapper'>
 
-      {
-        work.map( (caseStudy, i) => {
+        {
+          work.map( (caseStudy, i) => {
 
-          const imagePosition = ( i % 2 == 0 )? 'left' : 'right'
-          const backgroundColor = ( i % 2 == 0 )? 'bg-regular' : 'bg-alternate'
+            const imagePosition = ( i % 2 == 0 )? 'left' : 'right'
+            const backgroundColor = ( i % 2 == 0 )? 'bg-regular' : 'bg-alternate'
 
-          return (
+            return (
 
-            <AngledSection key={i} className={`work-section-${i} ${backgroundColor}`} mask='angle--both-left-right'>
-              <FeatureBlock key={ caseStudy.slug } imagePosition={imagePosition} caseStudy={caseStudy} />
-            </AngledSection>
-          )
+              <AngledSection key={i} className={`work-section-${i} ${backgroundColor}`} mask='angle--both-left-right'>
+                <FeatureBlock key={ caseStudy.slug } imagePosition={imagePosition} caseStudy={caseStudy} />
+              </AngledSection>
+            )
 
-        })
+          })
 
-      }
+        }
 
-    </div>
+      </div>
+    </AngledSection>
 
   </React.Fragment>
 )})
