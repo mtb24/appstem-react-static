@@ -3,9 +3,17 @@
 .contact {
     color: $third-font-color;
     background: $secondary-background-color;
+    @include desktop {
+        top: -175px;
+    }
+    @include tablet {
+        top: -120px;
+    }
+    @include phone {
+        top: -90px;
+    }
     
     .cta-wrapper {
-        margin-top: 3em;
 
         h2 {
             @include phone {
