@@ -1,6 +1,5 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
-import convert from 'htmr'
 import Hero from '../hero/hero'
 import AngledSection from '../layout/page-section/angled-section'
 import Testimonials from '../testimonials/testimonials'
@@ -21,7 +20,7 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
 
       
       <AngledSection className='section-1' mask='angle--both-left-right' style={{ background: 'red' }}>
-        <div className='content-wrapper home-text-wrapper'> { convert(home.contents) } </div>
+        <div className='content-wrapper home-text-wrapper'> { home.mainParagraph } </div>
       </AngledSection>
 
       <AngledSection className='section-2' mask='angle--both-left-right'>
@@ -29,7 +28,8 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
           key={ 'case-study-1' } 
           className='case-study-1' 
           imagePosition={ 'left' } 
-          caseStudy={ caseStudiesForHomePage[0] } />
+          caseStudy={ caseStudiesForHomePage[0] }
+          imageType='image' />
       </AngledSection>
       
       <AngledSection className='section-3' mask='angle--both-left-right'>
@@ -37,7 +37,8 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
           key={ 'case-study-2' } 
           className='case-study-2' 
           imagePosition={ 'right' }
-          caseStudy={ caseStudiesForHomePage[1] } />
+          caseStudy={ caseStudiesForHomePage[1] }
+          imageType='image' />
       </AngledSection>
       
       <AngledSection className='section-4' mask='angle--both-left-right'>
@@ -45,7 +46,8 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
           key={ 'case-study-3' } 
           className='case-study-3' 
           imagePosition={ 'left' } 
-          caseStudy={ caseStudiesForHomePage[2] } />
+          caseStudy={ caseStudiesForHomePage[2] }
+          imageType='image' />
           
         <LinkOutlined linkTo="/work" className="view-portfolio-link">View Full Portfolio</LinkOutlined>
       </AngledSection>
