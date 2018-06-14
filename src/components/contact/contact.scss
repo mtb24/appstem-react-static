@@ -1,5 +1,11 @@
 @import '../../styles/styles.scss';
 
+// Forms
+$form-heading-color: #1B252F;
+$form-active-border-color: $appstem-green;
+$form-inactive-border-color: #A29E9E;
+$form-text-color-mobile: #4A4A4A;
+
 .contact {
     color: $third-font-color;
     background: $secondary-background-color;

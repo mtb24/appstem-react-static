@@ -1,5 +1,16 @@
 @import '../../styles/styles.scss';
 
+// Services page
+$services-page-heading-color: $white;
+$services-page-p-color: $secondary-font-color;
+$services-page-block-p-color: $white;
+$services-page-exertise-heading-color: #1B252F;
+$services-page-exertise-block-color: #4a4a4a;
+$services-page-exertise-block-color-mobile: #9B9B9B;
+$services-page-exertise-project-type-color: #cccccc;
+$services-page-exertise-project-type-color-mobile: #4A4A4A;
+$services-page-see-what-we-made-block-color: #0E0E0E;
+
 .services {
     color: $primary-font-color;
     background: $primary-background-color;
