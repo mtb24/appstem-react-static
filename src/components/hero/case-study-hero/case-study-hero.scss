@@ -1,0 +1,60 @@
+@import '../../../styles/styles.scss';
+
+.case-study-hero {
+    height: auto;
+    position: relative;
+
+    .case-study-hero-featureblock {
+        // grid-column: col-start / span 12;
+        // align-items: flex-start;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 80px;
+
+        & .feature-block-image {
+            // grid-column: 10 / span 5;
+            justify-self: end;
+            // width: auto;
+
+        }
+        & .feature-block-details {
+            // grid-column-start: 1;
+            justify-self: start;
+
+            & > h2 {
+                color: #FAFAFA;
+                font-size: 63px;
+                font-weight: bold;
+                letter-spacing: 9.56px;
+                line-height: 92px;
+                margin: 0;
+            }
+            .feature-block-project-type {
+                    color: #B3B3B3;
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 5px;
+                    line-height: 25px;
+            }
+            .feature-block-project-description {
+                    color: #E7E7E7;
+                    font-size: 18px;
+                    line-height: 36px;
+                    
+                    & > p {
+
+                        @include desktop {
+                            // width: 369px;
+                        }
+                    }
+            }
+            & > a {
+                display: none;
+            }
+        }
+
+    }
+}
