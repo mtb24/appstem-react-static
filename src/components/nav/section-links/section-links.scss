@@ -40,12 +40,13 @@
             line-height: 50px;
             font-weight: bold;
             
-            &:first-of-type {
+            &.sl-left {
                 img {
                     margin-right: 1em;
                 }
+
             }
-            &:nth-of-type(2) {
+            &.sl-right {
                 img {
                     margin-left: 1em;
                 }
@@ -55,6 +56,7 @@
 
     &  a {
         text-decoration: none;
+        color: inherit;
     }
 
 }
