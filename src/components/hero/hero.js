@@ -10,17 +10,17 @@ export default props => {
     switch( props.heroType ) {
 
         case 'image':
-            console.log('image hero loading...')
+            // console.log('image hero loading...')
             return <ImageHero {...props}/>
             break
         
         case 'video': 
-            console.log('video hero loading...')
+            // console.log('video hero loading...')
             return <VideoHero {...props}/>
             break
 
         case 'case-study':
-            console.log('case-study hero loading...')
+            // console.log('case-study hero loading...')
             return <CasestudyHero {...props}/>
             break
         default:
