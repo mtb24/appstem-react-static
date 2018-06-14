@@ -3,7 +3,7 @@ import { withRouteData } from 'react-static'
 import Hero from '../hero/hero'
 import Testimonials from '../testimonials/testimonials'
 import AngledSection from '../layout/page-section/angled-section'
-import backgroundImage from '../../../public/assets/images/main-pages/large/bg_culture.jpg'
+import backgroundImage from '../../../public/assets/images/main-pages/bg_culture.jpg'
 import ImageBox from '../image-box/image-box'
 import { Player, BigPlayButton, PosterImage } from 'video-react';
 import posterImage from '../../../public/assets/images/culture-video-poster.png'
@@ -12,7 +12,7 @@ import LinkOutlined from '../buttons/link-outlined/link-outlined'
 import './culture.scss'
 
 
-export default withRouteData(({ culture, testimonials }) => {
+export default withRouteData(({ culture }) => {
   
   // get images and videos from page object.
   // expects a key following: image- or video-
@@ -71,7 +71,7 @@ export default withRouteData(({ culture, testimonials }) => {
       </AngledSection>
 
       <AngledSection className='testimonials-wrapper' mask='angle--both-left-right'>
-        <Testimonials className='grid-wrapper culture-testimonials' />
+        <Testimonials className='culture-testimonials' />
       </AngledSection>
 
     </React.Fragment>
