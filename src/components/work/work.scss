@@ -5,43 +5,47 @@
     background: $primary-background-color;
     
     @include desktop {
-        margin-top: 25rem !important;
-        padding-top: 1rem !important;
+        top: -175px;
         padding-bottom: 5em;
     }
     @include tablet {
-        padding-top: 1rem !important;
+        top: -120px;
     }
     @include phone {
-        padding-top: 0 !important;
+        top: -90px;
+    }
+    & > .content-wrapper {
+        padding-top: 0;
     }
 
     .angled-section {
-        @media (min-width: 1701px) and (max-width: 2000px) {
-            margin-bottom: -11% !important;
-        }
-        @media (min-width: 1601px) and (max-width: 1700px) {
-            margin-bottom: -9% !important;
-        }
-        @media (min-width: 1501px) and (max-width: 1600px) {
-            margin-bottom: -8.5% !important;
-        }
-        @media (min-width: 1401px) and (max-width: 1500px) {
-            margin-bottom: -8% !important;
-        }
-        @media (min-width: 1301px) and (max-width: 1400px) {
-            margin-bottom: -7.5% !important;
-        }
-        @media (min-width: 1200px) and (max-width: 1300px) {
-            margin-bottom: -7% !important;
-        }
+        // @media (min-width: 1701px) and (max-width: 2000px) {
+        //     margin-bottom: -11% !important;
+        // }
+        // @media (min-width: 1601px) and (max-width: 1700px) {
+        //     margin-bottom: -9% !important;
+        // }
+        // @media (min-width: 1501px) and (max-width: 1600px) {
+        //     margin-bottom: -8.5% !important;
+        // }
+        // @media (min-width: 1401px) and (max-width: 1500px) {
+        //     margin-bottom: -8% !important;
+        // }
+        // @media (min-width: 1301px) and (max-width: 1400px) {
+        //     margin-bottom: -7.5% !important;
+        // }
+        // @media (min-width: 1200px) and (max-width: 1300px) {
+        //     margin-bottom: -7% !important;
+        // }
         @include desktop {
             margin-bottom: -7%;
         }
         @include tablet {
+            padding-top: 5em;
             margin-bottom: -7%;
         }
         @include phone {
+            padding-top: 5em;
             margin-bottom: -7%;
         }
 

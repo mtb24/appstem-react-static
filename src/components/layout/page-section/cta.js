@@ -1,10 +1,20 @@
 import React from 'react'
+import Heading from '../page-section/heading'
 import './cta.scss'
 
-export default (props) => (
-    <div className={ `cta-wrapper ${ props.className || '' }` }>
-        <h2 className='all-caps'>{ props.heading }</h2>
-        <hr className='hr-green'/>
-        { props.children }
-    </div>
-)
+export default (props) => {
+    const headingLevel = props.headingLevel || '2'
+    return (
+        <div className={ `cta-wrapper ${ props.className || '' }` }>
+            
+            <Heading headingLevel={ headingLevel } className='top-heading'>
+                { props.heading }
+            </Heading>
+            
+            <hr className='hr-green'/>
+            
+            { props.children }
+        
+        </div>
+    )
+}

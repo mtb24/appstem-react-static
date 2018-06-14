@@ -1,14 +1,31 @@
 @import "~video-react/styles/scss/video-react";
 @import '../../styles/styles.scss';
 
+// Culture page
+$services-page-p-color: $secondary-font-color;
+$testimonials-H2-color: #1B252F;
+
 .culture {
     color: $primary-font-color;
     background-color: $primary-background-color;
+    top: -9.5em;
 
+    h2 {
+        color: #FFFFFF;
+        font-family: "Brandon Grotesque";
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 6.4px;
+        line-height: 46px;
+        text-align: center;
+    }
     .culture-who-we-are {
         
         @include phone {
             margin-bottom: 0;
+        }
+        & hr {
+            margin-bottom: 53px;
         }
 
         p {
@@ -23,6 +40,11 @@
             }
             @include desktop {
                 width: 65%;
+                // width: 780px;
+                color: #E7E7E7;
+                font-family: "Brandon Grotesque";
+                font-size: 28px;
+                line-height: 42px;
             }
             @include tablet {
                 width: 65%;
@@ -38,8 +60,8 @@
     .video-react {
         width: 100%;
         max-width: 960px;
-        // margin-top: 124px;
-        // padding-top: 54em;
+        margin: 0 auto;
+        
         @include tablet {
             margin: 124px auto 124px auto;
         }
@@ -56,6 +78,10 @@
         @include phone {
             margin-top: 85px;
         }
+
+        & hr {
+            margin-bottom: 80px;
+        }
         
         p {
             color: $services-page-p-color;
@@ -67,6 +93,7 @@
             }
             @include desktop {
                 width: 65%;
+                // width: 780px;
                 font-size: 24px;
                 line-height: 42px;
             }
@@ -93,6 +120,10 @@
         @include phone {
             margin-top: 78px;
             width: 95%;
+        }
+
+        & hr {
+            margin-bottom: 121px;
         }
 
         .culture-team-images {
@@ -159,17 +190,19 @@
         @include phone {
             padding: 5em 0 15em 0;
         }
+        & hr {
+            margin-bottom: 67px;
+        }
 
         p {
             width: 549px;
             margin: 0 auto;
             
             @include desktop {
-                    width: 549px;
-                    font-size: 24px;
-                    line-height: 42px;
-                    text-align: center;
-                    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                width: 549px;
+                font-size: 24px;
+                line-height: 42px;
+                text-align: center;
             }
             @include phone {
                 width: 260px;
@@ -192,7 +225,25 @@
     }
 
     .culture-testimonials {
-        background: $white;
+        background: inherit;
         padding: 10% 0;
+
+        h2 {
+            color: $testimonials-H2-color;
+            font-size: 32px;
+            font-weight: normal;
+            letter-spacing: 6.4px;
+            line-height: 46px;
+            text-align: center;
+            margin-top: 3em;
+    
+            @include phone {
+                font-size: 20px;
+                letter-spacing: 3.33px;
+                line-height: 29px;
+                margin-top: 110px;
+            }
+        }
+        
     }
 }

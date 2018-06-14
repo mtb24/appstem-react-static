@@ -3,7 +3,7 @@ import { withRouteData } from 'react-static'
 import Hero from '../hero/hero'
 import Testimonials from '../testimonials/testimonials'
 import AngledSection from '../layout/page-section/angled-section'
-import backgroundImage from '../../../public/assets/images/main-pages/large/bg_culture.jpg'
+import backgroundImage from '../../../public/assets/images/main-pages/bg_culture.jpg'
 import ImageBox from '../image-box/image-box'
 import { Player, BigPlayButton, PosterImage } from 'video-react';
 import posterImage from '../../../public/assets/images/culture-video-poster.png'
@@ -12,7 +12,7 @@ import LinkOutlined from '../buttons/link-outlined/link-outlined'
 import './culture.scss'
 
 
-export default withRouteData(({ culture, testimonials }) => {
+export default withRouteData(({ culture }) => {
   
   // get images and videos from page object.
   // expects a key following: image- or video-
@@ -38,7 +38,8 @@ export default withRouteData(({ culture, testimonials }) => {
             backgroundImage={ backgroundImage } 
             className='angle--bottom-right' />
 
-      <div className='culture content-wrapper angle--both-left-right'>
+      <AngledSection className='culture' mask='angle--both-left-right'>
+        <div className='content-wrapper'>
 
         <Cta className='culture-who-we-are' heading='Who We Are'>
           <p>Our mission is to make purpose-built apps that serve real needs in people’s lives. We use metrics-driven mobile strategies, human-centered design and efficient development to create apps that people want to use.</p>
@@ -66,10 +67,11 @@ export default withRouteData(({ culture, testimonials }) => {
           <LinkOutlined linkTo='/careers' className='view-openings-link'>View Openings</LinkOutlined>
         </Cta>
 
-      </div>
+        </div>
+      </AngledSection>
 
       <AngledSection className='testimonials-wrapper' mask='angle--both-left-right'>
-        <Testimonials className='grid-wrapper culture-testimonials' />
+        <Testimonials className='culture-testimonials' />
       </AngledSection>
 
     </React.Fragment>

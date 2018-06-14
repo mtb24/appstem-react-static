@@ -9,7 +9,7 @@ export default props => {
         <div className='imagebox-wrapper'>
             <Img
                 className={`ib-image ${ props.className || '' }`}
-                src={ `/assets/images/main-pages/small/${props.image[0]}` }
+                src={ `/assets/images/main-pages/${props.image[0]}` }
                 alt={ props.image[1] }
                 loader={ <BeatLoader color={'#3cd52e'} loading={ true } /> } />
             <div className='ib-title'>{ props.image[2] || 'Title' }</div>

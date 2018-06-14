@@ -1,1 +1,56 @@
 @import '../../styles/styles.scss';
+
+.case-study {
+
+    .big-picture-wrapper {
+        height: 848px;
+        background: #fafafa;
+    
+        & > .big-picture {
+            max-width: 1200px;
+            margin: 0 auto;
+    
+            .top-heading {
+                color: #1B252F;
+                font-size: 32px;
+                font-weight: bold;
+                letter-spacing: 6.4px;
+                line-height: 46px;
+                text-align: center;
+            }
+            & p {
+                color: #1B252F;
+                font-size: 20px;
+                line-height: 40px;
+            }
+        }
+    }
+    .full-width-image {
+        width: 100vw;
+        height: 1000px;
+    }
+    .why-appstem {}
+    .challenges {}
+    .development {
+        .wireframes {
+            .wireframe-image {}
+        }
+    }
+    .second-image-container {
+        .second-full-image {}
+    }
+    .company-blurb-section {
+        .company-blurb-wrapper {
+            .company-blurb-image {}
+            .company-blurb-text {}
+        }
+    }    
+}
+
+.case-study ~ .section-link-wrapper {
+    background: $off-black;
+    .section-links {
+        height: 500px;
+        max-width: 1200px;
+    }
+}

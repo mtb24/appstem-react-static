@@ -1,0 +1,50 @@
+@import '../../styles/styles.scss';
+
+.footer-form {
+    position: relative;
+    display: grid;
+
+    .email-address-field {
+        border: none;
+        border-bottom: 1px solid #9B9B9B;
+        background-color: inherit;
+        width: 310px;
+        color: $appstem-green;
+        z-index: 1;
+        @include phone {
+            width: 231px;
+        }
+
+        &:focus + label {
+            transform: translate(-50px, -15px) scale(0.75);
+            color: $appstem-green;
+            opacity: 1;
+        }
+    }
+    
+    .footer-email-label {
+        opacity: 0.5;
+        font-size: 20px;
+        line-height: 29px;
+        position: relative;
+        transition: all .2s linear;
+        top: -25px;
+        @include phone {
+            line-height: 23px;
+        }
+    }
+    .footer-form-submit-button {
+        position: relative;
+        top: -47px;
+        left: 296px;
+        background: url('../../../public/assets/images/icons/ic_arrow_green.png');
+        background-repeat: no-repeat;
+        border: 0;
+        display: inline-block;
+        height: 20px;
+        width: 22px;
+        @include phone {
+            left: 217px;
+        }
+    }
+}

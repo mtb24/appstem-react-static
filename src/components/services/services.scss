@@ -1,8 +1,21 @@
 @import '../../styles/styles.scss';
 
+// Services page
+$services-page-heading-color: $white;
+$services-page-p-color: $secondary-font-color;
+$services-page-block-p-color: $white;
+$services-page-exertise-heading-color: #1B252F;
+$services-page-exertise-block-color: #4a4a4a;
+$services-page-exertise-block-color-mobile: #9B9B9B;
+$services-page-exertise-project-type-color: #cccccc;
+$services-page-exertise-project-type-color-mobile: #4A4A4A;
+$services-page-see-what-we-made-block-color: #0E0E0E;
+
 .services {
     color: $primary-font-color;
     background: $primary-background-color;
+    top: -9.5em;
+    z-index: -2;
 
     .what-we-do {
         display: flex;
@@ -213,33 +226,13 @@
     }
     .see-what-we-made {
         height: 580px;
-        width: 100%;
         max-width: 1200px;
-        margin: 0 auto;
         background-color: $services-page-see-what-we-made-block-color;
         color: $white;
         font-size: 35px;
         font-weight: normal;
         letter-spacing: 7px;
         line-height: 50px;
-
-        .swm-top-left {
-            display: flex;
-            flex-direction: row;
-            justify-content: start;
-            align-items: center;
-            height: 100px;
-            margin-left: 1em;
-            margin-top: 157px;
-        }
-        .swm-bottom-right {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-            margin-right: 1em;
-            margin-top: 50px;
-        }
     }
 }
 // hack

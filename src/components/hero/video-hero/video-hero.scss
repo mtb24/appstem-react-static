@@ -1,0 +1,116 @@
+@import '../../../styles/styles.scss';
+
+.video-hero {
+    width: 100vw;
+    z-index: -1;
+    // display: grid;
+    
+    @include desktop {
+        margin-bottom: -175px;
+    }
+    @include tablet {
+        // margin-bottom: -12%;
+    }
+
+    @include phone {
+        height: 20em;
+        margin-bottom: -6rem;
+        background: url('/assets/images/posterimage-home.jpg');
+        background-size: cover;
+        video {
+            display: none;
+        }
+
+    }
+    & > video {
+        width: 100vw;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    & > .video-title {
+        position: relative;
+        z-index: 1;
+        color: $primary-font-color;
+        font-family: $secondary-font-family;
+        font-weight: 200;
+        text-align: center;
+        display: block;
+        
+        
+        @include desktop {
+            top: 10rem;
+            width: 40rem;
+            margin: 0 auto;
+            font-size: 96px;
+            letter-spacing: -0.83px;
+            line-height: 96px;
+    
+        }
+        @include tablet {
+            top: 3.5em;
+            width: 30rem;
+            margin: 0 auto;
+            font-size: 52px;
+            line-height: 72px;
+        }
+        @include phone {
+            width: 20rem;
+            font-size: 36px;
+            font-weight: 200;
+            letter-spacing: -0.31px;
+            line-height: 48px;
+            margin: 0 auto;
+            top: 3em;
+        }
+    }
+
+}
+
+// any h1's that are siblings
+.video-hero ~ h1.title {
+    grid-column: col-start / span 12;
+    position: absolute;
+    z-index: 1;
+    color: $primary-font-color;
+    font-family: $secondary-font-family;
+    font-weight: 200;
+    text-align: center;
+    
+    
+    @include desktop {
+        top: 10rem;
+        width: 60%;
+        margin: 0 20%;
+        font-size: 96px;
+        letter-spacing: -0.83px;
+        line-height: 96px;
+
+    }
+    @include tablet {
+        top: 2.5em;
+        width: 50%;
+        left: 28%;
+        margin: 0 auto;
+        font-size: 52px;
+        line-height: 72px;
+    }
+    @include phone {
+        width: 73%;
+        font-size: 36px;
+        font-weight: 200;
+        letter-spacing: -0.31px;
+        line-height: 48px;
+        margin: 0;
+        top: 3em;
+        left: 13.5%;
+    }
+    // @media (min-width: 1301px) and (max-width: 1400px) {
+    //     top: 250px !important;
+    // }
+    // @media (min-width: 1200px) and (max-width: 1300px) {
+    //     top: 150px !important;
+    // }
+}

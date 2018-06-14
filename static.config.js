@@ -67,13 +67,6 @@ export default {
         getData: () => ({
           work,
         }),
-        children: work.map(caseStudy => ({
-          path: `/work/${caseStudy.slug}`,
-          component: 'src/components/case-study/case-study',
-          getData: () => ({
-            caseStudy,
-          }),
-        })),
       },
       {
         path: '/contact',
@@ -89,6 +82,24 @@ export default {
           careers,
           openings,
         }),
+      },
+      {
+        path: '/portfolio',
+        component: 'src/components/case-study/case-study',
+        // getData: () => ({
+        //   work
+        // }),
+        children: work.map(caseStudy => ({
+          path: `/${caseStudy.slug}`,
+          component: 'src/components/case-study/case-study',
+          getData: () => ({
+            caseStudy,
+          }),
+        })),
+      },
+      {
+        path: '/test',
+        component: 'src/components/blog/blog',
       },
       {
         is404: true,

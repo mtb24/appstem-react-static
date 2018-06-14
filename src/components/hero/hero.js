@@ -1,41 +1,30 @@
 import React from 'react'
 import './hero.scss'
+import CasestudyHero from './case-study-hero/case-study-hero'
+import ImageHero from './image-hero/image-hero'
+import VideoHero from './video-hero/video-hero'
 
 export default props => {
 
-    /* Outputs a hero with either an image or video background  */
+    /* Outputs a hero with either an image, video, or case-study layout  */
     switch( props.heroType ) {
 
         case 'image':
-            // console.log('Hero image loading...')
-            return (
-                <div className={`hero ${props.className || ''}`} style={ {backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(${props.backgroundImage})`,backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
-                    <h1 className='title'>{ props.title || 'Default Title' }</h1>
-                </div>
-            )
+            // console.log('image hero loading...')
+            return <ImageHero {...props}/>
             break
         
         case 'video': 
-            // console.log('Hero video loading...')
-            return (
-                <React.Fragment>
-                <div className={`hero-video ${props.className || ''}`}>
-                    <video
-                        mute='1'
-                        autoPlay='1'
-                        loop='1'
-                        playsInline='1'
-                        poster={`assets/images/${ props.posterImg || ''}`}
-                        className='hero-video'>
-                        <source src={ `assets/videos/${ props.backgroundVideo || '' }` }/>
-                    </video>
-                </div>
-                <h1 className='title'>{ props.title || 'Default Title' }</h1>
-                </React.Fragment>
-            )
+            // console.log('video hero loading...')
+            return <VideoHero {...props}/>
+            break
+
+        case 'case-study':
+            // console.log('case-study hero loading...')
+            return <CasestudyHero {...props}/>
             break
         default:
-            console.error('Hero component: no heroType prop was passed!')
+            console.error('Hero component: no heroType prop was passed!', props)
             return null
     }
 

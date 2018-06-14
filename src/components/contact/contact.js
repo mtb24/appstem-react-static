@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouteData, Link } from 'react-static'
 import convert from 'htmr'
 import Hero from '../hero/hero'
-import backgroundImage from '../../../public/assets/images/main-pages/large/bg_contact_page.jpg'
+import backgroundImage from '../../../public/assets/images/main-pages/bg_contact_page.jpg'
 import { Form, Text } from 'react-form'
 import Cta from '../layout/page-section/cta'
 import { ClipLoader } from 'react-spinners'
@@ -43,7 +43,7 @@ export default withRouteData(({ contact }) => (
         backgroundImage={ backgroundImage } 
         className='angle--bottom-right' />
   <AngledSection className='contact' mask='angle--both-left-right'>
-    <div className='contact content-wrapper'>
+    <div className='content-wrapper'>
 
       <Cta heading={convert(contact.heading)} />
 

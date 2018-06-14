@@ -2,18 +2,27 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+// Testimonials
+$testimonials-company-color: #A7A7A7;
+$testimonials-text-color: #222222;
+
 .testimonial-slider {
-    grid-column: col-start / span 12;
     background-color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    width: 100%;
+    
+    @include desktop {
+        margin: 0 auto;
 
+    }
+    @include tablet {
+        margin: 0 auto;
+    }
     @include phone {
-        justify-content: normal;
-        align-items: unset;
+        margin: 0 auto;
         
         hr {
             width: 43px;
@@ -21,58 +30,31 @@
 
     }
 
-    h2 {
-        color: $testimonials-H2-color;
-        font-size: 32px;
-        font-weight: normal;
-        letter-spacing: 6.4px;
-        line-height: 46px;
-        text-align: center;
-        margin-top: 3em;
-
-        @include phone {
-            font-size: 20px;
-            letter-spacing: 3.33px;
-            line-height: 29px;
-            margin-top: 110px;
-        }
-    }
+    
     .cta-wrapper {
-        hr {
-            margin: 0 auto;
+
+        & > h2 + hr {
+            @include desktop {
+                margin-bottom: 182px;
+            }
+            @include tablet {
+                margin-bottom: 135px;
+            }
+            @include phone {
+                margin-bottom: 96px;
+            }
         }
 
         .slick-slider {
             margin: 0 auto;
-    
+            
             @include tablet {
                 width: 65%;
             }
             @include phone {
                 width: 100%;
             }
-            
-            &:before {
-                content: "\201C";
-                color: $appstem-green;
-                position: relative;
-                @include desktop {
-                    top: 75px;
-                    left: 250px;
-                    font-size: 600%;
-                }
-                @include tablet {
-                    top: 45px;
-                    left: 15px;
-                    font-size: 400%;
-                }
-                @include phone {
-                    left: 15px;
-                    top: 30px;
-                    font-size: 250%;
-                }
-    
-            }
+
             .testimonial-content {
                 margin: 0 auto;
                 color: $testimonials-text-color;
@@ -93,13 +75,36 @@
                     font-weight: 300;
                     line-height: 24px;
                     text-align: center;
-                    margin: 0 1.25em;
+                    margin: 0 auto;
+                    width: 80%;
+                }
+                &:before {
+                    content: "\201C";
+                    color: $appstem-green;
+                    position: relative;
+                    @include desktop {
+                        top: 35px;
+                        left: 0px;
+                        font-size: 475%;
+                    }
+                    @include tablet {
+                        top: 25px;
+                        left: 0;
+                        font-size: 400%;
+                    }
+                    @include phone {
+                        left: 0;
+                        top: 0;
+                        font-size: 150%;
+                    }
                 }
             }
             .quote-author-wrapper {
                 position: relative;
                 left: 65%;
-                margin-top: 60px;
+                @include desktop {
+                    margin-top: 60px;
+                }
                 @include tablet {
                     left: 0;
                     text-align: center;
@@ -112,7 +117,7 @@
                 hr {
                     position: relative;
                     @include desktop {
-                        left: 52.75%;
+                        left: 52%;
                     }
                     @include tablet {
                         left: 0;
@@ -127,7 +132,12 @@
                     font-size: 20px;
                     font-weight: 500;
                     line-height: 24px;
-                    margin-top: 1em;
+                    @include desktop {
+                        margin-top: 1em;
+                    }
+                    @include phone {
+                        margin-top: 0.5em;
+                    }
                 }
                 .testimonial-company {
                     color: $testimonials-company-color;
@@ -146,14 +156,14 @@
             .slick-dots {
                 position: relative;
                 bottom: 0;
-                margin-top: 49px;
+                margin-top: 58px;
     
-                button:hover {
+                li button:hover {
                     &:before {
                         border-color: $appstem-green;
                     }
                 }
-                button:before {
+                li button:before {
                     color: transparent;
                     font-size: 16px;
                     border: 2px solid grey;
@@ -168,6 +178,9 @@
                 }
             }
         }
+
+        .quote-author-wrapper hr {
+            margin-bottom: 1em;
+        }
     }
-    
 }
