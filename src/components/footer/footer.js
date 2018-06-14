@@ -1,6 +1,6 @@
 import React from 'react'
 import { SiteData, Link } from 'react-static'
-import { Form, Text } from 'react-form'
+import { FooterForm } from '../forms/footer-form'
 import Nav from '../nav/nav'
 import SocialIcons from '../social/social-icons'
 import './footer.scss'
@@ -46,19 +46,9 @@ export default () => (
 
                 <div className='footer-email-form-wrapper'>
                     <div className='footer-form-heading all-caps'>Join Our Mail List</div>
-                    <Form>
-                        {formApi => (
-                        <form action="window.open( String( 'mailto:kendowney.com^gmail.com' ).replace('^', '@') );" encType="text/plain" id="footer-email-form">
-                            <Text field="footerEmail" id="footerEmail" name='add-to-email-list' />
-                            <label htmlFor="footerEmail" className='footer-email-label'>Your email...</label>
-                            <button type="submit" className="footer-email-submit-button" />
-                        </form>
-                        )}
-                    </Form>
+                    <FooterForm/>
                 </div>
-
                 <SocialIcons />
-
             </div>
         </div>
     </footer>
