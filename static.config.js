@@ -86,9 +86,9 @@ export default {
       {
         path: '/portfolio',
         component: 'src/components/case-study/case-study',
-        getData: () => ({
-          work
-        }),
+        // getData: () => ({
+        //   work
+        // }),
         children: work.map(caseStudy => ({
           path: `/${caseStudy.slug}`,
           component: 'src/components/case-study/case-study',
