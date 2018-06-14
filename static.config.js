@@ -98,6 +98,10 @@ export default {
         })),
       },
       {
+        path: '/test',
+        component: 'src/components/blog/blog',
+      },
+      {
         is404: true,
         component: 'src/components/404',
       },
