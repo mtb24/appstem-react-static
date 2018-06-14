@@ -1,8 +1,16 @@
 @import '../../styles/styles.scss';
 
+// Footer
+$footerNavHoverColor: $appstem-green;
+$footer-heading-color: $white;
+
 .footer {
     width: 100vw;
     background-color: #1E1E1E;
+
+    & a {
+        text-decoration: none;
+    }
 
     .footer-grid {
         display: grid;
