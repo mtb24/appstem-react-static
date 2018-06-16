@@ -21,7 +21,7 @@ export default (props) => {
     const logoPath = `/assets/images/company-logos/`
 
     const interactionData = {
-        imageName: props.interactions[0],
+        featureBlockImage: props.interactions[0],
         heading: props.interactions[1],
         text: props.interactions[2],
     }
@@ -31,7 +31,7 @@ export default (props) => {
             <AngledSection className='big-picture-wrapper' mask='angle--both-left-right'>
                 <Cta heading='Big Picture' className='big-picture'>
                     <Paragrapher paragraphs={ props.bigPicture }/>
-                    <LinkOutlined linkTo='#'>Download Ridey</LinkOutlined>
+                    <LinkOutlined className='big-picture-button' linkTo='#'>Download Ridey</LinkOutlined>
                 </Cta>
             </AngledSection>
 
@@ -104,7 +104,7 @@ export default (props) => {
                 props.devFeatures.map( (feature, i) => {
       
                   const featureSet = {
-                      imageName: feature[0],
+                      featureBlockImage: feature[0],
                       heading: feature[1],
                       text: feature[2],
                   }
