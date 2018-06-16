@@ -4,7 +4,7 @@ import FeatureBlock from '../../feature-block/feature-block'
 import './case-study-hero.scss'
 
 export default (props) => {
-    console.log('case study hero props: ', props)
+    //console.log('case study hero props: ', props)
     const bgImagePath = `/assets/images/case-studies/${props.caseStudy.slug}/${props.caseStudy.heroBgImage}`
 
     return (
