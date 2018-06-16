@@ -20,7 +20,7 @@ export default (props) => {
     const logoPath = `/assets/images/company-logos/`
     const videoPath = '../../../../../public/assets/videos/'
     const interactionData = {
-        imageName: props.interactions[0],
+        featureBlockImage: props.interactions[0],
         heading: props.interactions[1],
         text: props.interactions[2],
     }
@@ -31,7 +31,7 @@ return (
         <AngledSection className='big-picture-wrapper' mask='angle--both-left-right'>
             <Cta heading='Big Picture' className='big-picture'>
                 <Paragrapher paragraphs={ props.bigPicture }/>
-                <LinkOutlined linkTo='#'>Download Vowla</LinkOutlined>
+                <LinkOutlined className='big-picture-button' linkTo='#'>Download Vowla</LinkOutlined>
             </Cta>
         </AngledSection>
 
@@ -106,11 +106,11 @@ return (
                         const featureSet = {
                             heading: feature[1],
                             text: feature[2],
-                            imageName: feature[0]
+                            featureBlockImage: feature[0]
                         }
                         const imagePosition = ( i % 2 == 0 )? 'left' : 'right'
                         //console.log('feature: ', feature)
-                        return (<FeatureBlock key={i} imagePosition={imagePosition} caseStudy={featureSet} slug='hubbub' imageType='case-study-feature'/> )
+                        return (<FeatureBlock key={i} imagePosition={imagePosition} caseStudy={featureSet} slug={props.slug} imageType='case-study-feature'/> )
         
                     })
                 : null

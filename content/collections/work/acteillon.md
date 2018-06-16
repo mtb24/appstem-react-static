@@ -1,8 +1,8 @@
 ---
 title: Actelion
 slug: actelion
-type: iOS & Back-end Development
-imageName: Acteilion_showcase.png
+projectType: iOS & Back-end Development
+featureBlockImage: Acteilion_showcase.png
 heroFeaturedimage: Macbook-Grey-Actelion-UsersPage.png
 heroBgImage: bg_top_actelion.png
 fullImages: ['lifestyle_img_actelion.png','Wireframes.png','Macbook-Grey-Actelion-UsersPage.png']
@@ -18,4 +18,5 @@ wireframeImages: []
 developmentText: []
 videos: []
 interactions: []
+branding: []
 ---

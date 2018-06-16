@@ -15,7 +15,7 @@ const ImageFeatureBlock = (feature) => (
         <Img
             key={ `image-${ feature.caseStudy.slug }` }
             className='feature-block-image'
-            src={ pathToImages(feature.caseStudy.slug, feature.caseStudy.imageName) }
+            src={ pathToImages(feature.caseStudy.slug, feature.caseStudy.featureBlockImage) }
             alt={ feature.caseStudy.imageAlt || `an image for ${ feature.caseStudy.slug }` }
             loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
 
@@ -23,7 +23,7 @@ const ImageFeatureBlock = (feature) => (
 
             <h2 className='all-caps'>{ feature.caseStudy.title }</h2>
 
-            <p className='feature-block-project-type'>{ feature.caseStudy.type }</p>
+            <p className='feature-block-project-type'>{ feature.caseStudy.projectType }</p>
 
             <div className='feature-block-project-description'>{ feature.caseStudy.featureBlockProjectDesc }</div>
 
@@ -46,7 +46,7 @@ const HeroFeatureBlock = (feature) => (
 
             <h2 className='all-caps'>{ feature.caseStudy.title }</h2>
 
-            <p className='feature-block-project-type'>{ feature.caseStudy.type }</p>
+            <p className='feature-block-project-type'>{ feature.caseStudy.projectType }</p>
 
             <div className='feature-block-project-description'>{ feature.caseStudy.featureBlockProjectDesc }</div>
 
@@ -56,7 +56,7 @@ const HeroFeatureBlock = (feature) => (
 )
 const CaseFeatureBlock = (props) => {
     //console.log('feature block: ', props)
-    const imagePath = `/assets/images/case-studies/${ props.slug }/${ props.caseStudy.imageName }` || '../../../public/assets/images/case-studies/feature-placeholder.png'
+    const imagePath = `/assets/images/case-studies/${ props.slug }/${ props.caseStudy.featureBlockImage }` || '../../../public/assets/images/case-studies/feature-placeholder.png'
     return (
         <div className={ `feature-block feature-image-${ props.imagePosition } ${ props.className || '' }`}>
             <Img

@@ -1,8 +1,8 @@
 ---
 title: UC Davis
 slug: uc-davis
-type: React.JS & Back-end Development
-imageName: UCD_1.1_Task.png
+projectType: React.JS & Back-end Development
+featureBlockImage: UCD_1.1_Task.png
 heroFeaturedimage: UCD_1.1_Task.png
 heroBgImage: bg_top_UC_Davis.png
 fullImages: ['Lifestyle_img_UC_Davis.jpg','Lifestyle_img_02.png']
@@ -18,4 +18,5 @@ wireframeImages: []
 devFeatures: []
 videos: []
 interactions: []
+branding: []
 ---

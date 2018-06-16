@@ -27,7 +27,7 @@ return (
         <AngledSection className='big-picture-wrapper' mask='angle--both-left-right'>
             <Cta heading='Big Picture' className='big-picture'>
                 <Paragrapher paragraphs={ props.bigPicture }/>
-                <LinkOutlined linkTo='#'>Go To Website</LinkOutlined>
+                <LinkOutlined className='big-picture-button' linkTo='#'>Go To Website</LinkOutlined>
             </Cta>
         </AngledSection>
 
@@ -90,7 +90,7 @@ return (
                   const featureSet = {
                       heading: feature[1],
                       text: feature[2],
-                      imageName: feature[0]
+                      featureBlockImage: feature[0]
                   }
                   const imagePosition = ( i % 2 == 0 )? 'left' : 'right'
                   //console.log('feature: ', feature)

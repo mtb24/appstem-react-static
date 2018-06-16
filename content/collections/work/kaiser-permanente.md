@@ -1,8 +1,8 @@
 ---
 title: Kaiser Permanente
 slug: kaiser-permanente
-type: iOS & Back-end Development
-imageName: Kaiser-iPhone-Blue-Logo.png
+projectType: iOS & Back-end Development
+featureBlockImage: Kaiser-iPhone-Blue-Logo.png
 heroFeaturedimage: Kaiser-iPhone-Blue-Logo.png
 heroBgImage: bg_top_kaiser.png
 fullImages: ['Lifestyle_img_kaiser.png','Lifestyle_img_02_kaiser.png','Kaiser-iPhone-Blue-Logo.png',]
@@ -18,4 +18,5 @@ wireframeImages: []
 devFeatures: []
 videos: []
 interactions: []
+branding: []
 ---

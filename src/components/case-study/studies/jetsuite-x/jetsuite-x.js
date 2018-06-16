@@ -26,7 +26,7 @@ return (
         <AngledSection className='big-picture-wrapper' mask='angle--both-left-right'>
             <Cta heading='Big Picture' className='big-picture'>
                 <Paragrapher paragraphs={ props.bigPicture }/>
-                <LinkOutlined linkTo='#'>Visit JetSuiteX</LinkOutlined>
+                <LinkOutlined className='big-picture-button' linkTo='#'>Visit JetSuiteX</LinkOutlined>
             </Cta>
         </AngledSection>
 
@@ -70,11 +70,11 @@ return (
                         const featureSet = {
                             heading: feature[1],
                             text: feature[2],
-                            imageName: feature[0]
+                            featureBlockImage: feature[0]
                         }
                         const imagePosition = ( i % 2 == 0 )? 'left' : 'right'
                         //console.log('feature: ', feature)
-                        return (<FeatureBlock key={i} imagePosition={imagePosition} caseStudy={featureSet} slug='hubbub' imageType='case-study-feature'/> )
+                        return (<FeatureBlock key={i} imagePosition={imagePosition} caseStudy={featureSet} slug={props.slug} imageType='case-study-feature'/> )
         
                     })
                 : null

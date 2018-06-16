@@ -1,8 +1,8 @@
 ---
 title: Tesla Motors
 slug: tesla-motors
-type: iOS & Back-end Development
-imageName: Tesla-iPad_Top.png
+projectType: iOS & Back-end Development
+featureBlockImage: Tesla-iPad_Top.png
 heroFeaturedimage: Tesla-iPad_Top.png
 heroBgImage: bg_top_tesla.jpg
 fullImages: ['matt-henry-59403.jpg']
@@ -18,4 +18,5 @@ devFeatures: [['Tesla-iPad-HomePage.png','high-tech retail experience','Consiste
 developmentText: ['Appstem created a first-of-it’s-kind app that streamlined the showroom experience in a way that’s true to the Tesla brand. Car-buyers, salespeople, marketing personnel and even members of the media --all use the app to find Telsa information in an equally intuitive and joyful way.','“Telsa quote with name and title” - Can we have them talk about why Appstem is a great long term partner they can rely on? Let me know if you want me to write.']
 wireframeImages: []
 interactions: []
+branding: []
 ---

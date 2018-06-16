@@ -1,8 +1,8 @@
 ---
 title: Hubbub
 slug: hubbub
-type: iOS & Back-end Development
-imageName: Hubbub_Mockup.png
+projectType: iOS & Back-end Development
+featureBlockImage: Hubbub_Mockup.png
 heroFeaturedimage: Hubbub_Mockup.png
 heroBgImage: bg_top_hubbub.png
 fullImages: ['Lifestyle_hubbub.jpg','Hubub-ImageScreens.jpg',]
@@ -18,4 +18,5 @@ developmentText: ['Hubbub’s first turned to Appstem for a redesign of their we
 wireframeImages: []
 devFeatures: [['1.2.2_hubbub360.png','Getting started is easy','Discovering relevant challenges on the hubbub platform is as easy as taking a 5-minute quiz. By answering the hubbub360 players are given a curated set of challenges to help them achieve their wellness goals.'],['1.2.3_Compare.png','Join challenges','Players can join the challenges that meet their fitness goals, check-in activities, and encourage other players. Integration with a variety of fitness trackers makes challenge check-ins a breeze.'],['1.0_Profile_Stats.png','Personalized coaching','Players can now received personalized coaching to guide them towards achieving their wellness goals. Browse through the coaches and find one who has the specialty you’re looking for. Communicate with the coach directly on the platform.']]
 interactions: []
+branding: []
 ---

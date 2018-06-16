@@ -1,8 +1,8 @@
 ---
 title: Jetsuite X
 slug: jetsuite-x
-type: React.JS & Back-end Development
-imageName: JetSuiteX_Homepage.png
+projectType: React.JS & Back-end Development
+featureBlockImage: JetSuiteX_Homepage.png
 heroFeaturedimage: Jetsuite_showcase.png
 heroBgImage: bg_top_jetsuite.jpg
 fullImages: ['Jetsuite_Lifestyle_img.png','JetSuiteX_Homepage.png','Arrow.png','iphone_Dev_Jetsuite.png','bg_top_jetsuite.jpg','jetsuite_lifestyle_img_02.png']
@@ -18,4 +18,5 @@ developmentText: ['Within the first month, JetSuite doubled its regular $50K/day
 wireframeImages: []
 devFeatures: [['JetSuiteX_Homepage.png','Interaction','Discovering relevant challenges on the hubbub platform is as easy as taking a 5-minute quiz. By answering the hubbub360 players are given a curated set of challenges to help them achieve their wellness goals.']]
 interactions: []
+branding: []
 ---

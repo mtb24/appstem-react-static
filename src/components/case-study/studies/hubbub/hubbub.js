@@ -26,7 +26,7 @@ return (
         <AngledSection className='big-picture-wrapper' mask='angle--both-left-right'>
             <Cta heading='Big Picture' className='big-picture'>
                 <Paragrapher paragraphs={ props.bigPicture }/>
-                <LinkOutlined linkTo='#'>Download Hubbub</LinkOutlined>
+                <LinkOutlined className='big-picture-button' linkTo='#'>Download Hubbub</LinkOutlined>
             </Cta>
         </AngledSection>
 
@@ -82,15 +82,14 @@ return (
                 props.devFeatures.map( (feature, i) => {
       
                   const featureSet = {
-                      imageName: feature[0],
+                      featureBlockImage: feature[0],
                       heading: feature[1],
                       text: feature[2],
                   }
                   const imagePosition = ( i % 2 == 0 )? 'left' : 'right'
-                  //console.log('feature: ', feature)
       
                   return (
-                      <FeatureBlock key={i} imagePosition={imagePosition} caseStudy={featureSet} slug='hubbub' imageType='case-study-feature'/>
+                      <FeatureBlock key={i} imagePosition={imagePosition} caseStudy={featureSet} slug={props.slug} imageType='case-study-feature'/>
                   )
       
                 })

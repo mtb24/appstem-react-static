@@ -1,8 +1,8 @@
 ---
 title: Ridey
 slug: ridey
-type: iOS & Back-end Development
-imageName: Ridey_Mockups_top.png
+projectType: iOS & Back-end Development
+featureBlockImage: Ridey_Mockups_top.png
 heroFeaturedimage: Ridey_Mockups_top.png
 heroBgImage: bg_top_ridey.png
 fullImages: ['Lifestyle_ridey.png','Ridey_Mockups_top.png']
@@ -18,4 +18,5 @@ wireframeImages: ['Wireframes.png']
 videos: []
 interactions: ['Interaction_-_Video.png','Interaction','A health and wellness solution serving both companies and individuals, hubbub encourages better fitness by rewarding employees for consistently participating in a variety of healthy activities.']
 devFeatures: [['Create_Ride.png','Create Group Rides','Discovering relevant challenges on the hubbub platform is as easy as taking a 5-minute quiz. By answering the hubbub360 players are given a curated set of challenges to help them achieve their wellness goals.'],['ETA.png','See your friends ETA','Discovering relevant challenges on the hubbub platform is as easy as taking a 5-minute quiz. By answering the hubbub360 players are given a curated set of challenges to help them achieve their wellness goals.'],['Profile_Screen.png','Connect with other riders','Discovering relevant challenges on the hubbub platform is as easy as taking a 5-minute quiz. By answering the hubbub360 players are given a curated set of challenges to help them achieve their wellness goals.']]
+branding: []
 ---

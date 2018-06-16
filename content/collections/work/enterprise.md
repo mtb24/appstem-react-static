@@ -1,8 +1,8 @@
 ---
 title: Enterprise
 slug: enterprise
-type: iOS & Back-end Development
-imageName: mockup_enterprise.png
+projectType: iOS & Back-end Development
+featureBlockImage: mockup_enterprise.png
 heroFeaturedimage: mockup_enterprise.png
 heroBgImage: bg_top_enterprise.jpg
 fullImages: ['Enterpriseforlandingpage.jpg','Enterprise.jpeg']
@@ -18,4 +18,5 @@ videos: []
 developmentText: []
 wireframeImages: []
 interactions: []
+branding: []
 ---
