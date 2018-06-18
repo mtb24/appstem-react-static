@@ -6,7 +6,7 @@ featureBlockImage: CouchCritic_Mockup.png
 featureBlockProjectDesc: An entire wedding planning marketplace matching planners with trusted vendors - all on in one iOS app.
 heroFeaturedimage: CouchCritic_Mockup.png
 heroBgImage: bg_top_couchcritic.png
-fullImages: ['couchcritic_Lifestyle_img.png','styleguide-placeholder.png']
+fullImages: ['couchcritic_Lifestyle_img.png','styleguide-placeholder.png','Couchcritic_Realistic_Mockup.png']
 imageAlt: Image for CouchCritic
 companyLogo: logo_couchcritic.png
 videos: ['appstem_hero.mp4']
