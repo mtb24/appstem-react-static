@@ -1,16 +1,16 @@
 ---
-title: Sober
-slug: sober
+title: Key.Me
+slug: keyme
 projectType: UX/UI Design, iOS Development
-featureBlockProjectDesc: An entire wedding planning marketplace matching planners with trusted vendors - all on in 
-featureBlockImage: Sober-Perspective.png
-heroFeaturedimage: Sober-Perspective.png
-heroBgImage: bg_top_sober.png
-fullImages: ['Lifestyle_sober.png','sober-ImageScreens.png']
-imageAlt: Image for Sober
-companyLogo: logo_sober.png
+featureBlockProjectDesc: An entire wedding planning marketplace matching planners with trusted vendors - all on in one iOS app.
+featureBlockImage: Group.png
+heroFeaturedimage: Group.png
+heroBgImage: bg_top_key.me.png
+fullImages: ['Lifestyle_keyme.png','keyme-ImageScreens.png']
+imageAlt: Image for Key.Me
+companyLogo: logo_KeyMe.png
 videos: []
-companyBlurb: ['Sober','Hubbub, a Cambia Health company, developed a customizable corporate wellness program that seamlessly uses technology, activity trackers, targeted incentives and game mechanics to turn things we all need to be doing—like drinking more water or taking the stairs—into motivating challenges that help people achieve a healthier lifestyle. Their app aims to improve employee wellness while employers benefit from healthier and happier employees.']
+companyBlurb: ['Key.Me','Hubbub, a Cambia Health company, developed a customizable corporate wellness program that seamlessly uses technology, activity trackers, targeted incentives and game mechanics to turn things we all need to be doing—like drinking more water or taking the stairs—into motivating challenges that help people achieve a healthier lifestyle. Their app aims to improve employee wellness while employers benefit from healthier and happier employees.']
 bigPicture: ['Hubbub solves a classic mobile and web app problem: How do you create new habits?
 Hubbub is a technology-driven wellness solution that taps into behavioral science, the strength of social circles, and a human drive towards incentives and game-playing to inspire employees towards healthier living. The Hubbub app can be customized by employers to create unique health-improvement experiences for their employees. By being actively engaged with how their employees relate to the app through data collection, engagement incentives, and social challenges, employers are able to take full ownership of their own successful health care programs.','Hubbub’s core business is helping people make healthy habits. Naturally, they looked at what would make healthy living more fun, but also what would make choosing “healthy” easier than “unhealthy”. Rather than forcing users to rely on willpower, Appstem worked with Hubbub to create virtual app-based environments and social groups that would reinforce new healthy habits.']
 whyAppstem: ['Messaging apps require heavy technical lifting, especially for functionality like turning messages off for individual users. It was a difficult technical challenge for even a highly experienced team. Appstem was chosen due to the team’s ability to provide these very specific technical messaging skills. The app was built on Firebase, Google’s mobile platform for developing high quality apps, a core expertise for the Appstem team.','Additionally, Appstem offered a critical component for any networking app needing to go viral: Launch services, including App Store Optimization (ASO), and market awareness to drive an early user-base. This turnkey approach was a very compelling factor in choosing Appstem’s team.']
