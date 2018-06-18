@@ -1,10 +1,27 @@
 
+.branding-section {
 
-.branding {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    h2 {}
-    .branding-image {}
+    .branding {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .brand-item {
+            display: flex;
+            flex-direction: row;
+            place-items: center;
+            justify-content: space-between;
+
+            h2 {
+                color: #1B252F;
+                font-size: 32px;
+                font-weight: bold;
+                letter-spacing: 6.4px;
+                line-height: 46px;
+            }
+            .branding-image {}
+        }
+    }
 }
