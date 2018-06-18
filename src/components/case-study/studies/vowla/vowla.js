@@ -36,7 +36,7 @@ return (
         </AngledSection>
 
         <AngledSection 
-            className='full-width-image' 
+            className='full-width-image-section' 
             mask='angle--both-left-right'
             style={ 
                 {

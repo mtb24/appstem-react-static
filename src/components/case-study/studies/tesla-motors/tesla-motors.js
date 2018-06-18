@@ -32,7 +32,7 @@ return (
         </AngledSection>
 
         <AngledSection 
-            className='full-width-image' 
+            className='full-width-image-section' 
             mask='angle--both-left-right'
             style={ 
                 {
@@ -104,7 +104,7 @@ return (
               }
         </Section>
 
-        {/* <Section className='second-image-container' style={{ background: '#f8f8f8', width: '100vw' }}>
+        {/* <Section className='full-width-image-section-section' style={{ background: '#f8f8f8', width: '100vw' }}>
         <Img
             className='second-full-image'
             src={ imagePath + props.fullImages[1] || '' }

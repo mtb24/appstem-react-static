@@ -37,7 +37,7 @@ return (
         </AngledSection>
 
         <AngledSection 
-            className='full-width-image' 
+            className='full-width-image-section' 
             mask='angle--both-left-right'
             style={ 
                 {
@@ -110,7 +110,7 @@ return (
                             featureBlockImage: feature[0]
                         }
                         const imagePosition = ( i % 2 == 0 )? 'left' : 'right'
-                        //console.log('feature: ', feature)
+
                         return (<FeatureBlock key={i} imagePosition={imagePosition} caseStudy={featureSet} slug={props.slug} imageType='case-study-feature'/> )
         
                     })
@@ -118,8 +118,16 @@ return (
             }
         </Section>
 
-        <Section className='branding' style={{ background: '#ffffff', width: '100vw' }}>
+        <Section className='branding-section' style={{ background: '#ffffff', width: '100vw' }}>
             <Branding brandItems={props.branding} slug={props.slug}/>
+        </Section>
+
+        <Section className='full-width-image-section' style={{ background: '#f8f8f8', width: '100vw' }}>
+            <Img
+                className='full-image'
+                src={ imagePath + props.fullImages[2] || '' }
+                alt={ props.imageAlt || `an image for ${ props.slug }` }
+                loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
         </Section>
 
         <Section className='company-blurb-section' style={{ background: '#ffffff', width: '100vw' }}>
@@ -131,7 +139,7 @@ return (
                     loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
 
                 <div className='company-blurb-text'>
-                    <Heading headingLevel='1'>{ props.companyBlurb[0] || 'Default Company Heading' }</Heading>
+                    <Heading headingLevel='2'>{ props.companyBlurb[0] || 'Default Company Heading' }</Heading>
                     <p>{ props.companyBlurb[1] || 'Default Company Paragraph' }</p>
                 </div>
             </div>
