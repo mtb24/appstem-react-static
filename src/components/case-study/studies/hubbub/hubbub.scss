@@ -1,1 +1,25 @@
 @import '../../case-study.scss';
+
+.development-features {
+
+    & > .feature-block {
+        margin: 0 auto;
+        align-items: flex-start;
+
+        & > .feature-block-details {
+            
+            h1, h2 {
+                color: #ffffff;
+                font-size: 35px;
+                font-weight: bold;
+                letter-spacing: 7px;
+                line-height: 50px;
+            }
+            .feature-block-project-description {
+                color: #e7e7e7;
+                font-size: 18px;
+                line-height: 36px;
+            }
+        } 
+    }
+}

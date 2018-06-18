@@ -1,13 +1,13 @@
 import React from 'react'
+import Img from 'react-image'
+import { BeatLoader } from 'react-spinners'
+import { Player, BigPlayButton, PosterImage } from 'video-react';
 import Section from '../../../layout/page-section/section'
 import AngledSection from '../../../layout/page-section/angled-section'
 import Cta from '../../../layout/page-section/cta'
-import Img from 'react-image'
-import { BeatLoader } from 'react-spinners'
 import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
 import LinkOutlined from '../../../buttons/link-outlined/link-outlined'
-import { Player, BigPlayButton, PosterImage } from 'video-react';
 import posterImage from '../../../../../public/assets/images/posterimage-home.jpg'
 import FeatureBlock from '../../../feature-block/feature-block'
 import './tesla-motors.scss'
@@ -104,9 +104,9 @@ return (
               }
         </Section>
 
-        {/* <Section className='full-width-image-section-section' style={{ background: '#f8f8f8', width: '100vw' }}>
+        {/* <Section className='full-width-image-section' style={{ background: '#f8f8f8', width: '100vw' }}>
         <Img
-            className='second-full-image'
+            className='full-image'
             src={ imagePath + props.fullImages[1] || '' }
             alt={ props.imageAlt || `an image for ${ props.slug }` }
             loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
