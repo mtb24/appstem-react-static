@@ -3,6 +3,7 @@ import { BeatLoader } from 'react-spinners'
 import Img from 'react-image'
 import Section from '../../../layout/page-section/section'
 import AngledSection from '../../../layout/page-section/angled-section'
+import FullWidthImage from '../../../layout/page-section/full-width-image-section'
 import Cta from '../../../layout/page-section/cta'
 import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
@@ -11,7 +12,7 @@ import './sober.scss'
 
 export default (props) => {
 
-    console.log('props: ', props)
+    // console.log('props: ', props)
 
     const imagePath = `/assets/images/case-studies/${props.slug}/`
     const logoPath = `/assets/images/company-logos/`
@@ -25,18 +26,10 @@ return (
             </Cta>
         </AngledSection>
 
-        <AngledSection 
-            className='full-width-image-section' 
+        <FullWidthImage 
+            className='first-full-image' 
             mask='angle--both-left-right'
-            style={ 
-                {
-                    backgroundImage: `url( ${props.fullImages[0] || ''} )`,
-                    backgroundRepeat: 'no-repeat', 
-                    backgroundSize: 'cover', 
-                    backgroundPosition: 'center center'
-                }
-            }
-        />
+            imagePath={ imagePath + props.fullImages[0] } />
 
         <Section className='why-appstem' style={{ background: '#f8f8f8', width: '100vw' }}>
             <Cta heading='Why Appstem'>
@@ -50,13 +43,12 @@ return (
             </Cta>
         </Section>
 
-        <Section className='full-width-image-section' style={{ background: '#d8d8d8', width: '100vw' }}>
-            <Img
-                className='full-image'
-                src={ imagePath + props.fullImages[1] || '' }
-                alt={ props.imageAlt || `an image for ${ props.slug }` }
-                loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
-        </Section>
+        <FullWidthImage 
+            className='second-full-image' 
+            mask='angle--both-left-right'
+            imagePath={ imagePath + props.fullImages[1] }
+            style={{ background: '#d8d8d8' }}
+            alt={ props.imageAlt || `an image for ${ props.slug }` } />
 
         <Section className='development' style={{ background: '#ffffff', width: '100vw' }}>
             <Cta heading='Design & Development'>

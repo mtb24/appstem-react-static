@@ -3,6 +3,7 @@ import Img from 'react-image'
 import { BeatLoader } from 'react-spinners'
 import Section from '../../../layout/page-section/section'
 import AngledSection from '../../../layout/page-section/angled-section'
+import FullWidthImage from '../../../layout/page-section/full-width-image-section'
 import Cta from '../../../layout/page-section/cta'
 import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
@@ -24,18 +25,10 @@ return (
             </Cta>
         </AngledSection>
 
-        <AngledSection 
-            className='full-width-image-section' 
+        <FullWidthImage 
+            className='first-full-image' 
             mask='angle--both-left-right'
-            style={ 
-                {
-                    backgroundImage: `url( ${props.fullImages[0] || ''} )`,
-                    backgroundRepeat: 'no-repeat', 
-                    backgroundSize: 'cover', 
-                    backgroundPosition: 'center center'
-                }
-            }
-        />
+            imagePath={ imagePath + props.fullImages[0] } />
 
         <Section className='why-appstem' style={{ background: '#ffffff', width: '100vw' }}>
             <Cta heading='Why Appstem'>
@@ -68,13 +61,12 @@ return (
             </Cta>
         </Section>
 
-        <Section className='full-width-image-section' style={{ background: '#f8f8f8', width: '100vw' }}>
-        <Img
-            className='full-image'
-            src={ imagePath + props.fullImages[2] || '' }
-            alt={ props.imageAlt || `an image for ${ props.slug }` }
-            loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
-        </Section>
+        <FullWidthImage 
+            className='second-full-image' 
+            mask='angle--both-left-right'
+            imagePath={ imagePath + props.fullImages[1] }
+            style={{ background: '#f8f8f8' }}
+            alt={ props.imageAlt || `an image for ${ props.slug }` } />
 
         <Section className='company-blurb-section' style={{ background: '#ffffff', width: '100vw' }}>
             <div className='company-blurb-wrapper'>

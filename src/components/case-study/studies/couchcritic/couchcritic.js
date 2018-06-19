@@ -4,6 +4,7 @@ import { Player, BigPlayButton, PosterImage } from 'video-react';
 import { BeatLoader } from 'react-spinners'
 import Section from '../../../layout/page-section/section'
 import AngledSection from '../../../layout/page-section/angled-section'
+import FullWidthImage from '../../../layout/page-section/full-width-image-section'
 import Cta from '../../../layout/page-section/cta'
 import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
@@ -19,7 +20,7 @@ export default (props) => {
 
     const imagePath = `/assets/images/case-studies/${props.slug}/`
     const logoPath = `/assets/images/company-logos/`
-    const videoPath = '../../../../../public/assets/videos/'
+    const videoPath = '/assets/videos/'
     const interactionData = {
         featureBlockImage: props.interactions[0],
         heading: props.interactions[1],
@@ -36,18 +37,10 @@ return (
             </Cta>
         </AngledSection>
 
-        <AngledSection 
-            className='full-width-image-section' 
+        <FullWidthImage 
+            className='first-full-image' 
             mask='angle--both-left-right'
-            style={ 
-                {
-                    backgroundImage: `url( ${props.fullImages[0] || ''} )`,
-                    backgroundRepeat: 'no-repeat', 
-                    backgroundSize: 'cover', 
-                    backgroundPosition: 'center center'
-                }
-            }
-        />
+            imagePath={ imagePath + props.fullImages[0] } />
 
         <Section className='why-appstem' style={{ background: '#ffffff', width: '100vw' }}>
             <Cta heading='Why Appstem'>
@@ -92,13 +85,12 @@ return (
             </Cta>
         </Section>
 
-        <Section className='styleguide' style={{ background: '#f8f8f8', width: '100vw' }}>
-            <Img
-                className='styleguide-full-image'
-                src={ imagePath + props.fullImages[1] || '' }
-                alt={ props.imageAlt || `an image for ${ props.slug }` }
-                loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
-        </Section>
+        <FullWidthImage 
+            className='styleguide' 
+            mask='angle--both-left-right'
+            imagePath={ imagePath + props.fullImages[1] }
+            style={{ background: '#f8f8f8' }}
+            alt={ props.imageAlt || `an image for ${ props.slug }` } />
 
         <Section className='development-features' style={{ background: '#f8f8f8', width: '100vw' }}>
             {
@@ -122,13 +114,12 @@ return (
             <Branding brandItems={props.branding} slug={props.slug}/>
         </Section>
 
-        <Section className='full-width-image-section' style={{ background: '#f8f8f8', width: '100vw' }}>
-            <Img
-                className='full-image'
-                src={ imagePath + props.fullImages[2] || '' }
-                alt={ props.imageAlt || `an image for ${ props.slug }` }
-                loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
-        </Section>
+        <FullWidthImage 
+            className='second-full-image' 
+            mask='angle--both-left-right'
+            imagePath={ imagePath + props.fullImages[2] }
+            style={{ background: '#f8f8f8' }}
+            alt={ props.imageAlt || `an image for ${ props.slug }` } />
 
         <Section className='company-blurb-section' style={{ background: '#ffffff', width: '100vw' }}>
             <div className='company-blurb-wrapper'>
