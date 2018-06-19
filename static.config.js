@@ -37,6 +37,7 @@ export default {
     } = await jdown('content')
 
     const caseStudiesForHomePage = work.filter( caseStudy => caseStudy.slug === 'hubbub' || caseStudy.slug === 'jetsuite-x' || caseStudy.slug === 'tesla-motors' )
+    const caseStudiesForNav = work.slice(0).map( caseStudy => {{ title: caseStudy.title, slug: caseStudy.slug }} )
 
     return [
       {
@@ -94,6 +95,7 @@ export default {
           component: 'src/components/case-study/case-study',
           getData: () => ({
             caseStudy,
+            caseStudiesForNav,
           }),
         })),
       },

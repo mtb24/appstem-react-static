@@ -4,7 +4,7 @@ import FeatureBlock from '../../feature-block/feature-block'
 import './case-study-hero.scss'
 
 export default (props) => {
-    //console.log('case study hero props: ', props)
+
     const bgImagePath = `/assets/images/case-studies/${props.caseStudy.slug}/${props.caseStudy.heroBgImage}`
 
     return (
@@ -20,7 +20,7 @@ export default (props) => {
                     }
                 }>
                 <div className='content-wrapper'>
-                    <PrevNextArrows prevLinkto='' nextLinkto=''/>
+                    <PrevNextArrows prevLinkto={ props.prevLink } nextLinkto={ props.nextLink } />
                     <FeatureBlock 
                         className='case-study-hero-featureblock' 
                         imagePosition={ 'right' }

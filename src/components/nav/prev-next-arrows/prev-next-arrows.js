@@ -6,7 +6,7 @@ import './prev-next-arrows.scss'
 
 export default (props) => (
     <div className='prev-next-arrows'>
-        <Link to={ props.prevLinkto || '/#' }><img className='left' src={ leftArrow } alt='Previous Case Study'/></Link>
-        <Link to={ props.nextLinkto || '/#' }><img className='right' src={ rightArrow } alt='Next Case Study'/></Link>
+        <Link to={ `/portfolio/${props.prevLinkto.slug}` || '/#' }><img className='left' src={ leftArrow } alt='Previous Case Study'/></Link>
+        <Link to={ `/portfolio/${props.nextLinkto.slug}` || '/#' }><img className='right' src={ rightArrow } alt='Next Case Study'/></Link>
     </div>
 )

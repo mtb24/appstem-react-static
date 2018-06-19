@@ -6,24 +6,23 @@ import rightArrow from '../../../../public/assets/images/icons/right-arrow.png'
 import LinkOutlined from '../../buttons/link-outlined/link-outlined'
 
 export default (props) => {
+    const alignclass = props.centerText? 'sl-centered' : 'sl-offset'
 
-    const alignclass = props.centerText? 'sl-centered' : 'sl-offset' 
-    
     return (
     
     <div className={`section-links ${props.className || ''}`}>
 
-        <Link to=''>
+        <Link to={`/portfolio/${ props.prevLink.slug }`}>
             <div className={`${alignclass} sl-left all-caps`}>
-                <img src={ leftArrow } alt='Left arrow icon'/> { props.leftText || 'Previous' }
+                <img src={ leftArrow } alt='Left arrow icon'/> { props.prevLink.title || 'Previous' }
             </div>
         </Link>
 
-        { props.centerText? <LinkOutlined linkTo='/work' className=''>{ props.centerText }</LinkOutlined> : null }
+        <LinkOutlined linkTo='/work' className=''>All Work</LinkOutlined>
 
-        <Link to=''>
+        <Link to={`/portfolio/${ props.nextLink.slug }`}>
             <div className={`${alignclass} sl-right all-caps`}>
-                { props.rightText || 'Next' } <img src={ rightArrow } alt='Right arrow icon'/>
+                { props.nextLink.title || 'Next' } <img src={ rightArrow } alt='Right arrow icon'/>
             </div>
         </Link>
         
