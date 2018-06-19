@@ -55,12 +55,15 @@
             }
         }
     }
-    .full-width-image-section {
-        width: 100vw;
-        .full-image {
-            width: 100%;
+
+    .first-full-image {
+        @include phone {}
+        @include tablet {}
+        @include desktop {
+            height: 893px;
         }
     }
+
     .why-appstem {
         display: flex;
         place-content: center;
@@ -147,6 +150,7 @@
         }
 
     }
+
     .development-features {
 
         & > .feature-block {
@@ -170,14 +174,24 @@
             } 
         }
     }
+
     .styleguide {
-        display: flex;
-        justify-content: center;
-        & > img {
-            width: 100%;
-            max-width: 1200px;
+    
+        @include phone {}
+        @include tablet {}
+        @include desktop {
+            height: 893px;
         }
     }
+
+    .second-full-image {
+        @include phone {}
+        @include tablet {}
+        @include desktop {
+            height: 893px;
+        }
+    }
+
     .company-blurb-section {
         height: 400px;
         display: flex;
