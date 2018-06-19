@@ -3,6 +3,8 @@
     background: cadetblue;
     height: 640px;
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     place-content: center;
+    place-items: center;
 }
