@@ -5,7 +5,7 @@ import Hero from '../hero/hero'
 import backgroundImage from '../../../public/assets/images/main-pages/bg_contact_page.jpg'
 import Cta from '../layout/page-section/cta'
 import AngledSection from '../layout/page-section/angled-section'
-import { ContactForm } from '../forms/contact-form'
+import ContactForm from '../forms/contact-form'
 import './contact.scss'
 
 export default withRouteData(({ contact }) => (
