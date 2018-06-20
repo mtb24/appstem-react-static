@@ -10,8 +10,8 @@ export default (props) => (
             autoPlay='1'
             loop='1'
             playsInline='1'
-            poster={`assets/images/${ props.posterImg || ''}`}>
-            <source src={ `assets/videos/${ props.backgroundVideo || '' }` }/>
+            poster={`/assets/images/${ props.posterImg || ''}`}>
+            <source src={ `/assets/videos/${ props.backgroundVideo || '' }` }/>
         </video>
     </div>
     </React.Fragment>
