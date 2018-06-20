@@ -6,7 +6,7 @@
     color: $primary-font-color;
     padding: 1em 2em;
     position: relative;
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 3.29px;
     line-height: 24px;
     width: fit-content;
@@ -19,7 +19,7 @@
     }
     
     @include phone {
-        font-size: 15px;
+        font-size: 0.9375rem;
         letter-spacing: 3.08px;
     }
 }

@@ -63,12 +63,12 @@ $featureblocks-link-color: $white;
         h2 {
             color: $featureblocks-heading-color;
             font-family: $primary-font-family;
-            font-size: 35px;
+            font-size: 2.188rem;
             font-weight: normal;
             letter-spacing: 7px;
             line-height: 50px;
             @include phone {
-                font-size: 18px;
+                font-size: 1.125rem;
                 letter-spacing: 3.6px;
                 line-height: 26px;
                 margin-bottom: 0;
@@ -77,10 +77,10 @@ $featureblocks-link-color: $white;
         .feature-block-project-type {
             color: $featureblocks-project-type-color;
             font-family: $primary-font-family;
-            font-size: 24px;
+            font-size: 1.5rem;
             line-height: 42px;
             @include phone {
-                font-size: 13px;
+                font-size: 0.8125rem;
                 line-height: 16px;
                 margin: 0;
             }
@@ -88,23 +88,23 @@ $featureblocks-link-color: $white;
         .feature-block-project-description {
             color: $featureblocks-project-desc-color;
             font-family: $primary-font-family;
-            font-size: 24px;
+            font-size: 1.5rem;
             line-height: 42px;
             max-width: 500px;
             @include phone {
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 24px;
             }
         }
         a {
             color: $featureblocks-link-color;
             font-family: $primary-font-family;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: normal;
             letter-spacing: 5px;
             line-height: 25px;
             @include phone {
-                font-size: 13px;
+                font-size: 0.8125rem;
                 letter-spacing: 4.06px;
             }
         }

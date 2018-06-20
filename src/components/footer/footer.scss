@@ -45,7 +45,7 @@ $footer-heading-color: $white;
                 flex-direction: column;
                 color: $link-color;
                 font-family: $primary-font-family;
-                font-size: 13px;
+                font-size: 0.8125rem;
                 font-weight: normal;
                 letter-spacing: 3.25px;
                 line-height: 24px;
@@ -96,7 +96,7 @@ $footer-heading-color: $white;
 
                 .footer-address-block {
                     opacity: 0.7;
-                    font-size: 13px;
+                    font-size: 0.8125rem;
                     line-height: 19px;
                     margin-bottom: 1em;
 
@@ -115,7 +115,7 @@ $footer-heading-color: $white;
                 h4.footer-heading {
                     color: $footer-heading-color;
                     font-family: $primary-font-family;
-                    font-size: 13px;
+                    font-size: 0.8125rem;
                     font-weight: normal;
                     line-height: 19px;
                     opacity: 1;
@@ -144,68 +144,19 @@ $footer-heading-color: $white;
 
                 .footer-form-heading {
                     color: #FFFFFF;
-                    font-family: brandon-grotesque;
-                    font-size: 13px;
+                    font-size: 0.8125rem;
                     font-weight: normal;
                     letter-spacing: 3.25px;
                     line-height: 24px;
-                    margin-bottom: 19px;
+                    margin-bottom: 15px;
 
                     @include phone {
-                        font-size: 13px;
+                        font-size: 0.8125rem;
                         font-weight: normal;
                         letter-spacing: 3.25px;
                         line-height: 24px;
                         text-align: center;
                         margin-bottom: 16px;
-                    }
-                }
-
-                #footer-email-form {
-                    position: relative;
-                    display: grid;
-
-                    #footerEmail {
-                        border: none;
-                        border-bottom: 1px solid #9B9B9B;
-                        background-color: inherit;
-                        width: 310px;
-                        color: $appstem-green;
-                        @include phone {
-                            width: 231px;
-                        }
-
-                        &:focus + label {
-                            transform: translate(-50px, -15px) scale(0.75);
-                            color: $appstem-green;
-                            opacity: 1;
-                        }
-                    }
-                    
-                    .footer-email-label {
-                        opacity: 0.5;
-                        font-size: 20px;
-                        line-height: 29px;
-                        position: relative;
-                        transition: all .2s linear;
-                        top: -25px;
-                        @include phone {
-                            line-height: 23px;
-                        }
-                    }
-                    .footer-email-submit-button {
-                        position: relative;
-                        top: -47px;
-                        left: 296px;
-                        background: url('../../../public/assets/images/icons/ic_arrow_green.png');
-                        background-repeat: no-repeat;
-                        border: 0;
-                        display: inline-block;
-                        height: 20px;
-                        width: 22px;
-                        @include phone {
-                            left: 217px;
-                        }
                     }
                 }
             }

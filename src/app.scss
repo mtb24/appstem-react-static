@@ -6,7 +6,7 @@ $footer-copywrite-color: #8E8E8E;
 body {
   font-family: $primary-font-family, sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   color: $primary-font-color;
@@ -35,7 +35,7 @@ body {
         height: 48px;
         background-color: $footerBottomBackgroundColor;
         color: $footer-copywrite-color;
-        font-size: 11px;
+        font-size: 0.6875rem;
         letter-spacing: 0.85px;    
     
         .copyright {

@@ -24,20 +24,20 @@ $featureblocks-bg-color: #1C1819;
         p {
             width: 60%;
             color: $white;
-            font-size: 36px;
+            font-size: 2.25rem;
             line-height: 72px;
             text-align: center;
             margin: 0 auto;
     
             @include tablet {
                 width: 75%;
-                font-size: 28px;
+                font-size: 1.75rem;
                 line-height: 62px;
             }
             
             @include phone {
                 width: 89%;
-                font-size: 20px;
+                font-size: 1.25rem;
                 line-height: 32px;
                 margin: 2em auto;
             }

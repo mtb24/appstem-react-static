@@ -24,14 +24,14 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
         width: 100%;
 
         h2 {
-            font-size: 32px;
+            font-size: 2rem;
             font-weight: normal;
             letter-spacing: 6.4px;
             line-height: 46px;
             text-align: center;
             
             @include phone {
-                font-size: 20px;
+                font-size: 1.25rem;
                 letter-spacing: 4px;
                 line-height: 29px;
             }
@@ -53,14 +53,14 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
             width: 65%;
             color: $services-page-p-color;
             font-weight: normal;
-            font-size: 24px;
+            font-size: 1.5rem;
             line-height: 40px;
             opacity: 0.9;
             
             @include phone {
                 width: 81%;
                 text-align: left;
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 24px;
                 margin-top: 32px;
                 margin-bottom: 76px;
@@ -94,13 +94,13 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
                 margin-top: 25px;
                 
                 h2 {
-                    font-size: 35px;
+                    font-size: 2.188rem;
                     font-weight: normal;
                     letter-spacing: 7px;
                     line-height: 50px;
                     text-align: left;
                     @include phone {
-                        font-size: 18px;
+                        font-size: 1.125rem;
                         letter-spacing: 3.6px;
                         line-height: 50px;
                         text-align: center;
@@ -110,10 +110,10 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
                     height: 72px;
                     width: 483px;
                     color: $services-page-block-p-color;
-                    font-size: 16px;
+                    font-size: 1rem;
                     line-height: 24px;
                     @include phone {
-                        font-size: 16px;
+                        font-size: 1rem;
                         line-height: 24px;
                         text-align: center;
                         width: 89%;
@@ -148,14 +148,14 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
         
         h2 {
             color: $services-page-exertise-block-color;
-            font-size: 32px;
+            font-size: 2rem;
             font-weight: normal;
             letter-spacing: 6.4px;
             line-height: 46px;
             grid-column: span 2;
             
             @include phone {
-                font-size: 20px;
+                font-size: 1.25rem;
                 letter-spacing: 4px;
                 line-height: 29px;
                 text-align: center;
@@ -167,7 +167,7 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
 
         .expertise-block {
             color: $services-page-exertise-block-color;
-            font-size: 35px;
+            font-size: 2.188rem;
             font-weight: normal;
             letter-spacing: 7px;
             line-height: 50px;
@@ -179,7 +179,7 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
             }
             h2 {
                 @include phone {
-                    font-size: 18px;
+                    font-size: 1.125rem;
                     letter-spacing: 3.6px;
                     line-height: 50px;
                 }
@@ -187,12 +187,12 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
 
             p.description {
                 color: $services-page-exertise-block-color;
-                font-size: 18px;
+                font-size: 1.125rem;
                 letter-spacing: 0.5px;
                 line-height: 30px;
                 text-align: center;
                 @include phone {
-                    font-size: 16px;
+                    font-size: 1rem;
                     color: $services-page-exertise-block-color-mobile;
                     letter-spacing: 0.44px;
                     line-height: 30px;
@@ -200,14 +200,14 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
             }
             p.project-type {
                 color: $services-page-exertise-project-type-color;
-                font-size: 18px;
+                font-size: 1.125rem;
                 font-weight: 500;
                 letter-spacing: 0.5px;
                 line-height: 30px;
                 text-align: center;
                 text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
                 @include phone {
-                    font-size: 16px;
+                    font-size: 1rem;
                     font-weight: 500;
                     color: $services-page-exertise-project-type-color-mobile;
                     letter-spacing: 0.44px;
@@ -229,7 +229,7 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
         max-width: 1200px;
         background-color: $services-page-see-what-we-made-block-color;
         color: $white;
-        font-size: 35px;
+        font-size: 2.188rem;
         font-weight: normal;
         letter-spacing: 7px;
         line-height: 50px;

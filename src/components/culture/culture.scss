@@ -13,7 +13,7 @@ $testimonials-H2-color: #1B252F;
     h2 {
         color: #FFFFFF;
         font-family: "Brandon Grotesque";
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: bold;
         letter-spacing: 6.4px;
         line-height: 46px;
@@ -30,7 +30,7 @@ $testimonials-H2-color: #1B252F;
 
         p {
             color: $services-page-p-color;
-            font-size: 28px;
+            font-size: 1.75rem;
             line-height: 42px;
             margin: 0 auto;
     
@@ -43,7 +43,7 @@ $testimonials-H2-color: #1B252F;
                 // width: 780px;
                 color: #E7E7E7;
                 font-family: "Brandon Grotesque";
-                font-size: 28px;
+                font-size: 1.75rem;
                 line-height: 42px;
             }
             @include tablet {
@@ -51,7 +51,7 @@ $testimonials-H2-color: #1B252F;
             }
             @include phone {
                 width: 85%;
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 24px;
             }
         }
@@ -94,16 +94,16 @@ $testimonials-H2-color: #1B252F;
             @include desktop {
                 width: 65%;
                 // width: 780px;
-                font-size: 24px;
+                font-size: 1.5rem;
                 line-height: 42px;
             }
             @include tablet {
-                font-size: 24px;
+                font-size: 1.5rem;
                 line-height: 42px;
                 width: 65%;
             }
             @include phone {
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 24px;
                 width: 85%;
             }
@@ -200,7 +200,7 @@ $testimonials-H2-color: #1B252F;
             
             @include desktop {
                 width: 549px;
-                font-size: 24px;
+                font-size: 1.5rem;
                 line-height: 42px;
                 text-align: center;
             }
@@ -230,7 +230,7 @@ $testimonials-H2-color: #1B252F;
 
         h2 {
             color: $testimonials-H2-color;
-            font-size: 32px;
+            font-size: 2rem;
             font-weight: normal;
             letter-spacing: 6.4px;
             line-height: 46px;
@@ -238,7 +238,7 @@ $testimonials-H2-color: #1B252F;
             margin-top: 3em;
     
             @include phone {
-                font-size: 20px;
+                font-size: 1.25rem;
                 letter-spacing: 3.33px;
                 line-height: 29px;
                 margin-top: 110px;

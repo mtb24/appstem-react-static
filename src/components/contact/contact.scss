@@ -23,7 +23,7 @@ $form-text-color-mobile: #4A4A4A;
 
         h2 {
             @include phone {
-                font-size: 20px;
+                font-size: 1.25rem;
                 line-height: 29px;
                 letter-spacing: 4px;
             }
@@ -48,14 +48,14 @@ $form-text-color-mobile: #4A4A4A;
                 top: -45px;
                 left: 5px;
                 color: $form-inactive-border-color;
-                font-size: 16px;
+                font-size: 1rem;
                 letter-spacing: 2px;
                 line-height: 23px;
                 transition: all .2s linear;
 
                 @include phone {
                     color: $form-text-color-mobile;
-                    font-size: 14px;
+                    font-size: 0.875rem;
                     letter-spacing: 1.75px;
                     line-height: 20px;
                 }
@@ -99,14 +99,14 @@ $form-text-color-mobile: #4A4A4A;
         }
 
         h2 {
-            font-size: 32px;
+            font-size: 2rem;
             font-weight: normal;
             letter-spacing: 6.4px;
             line-height: 46px;
             text-align: center;
             
             @include phone {
-                font-size: 20px;
+                font-size: 1.25rem;
                 font-weight: bold;
                 letter-spacing: 4px;
                 line-height: 29px;
@@ -114,21 +114,21 @@ $form-text-color-mobile: #4A4A4A;
         }
         p {
             margin: 70px 0 80px 0;
-            font-size: 20px;
+            font-size: 1.25rem;
             line-height: 40px;
             @include phone {
                 padding: 0 1em;
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 24px;
             }
         }
         .openings-link {
             color: $form-text-color-mobile;
-            font-size: 16px;
+            font-size: 1rem;
             letter-spacing: 3.29px;
             line-height: 24px;
             @include phone {
-                font-size: 15px;
+                font-size: 0.9375rem;
                 line-height: 3.08px;
                 font-weight: bold;
             }
