@@ -37,7 +37,7 @@ export default {
     } = await jdown('content')
 
     const caseStudiesForHomePage = work.filter( caseStudy => caseStudy.slug === 'hubbub' || caseStudy.slug === 'jetsuite-x' || caseStudy.slug === 'tesla-motors' )
-    const caseStudiesForNav = work.slice(0).map( caseStudy => {{ title: caseStudy.title, slug: caseStudy.slug }} )
+    const caseStudiesForNav = work.map( caseStudy => ( { title: caseStudy.title, slug: caseStudy.slug, } ) )
 
     return [
       {
@@ -101,7 +101,7 @@ export default {
       },
       {
         path: '/test',
-        component: 'src/components/blog/blog',
+        component: 'src/components/confirmationModal/confirmation-modal',
       },
       {
         is404: true,
