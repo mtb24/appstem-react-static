@@ -10,6 +10,9 @@ import redesignImage from '../../../public/assets/images/icons/ic_redesign.png'
 import revolutionImage from '../../../public/assets/images/icons/ic_revolution.png'
 import './services.scss'
 
+let prevLink = {title: 'See What We Made', slug: '/work'}
+let nextLink = {title: 'Let\'s Get In Touch', slug: '/contact'}
+
 export default withRouteData(({ services }) => (
   <React.Fragment>
 
@@ -93,7 +96,7 @@ export default withRouteData(({ services }) => (
     </AngledSection>
 
     <AngledSection className='last-section' mask='angle--bottom-right'> 
-      <SectionLinks className='see-what-we-made' leftText='See What We Made' rightText={`Let's Get In Touch`} />
+      <SectionLinks className='see-what-we-made' prevLink={ prevLink } nextLink={ nextLink } />
     </AngledSection>
 
   </React.Fragment>
