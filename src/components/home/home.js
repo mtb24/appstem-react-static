@@ -54,7 +54,7 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
       
 
       <AngledSection className='section-5' mask='angle--both-left-right'>
-        <Testimonials heading='From our Clients' className='grid-wrapper testimonials-wrapper' />
+        <Testimonials heading='From our Clients' className='testimonials-wrapper' />
       </AngledSection>
 
     </React.Fragment>
