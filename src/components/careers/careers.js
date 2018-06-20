@@ -42,7 +42,7 @@ export default withRouteData(({ careers, openings }) => {
                         {
                             openings.map( (job, i) => {
                                 const triggerEl = (
-                                    <div className='job-opening-trigger'>
+                                    <div key={ i + '-trigger' } className='job-opening-trigger'>
                                         <div className='job-title all-caps'>{ job.role }</div>
                                         <div className='job-meta'>
                                             <div className='job-type'><img src={ timeIcon } alt='Icon for job type'/> { job.type }</div>
