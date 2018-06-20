@@ -1,9 +1,4 @@
-:root {
-    --twitterIconHoverColor: #60b5f0;
-    --facebookIconHoverColor: #4463a3;
-    --instagramIconHoverColor: #e8496a;
-    --mediumIconHoverColor: #00c080;
-}
+
 .social-icons-wrapper {
     height: 36px;
     width: 192px;
@@ -12,18 +7,18 @@
     grid-gap: 1rem;
 }
 .social-icon-twitter :hover {
-    fill: var(--twitterIconHoverColor);
+    fill: #60b5f0;
     transition: .3s;
 }
 .social-icon-facebook :hover {
-    fill: var(--facebookIconHoverColor);
+    fill: #4463a3;
     transition: .3s;
 }
 .social-icon-instagram :hover {
-    fill: var(--instagramIconHoverColor);
+    fill: #e8496a;
     transition: .3s;
 }
 .social-icon-medium :hover {
-    fill: var(--mediumIconHoverColor);
+    fill: #00c080;
     transition: .3s;
 }
