@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactModal from 'react-modal'
-//import { Form, Text } from 'react-form'
 import { ClipLoader } from 'react-spinners'
+import axios from 'axios'
+import MockAdapter from 'axios-mock-adapter'
 import Button from '../buttons/base-button/button'
 import Cta from '../layout/page-section/cta'
-
 import '../confirmationModal/confirmation-modal.scss'
+
 
 class ContactForm extends React.Component {
 
@@ -21,12 +22,11 @@ class ContactForm extends React.Component {
           }
   
           this.handleSubmit = this.handleSubmit.bind(this)
-          this.sendFormData = this.sendFormData.bind(this)
-          this.requestBuildQueryString = this.requestBuildQueryString.bind(this)
           this.getFormData = this.getFormData.bind(this)
           this.handleOpenModal = this.handleOpenModal.bind(this)
           this.handleCloseModal = this.handleCloseModal.bind(this)
           this.toggleModal = this.toggleModal.bind(this)
+          this.postForm = this.postForm.bind(this)
     }
 
     handleOpenModal () {
@@ -45,73 +45,82 @@ class ContactForm extends React.Component {
     handleSubmit (event) {
       event.preventDefault()
       this.setState({ type: 'info', message: 'sending data...', loading: true })
-      this.getFormData()
+      this.postForm( this.getFormData(), '/contact-form' )
     }
   
     getFormData () {
-      const formData = {
-        name: this.refs.name.value,
-        email: this.refs.email.value,
-        phone: this.refs.phone.value,
-        company: this.refs.company.value,
-        project: this.refs.project.value,
-      }
+        const formData = new FormData()
+        formData.append('name', this.refs.name.value)
+        formData.append('email', this.refs.email.value)
+        formData.append('phone', this.refs.phone.value)
+        formData.append('company', this.refs.company.value)
+        formData.append('project', this.refs.project.value)
+        return formData
+    }
+    
+    async postForm(formDataObject, destination) {
       
-      // simulate submission for testing...
-      setTimeout( () => {
-        console.log('form data: ', formData)
-        this.setState({ 
-            type: 'success', 
-            message: 'Success', 
-            loading: false, 
-            status: 'sent', 
-            data: formData,
-            showModal: true,
-         })
-        document.getElementById('contact-form').reset()
-        // this.sendFormData()
-      }, 2000 )
-    }
+      try {
+        
+        const mock = new MockAdapter(axios, { delayResponse: 2500 })
+        mock.onPost('/contact-form')
+            
+          .reply(function(config) {
+              
+            return new Promise( (resolve, reject) => {
+                
+              setTimeout( () => {
+                  
+                Math.random() > 0.5
+                  ? resolve([200,
+                    {
+                      type: 'success',
+                      message: 'Success!',
+                      data: {...formDataObject},
+                    }])
+                  : resolve([500,
+                    {
+                      type: 'error',
+                      loading: false,
+                      status: 'error',
+                      message: 'There\'s been an error',
+                      showModal: false,
+                    }])
+              } , 2000)
+            })
+            .then( document.getElementById('contact-form').reset() )
+        })
+        
+        const response = await axios.post(destination)
+        console.log('state before: ',this.state)
+        console.log('postForm response: ', response)
+        
+        this.setState({
+          type: response.data.type || 'success',
+          message: response.data.message || 'Default Success message', 
+          status:  'sent',
+          showModal: true,
+          loading: false,
+          data: response.data.data,
+        })
+        console.log('state after: ',this.state)
 
-    sendFormData () {
-      const xmlhttp = new XMLHttpRequest()
-    //   const _this = this
-      xmlhttp.onreadystatechange = () => {
-        if (xmlhttp.readyState === 4) {
-          const response = JSON.parse(xmlhttp.responseText)
-          if (xmlhttp.status === 200 && response.status === 'OK') {
-            this.setState({ showModal: true, type: 'success', message: 'We have received your message and will get in touch shortly. Thanks!' })
-          }
-          else {
-            this.setState({ type: 'error', message: 'Sorry, there has been an error' })
-          }
-        }
       }
-      xmlhttp.open('POST', '/some-endpoint', true)
-      xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
-      xmlhttp.send(this.requestBuildQueryString(this.state.data))
-    }
-    /**
-     * Transforms an object into a URL querystring.
-     *
-     * @param object params
-     * @return string the formatted querystring.
-     */
-    requestBuildQueryString (params) {
-      const queryString = []
-      for(let property in params)
-        if (params.hasOwnProperty(property)) {
-          queryString.push(encodeURIComponent(property) + '=' + encodeURIComponent(params[property]))
-        }
-      return queryString.join('&')
+      catch (error) {
+        console.error('postForm error: ', error)
+        this.setState({
+          type: 'error',
+          message: error || 'An unknown error has occured', 
+          status:  'sent',
+          showModal: false,
+          loading: false,
+        })
+      }
     }
   
     render () {
-
-      const Status = () => (<div id="status" className={'alert alert-' + this.state.type} ref="status">{this.state.message}</div>)
       return (
         <React.Fragment>
-          <Status/>
           <form ref='contactform' onSubmit={this.handleSubmit} id="contact-form" className="contact-form" >
               <div className='contact-form-field-wrapper'>
               <input type='text' ref='name' field="name" id="name" name='name' />
@@ -137,6 +146,8 @@ class ContactForm extends React.Component {
               <input type='text' ref='project' field="project" id="project" name='project' />
               <label className='all-caps' htmlFor="project">Tell us about your project</label>
               </div>
+
+              <div id="status" className={'alert ' + `alert-${this.state.type}`} ref="status">{this.state.message || ''}</div>
   
               <Button type='submit' className='contact-form-submit' buttonText={ this.state.loading === false ? 'Send' : <ClipLoader color={'#ffffff'} loading={ this.state.loading } /> }/>
 
