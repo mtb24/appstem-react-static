@@ -159,14 +159,14 @@ $footer-heading-color: $white;
                         margin-bottom: 16px;
                     }
                 }
-            }
-            .social-icons-wrapper {
-                grid-area: form;
-                position: relative;
-                top: 80px;
-                @include phone {
-                    grid-area: social;
-                    top: 2em;
+                .social-icons-wrapper {
+                    grid-area: form;
+                    position: relative;
+                    // top: 80px;
+                    @include phone {
+                        grid-area: social;
+                        // top: 2em;
+                    }
                 }
             }
         }
