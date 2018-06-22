@@ -1,6 +1,6 @@
 import React from 'react'
 import { SiteData, Link } from 'react-static'
-import { FooterForm } from '../forms/footer-form'
+import FooterForm from '../forms/footer-form'
 import Nav from '../nav/nav'
 import SocialIcons from '../social/social-icons'
 import './footer.scss'
@@ -47,8 +47,8 @@ export default () => (
                 <div className='footer-email-form-wrapper'>
                     <div className='footer-form-heading all-caps'>Join Our Mail List</div>
                     <FooterForm/>
+                    <SocialIcons />
                 </div>
-                <SocialIcons />
             </div>
         </div>
     </footer>
