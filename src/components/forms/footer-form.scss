@@ -64,24 +64,16 @@
             width: 231px;
         }
 
-        &:focus + label {
-            transform: translate(-50px, -15px) scale(0.75);
-            color: $appstem-green;
-            opacity: 1;
-        }
+        // &:focus + label {
+        //     transform: translate(-50px, -15px) scale(0.75);
+        //     color: $appstem-green;
+        //     opacity: 1;
+        // }
     }
     
-    .footer-email-label {
-        opacity: 0.5;
-        font-size: 1.25rem;
-        line-height: 29px;
-        position: relative;
-        transition: all .2s linear;
-        top: -25px;
-        width: 290px;
+    label#status {
         @include phone {
-            line-height: 23px;
-            width: 231px;
+            text-align: center;
         }
     }
     .footer-form-submit-button {
