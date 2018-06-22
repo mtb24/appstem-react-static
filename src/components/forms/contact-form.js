@@ -58,11 +58,9 @@ class ContactForm extends React.Component {
         return formData
     }
     
-    async postForm(formDataObject, destination) {
-      
-      try {
-        
-        const mock = new MockAdapter(axios, { delayResponse: 2500 })
+    postForm(formDataObject, destination) {
+
+      const mock = new MockAdapter(axios, { delayResponse: 2000 })
         mock.onPost('/contact-form')
             
           .reply(function(config) {
@@ -71,19 +69,20 @@ class ContactForm extends React.Component {
                 
               setTimeout( () => {
                   
-                Math.random() > 0.5
+                // turn on random error testing by value > 0 (ie 0.1)
+                Math.random() > 0.0
                   ? resolve([200,
                     {
                       type: 'success',
                       message: 'Success!',
-                      data: {...formDataObject},
+                      data: [...formDataObject.entries()],
                     }])
-                  : resolve([500,
+                  : resolve([408,
                     {
                       type: 'error',
                       loading: false,
                       status: 'error',
-                      message: 'There\'s been an error',
+                      message: 'Server request has timed out',
                       showModal: false,
                     }])
               } , 2000)
@@ -91,31 +90,40 @@ class ContactForm extends React.Component {
             .then( document.getElementById('contact-form').reset() )
         })
         
-        const response = await axios.post(destination)
-        console.log('state before: ',this.state)
-        console.log('postForm response: ', response)
-        
-        this.setState({
-          type: response.data.type || 'success',
-          message: response.data.message || 'Default Success message', 
-          status:  'sent',
-          showModal: true,
-          loading: false,
-          data: response.data.data,
-        })
-        console.log('state after: ',this.state)
+        // console.log('state before: ',this.state)
 
-      }
-      catch (error) {
-        console.error('postForm error: ', error)
-        this.setState({
-          type: 'error',
-          message: error || 'An unknown error has occured', 
-          status:  'sent',
-          showModal: false,
-          loading: false,
+        axios({
+          method: 'post',
+          url: destination,
+          data: formDataObject,
+          config: { headers: {'Content-Type': 'multipart/form-data' }}
         })
-      }
+        .then( (response) => {
+            // success
+            this.setState({
+              type: response.data.type || 'success',
+              message: response.data.message || 'Default Success message', 
+              status:  'sent',
+              showModal: true,
+              loading: false,
+              data: response.data,
+            })
+            console.log('success response: ', response)
+            console.log('state after success: ', this.state)
+        })
+        .then( document.getElementById('contact-form').reset() )
+        .catch( (response) => {
+            // error
+            this.setState({
+              type: 'error',
+              message: response || 'An unknown error has occured', 
+              status:  'sent',
+              showModal: false,
+              loading: false,
+            })
+            console.log('error response: ', response)
+            console.log('state after error: ', this.state)
+        })
     }
   
     render () {
@@ -147,14 +155,14 @@ class ContactForm extends React.Component {
               <label className='all-caps' htmlFor="project">Tell us about your project</label>
               </div>
 
-              <div id="status" className={'alert ' + `alert-${this.state.type}`} ref="status">{this.state.message || ''}</div>
+              <div id="status" className={'alert ' + `alert-${this.state.type || ''}`} ref="status">{this.state.message || ''}</div>
   
               <Button type='submit' className='contact-form-submit' buttonText={ this.state.loading === false ? 'Send' : <ClipLoader color={'#ffffff'} loading={ this.state.loading } /> }/>
 
           </form>
           <ReactModal 
                 isOpen={ this.state.showModal }
-                contentLabel='confirmation - email form sucessfully submitted'
+                contentLabel='confirmation - contact form sucessfully submitted'
                 onRequestClose={ this.handleCloseModal }
                 className='modal'
                 overlayClassName='backdrop'>
