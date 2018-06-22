@@ -1,7 +1,73 @@
-@import '../../styles/styles.scss';
 
-.confirmation-wrapper {
-        padding: 60px 30px 30px;
-        background-color: $white;
+.modal {
+        background-color: #ffffff;
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+        width: 291px;
+        transition: all 1s;
+        z-index: 100;
+        
+        .cta-wrapper {
+                display: flex;
+                flex-direction: column;
+                place-content: center;
+                place-items: center;
+                padding: 60px 30px 30px;
+                width: unset;
+
+                h2 {
+                        color: #1B252F;
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                        letter-spacing: 4px;
+                        line-height: 29px;
+                        text-align: center;
+                }
+                hr {
+                        margin-bottom: 0;
+                }
+                p {
+                        color: #1B252F;
+                        font-size: 1rem;
+                        line-height: 24px;
+                        width: 80%;
+                        margin: 43px auto 41px auto;
+                }
+                button {
+                        height: 72px;
+                        width: 221px;
+                        background-color: #3cd52e;
+                        color: #fafafa;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        letter-spacing: 3.2px;
+                        line-height: 23px;
+                        text-align: center;
+                        border: none;
+                        border-radius: 3px;
+                }
+        }
+}
+.backdrop {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.3);
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+        transition: all .5s;
+        z-index: 99;
+}
+
+.confirmation-test {
+        background: cadetblue;
+        height: 640px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
 }
