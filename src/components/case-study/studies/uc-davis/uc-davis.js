@@ -13,7 +13,7 @@ import './uc-davis.scss'
 
 export default (props) => {
 
-    console.log('props: ', props)
+    // console.log('props: ', props)
 
     const imagePath = `/assets/images/case-studies/${props.slug}/`
     const logoPath = `/assets/images/company-logos/`
@@ -58,7 +58,7 @@ return (
                 {
                     (props.wireframeImages.length && props.wireframeImages.length > 0)
                     ?   props.wireframeImages.map( (image, i) => (
-                            <div className='wireframes'>
+                            <div key={i} className='wireframes'>
                                 <Img
                                     className='wireframe-image'
                                     src={ imagePath + image || '' }

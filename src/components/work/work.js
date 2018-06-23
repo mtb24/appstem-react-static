@@ -7,7 +7,7 @@ import FeatureBlock from '../feature-block/feature-block';
 import AngledSection from '../layout/page-section/angled-section'
 
 export default withRouteData(({ work }) => {
-  console.log('work: ', work)
+  // console.log('work: ', work)
   return (
 
   <React.Fragment>

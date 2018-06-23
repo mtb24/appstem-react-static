@@ -30,7 +30,7 @@ class ContactForm extends React.Component {
     }
 
     handleOpenModal () {
-        console.log('handleOpenModal fired')
+        //console.log('handleOpenModal fired')
         this.setState({ showModal: true })
     }
     
@@ -108,8 +108,8 @@ class ContactForm extends React.Component {
               loading: false,
               data: response.data,
             })
-            console.log('success response: ', response)
-            console.log('state after success: ', this.state)
+            // console.log('success response: ', response)
+            // console.log('state after success: ', this.state)
         })
         .then( document.getElementById('contact-form').reset() )
         .catch( (response) => {

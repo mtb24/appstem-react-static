@@ -16,7 +16,7 @@ import './vowla.scss'
 
 export default (props) => {
 
-    console.log('the props: ', props)
+    // console.log('the props: ', props)
 
     const imagePath = `/assets/images/case-studies/${props.slug}/`
     const logoPath = `/assets/images/company-logos/`

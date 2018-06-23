@@ -14,7 +14,7 @@ import './j&j.scss'
 
 export default (props) => {
 
-    console.log('props: ', props)
+    // console.log('props: ', props)
 
     const imagePath = `/assets/images/case-studies/${props.slug}/`
     const logoPath = `/assets/images/company-logos/`
