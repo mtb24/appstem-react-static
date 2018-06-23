@@ -101,7 +101,7 @@ export default {
       },
       {
         path: '/test',
-        component: 'src/components/confirmationModal/confirmation-modal',
+        component: 'src/components/blog/blog',
       },
       {
         is404: true,
