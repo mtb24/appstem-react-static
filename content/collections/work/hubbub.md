@@ -5,7 +5,7 @@ projectType: iOS & Back-end Development
 featureBlockImage: Hubbub_Mockup.png
 heroFeaturedimage: Hubbub_Mockup.png
 heroBgImage: bg_top_hubbub.png
-fullImages: ['Lifestyle_hubbub.jpg','Hubub-ImageScreens.jpg',]
+fullImages: ['Lifestyle_hubbub.jpg','Hubub-ImageScreens.jpg']
 imageAlt: Image showing Hubbub app on mobile device
 companyLogo: sym-logo-hubbub.png
 videos: ['appstem_hero.mp4']
