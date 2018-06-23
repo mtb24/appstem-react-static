@@ -14,6 +14,7 @@ class Header extends React.Component {
             showHeader: 'initial',
             ticking: false,
             targetHeight: 344,
+            animationId: null,
         }
         this.handleScroll = this.handleScroll.bind(this)
         this.calculateScroll = this.calculateScroll.bind(this)
@@ -27,6 +28,7 @@ class Header extends React.Component {
     }
     
     componentWillUnmount() {
+        if (this.state.animationId !== null) { cancelAnimationFrame(this.state.animationId) }
         window.removeEventListener('scroll', this.handleScroll)
         document.getElementsByClassName('nav-toggle')[0].removeEventListener('click', this.handleNavClicks)
     }
@@ -41,7 +43,9 @@ class Header extends React.Component {
         document.getElementsByClassName('nav-toggle')[0].checked = false
     }
     handleScroll() {
-        window.requestAnimationFrame(this.calculateScroll)
+        if (this.state.animationId !== null) { cancelAnimationFrame(this.state.animationId) }
+        const animationId = window.requestAnimationFrame(this.calculateScroll)
+        this.setState({animationId: animationId})
     }
     calculateScroll() {
         if (!this.state.ticking) {
@@ -55,11 +59,11 @@ class Header extends React.Component {
                 })
             }
             this.setState({
-                ticking: false,
+                ticking: true,
             })
         } else {
             this.setState({
-            ticking: true,
+            ticking: false,
         })}
     }
 
