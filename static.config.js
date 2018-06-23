@@ -36,8 +36,12 @@ export default {
       careers
     } = await jdown('content')
 
-    const caseStudiesForHomePage = work.filter( caseStudy => caseStudy.slug === 'hubbub' || caseStudy.slug === 'jetsuite-x' || caseStudy.slug === 'tesla-motors' )
-    const caseStudiesForNav = work.map( caseStudy => ( { title: caseStudy.title, slug: caseStudy.slug, } ) )
+    const caseStudiesForHomePage = work.length && work.length > 0 
+      ? work.filter( (caseStudy, i) => { return caseStudy.slug === 'hubbub' || caseStudy.slug === 'jetsuite-x' || caseStudy.slug === 'tesla-motors'})
+      : []
+    const caseStudiesForNav = work.length && work.length > 0
+      ? work.map( (caseStudy, i) => {return {index: i, title: caseStudy.title, slug: caseStudy.slug }})
+      : []
 
     return [
       {
@@ -87,9 +91,9 @@ export default {
       {
         path: '/portfolio',
         component: 'src/components/case-study/case-study',
-        // getData: () => ({
-        //   work
-        // }),
+        getData: () => ({
+          work
+        }),
         children: work.map(caseStudy => ({
           path: `/${caseStudy.slug}`,
           component: 'src/components/case-study/case-study',
