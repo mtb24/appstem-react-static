@@ -1,19 +1,19 @@
 import React from 'react'
 import { Link } from 'react-static'
-import Hamburger from './hamburger'
 
 import './nav.scss'
 
 export default (props) => (
-    <div className='nav-wrapper'>
-        <Hamburger />
-        <nav className={props.className}>
-            <Link to="/work">Work</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/culture">Culture</Link>
-            <Link to="/careers">Careers</Link>
-            <Link to="/#">Blog</Link>
-            <Link to="/contact">Contact</Link>
-        </nav>
-    </div>
+
+    <nav className={`nav ${props.className || ''}`}>
+        <ul>
+            <li><Link to="/work">Work</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/culture">Culture</Link></li>
+            <li><Link to="/careers">Careers</Link></li>
+            <li><Link to="/test">Blog</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+        </ul>
+    </nav>
+
 );
