@@ -1,9 +1,9 @@
 @import '../../styles/styles.scss';
 
 .hero {
-    top: -40px;
+    top: 0;
     width: 100vw;
-    z-index: -1;
+    z-index: 5; // so siblings will underlap
     
     @include desktop {
         height: 37rem;
