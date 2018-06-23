@@ -19,12 +19,16 @@ body {
   text-align: left;
 
   #root {
-    width: 100VW;
+    width: 100vw;
     height: auto;
 
     .app-wrapper {
       width: 100VW;
-      height: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
 
       .page-bottom {
         display: flex;
