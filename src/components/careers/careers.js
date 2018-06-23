@@ -41,8 +41,8 @@ export default withRouteData(({ careers, openings }) => {
                     <Cta heading='Open Positions' className='open-positions'>
                         {
                             openings.map( (job, i) => {
-                                const triggerEl = (
-                                    <div key={ i + '-trigger' } className='job-opening-trigger'>
+                                const TriggerEl = (
+                                    <div key={ `${i}-trigger` } className='job-opening-trigger'>
                                         <div className='job-title all-caps'>{ job.role }</div>
                                         <div className='job-meta'>
                                             <div className='job-type'><img src={ timeIcon } alt='Icon for job type'/> { job.type }</div>
@@ -52,8 +52,8 @@ export default withRouteData(({ careers, openings }) => {
                                     </div>
                                 )
                                 return (
-                                    <React.Fragment>
-                                        <Collapsible key={ i } trigger={ triggerEl } triggerOpenedClassName='rotate' >
+                                    <React.Fragment key={i}>
+                                        <Collapsible key={i} trigger={ TriggerEl } triggerOpenedClassName='rotate' >
                                             { convert( job.contents ) }
                                             <Button linkTo='#' buttonText='Apply' className='apply-button'/>
                                         </Collapsible>
