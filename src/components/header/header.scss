@@ -1,45 +1,158 @@
 @import '../../styles/styles.scss';
 
-.header {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 12% 1fr;
-    position: relative;
-    top: 62px;
-    height: 40px;
-    max-width: 1200px;
-    color: $primary-font-color;
-    background: transparent;
-    z-index: 99;
+.main-header {
+    display: flex;
+    position: fixed;
     align-items: center;
-    margin: 0 1.25em;
-    @media (min-width: 1260px) {
-        margin: 0 auto;
-    }
-
-    @include phone {
-        top: 31px;
-    }
-
-    .header-logo {
-        width: 148px;
-        height: 24px;
-
-        @include phone {
-            width: 124px;
-            height: 21px;
-        }
-    }
-
-    .nav-wrapper {
-        justify-self: end;
-
-        nav {
+    width: 100vw;
+    z-index: 100;
+    
+    @media (min-width: 768px) {
+        background: inherit;
+        top: 62px;
+        height: 40px;
         
-            a:nth-of-type(4) {
-                display: none;
+        nav {
+            all: unset;
+        }
+
+    }
+    @include phone {
+        opacity: 0.95;
+        top: 0;
+        height: 80px;
+        
+        /* Header animations for small screens */
+        .nav-toggle:checked ~ nav {
+            transform: scale(1, 1);
+            background-color: #1B252F;
+        }
+        .nav-toggle:checked ~ nav a {
+            opacity: 1;
+            transition: opacity 250ms ease-in-out;
+        }
+        .nav-toggle-label {
+            position: absolute;
+            top: 0;
+            right: 31px;
+            height: 100%;
+            display: flex !important;
+            align-items: center;
+            z-index: 100;
+
+            & > span,
+            & > span:before,
+            & > span:after {
+                display: block;
+                background: white;
+                height: 3px;
+                width: 17px;
+                border-radius: 3px;
+                position: relative;
+            }
+            & > span:before,
+            & > span:after {
+                content: '';
+                position: absolute;
+            }
+            & > span:before {
+                bottom: 7px;
+                width: 26px;
+            }
+            & > span::after {
+                top: 7px;
+                width: 26px;
             }
         }
     }
 
+    .header-max {
+        width: 100%;
+        max-width: 1200px;
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .header-logo {
+            width: 148px;
+            height: 24px;
+            margin-left: 1.25em;
+    
+            @include phone {
+                width: 124px;
+                height: 21px;
+                position: fixed;
+                z-index: 100;
+            }
+        }
+    
+        .nav-toggle,
+        .nav-toggle-label {
+            display: none;
+        }
+    
+        nav {
+            & li:nth-of-type(4) { // hide careers page from top nav
+                display: none;
+            }
+    
+            & li:last-child { // outline last item on large header nav only
+                @include tablet {
+                    border: 1px solid $link-color;
+                    padding: 20px;
+                }
+                @include desktop {
+                    border: 1px solid $link-color;
+                    padding: 20px;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    
+    /* Header animations for large screens */
+    @media (min-width: 768px) {
+        &.header-initial {
+            position: absolute;
+            transition: transform 500ms ease;
+            transform: translateY(-15px);
+        }
+        &.header-leave {
+            transition: transform 500ms ease;
+            transform: translateY(72px);
+            position: fixed;
+            height: 72px;
+            background: #000000;
+            opacity: .9;
+            top: -72px;
+    
+            & nav ul li > a {
+                @media (min-width: 768px) {
+                    font-size: 0.8125rem;
+                }
+            }
+            & nav li:last-child { // outline last item on large header nav only
+                @include tablet {
+                    border: 1px solid $link-color;
+                    padding: 7px 17px;
+                }
+                @include desktop {
+                    border: 1px solid $link-color;
+                    padding: 7px 17px;
+                    margin-right: 0;
+                }
+            }
+            
+        }
+        
+        &.header-enter {
+            transition: transform 500ms ease;
+            
+            transform: translate(0,65px);
+        }
+    }
+    
 }

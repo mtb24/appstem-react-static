@@ -1,53 +1,71 @@
 @import '../../styles/styles.scss';
 
-.nav-wrapper {
-  display: block;
+nav {
+  position: absolute;
+  top: 100%;
+  text-align: left;
+  left: 0;
+  width: 100%;
+  z-index: 99;
   
   @include phone {
-    .hamburger {
-      display: inline-block;
-    }
-    .footer-wrapper .hamburger {
-      display: none;
-    }
-  }
-  @include tablet {
-    .header-wrapper .hamburger,
-    .footer-wrapper .hamburger {
-      display: none;
-    }
+    padding-bottom: 3.18em;
+    padding-top: 6em;
+    top: 0;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 250ms ease-in-out;
   }
 
-  nav {
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
-    height: auto;
-    width: auto;
-    color: $primary-font-color;
-    font-family: $primary-font-family;
-    font-size: 0.875rem;
-    letter-spacing: 1.75px;
-    line-height: 20px;
-    
-    @include tablet {
-      
+    @media screen and (min-width: 768px) {
+      align-items: center;
     }
     @include phone {
-      display: none;
+      display: block;
     }
+    
+    & li {
+      margin-right: 40px;
 
-    & > a {
-      color: $link-color;
-      padding: 1em;
-      display: inline-block;
-      
-      &:hover {
-        text-decoration: underline;
+      @include phone {
+        margin-left: 3em;
       }
 
-      &:last-child {
-        border: 1px solid $link-color;
-        margin-left: 1em;
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #FAFAFA;
+        font-size: 0.875rem;
+        font-weight: bold;
+        letter-spacing: 0.1093rem;
+        line-height: 1.25rem;
+        text-align: center;
+
+        @include phone {
+          font-size: 2rem;
+          font-weight: bold;
+          letter-spacing: 0.2225rem;
+          line-height: 3.875rem;
+          opacity: 0;
+          transition: opacity 150ms ease-in-out;
+        }
+        
+        &.active,
+        &:hover {
+          color: #fafafa;
+          @include phone {
+            color: #3CD52E;
+          }
+          @include tablet {text-decoration: underline;}
+          @include desktop {text-decoration: underline;}
+        }
       }
     }
   }
+
 }
