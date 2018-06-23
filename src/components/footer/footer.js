@@ -8,7 +8,8 @@ import './footer.scss'
 export default () => (
     <footer className='footer'>
         <div className='footer-grid'>
-            <Nav className={'all-caps footer-nav'} />
+            
+            <Nav className='footer-nav' />
 
             <div className='footer-contact-info'>
 
