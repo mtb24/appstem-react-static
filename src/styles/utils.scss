@@ -1,4 +1,8 @@
 
+*::before, *::after {
+    box-sizing: border-box;
+}
+
 .hr-green {
     background-color: $appstem-green;
 }
