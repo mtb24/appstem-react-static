@@ -1,7 +1,8 @@
 
 .blog {
     background: rgb(48, 89, 90);
-    height: 80em;
+    height: 100%;
+    min-height: 40em;
     width: 100%;
     display: flex;
     flex-direction: column;
