@@ -1,6 +1,5 @@
 import React from 'react'
-import Img from 'react-image'
-import { BeatLoader } from 'react-spinners'
+import InstantImage from '../../instant-image/instant-image'
 
 const defaultProps = {
     imagePath: '/fav_appstem_144x144.png',
@@ -10,7 +9,7 @@ const defaultProps = {
 
 export default props => {
 
-    const mask = props.mask || defaultProps.mask;
+    const mask = props.mask || defaultProps.mask
     
     const defaultStyle = {
         width: '100vw',
@@ -19,10 +18,9 @@ export default props => {
     
     return (
         <div className={ `${ defaultProps.className } ${ mask } ${ props.className || '' }` } style={ defaultStyle }>
-            <Img
-                src={ props.imagePath }
+            <InstantImage
+                imageSrcs={ props.imagePath }
                 alt={ props.imageAlt || 'a full width image' }
-                loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } 
                 style={{
                     backgroundRepeat: 'no-repeat', 
                     backgroundSize: 'cover', 

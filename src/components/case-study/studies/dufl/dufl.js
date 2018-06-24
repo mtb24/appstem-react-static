@@ -1,6 +1,5 @@
 import React from 'react'
-import Img from 'react-image'
-import { BeatLoader } from 'react-spinners'
+import InstantImage from '../../../instant-image/instant-image'
 import Section from '../../../layout/page-section/section'
 import AngledSection from '../../../layout/page-section/angled-section'
 import FullWidthImage from '../../../layout/page-section/full-width-image-section'
@@ -65,11 +64,10 @@ return (
                     (props.wireframeImages.length && props.wireframeImages.length > 0)
                     ?   props.wireframeImages.map( (image, i) => (
                             <div key={i} className='wireframes'>
-                                <Img
+                                <InstantImage
                                     className='wireframe-image'
-                                    src={ imagePath + image || '' }
-                                    alt={ props.imageAlt || `an image for ${ props.slug }` }
-                                    loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
+                                    imageSrcs={ imagePath + image || '' }
+                                    alt={ props.imageAlt || `an image for ${ props.slug }` } />
                             </div>
                         ))
                     : null
@@ -97,11 +95,10 @@ return (
 
         <Section className='company-blurb-section' style={{ background: '#ffffff', width: '100vw' }}>
             <div className='company-blurb-wrapper'>
-                <Img
+                <InstantImage
                     className='company-blurb-image'
-                    src={ logoPath + props.companyLogo || '' }
-                    alt={ props.imageAlt || `an image for ${ props.slug }` }
-                    loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
+                    imageSrcs={ logoPath + props.companyLogo || '' }
+                    alt={ props.imageAlt || `an image for ${ props.slug }` } />
 
                 <div className='company-blurb-text'>
                     <Heading headingLevel='2'>{ props.companyBlurb[0] || 'Default Company Heading' }</Heading>

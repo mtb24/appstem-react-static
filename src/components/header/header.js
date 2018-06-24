@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-static'
+import InstantImage from '../instant-image/instant-image'
 import Nav from '../nav/nav'
-import Img from 'react-image'
 import Logo from '../../../public/assets/images/icons/Appstem-Logo_green.png'
-import { BeatLoader } from 'react-spinners'
 import './header.scss'
 
 
@@ -49,18 +48,21 @@ class Header extends React.Component {
     }
     calculateScroll() {
         if (!this.state.ticking) {
-            if (window.scrollY > this.state.targetHeight) {
+            setTimeout(() => {
+                if (window.scrollY > this.state.targetHeight) {
+                    this.setState({
+                        showHeader: 'leave',
+                    });
+                } else {
+                    this.setState({
+                        showHeader: 'initial',
+                    })
+                }
                 this.setState({
-                    showHeader: 'leave',
-                });
-            } else {
-                this.setState({
-                    showHeader: 'initial',
+                    ticking: true,
                 })
-            }
-            this.setState({
-                ticking: true,
-            })
+            }, 250)
+
         } else {
             this.setState({
             ticking: false,
@@ -75,10 +77,7 @@ class Header extends React.Component {
                 <div className='header-max'>
 
                     <Link to="/">
-                        <Img className='header-logo'
-                            src={ Logo }
-                            alt='Appstem company logo'
-                            loader={ <BeatLoader color={'#3cd52e'} loading={ true } /> } />
+                        <InstantImage className='header-logo' imageSrcs={ Logo } alt='Appstem company logo' />
                     </Link>
 
                     <label htmlFor='nav-toggle' className='nav-toggle-label'><span></span></label>

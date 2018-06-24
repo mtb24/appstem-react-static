@@ -1,9 +1,8 @@
 import React from 'react'
-import convert from 'htmr'
 import { Link } from 'react-static'
 import Arrow from '../../../public/assets/images/icons/arrow_white.png'
-import Img from 'react-image'
-import { BeatLoader } from 'react-spinners'
+import InstantImage from '../instant-image/instant-image'
+
 import './feature-block.scss'
 
 const pathToImages = (slug, imageName) => `/assets/images/case-studies/${ slug }/${ imageName }`
@@ -12,12 +11,11 @@ const pathToImages = (slug, imageName) => `/assets/images/case-studies/${ slug }
 const ImageFeatureBlock = (feature) => (
     <div className={ `${ feature.className || '' } feature-block feature-image-${ feature.imagePosition }`}>
     
-        <Img
+        <InstantImage
             key={ `image-${ feature.caseStudy.slug }` }
             className='feature-block-image'
-            src={ pathToImages(feature.caseStudy.slug, feature.caseStudy.featureBlockImage) }
-            alt={ feature.caseStudy.imageAlt || `an image for ${ feature.caseStudy.slug }` }
-            loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
+            imageSrcs={ pathToImages(feature.caseStudy.slug, feature.caseStudy.featureBlockImage) }
+            alt={ feature.caseStudy.imageAlt || `an image for ${ feature.caseStudy.slug }` } />
 
         <div className='feature-block-details'>
 
@@ -36,11 +34,10 @@ const ImageFeatureBlock = (feature) => (
 const HeroFeatureBlock = (feature) => (
     <div className={ `${ feature.className || '' } feature-block feature-image-${ feature.imagePosition }`}>
     
-        <Img
+        <InstantImage
             className='feature-block-image'
-            src={ pathToImages(feature.caseStudy.slug, feature.caseStudy.heroFeaturedimage) }
-            alt={ feature.caseStudy.imageAlt || `an image for ${ feature.caseStudy.slug }` }
-            loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
+            imageSrcs={ pathToImages(feature.caseStudy.slug, feature.caseStudy.heroFeaturedimage) }
+            alt={ feature.caseStudy.imageAlt || `an image for ${ feature.caseStudy.slug }` } />
 
         <div className='feature-block-details'>
 
@@ -59,11 +56,10 @@ const CaseFeatureBlock = (props) => {
     const imagePath = `/assets/images/case-studies/${ props.slug }/${ props.caseStudy.featureBlockImage }` || '../../../public/assets/images/case-studies/feature-placeholder.png'
     return (
         <div className={ `feature-block feature-image-${ props.imagePosition } ${ props.className || '' }`}>
-            <Img
+            <InstantImage
                 className='feature-block-image'
-                src={ imagePath }
-                alt={ `an image for ${ props.slug }` }
-                loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
+                imageSrcs={ imagePath }
+                alt={ `an image for ${ props.slug }` } />
 
             <div className='feature-block-details'>
                 <h2 className='all-caps'>{ props.caseStudy.heading }</h2>

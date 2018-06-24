@@ -1,6 +1,5 @@
 import React from 'react'
-import Img from 'react-image'
-import { BeatLoader } from 'react-spinners'
+import InstantImage from '../../../instant-image/instant-image'
 import { Player, BigPlayButton, PosterImage } from 'video-react';
 import Section from '../../../layout/page-section/section'
 import AngledSection from '../../../layout/page-section/angled-section'
@@ -8,7 +7,7 @@ import FullWidthImage from '../../../layout/page-section/full-width-image-sectio
 import Cta from '../../../layout/page-section/cta'
 import Heading from '../../../layout/page-section/heading'
 import LinkOutlined from '../../../buttons/link-outlined/link-outlined'
-import posterImage from '../../../../../public/assets/images/posterimage-home.jpg'
+import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
 import FeatureBlock from '../../../feature-block/feature-block'
 import Paragrapher from '../../../layout/page-section/paragrapher'
 import './ridey.scss'
@@ -72,11 +71,10 @@ export default (props) => {
                         (props.wireframeImages.length && props.wireframeImages.length > 0)
                         ?   props.wireframeImages.map( (image, i) => (
                                 <div key={i} className='wireframes'>
-                                    <Img
+                                    <InstantImage
                                         className='wireframe-image'
-                                        src={ imagePath + image || '' }
-                                        alt={ props.imageAlt || `an image for ${ props.slug }` }
-                                        loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
+                                        imageSrcs={ imagePath + image || '' }
+                                        alt={ props.imageAlt || `an image for ${ props.slug }` } />
                                 </div>
                             ))
                         : null
@@ -112,11 +110,10 @@ export default (props) => {
 
             <Section className='company-blurb-section' style={{ background: '#ffffff', width: '100vw' }}>
                 <div className='company-blurb-wrapper'>
-                    <Img
+                    <InstantImage
                         className='company-blurb-image'
-                        src={ logoPath + props.companyLogo || '' }
-                        alt={ props.imageAlt || `an image for ${ props.slug }` }
-                        loader={ <BeatLoader color={ '#3cd52e' } loading={ true } /> } />
+                        imageSrcs={ logoPath + props.companyLogo || '' }
+                        alt={ props.imageAlt || `an image for ${ props.slug }` } />
 
                     <div className='company-blurb-text'>
                         <Heading headingLevel='1'>{ props.companyBlurb[0] || 'Default Company Heading' }</Heading>
