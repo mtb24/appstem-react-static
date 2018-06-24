@@ -117,11 +117,11 @@
     @media (min-width: 768px) {
         &.header-initial {
             position: absolute;
-            transition: transform 500ms ease;
+            transition: transform 250ms ease;
             transform: translateY(-15px);
         }
         &.header-leave {
-            transition: transform 500ms ease;
+            transition: transform 250ms ease;
             transform: translateY(72px);
             position: fixed;
             height: 72px;
@@ -149,9 +149,8 @@
         }
         
         &.header-enter {
-            transition: transform 500ms ease;
-            
-            transform: translate(0,65px);
+            transition: transform 250ms ease;
+            transform: translate(0,72px);
         }
     }
     
