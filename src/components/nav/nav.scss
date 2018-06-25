@@ -1,12 +1,12 @@
 @import '../../styles/styles.scss';
 
-nav {
-  position: absolute;
-  top: 100%;
-  text-align: left;
-  left: 0;
-  width: 100%;
-  z-index: 99;
+.header-nav {
+  // position: absolute;
+  // top: 100%;
+  // text-align: left;
+  // left: 0;
+  // width: 100%;
+  // z-index: 99;
   
   @include phone {
     padding-bottom: 3.18em;
@@ -40,6 +40,70 @@ nav {
         text-decoration: none;
         text-transform: uppercase;
         color: #FAFAFA;
+        font-size: 0.875rem;
+        font-weight: bold;
+        letter-spacing: 0.1093rem;
+        line-height: 1.25rem;
+        text-align: center;
+
+        @include phone {
+          font-size: 2rem;
+          font-weight: bold;
+          letter-spacing: 0.2225rem;
+          line-height: 3.875rem;
+          opacity: 0;
+          transition: opacity 150ms ease-in-out;
+        }
+        
+        &.active,
+        &:hover {
+          color: #fafafa;
+          @include phone {
+            color: #3CD52E;
+          }
+          @include tablet {text-decoration: underline;}
+          @include desktop {text-decoration: underline;}
+        }
+      }
+    }
+  }
+
+}
+.footer-nav {
+
+  @include phone {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    margin-left: 7%;
+
+  }
+
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media screen and (min-width: 768px) {
+      height: 144px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @include phone {
+      display: block;
+    }
+    
+    & li {
+      // margin-right: 40px;
+
+      @include phone {
+        margin-left: 3em;
+      }
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #ffffff;
         font-size: 0.875rem;
         font-weight: bold;
         letter-spacing: 0.1093rem;
