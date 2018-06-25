@@ -21,7 +21,11 @@
         opacity: 0.95;
         top: 0;
         height: 80px;
+        align-items: flex-start;
         
+        &.header-leave {
+            background-color: #1B252F;
+        }
         /* Header animations for small screens */
         .nav-toggle:checked ~ nav {
             transform: scale(1, 1);
@@ -66,17 +70,18 @@
         }
     }
 
-    .header-max {
+    & > .header-max {
         width: 100%;
-        max-width: 1200px;
+        @media (max-width: 767px) {}
         @media (min-width: 768px) {
+            max-width: 1200px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin: 0 auto;
         }
 
-        .header-logo {
+        & > a > .header-logo {
             width: 148px;
             height: 24px;
             margin-left: 1.25em;
@@ -86,15 +91,16 @@
                 height: 21px;
                 position: fixed;
                 z-index: 100;
+                margin-top: 30px;
             }
         }
     
-        .nav-toggle,
-        .nav-toggle-label {
+        & > .nav-toggle,
+        & > .nav-toggle-label {
             display: none;
         }
     
-        nav {
+        & > nav {
             & li:nth-of-type(4) { // hide careers page from top nav
                 display: none;
             }
