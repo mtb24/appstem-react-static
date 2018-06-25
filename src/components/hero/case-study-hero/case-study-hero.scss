@@ -3,58 +3,98 @@
 .case-study-hero {
     height: auto;
     position: relative;
+    @media (max-width: 767px) {
+        max-height: 320px;
+    }
+    @media (min-width: 768px) {
+        max-height: 848px;
+    }
 
-    .case-study-hero-featureblock {
-        // grid-column: col-start / span 12;
-        // align-items: flex-start;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 100%;
-        padding-top: 80px;
-
-        & .feature-block-image {
-            // grid-column: 10 / span 5;
-            justify-self: end;
-            // width: auto;
-
-        }
-        & .feature-block-details {
-            // grid-column-start: 1;
-            justify-self: start;
-
-            & > h2 {
-                color: #FAFAFA;
-                font-size: 3.938rem;
-                font-weight: bold;
-                letter-spacing: 9.56px;
-                line-height: 92px;
-                margin: 0;
-            }
-            .feature-block-project-type {
-                    color: #B3B3B3;
-                    font-size: 1rem;
-                    font-weight: bold;
-                    letter-spacing: 5px;
-                    line-height: 25px;
-            }
-            .feature-block-project-description {
-                    color: #E7E7E7;
-                    font-size: 1.125rem;
-                    line-height: 36px;
-                    
-                    & > p {
-
-                        @include desktop {
-                            // width: 369px;
-                        }
-                    }
-            }
-            & > a {
+    & > .content-wrapper {
+        
+        & > .prev-next-arrows {
+            @media (max-width: 767px) {
                 display: none;
             }
+
         }
 
+        & > .case-study-hero-featureblock {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            @media (max-width: 767px) {
+                padding: 3em 1em;
+            }
+            @media (min-width: 768px) {}
+            
+    
+            & .feature-block-image {
+                z-index: 10;
+                @media (max-width: 767px) {
+                    max-width: 45%;
+                    padding-top: 4em;
+                    margin-right: 1.5em;
+                }
+                @media (min-width: 768px) {
+                    justify-self: end;
+                    padding-top: 80px;
+                }
+    
+            }
+            & .feature-block-details {
+                @media (max-width: 767px) {}
+                @media (min-width: 768px) {
+                    justify-self: start;
+                }
+    
+                & > h2 {
+                    color: #FAFAFA;
+                    @media (max-width: 767px) {
+                        font-size: 24px;
+                        font-weight: bold;
+                        letter-spacing: 3.64px;
+                        line-height: 34px;
+                    }
+                    @media (min-width: 768px) {
+                        font-size: 3.938rem;
+                        font-weight: bold;
+                        letter-spacing: 9.56px;
+                        line-height: 92px;
+                        margin: 0;
+                    }
+                }
+                & > .feature-block-project-type {
+                    @media (max-width: 767px) {
+                        color: #FFFFFF;
+                        font-size: 0.65rem;
+                        letter-spacing: 3.22px;
+                        line-height: 20px;
+                    }
+                    @media (min-width: 768px) {
+                        color: #B3B3B3;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        letter-spacing: 5px;
+                        line-height: 25px;
+                    }
+                }
+                & > .feature-block-project-description {
+                    color: #E7E7E7;
+                    @media (max-width: 767px) {
+                            font-size: 1rem;
+                            line-height: 24px;
+                    }
+                    @media (min-width: 768px) {
+                        font-size: 1.125rem;
+                        line-height: 36px;
+                    }
+                }
+                & > a { display: none; }
+            }
+    
+        }
     }
 }
