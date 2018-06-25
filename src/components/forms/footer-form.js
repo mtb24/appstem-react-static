@@ -126,7 +126,7 @@ class FooterForm extends React.Component {
 
                 <form ref='footer-form' onSubmit={this.handleSubmit} id="footer-email-form" className="footer-form" >
                     <label id="status" ref='status' htmlFor="email-address-field" className={`alert-${this.state.type || ''}`}>{ this.state.loading === false ? '' : <ClipLoader color={'#3cd52e'} loading={ this.state.loading } /> }</label>
-                    <input ref='email' type='email' className="email-address-field" name='email' placeholder={ this.state.loading === true ? this.state.message : 'Your Email...' } pattern='.+@.+\..+' required />
+                    <input ref='email' type='email' className="email-input-field" name='email' placeholder={ this.state.loading === true ? this.state.message : 'Enter your email...' } pattern='.+@.+\..+' required />
                     <button type="submit" className="footer-form-submit-button" />
                 </form>
 
