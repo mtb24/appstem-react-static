@@ -19,7 +19,7 @@ export default {
     addressSF: 'San Francisco',
     address1SF: '133 Kearny St.',
     address2SF: 'Suite 202',
-    address3SF: 'San Francisco, CA 94105',
+    address3SF: 'San Francisco, CA 94108',
     addressPT: 'Portland',
     address1PT: '5911 NE 28th Ave',
     address2PT: 'Portland, OR 97211',
