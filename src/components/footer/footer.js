@@ -6,14 +6,14 @@ import SocialIcons from '../social/social-icons'
 import './footer.scss'
 
 export default () => (
-    <footer className='footer'>
+    <footer className='footer angle--top-left'>
         <div className='footer-grid'>
             
             <Nav className='footer-nav' />
 
             <div className='footer-contact-info'>
-
-                <div className='footer-addresses'>
+                <div className='footer-address-block-wrapper'>
+                    
                     <h4 className='all-caps footer-heading'>Contact</h4>
                     <SiteData>
                         {({ email, phone }) => (
@@ -28,7 +28,7 @@ export default () => (
                         {({ address1SF, address2SF, address3SF }) => (
                             <div className='footer-address-block'>
                                 <Link to='https://www.google.com/maps/place/133+Kearny+St+%23202,+San+Francisco,+CA+94108/@37.7892453,-122.4062233,17z/data=!3m1!4b1!4m5!3m4!1s0x80858089a8f21ec5:0xc07a2848e4cc2bd0!8m2!3d37.7892453!4d-122.4040346'>
-                                    <address>{ address1SF }<br/>{ address2SF }<br/>{ address3SF }</address>
+                                    <address>{ address1SF } { address2SF }<br/>{ address3SF }</address>
                                 </Link>
                             </div>
                         )}
