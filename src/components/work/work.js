@@ -17,7 +17,7 @@ export default withRouteData(({ work }) => {
           backgroundImage={ backgroundImage }
           className='angle--bottom-right' />
 
-    <div className='work'>
+    <div className='work angle--top-left'>
 
       {
         work.map( (caseStudy, i) => {
