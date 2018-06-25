@@ -6,7 +6,7 @@ import rightArrow from '../../../../public/assets/images/icons/right-arrow.png'
 import LinkOutlined from '../../buttons/link-outlined/link-outlined'
 
 export default (props) => {
-    const alignclass = props.centerText? 'sl-centered' : 'sl-offset'
+    const alignclass = ''//props.centerText? 'sl-centered' : 'sl-offset'
 
     return (
     
