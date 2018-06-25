@@ -7,8 +7,6 @@ const Branding = (props) => {
 
     const output = (props.brandItems && props.brandItems.length > 0)
     ? props.brandItems.map( (item, i) => (
-
-        // each item has a heading as element[0], and an image array as element[1]
         <div key={i} className='brand-item'>
             <Heading>{ item[0] }</Heading>
             <BrandingItem slug={ props.slug } images={ item[1] } />
