@@ -16,9 +16,11 @@ $featureblocks-bg-color: #1C1819;
     @media (min-width: 768px) {
         height: 727.5px;
         padding: 3em 0;
+        margin-top: -7.2%;
     }
     @include phone {
         height: 341px;
+        margin-top: -7.1%;
     }
     
     .home-text-wrapper {
@@ -53,6 +55,9 @@ $featureblocks-bg-color: #1C1819;
             letter-spacing: 3.29px;
             line-height: 24px;
             text-align: center;
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
         
     }
@@ -60,14 +65,20 @@ $featureblocks-bg-color: #1C1819;
 .section-2 {
     background: radial-gradient(circle, #6A6A6A 0%, rgba(12,12,12,0) 100%);
     background-color: #1C1819;
-    top: -129px;
+    // top: -129px;
+    @media (max-width: 767px) {
+        margin-top: -7.2%;
+    }
+    @media (min-width: 768px) {
+        margin-top: -7.2%;
+    }
     
-    @include tablet {
-        height: auto;
-    }
-    @include phone {
-        height: auto;
-    }
+    // @include tablet {
+    //     height: auto;
+    // }
+    // @include phone {
+    //     height: auto;
+    // }
 
     .case-study-1 {
 
@@ -78,31 +89,37 @@ $featureblocks-bg-color: #1C1819;
                     // width: 100% !important;
                 }
                 @include tablet {
-                    // width: 60%;
+                    width: 40%;
                 }
                 @include phone {
-                    // width: 48%;
+                    width: 48%;
                 }   
             }
     }
 }
 .section-3 {
-    height: 876.28px;
+    // height: 876.28px;
     background: radial-gradient(circle, rgba(62,62,62,0.52) 0%, rgba(12,12,12,0.38) 100%);
     background-color: #1C1819;
-    top: -257px;
+    // top: -257px;
+    @media (max-width: 767px) {
+        margin-top: -7.2%;
+    }
+    @media (min-width: 768px) {
+        margin-top: -7.2%;
+    }
 
-    @include tablet {
-        height: auto;
-    }
-    @include phone {
-        height: auto;
-    }
+    // @include tablet {
+    //     height: auto;
+    // }
+    // @include phone {
+    //     height: auto;
+    // }
     
     .case-study-2 {
 
         @include desktop {
-            padding: 1em 0;
+            padding: 10em 0;
             justify-items: center;
             max-width: 1200px;
 
@@ -118,7 +135,14 @@ $featureblocks-bg-color: #1C1819;
         }
         @include tablet {
             .feature-block-image {
-                width: 80%;
+                // width: 80%;
+                margin-left: 0;
+                position: relative;
+                left: 12em;
+            }
+            .feature-block-details {
+                position: relative;
+                left: 12em;
             }
         }
         @include phone {
@@ -133,9 +157,15 @@ $featureblocks-bg-color: #1C1819;
     flex-direction: column;
     height: 876.28px;
     padding-bottom: 20em;
-    top: -385px;
+    // top: -385px;
     background: radial-gradient(circle, rgba(255,255,255,0.52) 0%, rgba(86,86,86,0.52) 45.07%, rgba(12,12,12,0) 100%);
     background-color: #1C1819;
+    @media (max-width: 767px) {
+        margin-top: -7.2%;
+    }
+    @media (min-width: 768px) {
+        margin-top: -7.2%;
+    }
 
     @include tablet {
         height: auto;
@@ -161,9 +191,15 @@ $featureblocks-bg-color: #1C1819;
         }
         @include tablet {
             .feature-block-image {
-                width: 120%;
-                justify-items: center;
+                // width: 120%;
+                // justify-items: center;
                 margin-right: 0;
+                position: relative;
+                left: -20em;
+            }
+            .feature-block-details {
+                position: relative;
+                left: -18em;
             }
         }
         @include phone {
@@ -184,21 +220,27 @@ $featureblocks-bg-color: #1C1819;
     }
 }
 .section-5 {
-    top: -513px;
+    // top: -513px;
     height: 876.28px;
     background-color: #FFFFFF;
     padding: 5em 0 4em;
+    @media (max-width: 767px) {
+        margin-top: -7.2%;
+    }
+    @media (min-width: 768px) {
+        margin-top: -7.2%;
+    }
 
     @include desktop {
-        margin-bottom: -30em;
+        // margin-bottom: -30em;
     }
     @include phone {
         height: auto;
-        margin-bottom: -32em;
+        // margin-bottom: -32em;
     }
     @include tablet {
         height: 725px;
-        margin-bottom: -32em;
+        // margin-bottom: -32em;
     }
     
     .testimonials-wrapper {

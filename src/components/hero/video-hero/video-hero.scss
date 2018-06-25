@@ -2,19 +2,14 @@
 
 .video-hero {
     width: 100vw;
-    z-index: -1;
-    // display: grid;
     
     @include desktop {
-        margin-bottom: -175px;
     }
     @include tablet {
-        // margin-bottom: -12%;
     }
 
     @include phone {
         height: 20em;
-        margin-bottom: -6rem;
         background: url('/assets/images/posterimage-home.jpg');
         background-size: cover;
         video {
@@ -24,10 +19,12 @@
     }
     & > video {
         width: 100vw;
-        z-index: -1;
         position: absolute;
         top: 0;
         left: 0;
+        @include tablet {
+            transform: scaleY(1.7);
+        }
     }
 
     & > .video-title {
@@ -107,10 +104,4 @@
         top: 3em;
         left: 13.5%;
     }
-    // @media (min-width: 1301px) and (max-width: 1400px) {
-    //     top: 250px !important;
-    // }
-    // @media (min-width: 1200px) and (max-width: 1300px) {
-    //     top: 150px !important;
-    // }
 }
