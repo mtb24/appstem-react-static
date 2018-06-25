@@ -12,7 +12,7 @@ $angled-section-even-background: radial-gradient(circle, rgba(62,62,62,0.52) 0%,
 @mixin angle-edge($angle, $angle-position-y, $angle-position-x, $angle-position-bottom-x: '', $fallback: true, $fallback-color: #fff) {
 
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
   
     // Converts degrees to VW, 100vw = 45deg using this technique
     @if $angle < 46 {
