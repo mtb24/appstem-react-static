@@ -10,13 +10,14 @@ $form-text-color-mobile: #4A4A4A;
     color: $third-font-color;
     background: $secondary-background-color;
     @include desktop {
-        top: -175px;
+        // top: -175px;
     }
     @include tablet {
-        top: -120px;
+        // top: -120px;
     }
     @include phone {
-        top: -90px;
+        padding-top: 5em;
+        margin-top: -7%;
     }
     
     .cta-wrapper {
