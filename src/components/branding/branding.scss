@@ -1,27 +1,72 @@
 
 .branding-section {
+    display: flex;
+    @media (max-width: 767px) {}
+    @media (min-width: 768px) {
+        height: 656px;
+        align-items: center;
+    }
 
     .branding {
         display: flex;
         flex-direction: column;
+        height: 100%;
         width: 100%;
-        max-width: 1200px;
         margin: 0 auto;
+        @media (min-width: 768px) {
+            max-width: 1200px;
+            justify-content: space-evenly;
+        }
 
+        .brand-item:first-of-type img { // temp hack for wide image
+            @media (max-width: 767px) {
+                transform: scale(0.6);
+            }
+        }
         .brand-item {
             display: flex;
             flex-direction: row;
             place-items: center;
             justify-content: space-between;
 
-            h2 {
-                color: #1B252F;
-                font-size: 2rem;
-                font-weight: bold;
-                letter-spacing: 6.4px;
-                line-height: 46px;
+            @media (max-width: 900px) {
+                flex-direction: column;
             }
-            .branding-image {}
+            & > h2 {
+                @media (max-width: 767px) {
+                    color: #1B252F;
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    line-height: 29px;
+                    text-align: center;
+                }
+                @media (min-width: 768px) {
+                        color: #1B252F;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        letter-spacing: 6.4px;
+                        line-height: 46px;
+                }
+            }
+            .branding-images {
+                @media (max-width: 767px) {
+                    display: flex;
+                    align-items: normal;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    max-width: 378px;
+                }
+                @media (min-width: 768px) {}
+                
+                
+                & > img {
+                    @media (max-width: 767px) {
+                        margin: 1em;
+                    }
+                }
+            }
         }
     }
 }
