@@ -9,115 +9,130 @@ $featureblocks-link-color: $white;
 
 
 .feature-block {
-    display: grid;
+    display: flex;
     padding: 10% 0;
     justify-items: center;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
 
-    @include phone {
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 'image' 'details';
-        grid-gap: 0;
+    @media (max-width: 767px) {
         margin: 1em auto;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
     }
-    @include tablet {
-        grid-template-columns: 1fr;
-        grid-template-areas: 'image' 'details';
-        grid-gap: 0;
-    }
-    @include desktop {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'details''image';
-    
+    @media (min-width: 768px) {
+        flex-direction: row;
     }
 
-    .feature-block-image {
-        grid-area: image;
-
-        @include desktop {
-            width: 60%;
-        }
-        @include tablet {
-            width: 48%;
-            justify-self: center;
-        }
-        @include phone {
-            width: 75%;
-            justify-self: center;
-        }
+    & > .feature-block-image {
+        @media (max-width: 767px) {}
+        @media (min-width: 768px) {}
     }
 
-    .feature-block-details {
-        grid-area: details;
+    & > .feature-block-details {
         text-align: left;
-
-        @include phone {
-            width: 67%;
+        @media (max-width: 767px) {
+            width: 89%;
             margin: 0 auto;
         }
+        @media (min-width: 768px) {}
 
-        h2 {
+        & > h1,
+        & > h2,
+        & > h3,
+        & > h4 {
             color: $featureblocks-heading-color;
-            font-family: $primary-font-family;
-            font-size: 2.188rem;
-            font-weight: normal;
-            letter-spacing: 7px;
-            line-height: 50px;
-            @include phone {
+            @media (max-width: 767px) {
                 font-size: 1.125rem;
                 letter-spacing: 3.6px;
                 line-height: 26px;
                 margin-bottom: 0;
             }
+            @media (min-width: 768px) {
+                font-size: 2.188rem;
+                font-weight: normal;
+                letter-spacing: 7px;
+                line-height: 50px;
+            }
         }
-        .feature-block-project-type {
+        & > .feature-block-project-type {
             color: $featureblocks-project-type-color;
-            font-family: $primary-font-family;
-            font-size: 1.5rem;
-            line-height: 42px;
-            @include phone {
+            @media (max-width: 767px) {
                 font-size: 0.8125rem;
                 line-height: 16px;
                 margin: 0;
             }
+            @media (min-width: 768px) {
+                font-size: 1.5rem;
+                line-height: 42px;
+            }
         }
-        .feature-block-project-description {
+        & > .feature-block-project-description {
             color: $featureblocks-project-desc-color;
-            font-family: $primary-font-family;
-            font-size: 1.5rem;
-            line-height: 42px;
             max-width: 500px;
-            @include phone {
+            @media (max-width: 767px) {
                 font-size: 1rem;
                 line-height: 24px;
             }
+            @media (min-width: 768px) {
+                font-size: 1.5rem;
+                line-height: 42px;
+            }
         }
-        a {
+        & > a {
             color: $featureblocks-link-color;
-            font-family: $primary-font-family;
-            font-size: 1rem;
-            font-weight: normal;
-            letter-spacing: 5px;
-            line-height: 25px;
-            @include phone {
+            text-decoration: none;
+            @media (max-width: 767px) {
                 font-size: 0.8125rem;
                 letter-spacing: 4.06px;
+            }
+            @media (min-width: 768px) {
+                font-size: 1rem;
+                font-weight: normal;
+                letter-spacing: 5px;
+                line-height: 25px;
             }
         }
     }
     
 }
 .feature-image-left {
-    @include desktop {
-        grid-template-areas: 'image details';
+    @media (max-width: 767px) {
+    }
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+    & > .feature-block-image {
+        @media (max-width: 767px) {
+        }
+        @media (min-width: 768px) {
+            margin-right: 118px;
+        }
+    }
+    & > .feature-block-details {
+        @media (max-width: 767px) {
+        }
+        @media (min-width: 768px) {
+            margin-right: 1em;
+        }
     }
 }
 .feature-image-right {
-    @include desktop {
-        grid-template-areas: 'details image';
+    @media (max-width: 767px) {
+    }
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+    }
+    & > .feature-block-image {
+        @media (max-width: 767px) {
+        }
+        @media (min-width: 768px) {
+            margin-left: 118px;
+        }
+    }
+    & > .feature-block-details {
+        @media (max-width: 767px) {
+        }
+        @media (min-width: 768px) {
+            margin-left: 1em;
+        }
     }
 }
