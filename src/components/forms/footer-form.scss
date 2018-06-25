@@ -1,67 +1,24 @@
 @import '../../styles/styles.scss';
 
-
-// #footer-email-form {
-//     position: relative;
-//     display: grid;
-
-//     #footerEmail {
-//         border: none;
-//         border-bottom: 1px solid #9B9B9B;
-//         background-color: inherit;
-//         width: 310px;
-//         color: $appstem-green;
-//         @include phone {
-//             width: 231px;
-//         }
-
-//         &:focus + label {
-//             transform: translate(-50px, -15px) scale(0.75);
-//             color: $appstem-green;
-//             opacity: 1;
-//         }
-//     }
-    
-//     .footer-email-label {
-//         opacity: 0.5;
-//         font-size: 1.25rem;
-//         line-height: 29px;
-//         position: relative;
-//         transition: all .2s linear;
-//         top: -25px;
-//         @include phone {
-//             line-height: 23px;
-//         }
-//     }
-//     .footer-email-submit-button {
-//         position: relative;
-//         top: -47px;
-//         left: 296px;
-//         background: url('../../../public/assets/images/icons/ic_arrow_green.png');
-//         background-repeat: no-repeat;
-//         border: 0;
-//         display: inline-block;
-//         height: 20px;
-//         width: 22px;
-//         @include phone {
-//             left: 217px;
-//         }
-//     }
-// }
-
 .footer-form {
     position: relative;
-    display: grid;
+    // display: grid;
+    width: 100%;
 
-    .email-address-field {
+    .email-input-field {
         border: none;
         border-bottom: 1px solid #9B9B9B;
         background-color: inherit;
-        width: 290px;
-        color: $appstem-green;
-        z-index: 1;
+        color: #FFFFFF;
+        z-index: 100;
         @include phone {
-            width: 231px;
+            width: 98%;
+            opacity: 0.5;
+            font-size: 1rem;
+            line-height: 23px;
+        }
+        @media (min-width: 768px) {
+            width: 284px;
         }
 
         // &:focus + label {
@@ -77,17 +34,14 @@
         }
     }
     .footer-form-submit-button {
-        position: relative;
-        top: -20px;
-        left: 296px;
         background: url('../../../public/assets/images/icons/ic_arrow_green.png');
         background-repeat: no-repeat;
         border: 0;
         display: inline-block;
         height: 20px;
         width: 22px;
-        @include phone {
-            left: 217px;
-        }
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
 }
