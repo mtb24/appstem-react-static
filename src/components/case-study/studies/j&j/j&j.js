@@ -9,7 +9,7 @@ import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
 import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
 import FeatureBlock from '../../../feature-block/feature-block'
-import './j&j.scss'
+import Wireframe from '../../../wireframe/wireframe'
 
 export default (props) => {
 
@@ -56,18 +56,7 @@ return (
         <Section className='development' style={{ background: '#ffffff', width: '100vw' }}>
             <Cta heading='Design & Development'>
                 <Paragrapher paragraphs={ props.developmentText }/>
-                {
-                    (props.wireframeImages.length && props.wireframeImages.length > 0)
-                    ?   props.wireframeImages.map( (image, i) => (
-                            <div key={i} className='wireframes'>
-                                <InstantImage
-                                    className='wireframe-image'
-                                    imageSrcs={ imagePath + image || '' }
-                                    alt={ props.imageAlt || `an image for ${ props.slug }` } />
-                            </div>
-                        ))
-                    : null
-                }
+                <Wireframe imagePath={ imagePath } wireframeImages={ props.wireframeImages } alt={ `an image for ${ props.slug }` } />
             </Cta>
         </Section>
 
