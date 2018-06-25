@@ -11,41 +11,55 @@ $featureblocks-bg-color: #1C1819;
 
 }
 .section-1 {
-    height: 727.5px;
-    background: $featureblocks-bg-color;
-
+    // background: $featureblocks-bg-color;
+    background: #f8f8f8;
+    @media (min-width: 768px) {
+        height: 727.5px;
+        padding: 3em 0;
+    }
     @include phone {
         height: 341px;
     }
     
     .home-text-wrapper {
+        background: #f8f8f8;
         padding-top: 0;
-        
-        p {
+        @media (min-width: 768px) {
             width: 60%;
-            color: $white;
+            color: #333333;
             font-size: 2.25rem;
             line-height: 72px;
             text-align: center;
             margin: 0 auto;
-    
-            @include tablet {
-                width: 75%;
-                font-size: 1.75rem;
-                line-height: 62px;
-            }
-            
-            @include phone {
-                width: 89%;
-                font-size: 1.25rem;
-                line-height: 32px;
-                margin: 2em auto;
-            }
         }
+        @include phone {
+            width: 89%;
+            font-size: 1.25rem;
+            color: #1B252F;
+            line-height: 32px;
+            margin: 2em auto;
+        }
+        & > .contact-link {
+            margin-top: 3em;
+            height: 72px;
+            width: 380px;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            border: 1px solid #1B252F;
+            color: #1B252F;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 3.29px;
+            line-height: 24px;
+            text-align: center;
+        }
+        
     }
 }
 .section-2 {
-    // height: 876.28px;
+    background: radial-gradient(circle, #6A6A6A 0%, rgba(12,12,12,0) 100%);
+    background-color: #1C1819;
     top: -129px;
     
     @include tablet {
@@ -61,20 +75,21 @@ $featureblocks-bg-color: #1C1819;
                 justify-items: center;
 
                 @include desktop {
-                    width: 100% !important;
+                    // width: 100% !important;
                 }
                 @include tablet {
-                    width: 60%;
+                    // width: 60%;
                 }
                 @include phone {
-                    width: 48%;
+                    // width: 48%;
                 }   
             }
     }
 }
 .section-3 {
     height: 876.28px;
-    background: $featureblocks-bg-color;
+    background: radial-gradient(circle, rgba(62,62,62,0.52) 0%, rgba(12,12,12,0.38) 100%);
+    background-color: #1C1819;
     top: -257px;
 
     @include tablet {
@@ -89,11 +104,16 @@ $featureblocks-bg-color: #1C1819;
         @include desktop {
             padding: 1em 0;
             justify-items: center;
+            max-width: 1200px;
 
             .feature-block-image {
-                width: 175%;
+                margin-left: 0;
                 position: relative;
                 left: 15.5%;
+            }
+            .feature-block-details {
+                position: relative;
+                left: 6em;
             }
         }
         @include tablet {
@@ -110,10 +130,12 @@ $featureblocks-bg-color: #1C1819;
 
 }
 .section-4 {
-    display: block;
+    flex-direction: column;
     height: 876.28px;
     padding-bottom: 20em;
     top: -385px;
+    background: radial-gradient(circle, rgba(255,255,255,0.52) 0%, rgba(86,86,86,0.52) 45.07%, rgba(12,12,12,0) 100%);
+    background-color: #1C1819;
 
     @include tablet {
         height: auto;
@@ -129,14 +151,19 @@ $featureblocks-bg-color: #1C1819;
         @include desktop {
             .feature-block-image {
                 position: relative;
-                left: -190px;
-                width: 160%;
+                left: -290px;
+                margin-right: 0;
+            }
+            .feature-block-details {
+                position: relative;
+                left: -6em;
             }
         }
         @include tablet {
             .feature-block-image {
                 width: 120%;
                 justify-items: center;
+                margin-right: 0;
             }
         }
         @include phone {
@@ -159,8 +186,8 @@ $featureblocks-bg-color: #1C1819;
 .section-5 {
     top: -513px;
     height: 876.28px;
-    background: $white;
-    padding-bottom: 4em;
+    background-color: #FFFFFF;
+    padding: 5em 0 4em;
 
     @include desktop {
         margin-bottom: -30em;
