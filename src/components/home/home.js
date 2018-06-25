@@ -19,8 +19,11 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
             className='angle--bottom-right'/>
 
       
-      <AngledSection className='section-1' mask='angle--both-left-right' style={{ background: 'red' }}>
-        <div className='content-wrapper home-text-wrapper'> { home.mainParagraph } </div>
+      <AngledSection className='section-1' mask='angle--both-left-right'>
+        <div className='content-wrapper home-text-wrapper'>
+          { home.mainParagraph }
+          <LinkOutlined linkTo="/contact" className="contact-link">Contact Us</LinkOutlined>
+        </div>
       </AngledSection>
 
       <AngledSection className='section-2' mask='angle--both-left-right'>
