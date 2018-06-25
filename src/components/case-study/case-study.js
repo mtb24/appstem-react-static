@@ -44,7 +44,7 @@ export default withRouteData(({ caseStudy, caseStudiesForNav }) => {
 
             <Hero heroType='case-study' 
                 caseStudy={ caseStudy }
-                className='angle--bottom-right'
+                className=''
                 prevLink={ prevLink } 
                 nextLink={ nextLink } />
 
