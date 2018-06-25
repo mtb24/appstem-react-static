@@ -53,7 +53,7 @@ export default withRouteData(({ caseStudy, caseStudiesForNav }) => {
             </div>
 
             <AngledSection className='section-link-wrapper' mask='angle--bottom-right'>
-              <SectionLinks className='centered' prevLink={ prevLink } nextLink={ nextLink } />
+              <SectionLinks prevLink={ prevLink } nextLink={ nextLink } />
             </AngledSection>
             
         </React.Fragment>
