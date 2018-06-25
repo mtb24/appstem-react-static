@@ -23,7 +23,7 @@ const ImageFeatureBlock = (feature) => (
 
             <p className='feature-block-project-type'>{ feature.caseStudy.projectType }</p>
 
-            <div className='feature-block-project-description'>{ feature.caseStudy.featureBlockProjectDesc }</div>
+            <p className='feature-block-project-description'>{ feature.caseStudy.featureBlockProjectDesc }</p>
 
             <Link to={`/portfolio/${ feature.caseStudy.slug }/`} className='all-caps'>View the case study <img src={ Arrow } alt='Link to case studies' /></Link>
 
