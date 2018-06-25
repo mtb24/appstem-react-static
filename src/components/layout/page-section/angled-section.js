@@ -1,5 +1,4 @@
 import React from 'react'
-import './angled-section.scss'
 
 export default props => {
 
@@ -9,7 +8,6 @@ export default props => {
         width: '100vw',
         alignItems: 'center',
         justifyContent: 'center',
-        margin: '0 auto',
     }
 
     return (
