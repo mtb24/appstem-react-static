@@ -9,6 +9,9 @@ $careers-page-job-meta-color: #9b9b9b;
 .careers-wrapper {
     background: $secondary-background-color;
     padding-bottom: 8rem;
+    @media (min-width: 768px) {
+        margin-top: -7.2%;
+    }
 
     .careers {
         width: 100%;

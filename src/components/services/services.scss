@@ -14,8 +14,8 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
 .services {
     color: $primary-font-color;
     background: $primary-background-color;
-    top: -9.5em;
-    z-index: -2;
+    margin-top: -7.2%;
+    z-index: -1;
 
     .what-we-do {
         display: flex;
@@ -127,6 +127,7 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
 }
 .expertise {
     background: $secondary-background-color;
+    margin-top: -7.2%;
 
     .our-expertise {
         background: $secondary-background-color;
@@ -233,6 +234,13 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
         font-weight: normal;
         letter-spacing: 7px;
         line-height: 50px;
+        
+        & > a:first-of-type {
+            text-align: left;
+        }
+        & > a:nth-of-type(3) {
+            text-align: right;
+        }
     }
 }
 // hack
