@@ -3,40 +3,79 @@
 .work {
     color: $primary-font-color;
     background: $primary-background-color;
+
+    @media (max-width: 767px) {
+        margin-top: -7.5%;
+    }
+    @media (min-width: 768px) {
+        margin-top: -7.1%;
+    }
     
-    @include desktop {
-        top: -175px;
-        padding-bottom: 5em;
-    }
-    @include tablet {
-        top: -120px;
-    }
-    @include phone {
-        top: -90px;
-    }
-    & > .content-wrapper {
-        padding-top: 0;
+    .feature-block {
+
+        & > .feature-block-image {
+            // @media (max-width: 767px) {
+            //     max-width: 60%;
+            // }
+            // @media (min-width: 768px) {
+            //     max-width: 60%;
+            // }
+            @include phone {max-width: 60%;}
+            @include tablet {
+                max-width: 40%;
+                margin-left: 2em;
+            }
+            @include desktop {max-width: 60%;}
+        }
+        & > .feature-block-details {
+            @media (max-width: 767px) {}
+            @media (min-width: 768px) {}
+
+            & > h2 {
+                @media (max-width: 767px) {
+                    color: #FFFFFF;
+                    font-size: 1.6rem;
+                    line-height: 37px;
+                    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                }
+                @media (min-width: 768px) {
+                    
+                }
+            }
+            & > .feature-block-project-type {
+                @media (max-width: 767px) {
+                    color: #9B9B9B;
+                    font-size: 1.125rem;
+                    line-height: 26px;
+                }
+                @media (min-width: 768px) {
+                    
+                }
+            }
+            & > .feature-block-project-description {
+                @media (max-width: 767px) {
+                    font-size: 1.125rem;
+                    color: #FFFFFF;
+                    letter-spacing: 4.06px;
+                    line-height: 25px;
+                }
+                @media (min-width: 768px) {
+                    
+                }
+            }
+            & > a {
+                @media (max-width: 767px) {
+                    font-size: 0.8125rem;
+                }
+                @media (min-width: 768px) {
+                    
+                }
+
+            }
+        }
     }
 
     .angled-section {
-        // @media (min-width: 1701px) and (max-width: 2000px) {
-        //     margin-bottom: -11% !important;
-        // }
-        // @media (min-width: 1601px) and (max-width: 1700px) {
-        //     margin-bottom: -9% !important;
-        // }
-        // @media (min-width: 1501px) and (max-width: 1600px) {
-        //     margin-bottom: -8.5% !important;
-        // }
-        // @media (min-width: 1401px) and (max-width: 1500px) {
-        //     margin-bottom: -8% !important;
-        // }
-        // @media (min-width: 1301px) and (max-width: 1400px) {
-        //     margin-bottom: -7.5% !important;
-        // }
-        // @media (min-width: 1200px) and (max-width: 1300px) {
-        //     margin-bottom: -7% !important;
-        // }
         @include desktop {
             margin-bottom: -7%;
         }
