@@ -1,24 +1,26 @@
 
 .social-icons-wrapper {
-    height: 36px;
-    width: 192px;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 1rem;
+    height: 37px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 33px;
+    @media (min-width: 768px) {
+        width: 169px;
+    }
 }
 .social-icon-twitter :hover {
     fill: #60b5f0;
-    transition: .3s;
+    transition: .2s;
 }
 .social-icon-facebook :hover {
     fill: #4463a3;
-    transition: .3s;
+    transition: .2s;
 }
 .social-icon-instagram :hover {
     fill: #e8496a;
-    transition: .3s;
+    transition: .2s;
 }
 .social-icon-medium :hover {
     fill: #00c080;
-    transition: .3s;
+    transition: .2s;
 }
