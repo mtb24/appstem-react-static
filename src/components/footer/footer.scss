@@ -7,107 +7,67 @@ $footer-heading-color: $white;
 .footer {
     width: 100vw;
     background-color: #1E1E1E;
-
-    & a {
-        text-decoration: none;
-    }
+    margin-top: -7.2%;
 
     .footer-grid {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas: 'left right';
         position: relative;
         width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
         
-        @include desktop {
-            padding: 5em 0;
-        }
-        @include tablet {
-            grid-template-columns: 1fr;
-            padding: 7em 0 0 0;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            padding: 10em 0 5em 0;
+            margin: 0 auto;
         }
         @include phone {
-            grid-template-columns: 1fr;
+            display: block;
             padding: 7em 0 0 0;
         }
-        
-        .nav-wrapper {
-            justify-self: center;
-            
-            @include phone {
-                display: none;
-            }
 
-            .footer-nav {
-                display: flex;
-                flex-direction: column;
-                color: $link-color;
-                font-family: $primary-font-family;
-                font-size: 0.8125rem;
-                font-weight: normal;
-                letter-spacing: 3.25px;
-                line-height: 24px;
-                text-align: left;
-                
-                a {
-                    padding: 0 0 0.5em 0;
-
-                    &:hover {
-                        color: $footerNavHoverColor;
-                        text-decoration: none;
-                    }
-                    
-                    &:last-child {
-                        border: none;
-                        margin: 0;
-                    }
-                }
-            }
-        }
         .footer-contact-info {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            grid-template-areas: 'addresses form';
-            grid-gap: 25%;
+            display: flex;
             
+            @media (min-width: 768px) {
+                justify-content: space-between;
+                width: 62.5%;
+            }
             @include phone {
-                grid-template-columns: 1fr;
-                grid-template-areas: 'form''social''addresses';
-                grid-gap: unset;
-                justify-items: center;
-            }
-            @include tablet {
-                grid-gap: 5em;
-            }
+                flex-direction: column-reverse;
 
-            .footer-addresses {
-                grid-area: addresses;
+            }
+            
+            .footer-address-block-wrapper {
                 font-family: $primary-font-family;
                 width: 7em;
                 text-align: left;
 
                 @include phone {
-                    margin-top: 6em;
+                    margin-top: 41px;
                     text-align: center;
                     width: 100%;
                 }
 
                 .footer-address-block {
-                    opacity: 0.7;
-                    font-size: 0.8125rem;
-                    line-height: 19px;
                     margin-bottom: 1em;
+                    @include phone {
+                        margin-bottom: 36px;
+                    }
 
-                    a {
+                    & > a {
                         color: $white;
+                        opacity: 0.7;
+                        font-size: 0.8125rem;
+                        line-height: 19px;
+                        text-decoration: none;
+
                         &:hover {
                             color: $footerNavHoverColor;
                         }
                         
-                        address {
+                        & > address {
                             font-style: normal;
+                            opacity: 0.7;
                         }
                     }
                 }
@@ -129,17 +89,18 @@ $footer-heading-color: $white;
             }
             
             .footer-email-form-wrapper {
-                grid-area: form;
+                // grid-area: form;
                 position: relative;
-                margin-right: 5em;
-                height: 65px;
+                // margin-right: 5em;
+                // height: 65px;
                 text-align: left;
                 
                 @include phone {
-                    margin: 0 0;
+                    margin: 0 auto;
+                    width: 73.33%;
                 }
                 @include tablet {
-                    margin: 0 0;
+                    margin: 0 auto;
                 }
 
                 .footer-form-heading {
@@ -160,12 +121,11 @@ $footer-heading-color: $white;
                     }
                 }
                 .social-icons-wrapper {
-                    grid-area: form;
+                    // grid-area: form;
                     position: relative;
-                    // top: 80px;
+
                     @include phone {
-                        grid-area: social;
-                        // top: 2em;
+                        // grid-area: social;
                     }
                 }
             }
