@@ -11,7 +11,7 @@ import LinkOutlined from '../../../buttons/link-outlined/link-outlined'
 import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
 import FeatureBlock from '../../../feature-block/feature-block'
 import Branding from '../../../branding/branding'
-import './draftmates.scss'
+import Wireframe from '../../../wireframe/wireframe'
 
 export default (props) => {
 
@@ -38,10 +38,10 @@ return (
 
         <FullWidthImage 
             className='first-full-image' 
-            mask='angle--both-left-right'
+            mask='angle--top-left'
             imagePath={ imagePath + props.fullImages[0] } />
 
-        <Section className='why-appstem' style={{ background: '#ffffff', width: '100vw' }}>
+        <Section className='why-appstem' style={{ background: '#fafafa', width: '100vw' }}>
             <Cta heading='Why Appstem'>
                 <Paragrapher paragraphs={ props.whyAppstem }/>
             </Cta>
@@ -55,7 +55,7 @@ return (
             <BigPlayButton position="center" />
         </Player>
 
-        <Section className='challenges' style={{ background: '#ffffff', width: '100vw' }}>
+        <Section className='challenges' style={{ background: '#fafafa', width: '100vw' }}>
             <Cta heading='Challenges'>
                 <Paragrapher paragraphs={ props.challenges }/>
             </Cta>
@@ -65,32 +65,21 @@ return (
             <FeatureBlock imagePosition='left' caseStudy={interactionData} slug={props.slug} imageType='case-study-feature'/>
         </Section>
 
-        <Section className='development' style={{ background: '#ffffff', width: '100vw' }}>
+        <Section className='development' style={{ background: '#fafafa', width: '100vw' }}>
             <Cta heading='Design & Development'>
                 <Paragrapher paragraphs={ props.developmentText }/>
-                {
-                    (props.wireframeImages.length && props.wireframeImages.length > 0)
-                    ?   props.wireframeImages.map( (image, i) => (
-                            <div key={i} className='wireframes'>
-                                <InstantImage
-                                    className='wireframe-image'
-                                    imageSrcs={ imagePath + image || '' }
-                                    alt={ props.imageAlt || `an image for ${ props.slug }` } />
-                            </div>
-                        ))
-                    : null
-                }
+                <Wireframe imagePath={ imagePath } wireframeImages={ props.wireframeImages } alt={ `an image for ${ props.slug }` } />
             </Cta>
         </Section>
 
         <FullWidthImage 
                 className='styleguide' 
-                mask='angle--both-left-right'
+                mask='none'
                 imagePath={ imagePath + props.fullImages[1] }
                 style={{ background: '#d8d8d8' }}
                 alt={ props.imageAlt || `an image for ${ props.slug }` } />
 
-        <Section className='development-features' style={{ background: '#f8f8f8', width: '100vw' }}>
+        <Section className='development-features' style={{ background: '#fafafa', width: '100vw' }}>
             {
                 (props.devFeatures.length && props.devFeatures.length > 0)
                 ?  props.devFeatures.map( (feature, i) => {      
@@ -108,18 +97,18 @@ return (
             }
         </Section>
 
-        <Section className='branding-section' style={{ background: '#ffffff', width: '100vw' }}>
+        <Section className='branding-section' style={{ background: '#fafafa', width: '100vw' }}>
             <Branding brandItems={props.branding} slug={props.slug}/>
         </Section>
 
         <FullWidthImage 
             className='second-full-image' 
-            mask='angle--both-left-right'
+            mask='none'
             imagePath={ imagePath + props.fullImages[2] }
-            style={{ background: '#f8f8f8' }}
+            style={{ background: '#fafafa' }}
             alt={ props.imageAlt || `an image for ${ props.slug }` } />
 
-        <Section className='company-blurb-section' style={{ background: '#ffffff', width: '100vw' }}>
+        <Section className='company-blurb-section' style={{ background: '#fafafa', width: '100vw' }}>
             <div className='company-blurb-wrapper'>
                 <InstantImage
                     className='company-blurb-image'

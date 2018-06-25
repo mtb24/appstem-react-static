@@ -10,7 +10,6 @@ import LinkOutlined from '../../../buttons/link-outlined/link-outlined'
 import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
 import FeatureBlock from '../../../feature-block/feature-block'
 import Paragrapher from '../../../layout/page-section/paragrapher'
-import './hubbub.scss'
 
 export default (props) => {
 

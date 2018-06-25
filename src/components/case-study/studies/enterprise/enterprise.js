@@ -6,7 +6,6 @@ import FullWidthImage from '../../../layout/page-section/full-width-image-sectio
 import Cta from '../../../layout/page-section/cta'
 import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
-import './enterprise.scss'
 
 export default (props) => {
 
