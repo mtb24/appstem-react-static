@@ -1,13 +1,6 @@
 @import '../../styles/styles.scss';
 
 .header-nav {
-  // position: absolute;
-  // top: 100%;
-  // text-align: left;
-  // left: 0;
-  // width: 100%;
-  // z-index: 99;
-  
   @include phone {
     padding-bottom: 3.18em;
     padding-top: 6em;
@@ -61,14 +54,46 @@
           @include phone {
             color: #3CD52E;
           }
-          @include tablet {text-decoration: underline;}
-          @include desktop {text-decoration: underline;}
+          @include tablet {border-bottom: 1px solid $link-color; padding-bottom: 20px;}
+          @include desktop {border-bottom: 1px solid $link-color; padding-bottom: 20px;}
         }
       }
     }
+    
+    & li:last-child { // outline last item on large header nav only
+        @include tablet {
+            border: 1px solid $link-color;
+            padding: 20px;
+        }
+        @include desktop {
+            border: 1px solid $link-color;
+            padding: 20px;
+            margin-right: 0;
+        }
+    }
   }
-
 }
+
+/* dropdown nav styles */
+.header-leave nav {
+  & > ul li > a {
+    @media (min-width: 768px) {
+        font-size: 0.8125rem;
+    }
+  }
+  & li:last-child { // outline last item on large header nav only
+      @include tablet {
+          border: 1px solid $link-color;
+          padding: 7px 17px;
+      }
+      @include desktop {
+          border: 1px solid $link-color;
+          padding: 7px 17px;
+          margin-right: 0;
+      }
+  }
+}
+
 .footer-nav {
 
   @include phone {
