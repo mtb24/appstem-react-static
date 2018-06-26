@@ -161,12 +161,15 @@ $testimonials-text-color: #222222;
                 li button:hover {
                     &:before {
                         border-color: $appstem-green;
+                        background-color: lightgrey;
+                        opacity: 0.6;
                     }
                 }
                 li button:before {
                     color: transparent;
+                    background-color: lightgrey;
                     font-size: 1rem;
-                    border: 2px solid grey;
+                    border: 2px solid lightgrey;
                     border-radius: 12px;
                 }
                 li.slick-active {
