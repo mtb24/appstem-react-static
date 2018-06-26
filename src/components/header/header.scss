@@ -11,11 +11,6 @@
         background: inherit;
         top: 62px;
         height: 40px;
-        
-        nav {
-            all: unset;
-        }
-
     }
     @include phone {
         opacity: 0.95;
@@ -99,24 +94,6 @@
         & > .nav-toggle-label {
             display: none;
         }
-    
-        & > nav {
-            & li:nth-of-type(4) { // hide careers page from top nav
-                display: none;
-            }
-    
-            & li:last-child { // outline last item on large header nav only
-                @include tablet {
-                    border: 1px solid $link-color;
-                    padding: 20px;
-                }
-                @include desktop {
-                    border: 1px solid $link-color;
-                    padding: 20px;
-                    margin-right: 0;
-                }
-            }
-        }
     }
     
     /* Header animations for large screens */
@@ -135,22 +112,7 @@
             opacity: .9;
             top: -72px;
     
-            & nav ul li > a {
-                @media (min-width: 768px) {
-                    font-size: 0.8125rem;
-                }
-            }
-            & nav li:last-child { // outline last item on large header nav only
-                @include tablet {
-                    border: 1px solid $link-color;
-                    padding: 7px 17px;
-                }
-                @include desktop {
-                    border: 1px solid $link-color;
-                    padding: 7px 17px;
-                    margin-right: 0;
-                }
-            }
+            
             
         }
         
