@@ -95,9 +95,7 @@ export default withRouteData(({ services }) => (
       </Cta>
     </AngledSection>
 
-    <AngledSection className='last-section' mask='angle--bottom-right'> 
-      <SectionLinks className='see-what-we-made' prevLink={ prevLink } nextLink={ nextLink } />
-    </AngledSection>
+    
 
   </React.Fragment>
 ))
