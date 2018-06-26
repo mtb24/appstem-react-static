@@ -23,6 +23,7 @@
         }
         /* Header animations for small screens */
         .nav-toggle:checked ~ nav {
+            height: 100vh;
             transform: scale(1, 1);
             background-color: #1B252F;
         }
