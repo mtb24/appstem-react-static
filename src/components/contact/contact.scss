@@ -41,40 +41,44 @@ $form-text-color-mobile: #4A4A4A;
             margin-bottom: 2em;
             text-align: left;
             
-            label {
-                position: relative;
-                top: -45px;
-                left: 5px;
-                color: $form-inactive-border-color;
-                font-size: 1rem;
-                letter-spacing: 2px;
-                line-height: 23px;
-                transition: all .2s linear;
+            // label {
+            //     position: relative;
+            //     top: -45px;
+            //     left: 5px;
+            //     color: $form-inactive-border-color;
+            //     font-size: 1rem;
+            //     letter-spacing: 2px;
+            //     line-height: 23px;
+            //     transition: all .2s linear;
 
-                @include phone {
-                    color: $form-text-color-mobile;
-                    font-size: 0.875rem;
-                    letter-spacing: 1.75px;
-                    line-height: 20px;
-                }
+            //     @include phone {
+            //         color: $form-text-color-mobile;
+            //         font-size: 0.875rem;
+            //         letter-spacing: 1.75px;
+            //         line-height: 20px;
+            //     }
 
-                label.has-value {
-                    // force label to stay in elevated position if input has a value
-                    top: -45px;
-                }
-            }
+            //     label.has-value {
+            //         // force label to stay in elevated position if input has a value
+            //         top: -45px;
+            //     }
+            // }
             input {
                 width: 100%;
                 border: none;
                 border-bottom: 1px solid $form-inactive-border-color;
                 background-color: inherit;
+                color: $form-inactive-border-color;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                line-height: 23px;
                 
-                &:focus + label {
-                    /* transform: scale(0.5) translate(-50%, -50%); */
-                    color: $appstem-green;
-                    top: -45px;
-                    font-size: 0.75em;
-                }
+                // &:focus + label {
+                //     /* transform: scale(0.5) translate(-50%, -50%); */
+                //     color: $appstem-green;
+                //     top: -45px;
+                //     font-size: 0.75em;
+                // }
                 &:focus,
                 textarea:focus {
                     border-bottom: 1px solid $form-active-border-color;

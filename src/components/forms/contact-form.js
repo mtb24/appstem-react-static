@@ -131,28 +131,23 @@ class ContactForm extends React.Component {
         <React.Fragment>
           <form ref='contactform' onSubmit={this.handleSubmit} id="contact-form" className="contact-form" >
               <div className='contact-form-field-wrapper'>
-              <input type='text' ref='name' field="name" id="name" name='name' />
-              <label className='all-caps' htmlFor="name">Name</label>
+              <input type='text' ref='name' field="name" id="name" name='name' placeholder='Name' />
               </div>
   
               <div className='contact-form-field-wrapper'>
-              <input type='text' ref='email' field="email" id="email" name='email' />
-              <label className='all-caps' htmlFor="email">Email</label>
+              <input type='text' ref='email' field="email" id="email" name='email' placeholder='Email'/>
               </div>
   
               <div className='contact-form-field-wrapper'>
-              <input type='text' ref='phone' field="phone" id="phone" name='phone' />
-              <label className='all-caps' htmlFor="phone">Phone</label>
+              <input type='text' ref='phone' field="phone" id="phone" name='phone' placeholder='Phone'/>
               </div>
   
               <div className='contact-form-field-wrapper'>
-              <input type='text' ref='company' field="company" id="company" name='company' />
-              <label className='all-caps' htmlFor="company">Company/Organization</label>
+              <input type='text' ref='company' field="company" id="company" name='company' placeholder='Company/Organization'/>
               </div>
   
               <div className='contact-form-field-wrapper'>
-              <input type='text' ref='project' field="project" id="project" name='project' />
-              <label className='all-caps' htmlFor="project">Tell us about your project</label>
+              <input type='text' ref='project' field="project" id="project" name='project' placeholder='Tell us about your project'/>
               </div>
 
               <div id="status" className={'alert ' + `alert-${this.state.type || ''}`} ref="status">{this.state.message || ''}</div>
