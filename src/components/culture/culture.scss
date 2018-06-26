@@ -12,16 +12,7 @@ $testimonials-H2-color: #1B252F;
         padding-top: 5em;
     }
 
-    h2 {
-        color: #FFFFFF;
-        font-family: "Brandon Grotesque";
-        font-size: 2rem;
-        font-weight: bold;
-        letter-spacing: 6.4px;
-        line-height: 46px;
-        text-align: center;
-    }
-    .culture-who-we-are {
+    & .culture-who-we-are {
         
         @include phone {
             margin-bottom: 0;
@@ -59,7 +50,7 @@ $testimonials-H2-color: #1B252F;
         }
     }
 
-    .video-react {
+    & .video-react {
         width: 100%;
         max-width: 960px;
         margin: 0 auto;
@@ -75,7 +66,9 @@ $testimonials-H2-color: #1B252F;
         }
     }
 
-    .culture-work-as-team {
+    & .culture-work-as-team {
+        @media (max-width: 767px) {}
+        @media (min-width: 768px) {}
         
         @include phone {
             margin-top: 85px;
@@ -112,7 +105,7 @@ $testimonials-H2-color: #1B252F;
         }
     }
 
-    .culture-our-team {
+    & .culture-our-team {
         @include desktop {
             margin: 15em 0 5em 0;
         }
@@ -186,17 +179,17 @@ $testimonials-H2-color: #1B252F;
             
         }
     }
-    .culture-join-us {
+    & .culture-join-us {
         padding: 5em 0 20em 0;
         text-align: center;
         @include phone {
             padding: 5em 0 15em 0;
         }
-        & hr {
+        & > h2 {}
+        & > hr {
             margin-bottom: 67px;
         }
-
-        p {
+        & > p {
             width: 549px;
             margin: 0 auto;
             
@@ -213,7 +206,7 @@ $testimonials-H2-color: #1B252F;
                 text-align: center;
             }
         }
-        .view-openings-link {
+        & > .view-openings-link {
             top: 8em;
         }
 
@@ -226,11 +219,11 @@ $testimonials-H2-color: #1B252F;
         padding-bottom: 2rem;
     }
 
-    .culture-testimonials {
+    & > .culture-testimonials {
         background: inherit;
         padding: 10% 0;
 
-        h2 {
+        & h2 {
             color: $testimonials-H2-color;
             font-size: 2rem;
             font-weight: normal;
