@@ -1,5 +1,5 @@
 ---
-title: Culture
+title: About
 video-1: 'noneExistentVideo.mp4'
 image-1: ['img_Robert_Armstrong.jpg','Image of Robert Armstrong','Robert Armstrong', 'Co-Founder & CEO']
 image-2: ['img_CHris_Newhouse.jpg','Image of Chris Newhouse','Chris Newhouse', 'CTO']
