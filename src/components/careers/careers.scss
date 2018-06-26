@@ -8,7 +8,8 @@ $careers-page-job-meta-color: #9b9b9b;
 
 .careers-wrapper {
     background: $secondary-background-color;
-    padding-bottom: 8rem;
+    padding-top: 5em;
+    padding-bottom: 8em;
     @media (min-width: 768px) {
         margin-top: -7.2%;
     }
@@ -108,9 +109,16 @@ $careers-page-job-meta-color: #9b9b9b;
                     margin: 0 auto;
                 }
 
-                .rotate {
-                    .trigger-button {
-                        transform: rotate(90deg);
+                & > .Collapsible__trigger {
+                    &.is-closed {
+                        .trigger-button {
+                            content: url(/assets/images/icons/circle-outline-with-plus-sign.svg);
+                        }
+                    }
+                    &.is-open {
+                        .trigger-button {
+                            content: url(/assets/images/icons/circle-outline-with-dash.svg);
+                        }
                     }
                 }
 
@@ -322,7 +330,7 @@ $careers-page-job-meta-color: #9b9b9b;
             
         }
 
-        .send-an-email {
+        p.send-an-email {
             font-size: 1.5rem;
             line-height: 42px;
             text-align: center;

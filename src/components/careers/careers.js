@@ -7,16 +7,17 @@ import Collapsible from 'react-collapsible'
 import backgroundImage from '../../../public/assets/images/main-pages/bg_careers.jpg'
 import timeIcon from '../../../public/assets/images/icons/ic-time@2x.png'
 import locationIcon from '../../../public/assets/images/icons/ic-destination-outline@2x.png'
-import openButton from '../../../public/assets/images/icons/chevron-right.svg'
-import closeButton from '../../../public/assets/images/icons/circle-outline-with-x.svg'
+//import openButton from '../../../public/assets/images/icons/circle-outline-with-plus-sign.svg'
+//import closeButton from '../../../public/assets/images/icons/circle-outline-with-dash.svg'
 import Button from '../buttons/base-button/button'
 import AngledSection from '../layout/page-section/angled-section'
 import './careers.scss'
 
 export default withRouteData(({ careers, openings }) => {
 
-    const open = <img className='trigger-button' alt='circle icon to open panel' src={ openButton }/>
-    const close = <img className='trigger-button' alt='circle icon to close panel' src={ closeButton }/>
+    //const open = <img className='trigger-button' alt='circle icon to open panel' src={ openButton }/>
+    //const close = <img className='trigger-button' alt='circle icon to close panel' src={ closeButton }/>
+    const button = <span className='trigger-button' alt='circle icon to open and close panel'></span>
   
     return (
 
@@ -47,13 +48,13 @@ export default withRouteData(({ careers, openings }) => {
                                         <div className='job-meta'>
                                             <div className='job-type'><img src={ timeIcon } alt='Icon for job type'/> { job.type }</div>
                                             <div className='job-location'><img src={ locationIcon } alt='Icon for job location'/> { job.location }</div>
-                                            { open }
+                                            { button }
                                         </div>
                                     </div>
                                 )
                                 return (
                                     <React.Fragment key={i}>
-                                        <Collapsible key={i} trigger={ TriggerEl } triggerOpenedClassName='rotate' >
+                                        <Collapsible key={i} trigger={ TriggerEl } triggerOpenedClassName='opened' >
                                             { convert( job.contents ) }
                                             <Button linkTo='#' buttonText='Apply' className='apply-button'/>
                                         </Collapsible>
