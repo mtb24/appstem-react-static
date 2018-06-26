@@ -14,7 +14,7 @@ export default (props) => {
 
         <Link to={`/portfolio/${ props.prevLink.slug }`}>
             <div className={`${alignclass} sl-left all-caps`}>
-                <img src={ leftArrow } alt='Left arrow icon'/> { props.prevLink.title || 'Previous' }
+                <img src={ leftArrow } alt='Left arrow icon'/> Previous
             </div>
         </Link>
 
@@ -22,7 +22,7 @@ export default (props) => {
 
         <Link to={`/portfolio/${ props.nextLink.slug }`}>
             <div className={`${alignclass} sl-right all-caps`}>
-                { props.nextLink.title || 'Next' } <img src={ rightArrow } alt='Right arrow icon'/>
+                Next <img src={ rightArrow } alt='Right arrow icon'/>
             </div>
         </Link>
         
