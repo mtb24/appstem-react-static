@@ -8,7 +8,9 @@ $testimonials-H2-color: #1B252F;
 .culture {
     color: $primary-font-color;
     background-color: $primary-background-color;
-    top: -9.5em;
+    @media (min-width: 768px) {
+        padding-top: 5em;
+    }
 
     h2 {
         color: #FFFFFF;
