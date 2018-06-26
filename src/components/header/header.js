@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-static'
 import InstantImage from '../instant-image/instant-image'
-import Nav from '../nav/nav'
+import { HeaderNav } from '../nav/nav'
 import Logo from '../../../public/assets/images/icons/Appstem-Logo_green.png'
 import './header.scss'
 
@@ -83,7 +83,7 @@ class Header extends React.Component {
                     <label htmlFor='nav-toggle' className='nav-toggle-label'><span></span></label>
                     <input type='checkbox' id='nav-toggle' className='nav-toggle'/>
                     
-                    <Nav className='header-nav' />
+                    <HeaderNav className='header-nav' />
 
                 </div>
             </header>

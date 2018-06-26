@@ -1,7 +1,7 @@
 import React from 'react'
 import { SiteData, Link } from 'react-static'
 import FooterForm from '../forms/footer-form'
-import Nav from '../nav/nav'
+import { FooterNav } from '../nav/nav'
 import SocialIcons from '../social/social-icons'
 import './footer.scss'
 
@@ -9,7 +9,7 @@ export default () => (
     <footer className='footer angle--top-left'>
         <div className='footer-grid'>
             
-            <Nav className='footer-nav' />
+            <FooterNav className='footer-nav' />
 
             <div className='footer-contact-info'>
                 <div className='footer-address-block-wrapper'>
