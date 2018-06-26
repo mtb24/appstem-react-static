@@ -2,25 +2,45 @@
 
 .imagebox-wrapper {
     max-width: 265px;
+    @media (max-width: 767px) {}
+    @media (min-width: 768px) {}
 
-    .ib-image {
+    & > .ib-image {
         width: 100%;
+        @media (max-width: 767px) {}
+        @media (min-width: 768px) {}
     }
 
-    .ib-title {
+    & > .ib-title {
         color: $secondary-font-color;
-        font-family: $primary-font-family;
-        font-size: 1.25rem;
-        font-weight: normal;
-        letter-spacing: 1.7px;
-        line-height: 42px;
+        font-weight: bold;
+        @media (max-width: 767px) {
+            font-size: 1.125rem;
+            letter-spacing: 2px;
+            line-height: 1.6rem;
+        }
+        @media (min-width: 768px) {
+            font-size: 1.125rem;
+            letter-spacing: 2px;
+            line-height: 1.6rem;
+        }
     }
-    .ib-desc {
-        color: #9B9B9B;
-        font-family: $primary-font-family;
-        font-size: 1rem;
-        font-weight: normal;
-        letter-spacing: 2px;
-        line-height: 27px;
+    & > .ib-desc {
+        @media (max-width: 767px) {
+            color: #9B9B9B;
+            font-size: 0.8125rem;
+            font-weight: bold;
+            letter-spacing: 1.63px;
+            line-height: 27px;
+            text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+        }
+        @media (min-width: 768px) {
+            color: #9B9B9B;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 1.75px;
+            line-height: 20px;
+            text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+        }
     }
 }
