@@ -28,7 +28,9 @@ export default withRouteData(({ culture }) => {
     }
   });
 
-  const renderedImages = images.length && images.map((image, index) => (<ImageBox key={ index } image={ image } />))
+  const renderedImages = images.length && images.map(
+    (image, index) => (<ImageBox key={ index } image={ image } />)
+  )
 
   return (
     <React.Fragment>
