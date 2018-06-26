@@ -14,7 +14,7 @@ export default {
 
   getSiteData: () => ({
     title: 'Appstem',
-    email: 'info@appstem',
+    email: 'hello@appstem',
     phone: '415.956.7400',
     addressSF: 'San Francisco',
     address1SF: '133 Kearny St.',
@@ -60,7 +60,7 @@ export default {
         }),
       },
       {
-        path: '/culture',
+        path: '/about',
         component: 'src/components/culture/culture',
         getData: () => ({
           culture,
@@ -104,7 +104,7 @@ export default {
         })),
       },
       {
-        path: '/test',
+        path: '/blog',
         component: 'src/components/blog/blog',
       },
       {
