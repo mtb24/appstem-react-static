@@ -16,9 +16,22 @@
     fill: #4463a3;
     transition: .2s;
 }
-.social-icon-instagram :hover {
-    fill: #e8496a;
-    transition: .2s;
+.social-icon-instagram {
+    display: block;
+    padding: 6px;
+    line-height: 32px;
+
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    
+    &:hover {
+        background-color: #e8496a;
+        transition: .2s;
+    }
 }
 .social-icon-medium :hover {
     fill: #00c080;

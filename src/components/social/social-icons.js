@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-static'
 import TwitterIcon from './icons/ic_footer_twitter'
 import FacebookIcon from './icons/ic_footer_fb'
-import InstagramIcon from './icons/ic_footer_instagram'
+//import InstagramIcon from './icons/ic_footer_instagram'
 import MediumIcon from './icons/ic_footer_medium'
 
 import './social-icons.scss'
@@ -35,12 +35,11 @@ export default () => (
 
         <Link to='https://www.instagram.com/appstem'>
 
-            <InstagramIcon
-                fillColor='#fefefe'
+            <img
                 className='social-icon-instagram'
-                width='36'
-                height='36'
-            />
+                width='25'
+                height='25'
+                src='/assets/images/icons/ic_instagram-2x-inverse.png' />
 
         </Link>
 
