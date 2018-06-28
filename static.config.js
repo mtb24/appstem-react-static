@@ -28,7 +28,7 @@ export default {
   getRoutes: async () => {
     const {
       work,
-      openings,
+      jobs,
       home,
       contact,
       culture,
@@ -85,7 +85,7 @@ export default {
         component: 'src/components/careers/careers',
         getData: () => ({
           careers,
-          openings,
+          jobs,
         }),
       },
       {
