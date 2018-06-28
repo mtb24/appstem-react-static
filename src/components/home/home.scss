@@ -176,30 +176,24 @@ $featureblocks-bg-color: #1C1819;
         padding-bottom: 5em;
     }
 
-    .case-study-3 {
+    & > .case-study-3 {
 
         @include desktop {
-            .feature-block-image {
-                position: relative;
-                left: -290px;
-                margin-right: 0;
-            }
-            .feature-block-details {
-                position: relative;
-                left: -6em;
-            }
-        }
-        @include tablet {
-            .feature-block-image {
-                // width: 120%;
-                // justify-items: center;
-                margin-right: 0;
-                position: relative;
-                left: -20em;
-            }
-            .feature-block-details {
-                position: relative;
-                left: -18em;
+            &.feature-block {
+                &.feature-image-left {
+                    position: relative;
+                    left: -270px !important;
+                }
+                
+                & > .feature-block-image {
+                    position: relative;
+                    margin: unset;
+                    margin-right: 0 !important;
+                }
+                & > .feature-block-details {
+                    position: relative;
+                    // left: -6em;
+                }
             }
         }
         @include phone {
