@@ -1,10 +1,16 @@
 # Appstem Website
 
-This is the beginning documentation. It includes:
+This is the beginning documentation.
 - How it works
-- How to edit Markdown content with [jdown](https://github.com/DanWebb/jdown)
+- How to edit Markdown content
+-- folders and files in 'content/collections' will be returned as JSON
+-- files/folders in 'content' will create new routes
+-- markdown variables must start on first link with '---', and end with '---'
+-- variable names are variable: followed by a space.
+-- text can be an unquoted string
+-- Other variables follow a pattern of arrays - ['image-filename.png','Heading Text','Each array element from here will be a paragraph', 'This is another paragraph']
 - Where to put images
-- How Automatic Routing works
+-- /public/assets/images, /public/assets/videos
 
 [appstem.com](https://appstem.com) is built using jdown for handling Markdown, and 
 
