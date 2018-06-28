@@ -9,7 +9,7 @@ const pathToImages = (slug, imageName) => `/assets/images/case-studies/${ slug }
 
 
 const ImageFeatureBlock = (feature) => (
-    <div className={ `${ feature.className || '' } feature-block feature-image-${ feature.imagePosition }`}>
+    <div className={ `feature-block feature-image-${ feature.imagePosition } ${ feature.className || '' } `}>
     
         <InstantImage
             key={ `image-${ feature.caseStudy.slug }` }
