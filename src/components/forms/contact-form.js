@@ -131,15 +131,15 @@ class ContactForm extends React.Component {
         <React.Fragment>
           <form ref='contactform' onSubmit={this.handleSubmit} id="contact-form" className="contact-form" >
               <div className='contact-form-field-wrapper'>
-              <input type='text' ref='name' field="name" id="name" name='name' placeholder='Name' />
+              <input type='text' ref='name' field="name" id="name" name='name' placeholder='Name' required />
               </div>
   
               <div className='contact-form-field-wrapper'>
-              <input type='text' ref='email' field="email" id="email" name='email' placeholder='Email'/>
+              <input type='email' ref='email' field="email" id="email" name='email' placeholder='Email' required/>
               </div>
   
               <div className='contact-form-field-wrapper'>
-              <input type='text' ref='phone' field="phone" id="phone" name='phone' placeholder='Phone'/>
+              <input type='tel' ref='phone' field="phone" id="phone" name='phone' placeholder='Phone' required/>
               </div>
   
               <div className='contact-form-field-wrapper'>
@@ -147,7 +147,7 @@ class ContactForm extends React.Component {
               </div>
   
               <div className='contact-form-field-wrapper'>
-              <input type='text' ref='project' field="project" id="project" name='project' placeholder='Tell us about your project'/>
+              <input type='text' ref='project' field="project" id="project" name='project' placeholder='Tell us about your project' required/>
               </div>
 
               <div id="status" className={'alert ' + `alert-${this.state.type || ''}`} ref="status">{this.state.message || ''}</div>
