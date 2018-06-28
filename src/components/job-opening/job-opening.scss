@@ -1,0 +1,249 @@
+@import '../../styles/viewport-sizes.scss';
+
+.Collapsible {
+    margin: 67px auto;
+    @media (min-width: 768px) {
+        width: 65%;
+    }
+    @include tablet {
+        width: 89%;
+    }
+    @include phone {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    & > .Collapsible__trigger {
+        &.is-closed {
+            .trigger-button {
+                content: url(/assets/images/icons/circle-outline-with-plus-sign.svg);
+            }
+        }
+        &.is-open {
+            .trigger-button {
+                content: url(/assets/images/icons/circle-outline-with-dash.svg);
+            }
+        }
+        & > .job-opening-trigger {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            @include phone {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    
+            & > .job-title {
+                color: #4A4A4A;
+                font-size: 1.5rem;
+                font-weight: bold;
+                letter-spacing: 1.8px;
+                line-height: 24px;
+                @include phone {
+                    font-size: 0.875rem;
+                    letter-spacing: 1.05px;
+                }
+            }
+    
+            & > .job-meta {
+                width: 22em;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                @include phone {
+                    width: 100%;
+                    margin-top: 7px;
+                }
+    
+                & > .job-type {
+                    color: #9B9B9B;
+                    font-size: 1.5rem;
+                    letter-spacing: 1.8px;
+                    line-height: 24px;
+                    @include phone {
+                        font-size: 1rem;
+                        letter-spacing: 1.2px;
+                    }
+    
+                    & > img {
+                        height: 16px;
+                        width: 16px;
+                    }
+                }
+                & > .job-location {
+                    color: #9B9B9B;
+                    font-size: 1.5rem;
+                    letter-spacing: 1.8px;
+                    line-height: 24px;
+                    @include phone {
+                        font-size: 1rem;
+                        letter-spacing: 1.2px;
+                    }
+    
+                    & > img {
+                        height: 16px;
+                        width: 10px;
+                    }
+                }
+                & > .trigger-button {
+                    height: 19px;
+                    width: 19px;
+                }
+            }
+        }
+    }
+
+    
+    & > .Collapsible__contentOuter {
+
+        & > .Collapsible__contentInner {
+    
+            & > p:first-of-type {
+                color: #000000;
+                font-size: 1.25rem;
+                letter-spacing: 0.29px;
+                line-height: 42px;
+                text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                @include phone {
+                    color: #1B252F;
+                    font-size: 1rem;
+                    line-height: 24px;
+                }
+            }
+    
+            & > .about-role {
+                display: flex;
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                    color: #1B252F;
+                    font-size: 1rem;
+                    line-height: 24px;
+                }
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    margin: 124px auto 160px;
+                    color: #000000;
+                    font-size: 1.125rem;
+                    letter-spacing: 0.29px;
+                    line-height: 42px;
+                    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                }
+    
+                & > h2 {
+                    color: #4A4A4A;
+                    text-align: left;
+                    @media (max-width: 767px) {
+                        font-size: 1.125rem;
+                        font-weight: bold;
+                        letter-spacing: 3.6px;
+                        line-height: 50px;
+                    }
+                    @media (min-width: 768px) {
+                        font-size: 1.125rem;
+                        font-weight: bold;
+                        letter-spacing: 4px;
+                        line-height: 42px;
+                    }
+                }
+                & > p {
+                    @media (max-width: 767px) {}
+                    @media (min-width: 768px) {
+                        width: 55%;
+                        margin-left: 16%;
+                    }
+                }
+            }
+            & > .skills {
+                display: flex;
+                flex-direction: row;
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                    color: #1B252F;
+                    font-size: 1rem;
+                    line-height: 24px;
+                }
+                @media (min-width: 768px) {
+                    color: #000000;
+                    font-size: 1.25rem;
+                    line-height: 42px;
+                }
+    
+                & > h2 {
+                    color: #4A4A4A;
+                    text-align: left;
+                    @media (max-width: 767px) {
+                        font-size: 1.125rem;
+                        font-weight: bold;
+                        letter-spacing: 3.6px;
+                        line-height: 30px;
+                    }
+                    @media (min-width: 768px) {
+                        font-size: 1.125rem;
+                        font-weight: bold;
+                        letter-spacing: 4px;
+                        line-height: 42px;
+                    }
+    
+                }
+                & > .skill-wrapper {
+
+                    & > ul {
+                        color: #000000;
+                        font-size: 1.25rem;
+                        line-height: 42px;
+                        
+                        @include phone {
+                            color: #1B252F;
+                            font-size: 1rem;
+                            line-height: 24px;
+                            padding-left: 16px;
+                        }
+                    }
+                    & > p {
+                        @include desktop {
+                            font-size: 1.25rem;
+                            line-height: 42px;
+                        }
+                        @include tablet {
+                            font-size: 1.25rem;
+                            line-height: 42px;
+                        }
+                        @include phone {
+                            font-size: 1.125rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            letter-spacing: 3.6px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+            .apply-button {
+                @include desktop {
+                    margin: 80px auto auto;
+                }
+                @include tablet {
+                    margin: 80px 33% 0;
+                }
+                @include phone {
+                    margin: 66px auto 0 auto;
+                }
+            }
+        }
+    }
+}
+.job-opening-seperator {
+    box-sizing: border-box;
+    height: 2px;
+    width: 56%;
+    border: 1px solid #B9B9B9;
+    opacity: 0.5;
+    @include tablet {
+        width: 89%;
+    }
+    @include phone {
+        width: 80%;
+        margin: 17px auto;
+    }
+}
