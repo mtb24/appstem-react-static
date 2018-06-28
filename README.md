@@ -27,4 +27,5 @@ Features:
 To get development environment started, run `yarn` then `yarn start` and open http://localhost:3000
 
 Build for staging: `yarn build -staging`
+
 Build for production: `yarn build`
