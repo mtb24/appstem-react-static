@@ -16,13 +16,16 @@ const App = () => (
 
       <Footer />
 
-      <div className='page-bottom'>
-        <div className='copyright'>© 2018 Appstem Media LLC. All Rights Reserved.</div>
-        <div className='legal'>
-            <div className='terms'><Link to='#'>Terms</Link></div>
-            <div className='sitemap'><Link to='#'>Site Map</Link></div>
+      <div className='page-bottom-wrapper'>
+        <div className='page-bottom'>
+          <div className='copyright'>© 2018 Appstem Media LLC. All Rights Reserved.</div>
+          <div className='legal'>
+              <div className='terms'><Link to='#'>Terms</Link></div>
+              <div className='sitemap'><Link to='#'>Site Map</Link></div>
+          </div>
         </div>
       </div>
+      
     </div>
   </Router>
 )
