@@ -38,7 +38,7 @@ $form-text-color-mobile: #4A4A4A;
 
         .contact-form-field-wrapper {
             width: 100%;
-            margin-bottom: 2em;
+            margin-bottom: 6.5em;
             text-align: left;
             
             // label {
@@ -82,12 +82,17 @@ $form-text-color-mobile: #4A4A4A;
                 &:focus,
                 textarea:focus {
                     border-bottom: 1px solid $form-active-border-color;
+                    outline: none;
                 }
             }
         }
     
         .contact-form-submit {
             margin-top: 5em;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -129,6 +134,7 @@ $form-text-color-mobile: #4A4A4A;
             font-size: 1rem;
             letter-spacing: 3.29px;
             line-height: 24px;
+            text-decoration: none;
             @include phone {
                 font-size: 0.9375rem;
                 line-height: 3.08px;
