@@ -6,16 +6,26 @@
     position: relative;
     align-items: center;
 
-    h2 {
+    & > h2 {
         margin: 0;
         text-align: center;
+        @media (max-width: 767px) {}
+        @media (min-width: 768px) {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 6.4px;
+            line-height: 46px;
+        }
     }
 
-    hr {
-        width: 63px;
-        height: 3px;
+    & > hr {
         border: none;
         margin-bottom: 3em;
+        @media (min-width: 768px) {
+            box-sizing: border-box;
+            height: 3px;
+            width: 102.38px;
+        }
 
         @include phone {
             width: 31px;
