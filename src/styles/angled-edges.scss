@@ -1,7 +1,4 @@
 
-$angled-section-odd-background: radial-gradient(circle, rgba(255,255,255,0.52) 0%, rgba(86,86,86,0.52) 45.07%, rgba(12,12,12,0) 100%);
-$angled-section-even-background: radial-gradient(circle, rgba(62,62,62,0.52) 0%, rgba(12,12,12,0.38) 100%);
-
 // $angle: The angle in degrees: 1 - 45
 // $angle-position-y: The Y position of the angle: top | bottom | both
 // $angle-position-x: The X position of the angle: left | right
@@ -9,7 +6,7 @@ $angled-section-even-background: radial-gradient(circle, rgba(62,62,62,0.52) 0%,
 // $fallback: Create a fallback for older browsers: true | false
 // $fallback-color: Fallback colour for older browsers: Hex color
 
-@mixin angle-edge($angle, $angle-position-y, $angle-position-x, $angle-position-bottom-x: '', $fallback: true, $fallback-color: #fff) {
+@mixin angle-edge($angle, $angle-position-y, $angle-position-x, $angle-position-bottom-x: '', $fallback: true, $fallback-color: transparent) {
 
     position: relative;
     // overflow: hidden;
@@ -80,6 +77,7 @@ $angled-section-even-background: radial-gradient(circle, rgba(62,62,62,0.52) 0%,
   
     $clip-path: polygon($clip-path-top, $clip-path-bottom);
     clip-path: $clip-path;
+    -webkit-clip-path: $clip-path;
   
   
     // Fallback for clip-path with solid colours
