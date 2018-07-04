@@ -9,7 +9,7 @@ $footer-heading-color: $white;
     background-color: #1E1E1E;
     margin-top: -7.2%;
 
-    .footer-grid {
+    & > .footer-grid {
         position: relative;
         width: 100%;
         
@@ -25,7 +25,7 @@ $footer-heading-color: $white;
             padding: 7em 0 0 0;
         }
 
-        .footer-contact-info {
+        & > .footer-contact-info {
             display: flex;
             
             @media (min-width: 768px) {
@@ -37,9 +37,7 @@ $footer-heading-color: $white;
 
             }
             
-            .footer-address-block-wrapper {
-                font-family: $primary-font-family;
-                width: 7em;
+            & > .footer-address-block-wrapper {
                 text-align: left;
 
                 @include phone {
@@ -47,8 +45,11 @@ $footer-heading-color: $white;
                     text-align: center;
                     width: 100%;
                 }
+                @media (min-width: 768px) {
+                    width: 148px;
+                }
 
-                .footer-address-block {
+                & > .footer-address-block {
                     margin-bottom: 1em;
                     @include phone {
                         margin-bottom: 36px;
@@ -72,7 +73,7 @@ $footer-heading-color: $white;
                     }
                 }
 
-                h4.footer-heading {
+                & > h4.footer-heading {
                     color: $footer-heading-color;
                     font-family: $primary-font-family;
                     font-size: 0.8125rem;
@@ -81,14 +82,14 @@ $footer-heading-color: $white;
                     opacity: 1;
                     margin: 0;
                 }
-                h4.footer-heading:first-of-type {
+                & > h4.footer-heading:first-of-type {
                     letter-spacing: 3.25px;
                     line-height: 24px;
                 }
                 
             }
             
-            .footer-email-form-wrapper {
+            & > .footer-email-form-wrapper {
                 // grid-area: form;
                 position: relative;
                 // margin-right: 5em;
@@ -103,7 +104,7 @@ $footer-heading-color: $white;
                     margin: 0 auto;
                 }
 
-                .footer-form-heading {
+                & > .footer-form-heading {
                     color: #FFFFFF;
                     font-size: 0.8125rem;
                     font-weight: normal;
@@ -120,7 +121,7 @@ $footer-heading-color: $white;
                         margin-bottom: 16px;
                     }
                 }
-                .social-icons-wrapper {
+                & > .social-icons-wrapper {
                     // grid-area: form;
                     position: relative;
 
