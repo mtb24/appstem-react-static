@@ -57,7 +57,12 @@ body {
           & > .legal {
               display: flex;
               flex-direction: row;
-              margin-right: 0;
+              @include desktop {
+                margin-right: 0;
+              }
+              @include tablet {
+                margin-right: 155px;
+              }
               @include phone {
                 display: none;
               }
