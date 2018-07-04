@@ -28,9 +28,11 @@ class ContactForm extends React.Component {
           this.toggleModal = this.toggleModal.bind(this)
           this.postForm = this.postForm.bind(this)
     }
+    contactFormRef = React.createRef()
+    modalRef = React.createRef()
+
 
     handleOpenModal () {
-        //console.log('handleOpenModal fired')
         this.setState({ showModal: true })
     }
     
@@ -129,7 +131,7 @@ class ContactForm extends React.Component {
     render () {
       return (
         <React.Fragment>
-          <form ref='contactform' onSubmit={this.handleSubmit} id="contact-form" className="contact-form" >
+          <form ref={this.contactFormRef} onSubmit={this.handleSubmit} id="contact-form" className="contact-form" >
               <div className='contact-form-field-wrapper'>
               <input type='text' ref='name' field="name" id="name" name='name' placeholder='Name' required />
               </div>
@@ -155,19 +157,21 @@ class ContactForm extends React.Component {
               <Button type='submit' className='contact-form-submit' buttonText={ this.state.loading === false ? 'Send' : <ClipLoader color={'#ffffff'} loading={ this.state.loading } /> }/>
 
           </form>
-          <ReactModal 
-                isOpen={ this.state.showModal }
-                contentLabel='confirmation - contact form sucessfully submitted'
-                onRequestClose={ this.handleCloseModal }
-                className='modal'
-                overlayClassName='backdrop'>
+          <ReactModal
+            ref={this.modalRef}
+            appElement={document.body}
+            isOpen={ this.state.showModal }
+            contentLabel='confirmation - contact form sucessfully submitted'
+            onRequestClose={ this.handleCloseModal }
+            className='modal'
+            overlayClassName='backdrop'>
 
-                <Cta heading='Thank You!'>
-                    <p>Your message has been sent successfully. We will be in contact soon.</p>
-                    <button onClick={ this.handleCloseModal } className='all-caps'>Ok</button>
-                </Cta>
+            <Cta heading='Thank You!'>
+                <p>Your message has been sent successfully. We will be in contact soon.</p>
+                <button onClick={ this.handleCloseModal } className='all-caps'>Ok</button>
+            </Cta>
 
-            </ReactModal>
+          </ReactModal>
         </React.Fragment>
       )
     }
