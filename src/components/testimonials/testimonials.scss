@@ -57,14 +57,14 @@ $testimonials-text-color: #222222;
 
             .testimonial-content {
                 margin: 0 auto;
-                color: $testimonials-text-color;
-                font-size: 1.5rem;
-                font-style: italic;
-                font-weight: 300;
-                line-height: 36px;
-                text-align: center;
                 @include desktop {
-                    width: 52%;
+                    width: 644px;
+                    color: #222222;
+                    font-size: 1.5rem;
+                    font-style: italic;
+                    font-weight: 300;
+                    line-height: 36px;
+                    text-align: center;
                 }
                 @include tablet {
                     width: auto;
@@ -117,7 +117,9 @@ $testimonials-text-color: #222222;
                 hr {
                     position: relative;
                     @include desktop {
-                        left: 52%;
+                        left: 51.5%;
+                        width: 60px;
+                        height: 2px;
                     }
                     @include tablet {
                         left: 0;
@@ -130,7 +132,7 @@ $testimonials-text-color: #222222;
                 .testimonial-author {
                     color: $testimonials-text-color;
                     font-size: 1.25rem;
-                    font-weight: 500;
+                    font-weight: bold;
                     line-height: 24px;
                     @include desktop {
                         margin-top: 1em;
