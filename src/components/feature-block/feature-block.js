@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-static'
-import Arrow from '../../../public/assets/images/icons/arrow_white.png'
 import InstantImage from '../instant-image/instant-image'
 
 import './feature-block.scss'
@@ -25,7 +24,12 @@ const ImageFeatureBlock = (feature) => (
 
             <p className='feature-block-project-description'>{ feature.caseStudy.featureBlockProjectDesc }</p>
 
-            <Link to={`/portfolio/${ feature.caseStudy.slug }/`} className='all-caps'>View the case study <img src={ Arrow } alt='Link to case studies' /></Link>
+            <Link to={`/portfolio/${ feature.caseStudy.slug }/`}>View the case study 
+                <picture className='header-logo'>
+                    <source srcSet='/assets/images/icons/ic_arrow_white@2x.png 2x' />
+                    <img alt='Link to case studies' src='/assets/images/icons/arrow_white.png' />
+                </picture>
+            </Link>
 
         </div>
 
