@@ -13,18 +13,8 @@ $testimonials-text-color: #222222;
     justify-content: center;
     align-items: center;
     width: 100%;
-    
-    @include desktop {
-        margin: 0 auto;
-    }
-    @include tablet {
-        margin: 0 auto;
-    }
-    @include phone {
-        margin: 0 auto;
-    }
+    margin: 0 auto;
 
-    
     .cta-wrapper {
 
         & > h2 + hr {
@@ -41,21 +31,35 @@ $testimonials-text-color: #222222;
 
         .slick-slider {
             margin: 0 auto;
-            
-            @include tablet {
-                width: 65%;
+            @media (min-width: 768px) {
+               width: 100%;
+
             }
-            @include phone {
+            // @include tablet {
+            // }
+            @media (max-width: 767px) {
                 width: 100%;
             }
             & > .slick-list {
                 overflow: visible;
 
+                & > .slick-track > .slick-slide > div {
+                    position: relative;
+                    margin: 0 auto;
+                    height: 238px;
+                    @media (max-width: 767px) {
+                        max-width: 80%;
+                    }
+                    @media (min-width: 768px) {
+                        max-width: 644px;
+                    }
+                }
+
                 .testimonial-content {
                     margin: 0 auto;
                     position: relative;
                     overflow: visible;
-                    @include desktop {
+                    @media (min-width: 768px) {
                         width: 644px;
                         color: #222222;
                         font-size: 1.5rem;
@@ -64,23 +68,23 @@ $testimonials-text-color: #222222;
                         line-height: 36px;
                         text-align: center;
                     }
-                    @include tablet {
-                        width: auto;
-                    }
-                    @include phone {
+                    // @include tablet {
+                    //     width: auto;
+                    // }
+                    @media (max-width: 767px) {
                         font-size: 1rem;
                         font-style: italic;
                         font-weight: 300;
                         line-height: 24px;
                         text-align: center;
                         margin: 0 auto;
-                        width: 80%;
+                        // width: 80%;
                     }
                     &::before {
                         content: url('/assets/images/icons/sym-open-quote-optimized.svg');
                         z-index: 100;
                         position: absolute;
-                        @include desktop {
+                        @media (min-width: 768px) {
                             top: -40px;
                             left: -65px;
                             width: 56px;
@@ -91,28 +95,32 @@ $testimonials-text-color: #222222;
                         //     left: 0;
                         //     // font-size: 400%;
                         // }
-                        @include phone {
-                            left: 46%;
+                        @media (max-width: 767px) {
+                            left: 47.5%;
                             top: -43px;
                             height: 24px;
                             width: 29px;
                         }
+                        @media (max-width: 600px) {
+                            left: 45%;
+                        }
                     }
                 }
                 .quote-author-wrapper {
-                    position: relative;
-                    @include desktop {
-                        left: 65%;
+                    @media (min-width: 768px) {
+                        position: absolute;
+                        right: -7px;
                         margin-top: 60px;
                     }
-                    @include tablet {
-                        left: 0;
+                    // @media (max-width: 1200px) {
+                    //     right: 38.5vw;
+                    //     margin-top: 60px;
+                    // }
+                    @media (max-width: 767px) {
+                        position: relative;
                         text-align: center;
-                    }
-                    @include phone {
-                        left: 0;
-                        text-align: center;
-                        margin-top: 35px;
+                        // margin-top: 30px;
+                        margin: 30px auto 0;
                     }
     
                     & > hr {
@@ -122,11 +130,12 @@ $testimonials-text-color: #222222;
                         box-sizing: border-box;
                         border: 2px solid #36CD1D;
                         @media (min-width: 768px) {
-                            left: 52.4%;
+                            position: absolute;
+                            top: -25px;
+                            left: 0;
                             margin-bottom: 1em;
                         }
                         @media (max-width: 767px) {
-                            left: 0;
                             margin-bottom: 15px;
                         }
                     }
@@ -136,8 +145,8 @@ $testimonials-text-color: #222222;
                         font-size: 1.5rem;
                         font-weight: bold;
                         line-height: 24px;
-                        @include desktop {
-                            margin-top: 1em;
+                        @media (min-width: 768px) {
+                            // margin-top: 1em;
                         }
                         @include phone {
                             // margin-top: 0.5em;
