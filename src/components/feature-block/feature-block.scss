@@ -86,6 +86,8 @@ $featureblocks-link-color: $white;
         & > a {
             color: $featureblocks-link-color;
             text-decoration: none;
+            text-transform: uppercase;
+            
             @media (max-width: 767px) {
                 font-size: 0.8125rem;
                 letter-spacing: 4.06px;
