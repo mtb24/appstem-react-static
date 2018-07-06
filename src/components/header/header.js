@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-static'
-import InstantImage from '../instant-image/instant-image'
 import { HeaderNav } from '../nav/nav'
-import Logo from '../../../public/assets/images/icons/Appstem-Logo_green.png'
 import './header.scss'
 
 
@@ -77,7 +75,10 @@ class Header extends React.Component {
                 <div className='header-max'>
 
                     <Link to="/">
-                        <InstantImage className='header-logo' imageSrcs={ Logo } alt='Appstem company logo' />
+                        <picture className='header-logo'>
+                            <source srcSet='/assets/images/icons/ic-appstem-logo@2x.png 2x, /assets/images/icons/ic-appstem-logo@3x.png 3x' />
+                            <img alt='Appstem company logo' src='/assets/images/icons/ic-appstem-logo.png' />
+                        </picture>
                     </Link>
 
                     <label htmlFor='nav-toggle' className='nav-toggle-label'><span></span></label>
