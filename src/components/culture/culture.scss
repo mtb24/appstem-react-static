@@ -212,33 +212,3 @@ $testimonials-H2-color: #1B252F;
 
     }
 }
-.testimonials-wrapper {
-    background: $white;
-    margin-top: -7%;
-    @include phone {
-        padding-bottom: 2rem;
-    }
-
-    & > .culture-testimonials {
-        background: inherit;
-        padding: 10% 0;
-
-        & h2 {
-            color: $testimonials-H2-color;
-            font-size: 2rem;
-            font-weight: normal;
-            letter-spacing: 6.4px;
-            line-height: 46px;
-            text-align: center;
-            margin-top: 3em;
-    
-            @include phone {
-                font-size: 1.25rem;
-                letter-spacing: 3.33px;
-                line-height: 29px;
-                margin-top: 110px;
-            }
-        }
-        
-    }
-}
