@@ -1,214 +1,321 @@
 @import "~video-react/styles/scss/video-react";
 @import '../../styles/styles.scss';
 
-// Culture page
-$services-page-p-color: $secondary-font-color;
-$testimonials-H2-color: #1B252F;
-
 .culture {
-    color: $primary-font-color;
-    background-color: $primary-background-color;
-    @media (min-width: 768px) {
-        padding-top: 5em;
-    }
-
-    & .culture-who-we-are {
-        
-        @include phone {
-            margin-bottom: 0;
-        }
-        & hr {
-            margin-bottom: 53px;
-        }
-
-        p {
-            color: $services-page-p-color;
-            font-size: 1.75rem;
-            line-height: 42px;
-            margin: 0 auto;
+    color: #fafafa;
+    background-color: #1e1e1e;
+    margin-top: -7%;
     
-            // if sibling p's, add margin
-            &:nth-of-type(2) {
-                margin-top: 2em;
-            }
-            @include desktop {
-                width: 65%;
-                // width: 780px;
-                color: #E7E7E7;
-                font-family: "Brandon Grotesque";
-                font-size: 1.75rem;
-                line-height: 42px;
-            }
-            @include tablet {
-                width: 65%;
-            }
-            @include phone {
-                width: 85%;
-                font-size: 1rem;
-                line-height: 24px;
-            }
-        }
-    }
-
-    & .video-react {
+    & > .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        max-width: 960px;
-        margin: 0 auto;
-        
-        @include tablet {
-            margin: 124px auto 124px auto;
+        position: relative;
+        max-width: 1200px;
+        @media (max-width: 767px) {
+            margin-top: 60px;
         }
-        @include phone {
-            margin-top: 85px;
-        }
-        .video-react-poster {
-            background-color: #1e1e1e;
-        }
-    }
-
-    & .culture-work-as-team {
-        @media (max-width: 767px) {}
-        @media (min-width: 768px) {}
-        
-        @include phone {
-            margin-top: 85px;
+        @media (min-width: 768px) {
+            margin-top: 260px;
         }
 
-        & hr {
-            margin-bottom: 80px;
-        }
-        
-        p {
-            color: $services-page-p-color;
-            margin: 0 auto;
-
-            // if there are sibling p's, add margin
-            &:nth-of-type(2) {
-                margin-top: 2em;
+        & > .culture-who-we-are {
+            @media (max-width: 767px) {
+                margin-bottom: 0;
             }
-            @include desktop {
-                width: 65%;
-                // width: 780px;
-                font-size: 1.5rem;
-                line-height: 42px;
-            }
-            @include tablet {
-                font-size: 1.5rem;
-                line-height: 42px;
-                width: 65%;
-            }
-            @include phone {
-                font-size: 1rem;
-                line-height: 24px;
-                width: 85%;
-            }
-        }
-    }
 
-    & .culture-our-team {
-        @include desktop {
-            margin: 15em 0 5em 0;
-        }
-        @include tablet {
-            margin-top: 7em;
-        }
-        @include phone {
-            margin-top: 78px;
-            width: 95%;
-        }
-
-        & hr {
-            margin-bottom: 121px;
-        }
-
-        .culture-team-images {
-            width: 100%;
-            margin: 0 auto;
-            display: grid;
-            justify-items: center;
-
-            @include phone {
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 1em;
-                margin-top: 34px;
-
-                .imagebox-wrapper:last-of-type {
-                    grid-column: -3 / span 2;
-                    width: 47.5%;
-                }
-
-            }
-            @include tablet {
-                grid-template-columns: repeat(4,1fr);
-                grid-gap: 1em;
-
-                .imagebox-wrapper {
-                    margin-bottom: 3em;
-                }
-                .imagebox-wrapper:nth-of-type(5),
-                .imagebox-wrapper:nth-of-type(6),
-                .imagebox-wrapper:nth-of-type(7) {
-                    position: relative;
-                    left: 14vw;
-                }
-            }
-            @include desktop {
-                grid-gap: 2em;
-                grid-template-columns: repeat(24, 1fr);
-                
-                .imagebox-wrapper {
-                    grid-column: span 6;
-                    margin-bottom: 5em;
-                }
-                .imagebox-wrapper:nth-of-type(1) {
-                    grid-column-start: 0;
-                }
-                .imagebox-wrapper:nth-of-type(2) {
-                    grid-column-end: 13;
-                }
-                .imagebox-wrapper:nth-of-type(3) {
-                    grid-column-end: 19;
-                }
-                .imagebox-wrapper:nth-of-type(4) {
-                    grid-column-end: 25;
-                }
-                .imagebox-wrapper:nth-last-of-type(3) {
-                    grid-column-end: 10;
-                }
+            & > h2 {
+                color: #ffffff;
             }
             
-        }
-    }
-    & .culture-join-us {
-        padding: 5em 0 20em 0;
-        text-align: center;
-        @include phone {
-            padding: 5em 0 15em 0;
-        }
-        & > h2 {}
-        & > hr {
-            margin-bottom: 67px;
-        }
-        & > p {
-            width: 549px;
-            margin: 0 auto;
-            
-            @include desktop {
-                width: 549px;
-                font-size: 1.5rem;
-                line-height: 42px;
-                text-align: center;
+            & > hr {
+                box-sizing: border-box;
+                @media (max-width: 767px) {
+                    margin-top: 15px;
+                    margin-bottom: 38.5px;
+                    height: 3px;
+                    width: 43px;
+                    border: 1px solid #3CD52E;
+                }
+                @media (min-width: 768px) {
+                    margin-top: 20px;
+                    margin-bottom: 52px;
+                    width: 102.38px;
+                }
             }
-            @include phone {
-                width: 260px;
-                padding: 0px;
+    
+            & > p {
+                color: #e7e7e7;
                 margin: 0 auto;
-                text-align: center;
+        
+                // if sibling p's, add margin
+                &:nth-of-type(2) {
+                    margin-top: 2em;
+                }
+                @media (max-width: 767px) {
+                    width: 81.87%;
+                    font-size: 1rem;
+                    line-height: 24px;
+                }
+                @media (min-width: 768px) {
+                    width: 65%;
+                    font-size: 1.75rem;
+                    line-height: 42px;
+                }
             }
         }
-        & > .view-openings-link {
-            top: 8em;
+    
+        & > .video-react {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            
+            // @include tablet {
+            //     margin: 124px auto 124px auto;
+            // }
+            @media (max-width: 767px) {
+                margin-top: 38px;
+            }
+            @media (min-width: 768px) {
+                margin-top: 56px;
+            }
+            & > .video-react-poster {
+                background-color: #1e1e1e;
+            }
         }
+    
+        & > .culture-work-as-team {
+            @media (max-width: 767px) {
+                margin-top: 55px;
+            }
+            @media (min-width: 768px) {}
+    
+            & > h2 {
+                color: #ffffff;
+                @media (max-width: 767px) {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    line-height: 34px;
+                    text-align: center;
+                }
+                @media (min-width: 768px) {
+                    margin-top: 166px;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    letter-spacing: 6.4px;
+                    line-height: 46px;
+                    text-align: center;
+                }
+            }
+            & > hr {
+                box-sizing: border-box;
+                @media (max-width: 767px) {
+                    margin-top: 13px;
+                    margin-bottom: 23px;
+                    height: 3px;
+                    width: 43px;
+                    border: 1px solid #3CD52E;
+                }
+                @media (min-width: 768px) {
+                    height: 2px;
+                    width: 102.38px;
+                    border: 2px solid #3CD52E;
+                    margin-bottom: 77px;
+                }
+            }
+            
+            & > p {
+                color: #FFFFFF;
+                margin: 0 auto;
+    
+                // if there are sibling p's, add margin
+                &:nth-of-type(2) {
+                    margin-top: 2em;
+                }
+                @media (max-width: 767px) {
+                    font-size: 1rem;
+                    line-height: 24px;
+                    width: 81.87%;
+                }
+                @media (min-width: 768px) {
+                    width: 54.17%;
+                    font-size: 1.5rem;
+                    line-height: 42px;
+                }
+                // @include tablet {
+                //     font-size: 1.5rem;
+                //     line-height: 42px;
+                //     width: 65%;
+                // }
+            }
+        }
+    
+        & > .culture-our-team {
+            // @include tablet {
+            //     margin-top: 7em;
+            // }
+            @media (max-width: 767px) {
+                margin-top: 78px;
+            }
+            @media (min-width: 768px) {
+                margin: 15em 0 5em 0;
+            }
 
+            & > h2 {
+                color: #ffffff;
+                @media (max-width: 767px) {}
+                @media (min-width: 768px) {}
+            }
+    
+            & > hr {
+                box-sizing: border-box;
+                @media (max-width: 767px) {
+                    height: 3px;
+                    width: 43px;
+                    border: 1px solid #3CD52E;
+                    margin-top: 20px;
+                }
+                @media (min-width: 768px) {
+                    width: 154.88px;
+                    height: 2px;
+                    border: 2px solid #3CD52E;
+                    margin-bottom: 121px;
+                }
+            }
+    
+            & > .culture-team-images {
+                width: 100%;
+                margin: 0 auto;
+                display: grid;
+                justify-items: center;
+    
+                @media (max-width: 767px) {
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1em;
+                    margin-top: 34px;
+    
+                    & > .imagebox-wrapper:last-of-type {
+                        grid-column: -3 / span 2;
+                        width: 47.5%;
+                    }
+    
+                }
+                // @include tablet {
+                //     grid-template-columns: repeat(4,1fr);
+                //     grid-gap: 1em;
+    
+                //     & > .imagebox-wrapper {
+                //         margin-bottom: 3em;
+                //     }
+                //     & > .imagebox-wrapper:nth-of-type(5),
+                //     & > .imagebox-wrapper:nth-of-type(6),
+                //     & > .imagebox-wrapper:nth-of-type(7) {
+                //         position: relative;
+                //         left: 14vw;
+                //     }
+                // }
+                @media (min-width: 768px) {
+                    grid-gap: 2em;
+                    grid-template-columns: repeat(24, 1fr);
+                    
+                    & > .imagebox-wrapper {
+                        grid-column: span 6;
+                        margin-bottom: 5em;
+                    }
+                    & > .imagebox-wrapper:nth-of-type(1) {
+                        grid-column-start: 0;
+                    }
+                    & > .imagebox-wrapper:nth-of-type(2) {
+                        grid-column-end: 13;
+                    }
+                    & > .imagebox-wrapper:nth-of-type(3) {
+                        grid-column-end: 19;
+                    }
+                    & > .imagebox-wrapper:nth-of-type(4) {
+                        grid-column-end: 25;
+                    }
+                    & > .imagebox-wrapper:nth-last-of-type(3) {
+                        grid-column-end: 10;
+                    }
+                }
+                
+            }
+        }
+        & > .culture-join-us-wrapper {
+            background-color: rgba(0,0,0,0.25);
+            
+            & > .culture-join-us {
+                text-align: center;
+                @media (max-width: 767px) {
+                    margin-top: 114px;
+                }
+                @media (min-width: 768px) {
+                    margin-top: 226px;
+                }
+
+                & > h2 {
+                    color: #ffffff;
+                    @media (max-width: 767px) {
+                        font-size: 1.25rem;
+                        font-weight: bold;
+                        letter-spacing: 4px;
+                        line-height: 29px;
+                        text-align: center;
+                    }
+                }
+                & > hr {
+                    box-sizing: border-box;
+                    @media (max-width: 767px) {
+                        height: 2px;
+                        width: 31px;
+                        border: 1px solid #3CD52E;
+                        margin-top: 15px;
+                        margin-bottom: 39px;
+                    }
+                    @media (min-width: 768px) {
+                        height: 2px;
+                        width: 154.88px;
+                        border: 2px solid #3CD52E;
+                        margin-bottom: 67px;
+                    }
+                }
+                & > p {
+                    color: #ffffff;
+                    @media (max-width: 767px) {
+                        width: 69.33%;
+                        font-size: 1rem;
+                        line-height: 24px;
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                    @media (min-width: 768px) {
+                        width: 549px;
+                        font-size: 1.5rem;
+                        line-height: 42px;
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                }
+                & > .view-openings-link {
+                    @media (max-width: 767px) {
+                        margin-top: 81px;
+                        margin-bottom: 131px;
+                        padding: 20px 50px;
+                    }
+                    @media (min-width: 768px) {
+                        padding: 27px 106px;
+                        border: 1px solid #B3B3B3;
+                        margin-top: 127px;
+                        margin-bottom: 218.26px;
+                    }
+                }
+        
+            }
+        }
     }
+}
+.testimonials-wrapper {
+    margin-top: -7%;
 }
