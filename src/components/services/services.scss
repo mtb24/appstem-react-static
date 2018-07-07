@@ -1,119 +1,133 @@
-@import '../../styles/styles.scss';
-
-// Services page
-$services-page-heading-color: $white;
-$services-page-p-color: $secondary-font-color;
-$services-page-block-p-color: $white;
-$services-page-exertise-heading-color: #1B252F;
-$services-page-exertise-block-color: #4a4a4a;
-$services-page-exertise-block-color-mobile: #9B9B9B;
-$services-page-exertise-project-type-color: #cccccc;
-$services-page-exertise-project-type-color-mobile: #4A4A4A;
-$services-page-see-what-we-made-block-color: #0E0E0E;
 
 .services {
-    color: $primary-font-color;
-    background: $primary-background-color;
+    color: #fafafa;
+    background: #1e1e1e;
     margin-top: -7.2%;
     z-index: -1;
 
-    .what-we-do {
+    & > .content-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        position: relative;
+        max-width: 1200px;
 
-        & > h2 {
-            color: #FFFFFF;
+        @media (max-width: 767px) {
+            margin-top: 88px;
+            margin-bottom: 140px;
         }
-        p {
-            @media (max-width: 767px) {
-                color: #ffffff;
-                width: 81%;
-                font-size: 1rem;
-                line-height: 24px;
-            }
-            @media (min-width: 768px) {
-                color: #e7e7e7;
-                width: 65%;
-                font-size: 1.125rem;
-                line-height: 36px;
-            }
-            
-            @include phone {
-                width: 81%;
-                text-align: left;
-                font-size: 1rem;
-                line-height: 24px;
-                margin-top: 32px;
-                margin-bottom: 76px;
-            }
+        @media (min-width: 768px) {
+            margin-top: 335px;
+            margin-bottom: 350px;
         }
 
-        .services-block {
+        & > .what-we-do {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 10em;
-            
-            @include tablet {
-                margin: 3rem auto;
+            width: 100%;
+    
+            & > h2 {
+                color: #FFFFFF;
             }
-            @include phone {
-                flex-direction: column;
-            }
-
-            img {
-                height: 85px;
-                width: 85px;
-                margin-right: 111px;
-                @include phone {
-                    margin-right: 0;
-                    height: 60px;
-                    width: 50px;
+            & > hr {
+                @media (max-width: 767px) {
+                    margin-top: 12px;
+                    height: 2px;
+                    width: 43px;
+                    border: 1.5px solid #3CD52E;
+                }
+                @media (min-width: 768px) {
+                    margin-top: 40px;
                 }
             }
-            .services-block-text {
-                margin-top: 25px;
-                
-                h2 {
-                    font-size: 2.188rem;
-                    font-weight: normal;
-                    letter-spacing: 7px;
-                    line-height: 50px;
-                    text-align: left;
-                    @include phone {
-                        font-size: 1.125rem;
-                        letter-spacing: 3.6px;
-                        line-height: 50px;
-                        text-align: center;
-                    }
-                }
-                p {
-                    height: 72px;
-                    width: 483px;
-                    color: $services-page-block-p-color;
+            & > p {
+                text-align: center;
+                @media (max-width: 767px) {
+                    color: #ffffff;
+                    width: 81.87%;
                     font-size: 1rem;
                     line-height: 24px;
-                    @include phone {
-                        font-size: 1rem;
-                        line-height: 24px;
-                        text-align: center;
-                        width: 89%;
-                        margin: 0 auto;
+                }
+                @media (min-width: 768px) {
+                    color: #e7e7e7;
+                    width: 65%;
+                    font-size: 1.125rem;
+                    line-height: 36px;
+                    margin-top: 82px;
+                }
+            }
+            & > .services-block {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                    margin-top: 76px;
+                }
+                @media (min-width: 768px) {
+                    margin-top: 250px;
+                    width: 55%;
+                }
+    
+                & > img {
+                    @media (max-width: 767px) {
+                        margin-right: 0;
+                        height: 60px;
+                        width: 60px;
+                    }
+                    @media (min-width: 768px) {
+                        height: 85px;
+                        width: 85px;
+                        margin-right: 70px;
+                    }
+                }
+                & > .services-block-text {
+                    
+                    & > h2 {
+                        @media (max-width: 767px) {
+                            font-size: 1.125rem;
+                            font-weight: bold;
+                            letter-spacing: 3.6px;
+                            line-height: 50px;
+                            text-align: center;
+                        }
+                        @media (min-width: 768px) {
+                            color: #FFFFFF;
+                            font-size: 2.188rem;
+                            font-weight: bold;
+                            letter-spacing: 7px;
+                            line-height: 50px;
+                        }
+                    }
+                    & > p {
+                        @media (max-width: 767px) {
+                            font-size: 1rem;
+                            color: #ffffff;
+                            line-height: 24px;
+                            text-align: center;
+                            width: 84.8%;
+                            margin: 0 auto;
+                        }
+                        @media (min-width: 768px) {
+                            color: #FFFFFF;
+                            font-size: 1rem;
+                            line-height: 24px;
+                        }
                     }
                 }
             }
-
         }
     }
 }
 .expertise {
-    background: $secondary-background-color;
+    background: #fafafa;
     margin-top: -7.2%;
 
-    .our-expertise {
-        background: $secondary-background-color;
+    & > .our-expertise {
+        background: #fafafa;
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
@@ -121,115 +135,136 @@ $services-page-see-what-we-made-block-color: #0E0E0E;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1em;
         justify-items: center;
-        padding: 10em 0;
         
-        @include phone {
+        @media (max-width: 767px) {
             width: 100%;
             display: flex;
             flex-direction: column;
-            padding: 4em 0;
+            margin-top: 109px;
+            margin-bottom: 70px;
+        }
+        @media (min-width: 768px) {
+            padding: 209px 0 207px;
         }
         
-        h2 {
-            color: $services-page-exertise-block-color;
+        & > h2 {
+            color: #4a4a4a;
             font-size: 2rem;
             font-weight: bold;
             letter-spacing: 6.4px;
             line-height: 46px;
             grid-column: span 2;
             
-            @include phone {
+            @media (max-width: 767px) {
                 font-size: 1.25rem;
                 letter-spacing: 4px;
                 line-height: 29px;
                 text-align: center;
             }
+            @media (min-width: 768px) {
+                color: #1B252F;
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: 6.4px;
+                line-height: 46px;
+                text-align: center;
+            }
         }
-        hr {
+        & > hr {
             grid-column: span 2;
+            @media (max-width: 767px) {
+                width: 31px;
+                height: 2px;
+                border: 1px solid #3CD52E;
+            }
+            @media (min-width: 768px) {
+                margin-top: 0;
+                margin-bottom: 130px;
+            }
         }
 
-        .expertise-block {
-            color: $services-page-exertise-block-color;
-            font-size: 2.188rem;
-            font-weight: normal;
-            letter-spacing: 7px;
-            line-height: 50px;
+        & > .expertise-block {
             text-align: center;
-            width: 10em;
-            @include phone {
-                width: 89%;
-                margin: 1rem auto;
+            @media (max-width: 767px) {
+                width: 77.87%;
+                margin-top: 60px;
             }
-            h2 {
-                @include phone {
+            @media (min-width: 768px) {
+                font-size: 2.188rem;
+                font-weight: normal;
+                letter-spacing: 7px;
+                line-height: 50px;
+                width: 10em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
+                    margin-top: 207px;
+                }
+            }
+            & > h2 {
+                @media (max-width: 767px) {
                     font-size: 1.125rem;
                     letter-spacing: 3.6px;
                     line-height: 50px;
+                    margin: 0;
+                }
+                @media (min-width: 768px) {
+                    color: #4A4A4A;
+                    font-size: 2.188rem;
+                    font-weight: bold;
+                    letter-spacing: 7px;
+                    line-height: 50px;
+                    text-align: center;
+                    margin: 0;
                 }
             }
 
-            p.description {
-                color: $services-page-exertise-block-color;
-                font-size: 1.125rem;
-                letter-spacing: 0.5px;
-                line-height: 30px;
-                text-align: center;
-                @include phone {
+            & > p.description {
+                @media (max-width: 767px) {
                     font-size: 1rem;
-                    color: $services-page-exertise-block-color-mobile;
+                    color: #9B9B9B;
                     letter-spacing: 0.44px;
                     line-height: 30px;
+                    text-align: center;
+                    margin-top: 0;
+                    // text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+                }
+                @media (min-width: 768px) {
+                    color: #4A4A4A;
+                    font-size: 1.125rem;
+                    letter-spacing: 0.5px;
+                    line-height: 30px;
+                    text-align: center;
+                    // text-shadow: 0 2px 4px rgba(0,0,0,0.5);
                 }
             }
-            p.project-type {
-                color: $services-page-exertise-project-type-color;
-                font-size: 1.125rem;
-                font-weight: 500;
-                letter-spacing: 0.5px;
-                line-height: 30px;
-                text-align: center;
-                text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-                @include phone {
+            & > p.project-type {
+                @media (max-width: 767px) {
                     font-size: 1rem;
                     font-weight: 500;
-                    color: $services-page-exertise-project-type-color-mobile;
+                    color: #4A4A4A;
                     letter-spacing: 0.44px;
                     line-height: 30px;
+                    text-align: center;
+                    // text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+                }
+                @media (min-width: 768px) {
+                    height: 60px;
+                    width: 427px;
+                    color: #CCCCCC;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                    line-height: 30px;
+                    text-align: center;
+                    margin-top: 1.5em;
+                    // text-shadow: 0 2px 4px rgba(0,0,0,0.5);
                 }
             }
         }
     }
-}
-
-.last-section {
-    background: $services-page-see-what-we-made-block-color;
-
-    @include phone {
-        display: none;
-    }
-    .see-what-we-made {
-        height: 580px;
-        max-width: 1200px;
-        background-color: $services-page-see-what-we-made-block-color;
-        color: $white;
-        font-size: 2.188rem;
-        font-weight: normal;
-        letter-spacing: 7px;
-        line-height: 50px;
-        
-        & > a:first-of-type {
-            text-align: left;
-        }
-        & > a:nth-of-type(3) {
-            text-align: right;
-        }
-    }
-}
-// hack
-.footer {
-    margin-top: -2rem;
-}
-.footer-body > .nav-wrapper {
-    z-index: 1;
 }
