@@ -1,153 +1,203 @@
-@import '../../styles/styles.scss';
-
-// Forms
-$form-heading-color: #1B252F;
-$form-active-border-color: $appstem-green;
-$form-inactive-border-color: #A29E9E;
-$form-text-color-mobile: #4A4A4A;
 
 .contact {
-    color: $third-font-color;
-    background: $secondary-background-color;
+    color: #1e1e1e;
+    background: #fafafa;
+    @media (max-width: 767px) {
+        margin-top: -7%;
+    }
     @media (min-width: 768px) {
         margin-top: -7.2%;
     }
-    @include phone {
-        padding-top: 5em;
-        margin-top: -7%;
-    }
-    
-    .cta-wrapper {
 
-        h2 {
-            @include phone {
-                font-size: 1.25rem;
-                line-height: 29px;
-                letter-spacing: 4px;
+    & > .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        max-width: 1200px;
+        @media (max-width: 767px) {
+            margin-top: 60px;
+        }
+        @media (min-width: 768px) {
+            margin-top: 215px;
+        }
+        
+        & > .cta-wrapper {
+
+            & > h2 {
+                @media (max-width: 767px) {
+                    color: #1E1E1E;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    line-height: 34px;
+                    text-align: center;
+                    margin: 0;
+                }
+                @media (min-width: 768px) {
+                    color: #1B252F;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    letter-spacing: 6.4px;
+                    line-height: 46px;
+                    text-align: center;
+                }
             }
+            & > hr {}
         }
-    }
-
-    #contact-form {
-        width: 80%;
-        max-width: 800px;
-        margin-top: 7em;
-        @include phone {
-            margin-top: 3rem;
-        }
-
-        .contact-form-field-wrapper {
-            width: 100%;
-            margin-bottom: 6.5em;
-            text-align: left;
+    
+        & > #contact-form {
             
-            // label {
-            //     position: relative;
-            //     top: -45px;
-            //     left: 5px;
-            //     color: $form-inactive-border-color;
-            //     font-size: 1rem;
-            //     letter-spacing: 2px;
-            //     line-height: 23px;
-            //     transition: all .2s linear;
-
-            //     @include phone {
-            //         color: $form-text-color-mobile;
-            //         font-size: 0.875rem;
-            //         letter-spacing: 1.75px;
-            //         line-height: 20px;
-            //     }
-
-            //     label.has-value {
-            //         // force label to stay in elevated position if input has a value
-            //         top: -45px;
-            //     }
-            // }
-            input {
+            @media (max-width: 767px) {
+                margin-top: 3rem;
+                width: 80.27%;
+            }
+            @media (min-width: 768px) {
+                width: 66.25%;
+                max-width: 800px;
+                margin-top: 7em;
+            }
+    
+            .contact-form-field-wrapper {
                 width: 100%;
-                border: none;
-                border-bottom: 1px solid $form-inactive-border-color;
-                background-color: inherit;
-                color: $form-inactive-border-color;
-                font-size: 1rem;
-                letter-spacing: 2px;
-                line-height: 23px;
+                margin-bottom: 6.5em;
+                text-align: left;
+                @media (max-width: 767px) {
+                    margin-bottom: 50px;
+                }
                 
-                // &:focus + label {
-                //     /* transform: scale(0.5) translate(-50%, -50%); */
-                //     color: $appstem-green;
+                // label {
+                //     position: relative;
                 //     top: -45px;
-                //     font-size: 0.75em;
+                //     left: 5px;
+                //     color: #A29E9E;
+                //     font-size: 1rem;
+                //     letter-spacing: 2px;
+                //     line-height: 23px;
+                //     transition: all .2s linear;
+    
+                //     @media (max-width: 767px) {
+                //         color: #4A4A4A;
+                //         font-size: 0.875rem;
+                //         letter-spacing: 1.75px;
+                //         line-height: 20px;
+                //     }
+    
+                //     label.has-value {
+                //         // force label to stay in elevated position if input has a value
+                //         top: -45px;
+                //     }
                 // }
-                &:focus,
-                textarea:focus {
-                    border-bottom: 1px solid $form-active-border-color;
-                    outline: none;
+                input {
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid #A29E9E;
+                    background-color: inherit;
+                    color: #A29E9E;
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                    line-height: 23px;
+                    text-transform: uppercase;
+                    @media (max-width: 767px) {
+                        color: #4A4A4A;
+                        font-size: 0.875rem;
+                        letter-spacing: 1.75px;
+                        line-height: 20px;
+                    }
+                    
+                    // &:focus + label {
+                    //     /* transform: scale(0.5) translate(-50%, -50%); */
+                    //     color: $appstem-green;
+                    //     top: -45px;
+                    //     font-size: 0.75em;
+                    // }
+                    &:focus,
+                    textarea:focus {
+                        border-bottom: 1px solid #3cd52e;
+                        outline: none;
+                    }
+                }
+            }
+        
+            .contact-form-submit {
+                @media (max-width: 767px) {
+                    margin-top: 40px;
+                }
+                @media (min-width: 768px) {
+                    margin-top: 2em;
+                }
+                &:hover {
+                    cursor: pointer;
                 }
             }
         }
-    
-        .contact-form-submit {
-            margin-top: 5em;
 
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
-
-
-    .view-openings-wrapper {
-        width: 100%;
-        text-align: center;
-        margin: 220px 0;
-        @include phone {
-            margin: 6rem auto;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: normal;
-            letter-spacing: 6.4px;
-            line-height: 46px;
+        & > .view-openings-wrapper {
+            width: 100%;
             text-align: center;
-            
-            @include phone {
-                font-size: 1.25rem;
+            margin: 220px 0;
+            @media (max-width: 767px) {
+                margin: 6rem auto;
+            }
+    
+            & > h2 {
+                font-size: 2rem;
                 font-weight: bold;
-                letter-spacing: 4px;
-                line-height: 29px;
+                letter-spacing: 6.4px;
+                line-height: 46px;
+                text-align: center;
+                
+                @media (max-width: 767px) {
+                    color: #1E1E1E;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    line-height: 34px;
+                    text-align: center;
+                }
             }
-        }
-        p {
-            margin: 70px 0 80px 0;
-            font-size: 1.25rem;
-            line-height: 40px;
-            @include phone {
-                padding: 0 1em;
-                font-size: 1rem;
-                line-height: 24px;
+            & > p {
+                @media (max-width: 767px) {
+                    font-size: 1rem;
+                    color: #1B252F;
+                    line-height: 24px;
+                    text-align: center;
+                    margin-top: 36px;
+                    margin-bottom: 54px;
+                }
+                @media (min-width: 768px) {
+                    margin: 70px 0 80px 0;
+                    font-size: 1.25rem;
+                    line-height: 40px;
+                }
             }
-        }
-        .openings-link {
-            color: $form-text-color-mobile;
-            font-size: 1rem;
-            letter-spacing: 3.29px;
-            line-height: 24px;
-            text-decoration: none;
-            @include phone {
-                font-size: 0.9375rem;
-                line-height: 3.08px;
+            & > .openings-link {
+                color: #4A4A4A;
+                text-decoration: none;
+                font-weight: bold;
+                @media (max-width: 767px) {
+                    font-size: 0.9375rem;
+                    color: #4A4A4A;
+                    font-weight: bold;
+                    letter-spacing: 3.08px;
+                    line-height: 24px;
+                    text-align: center;
+                }
+                @media (min-width: 768px) {
+                    font-size: 1rem;
+                    letter-spacing: 3.29px;
+                    line-height: 24px;
+                }
+            }
+            & > .openings-link-arrow {
+                color: #4A4A4A;
+                position: relative;
+                top: -2px;
+                left: 5px;
+                font-size: 1em;
                 font-weight: bold;
             }
         }
-        .openings-link-arrow {
-            color: $form-text-color-mobile;
-            position: relative;
-            top: -2px;
-            left: 5px;
-            font-size: 1em;
-        }
-    }
-        
+    }    
 }
