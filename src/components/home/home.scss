@@ -11,8 +11,8 @@ $featureblocks-bg-color: #1C1819;
 
 }
 .section-1 {
-    // background: $featureblocks-bg-color;
-    background: #f8f8f8;
+    background-size: 2rem;
+    background-color: #f8f8f8;
     @media (min-width: 768px) {
         height: 727.5px;
         padding: 3em 0;
@@ -45,6 +45,7 @@ $featureblocks-bg-color: #1C1819;
             margin-top: 3em;
             height: 72px;
             width: 380px;
+            padding: 0;
             display: flex;
             place-content: center;
             place-items: center;
@@ -72,13 +73,6 @@ $featureblocks-bg-color: #1C1819;
     @media (min-width: 768px) {
         margin-top: -7.2%;
     }
-    
-    // @include tablet {
-    //     height: auto;
-    // }
-    // @include phone {
-    //     height: auto;
-    // }
 
     .case-study-1 {
 
@@ -98,10 +92,8 @@ $featureblocks-bg-color: #1C1819;
     }
 }
 .section-3 {
-    // height: 876.28px;
     background: radial-gradient(circle, rgba(62,62,62,0.52) 0%, rgba(12,12,12,0.38) 100%);
     background-color: #1C1819;
-    // top: -257px;
     @media (max-width: 767px) {
         margin-top: -7.2%;
     }
@@ -109,13 +101,6 @@ $featureblocks-bg-color: #1C1819;
         margin-top: -7.2%;
     }
 
-    // @include tablet {
-    //     height: auto;
-    // }
-    // @include phone {
-    //     height: auto;
-    // }
-    
     .case-study-2 {
 
         @include desktop {
@@ -157,7 +142,6 @@ $featureblocks-bg-color: #1C1819;
     flex-direction: column;
     height: 876.28px;
     padding-bottom: 20em;
-    // top: -385px;
     background: radial-gradient(circle, rgba(255,255,255,0.52) 0%, rgba(86,86,86,0.52) 45.07%, rgba(12,12,12,0) 100%);
     background-color: #1C1819;
     @media (max-width: 767px) {
@@ -188,11 +172,11 @@ $featureblocks-bg-color: #1C1819;
                 & > .feature-block-image {
                     position: relative;
                     margin: unset;
-                    margin-right: 0 !important;
+                    left: -100px;
                 }
                 & > .feature-block-details {
                     position: relative;
-                    // left: -6em;
+                    margin-left: 94px;
                 }
             }
         }
@@ -208,36 +192,28 @@ $featureblocks-bg-color: #1C1819;
         display: block;
         margin: 0 auto;
         text-decoration: none;
+        height: 24px;
+        width: 380px;
+        color: #FFFFFF;
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: 3.29px;
+        line-height: 24px;
+        text-align: center;
+        padding: 1.75em 0;
         @include phone {
             margin-bottom: 7em;
         }
     }
 }
 .section-5 {
-    // top: -513px;
-    height: 876.28px;
     background-color: #FFFFFF;
-    padding: 5em 0 4em;
     @media (max-width: 767px) {
         margin-top: -7.2%;
+        padding: 123px 0 100px;
     }
     @media (min-width: 768px) {
         margin-top: -7.2%;
-    }
-
-    @include desktop {
-        // margin-bottom: -30em;
-    }
-    @include phone {
-        height: auto;
-        // margin-bottom: -32em;
-    }
-    @include tablet {
-        height: 725px;
-        // margin-bottom: -32em;
-    }
-    
-    .testimonials-wrapper {
-    
+        padding: 294px 0;
     }
 }
