@@ -3,22 +3,18 @@ import { withRouteData } from 'react-static'
 import Hero from '../hero/hero'
 import Cta from '../layout/page-section/cta'
 import AngledSection from '../layout/page-section/angled-section'
-import SectionLinks from '../nav/section-links/section-links'
-import backgroundImage from '../../../public/assets/images/main-pages/bg_services.jpg'
 import startupImage from '../../../public/assets/images/icons/ic_startup.png'
 import redesignImage from '../../../public/assets/images/icons/ic_redesign.png'
 import revolutionImage from '../../../public/assets/images/icons/ic_revolution.png'
 import './services.scss'
 
-let prevLink = {title: 'See What We Made', slug: '/work'}
-let nextLink = {title: 'Let\'s Get In Touch', slug: '/contact'}
-
 export default withRouteData(({ services }) => (
   <React.Fragment>
 
-    <Hero title='Service' 
-          heroType='image' 
-          backgroundImage={ backgroundImage } 
+    <Hero title='Services'
+          heroType='image'
+          smallImage='/assets/images/main-pages/hdr-sm-services.jpg'
+          largeImage='/assets/images/main-pages/hdr-services.jpg'
           className='angle--bottom-right' />
 
     <AngledSection className='services' mask='angle--bottom-right'>
@@ -94,8 +90,6 @@ export default withRouteData(({ services }) => (
 
       </Cta>
     </AngledSection>
-
-    
 
   </React.Fragment>
 ))

@@ -2,7 +2,6 @@ import React from 'react'
 import { withRouteData, Link } from 'react-static'
 import convert from 'htmr'
 import Hero from '../hero/hero'
-import backgroundImage from '../../../public/assets/images/main-pages/bg_contact_page.jpg'
 import Cta from '../layout/page-section/cta'
 import AngledSection from '../layout/page-section/angled-section'
 import ContactForm from '../forms/contact-form'
@@ -12,8 +11,10 @@ export default withRouteData(({ contact }) => (
   <React.Fragment>    
     <Hero title={ contact.title } 
           heroType='image' 
-          backgroundImage={ backgroundImage } 
+          smallImage='/assets/images/main-pages/hdr-sm-contact.jpg'
+          largeImage='/assets/images/main-pages/hdr-contact.jpg'
           className='angle--bottom-right' />
+          
     <AngledSection className='contact' mask='angle--both-left-right'>
       <div className='content-wrapper'>
 

@@ -1,10 +1,9 @@
 import React from 'react'
-import { withRouteData, Link } from 'react-static'
+import { withRouteData } from 'react-static'
 import Hero from '../hero/hero'
-import backgroundImage from '../../../public/assets/images/main-pages/bg_portfolio.png'
-import './work.scss'
 import FeatureBlock from '../feature-block/feature-block';
 import AngledSection from '../layout/page-section/angled-section'
+import './work.scss'
 
 export default withRouteData(({ work }) => {
   // console.log('work: ', work)
@@ -14,7 +13,8 @@ export default withRouteData(({ work }) => {
 
     <Hero title='Our Work' 
           heroType='image' 
-          backgroundImage={ backgroundImage }
+          smallImage='/assets/images/main-pages/hdr-sm-work.jpg'
+          largeImage='/assets/images/main-pages/hdr-work.jpg'
           className='angle--bottom-right' />
 
     <div className='work angle--top-left'>
