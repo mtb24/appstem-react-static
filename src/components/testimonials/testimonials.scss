@@ -7,13 +7,19 @@ $testimonials-company-color: #A7A7A7;
 $testimonials-text-color: #222222;
 
 .testimonial-slider {
-    background-color: inherit;
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin: 0 auto;
+    @media (max-width: 767px) {
+        padding: 107px 0;
+    }
+    @media (min-width: 768px) {
+        padding: 294px 0;
+    }
 
     .cta-wrapper {
 
