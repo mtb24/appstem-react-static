@@ -1,8 +1,3 @@
-@import '../../styles/styles.scss';
-
-// Footer
-$footerNavHoverColor: $appstem-green;
-$footer-heading-color: $white;
 
 .footer {
     width: 100vw;
@@ -20,7 +15,7 @@ $footer-heading-color: $white;
             padding: 10em 0 5em 0;
             margin: 0 auto;
         }
-        @include phone {
+        @media (max-width: 767px) {
             display: block;
             padding: 7em 0 0 0;
         }
@@ -32,7 +27,7 @@ $footer-heading-color: $white;
                 justify-content: space-between;
                 width: 62.5%;
             }
-            @include phone {
+            @media (max-width: 767px) {
                 flex-direction: column-reverse;
 
             }
@@ -40,7 +35,7 @@ $footer-heading-color: $white;
             & > .footer-address-block-wrapper {
                 text-align: left;
 
-                @include phone {
+                @media (max-width: 767px) {
                     margin-top: 41px;
                     text-align: center;
                     width: 100%;
@@ -51,19 +46,19 @@ $footer-heading-color: $white;
 
                 & > .footer-address-block {
                     margin-bottom: 1em;
-                    @include phone {
+                    @media (max-width: 767px) {
                         margin-bottom: 36px;
                     }
 
                     & > a {
-                        color: $white;
+                        color: #ffffff;
                         opacity: 0.7;
                         font-size: 0.8125rem;
                         line-height: 19px;
                         text-decoration: none;
 
                         &:hover {
-                            color: $footerNavHoverColor;
+                            color: #3cd52e;
                         }
                         
                         & > address {
@@ -72,10 +67,8 @@ $footer-heading-color: $white;
                         }
                     }
                 }
-
                 & > h4.footer-heading {
-                    color: $footer-heading-color;
-                    font-family: $primary-font-family;
+                    color: #ffffff;
                     font-size: 0.8125rem;
                     font-weight: normal;
                     line-height: 19px;
@@ -85,23 +78,16 @@ $footer-heading-color: $white;
                 & > h4.footer-heading:first-of-type {
                     letter-spacing: 3.25px;
                     line-height: 24px;
-                }
-                
+                }   
             }
             
             & > .footer-email-form-wrapper {
-                // grid-area: form;
                 position: relative;
-                // margin-right: 5em;
-                // height: 65px;
                 text-align: left;
                 
-                @include phone {
+                @media (max-width: 767px) {
                     margin: 0 auto;
                     width: 73.33%;
-                }
-                @include tablet {
-                    margin: 0 auto;
                 }
 
                 & > .footer-form-heading {
@@ -112,7 +98,7 @@ $footer-heading-color: $white;
                     line-height: 24px;
                     margin-bottom: 15px;
 
-                    @include phone {
+                    @media (max-width: 767px) {
                         font-size: 0.8125rem;
                         font-weight: normal;
                         letter-spacing: 3.25px;
@@ -121,13 +107,11 @@ $footer-heading-color: $white;
                         margin-bottom: 16px;
                     }
                 }
+                & > .footer-form input {
+                    outline: none;
+                }
                 & > .social-icons-wrapper {
-                    // grid-area: form;
                     position: relative;
-
-                    @include phone {
-                        // grid-area: social;
-                    }
                 }
             }
         }
