@@ -1,8 +1,6 @@
-@import '../../styles/styles.scss';
 
 .footer-form {
     position: relative;
-    // display: grid;
     width: 100%;
 
     .email-input-field {
@@ -11,11 +9,12 @@
         background-color: inherit;
         color: #FFFFFF;
         z-index: 100;
-        @include phone {
+        @media (max-width: 767px) {
             width: 98%;
             opacity: 0.5;
             font-size: 1rem;
             line-height: 23px;
+            height: 48px;
         }
         @media (min-width: 768px) {
             width: 284px;
@@ -29,12 +28,12 @@
     }
     
     label#status {
-        @include phone {
+        @media (max-width: 767px) {
             text-align: center;
         }
     }
     .footer-form-submit-button {
-        background: url('../../../public/assets/images/icons/ic_arrow_green.png');
+        background: url('/assets/images/icons/ic_arrow_green.png');
         background-repeat: no-repeat;
         border: 0;
         display: inline-block;
@@ -43,5 +42,8 @@
         position: absolute;
         right: 0;
         bottom: 0;
+        @media (max-width: 767px) {
+            bottom: 15px;
+        }
     }
 }
