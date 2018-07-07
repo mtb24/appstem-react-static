@@ -3,6 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 767px) {
+        height: 320px;
+    }
+    @media (min-width: 768px) {
+        height: 700px;
+    }
+
 
     & > .title {
         position: absolute;
