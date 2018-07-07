@@ -64,10 +64,12 @@ export default withRouteData(({ culture }) => {
           <div className='culture-team-images'>{ renderedImages }</div>
         </Cta>
         
-        <Cta className='culture-join-us' heading='Join us'>
-          <p>We’ are hiring! If you can’t find what you are looking for, send us an email hello@appstem.com.</p>
-          <LinkOutlined linkTo='/careers' className='view-openings-link'>View Openings</LinkOutlined>
-        </Cta>
+        <AngledSection className='culture-join-us-wrapper' mask='angle--both-left-right'>
+          <Cta className='culture-join-us' heading='Join us'>
+            <p>We’ are hiring! If you can’t find what you are looking for, send us an email hello@appstem.com.</p>
+            <LinkOutlined linkTo='/careers' className='view-openings-link'>View Openings</LinkOutlined>
+          </Cta>
+        </AngledSection>
 
         </div>
       </AngledSection>
