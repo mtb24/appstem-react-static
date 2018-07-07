@@ -52,7 +52,7 @@ export default withRouteData(({ services }) => (
                 alt='an icon for revolution section' />
 
             <div className='services-block-text'>
-              <h2 className='all-caps'>Revolution</h2>
+              <h2 className='all-caps'>Enterprise</h2>
               <p>We develop natively across iOS, Android, and Windows platforms using the latest mobile technology. Leveraging years of experience, we build performance-critical mobile apps tailored to the nuances of each platform.</p>
             </div>
           </div>
