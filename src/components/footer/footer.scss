@@ -47,7 +47,7 @@
                 & > .footer-address-block {
                     margin-bottom: 1em;
                     @media (max-width: 767px) {
-                        margin-bottom: 36px;
+                        margin-bottom: 20px;
                     }
 
                     & > a {
@@ -70,14 +70,14 @@
                 & > h4.footer-heading {
                     color: #ffffff;
                     font-size: 0.8125rem;
-                    font-weight: normal;
+                    font-weight: bold;
                     line-height: 19px;
                     opacity: 1;
                     margin: 0;
-                }
-                & > h4.footer-heading:first-of-type {
-                    letter-spacing: 3.25px;
-                    line-height: 24px;
+                    @media (max-width: 767px) {
+                        letter-spacing: 2.89px;
+                        line-height: 24px;
+                    }
                 }   
             }
             
