@@ -24,8 +24,8 @@ export default withRouteData(({ work }) => {
           const imagePosition = ( i % 2 == 0 )? 'left' : 'right'
           const backgroundColor = ( i % 2 == 0 )? 'bg-regular' : 'bg-alternate'
           return (
-            <AngledSection key={i} className={`work-section-${i} ${backgroundColor}`} mask='angle--both-left-right'>
-              <FeatureBlock imagePosition={imagePosition} caseStudy={caseStudy} imageType='image' />
+            <AngledSection key={i} className={`case-study-section ${backgroundColor}`} mask='angle--both-left-right'>
+              <FeatureBlock className={`case-${i}`} imagePosition={imagePosition} caseStudy={caseStudy} imageType='image' />
             </AngledSection>
           )
 
