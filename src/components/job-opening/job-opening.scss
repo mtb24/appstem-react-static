@@ -3,12 +3,13 @@
 .Collapsible {
     margin: 67px auto;
     @media (min-width: 768px) {
-        width: 65%;
+        width: 81%;
+        max-width: 974px;
     }
-    @include tablet {
-        width: 89%;
-    }
-    @include phone {
+    // @include tablet {
+    //     width: 89%;
+    // }
+    @media (max-width: 767px) {
         width: 80%;
         margin: 0 auto;
     }
@@ -29,7 +30,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            @include phone {
+            @media (max-width: 767px) {
                 flex-direction: column;
                 align-items: flex-start;
             }
@@ -40,9 +41,12 @@
                 font-weight: bold;
                 letter-spacing: 1.8px;
                 line-height: 24px;
-                @include phone {
+                @media (max-width: 767px) {
                     font-size: 0.875rem;
                     letter-spacing: 1.05px;
+                }
+                @media (min-width: 768px) and (max-width: 800px) {
+                    font-size: 1.25rem;
                 }
             }
     
@@ -51,7 +55,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                @include phone {
+                @media (max-width: 767px) {
                     width: 100%;
                     margin-top: 7px;
                 }
@@ -61,7 +65,7 @@
                     font-size: 1.5rem;
                     letter-spacing: 1.8px;
                     line-height: 24px;
-                    @include phone {
+                    @media (max-width: 767px) {
                         font-size: 1rem;
                         letter-spacing: 1.2px;
                     }
@@ -76,7 +80,7 @@
                     font-size: 1.5rem;
                     letter-spacing: 1.8px;
                     line-height: 24px;
-                    @include phone {
+                    @media (max-width: 767px) {
                         font-size: 1rem;
                         letter-spacing: 1.2px;
                     }
@@ -100,15 +104,18 @@
         & > .Collapsible__contentInner {
     
             & > p:first-of-type {
-                color: #000000;
-                font-size: 1.25rem;
-                letter-spacing: 0.29px;
-                line-height: 42px;
-                text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-                @include phone {
+                @media (max-width: 767px) {
                     color: #1B252F;
                     font-size: 1rem;
                     line-height: 24px;
+                }
+                @media (min-width: 768px) {
+                    margin-top: 72px;
+                    color: #000000;
+                    font-size: 1.25rem;
+                    letter-spacing: 0.29px;
+                    line-height: 42px;
+                    // text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
                 }
             }
     
@@ -122,16 +129,10 @@
                 }
                 @media (min-width: 768px) {
                     flex-direction: row;
-                    margin: 124px auto 160px;
-                    color: #000000;
-                    font-size: 1.125rem;
-                    letter-spacing: 0.29px;
-                    line-height: 42px;
-                    text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                    margin: 72px auto;
                 }
     
                 & > h2 {
-                    color: #4A4A4A;
                     text-align: left;
                     @media (max-width: 767px) {
                         font-size: 1.125rem;
@@ -140,17 +141,35 @@
                         line-height: 50px;
                     }
                     @media (min-width: 768px) {
-                        font-size: 1.125rem;
+                        color: #4A4A4A;
+                        font-size: 1.25rem;
                         font-weight: bold;
                         letter-spacing: 4px;
                         line-height: 42px;
+                    }
+                    @media (min-width: 768px) and (max-width: 800px) {
+                        width: 320px;
+                    }
+                    @media (min-width: 801px) and (max-width: 1025px) {
+                        width: 235px;
                     }
                 }
                 & > p {
                     @media (max-width: 767px) {}
                     @media (min-width: 768px) {
                         width: 55%;
-                        margin-left: 16%;
+                        margin: 0 0 0 181px;
+                        color: #000000;
+                        font-size: 1.25rem;
+                        letter-spacing: 0.29px;
+                        line-height: 42px;
+                        // text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+                    }
+                    @media (min-width: 768px) and (max-width: 800px) {
+                        margin: 0 0 0 80px;
+                    }
+                    @media (min-width: 801px) and (max-width: 1025px) {
+                        margin: 0 0 0 170px;
                     }
                 }
             }
@@ -163,12 +182,6 @@
                     font-size: 1rem;
                     line-height: 24px;
                 }
-                @media (min-width: 768px) {
-                    color: #000000;
-                    font-size: 1.25rem;
-                    line-height: 42px;
-                }
-    
                 & > h2 {
                     color: #4A4A4A;
                     text-align: left;
@@ -179,71 +192,80 @@
                         line-height: 30px;
                     }
                     @media (min-width: 768px) {
-                        font-size: 1.125rem;
+                        color: #4A4A4A;
+                        font-size: 1.25rem;
                         font-weight: bold;
                         letter-spacing: 4px;
                         line-height: 42px;
                     }
-    
+                    @media (min-width: 768px) and (max-width: 800px) {
+                        width: 500px;
+                        margin-right: 115px;
+                    }
+                    @media (min-width: 801px) and (max-width: 1025px) {
+                        width: 320px;
+                    }
+                    @media (min-width: 1026px) {
+                        width: 265px;
+                    }
                 }
                 & > .skill-wrapper {
+                    @media (max-width: 767px) {}
+                    @media (min-width: 768px) and (max-width: 800px) {
+                        margin: 0;
+                    }
+                    @media (min-width: 801px) and (max-width: 1025px) {
+                        margin: 0 0 0 165px;
+                    }
+                    @media (min-width: 1101px) {
+                        margin: 0 0 0 160px;
+                    }
 
                     & > ul {
-                        color: #000000;
-                        font-size: 1.25rem;
-                        line-height: 42px;
-                        
-                        @include phone {
+                        @media (max-width: 767px) {
                             color: #1B252F;
                             font-size: 1rem;
                             line-height: 24px;
                             padding-left: 16px;
                         }
+                        @media (min-width: 768px) {
+                            color: #000000;
+                            font-size: 1.25rem;
+                            line-height: 42px;
+                        }
                     }
                     & > p {
-                        @include desktop {
-                            font-size: 1.25rem;
-                            line-height: 42px;
-                        }
-                        @include tablet {
-                            font-size: 1.25rem;
-                            line-height: 42px;
-                        }
-                        @include phone {
+                        text-transform: uppercase;
+                        @media (max-width: 767px) {
                             font-size: 1.125rem;
                             font-weight: bold;
-                            text-transform: uppercase;
                             letter-spacing: 3.6px;
                             line-height: 30px;
+                        }
+                        @media (min-width: 768px) {
+                            color: #000000;
+                            font-size: 1.25rem;
+                            line-height: 42px;
+                            font-weight: bold;
+                            margin-left: 20px;
                         }
                     }
                 }
             }
             .apply-button {
-                @include desktop {
-                    margin: 80px auto auto;
-                }
-                @include tablet {
-                    margin: 80px 33% 0;
-                }
-                @include phone {
+                @media (max-width: 767px) {
                     margin: 66px auto 0 auto;
+                }
+                @media(min-width: 768px) and (max-width: 800px) {
+                    margin: 72px 0 0 47%;
+                }
+                @media(min-width: 801px) and (max-width: 1025px) {
+                    margin: 72px 0 0 180px;
+                }
+                @media (min-width: 1026px) {
+                    margin: 72px 0 0 50px;
                 }
             }
         }
-    }
-}
-.job-opening-seperator {
-    box-sizing: border-box;
-    height: 2px;
-    width: 56%;
-    border: 1px solid #B9B9B9;
-    opacity: 0.5;
-    @include tablet {
-        width: 89%;
-    }
-    @include phone {
-        width: 80%;
-        margin: 17px auto;
     }
 }

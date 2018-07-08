@@ -1,115 +1,188 @@
 @import '../../styles/styles.scss';
 
-// Careers page
-$careers-page-heading-color: #1B252F;
-$careers-page-text-color: #1B252F;
-$careers-page-job-title-color: #4a4a4a;
-$careers-page-job-meta-color: #9b9b9b;
-
-.careers-wrapper {
-    background: $secondary-background-color;
-    padding-top: 5em;
-    padding-bottom: 8em;
-    @media (min-width: 768px) {
-        margin-top: -7.2%;
-    }
-
-    .careers {
+.careers {
+    background: #fafafa;
+    margin-top: -7%;
+    
+    & > .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        text-align: left;
-        background-color: $secondary-background-color;
-        color: $careers-page-text-color;
-
-        h2 {
-            color: $careers-page-heading-color;
-            @include phone {}
-            @include tablet {
-                padding: 0;
-            }
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fafafa;
+        color: #1B252F;
+        @media (max-width: 767px) {
+            margin-top: 85px;
+            margin-bottom: 50px;
+        }
+        @media (min-width: 768px) {
+            margin-top: 190px;
+            margin-bottom: 198px;
         }
 
-        .about-appstem {
-            margin: 0 auto 70px auto;
-            padding-top: 70px;
-            @include phone {
-                margin-bottom: 3em;
-                padding-top: 56px;
+        & > .about-appstem {
+            & > h2 {
+                @media (max-width: 767px) {
+                    color: #1B252F;
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    line-height: 29px;
+                    text-align: center;
+                }
             }
-
-            p {
-                margin: 3.5em auto 0 auto;
-                width: 65%;
+            & > hr {
+                @media (max-width: 767px) {
+                    box-sizing: border-box;
+                    height: 2px;
+                    width: 31px;
+                    border: 1px solid #3CD52E;
+                    margin-top: 15px;
+                }
+            }
+            & > p {
                 color: #1B252F;
-                font-size: 1.25rem;
-                line-height: 40px;
-
-                @include phone {
+                @media (min-width: 768px) {
+                    width: 65%;
+                    margin: 3.5em auto 0 auto;
+                    font-size: 1.25rem;
+                    line-height: 40px;
+                }
+                @media (max-width: 767px) {
                     width: 89%;
+                    color: #1B252F;
                     font-size: 1rem;
                     line-height: 24px;
+                    margin: 60px auto 0 auto;
                 }
             }
         }
-        .why-appstem {
-            margin: 163px auto 0;
-            width: 39.5em;
-            color: #1B252F;
-            font-size: 1.25rem;
-            line-height: 40px;
-
-            @include tablet {
+        & > .why-appstem {
+            @media (max-width: 767px) {
+                width: 85%;
+                margin-top: 50px;
+            }
+            @media (min-width: 768px) and (max-width: 1100px) {
                 width: 30em;
             }
-
-            @include phone {
-                width: 85%;
-                margin-top: 30px;
+            @media (min-width: 1101px) {
+                width: 39.5em;
             }
-
+            @media (min-width: 768px) {
+                margin: 163px auto 0;
+                font-size: 1.25rem;
+                line-height: 40px;
+            }
+            & > h2 {
+                @media (max-width: 767px) {
+                    color: #1B252F;
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    line-height: 29px;
+                    text-align: center;
+                }
+            }
+            & > hr {
+                @media (max-width: 767px) {
+                    box-sizing: border-box;
+                    height: 2px;
+                    width: 31px;
+                    border: 1px solid #3CD52E;
+                    margin-top: 10px;
+                }
+            }
             ul {
                 padding-left: 10px;
                 list-style: '- ';
-                @include phone {
+                @media (max-width: 767px) {
                     font-size: 1rem;
                     line-height: 24px;
+                }
+                @media (min-width: 768px) {
+                    margin-top: 76px;
+                    font-size: 1.25rem;
+                    line-height: 40px;
                 }
             }
 
             p {
-                @include phone {
+                @media (max-width: 767px) {
+                    color: #4A4A4A;
                     font-size: 1rem;
                     font-weight: bold;
                     letter-spacing: 3.2px;
                     line-height: 27px;
+                    text-transform: uppercase;
                 }
             }
 
         }
-        .open-positions {
-            @include desktop {
-                margin-top: 307px;
-            }
-            @include tablet {
-                margin-top: 163px;
-            }
-            @include phone {
+        & > .open-positions {
+            @media (max-width: 767px) {
                 margin-top: 5em;
+            }
+            @media (min-width: 768px) {
+                margin-top: 143px;
+            }
+            & > h2 {
+                @media (max-width: 767px) {
+                    color: #1B252F;
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    line-height: 29px;
+                    text-align: center;
+                }
+            }
+            & > hr {
+                @media (max-width: 767px) {
+                    box-sizing: border-box;
+                    height: 2px;
+                    width: 31px;
+                    border: 1px solid #3CD52E;
+                    margin-top: 10px;
+                    margin-bottom: 65px;
+                }
+            }
+            & > .job-opening-seperator {
+                box-sizing: border-box;
+                height: 1px;
+                border: 0.5px solid #B9B9B9;
+                opacity: 0.5;
+                // @include tablet {
+                //     width: 89%;
+                // }
+                @media (max-width: 767px) {
+                    width: 80%;
+                    margin: 17px auto;
+                }
+                @media (min-width: 768px) {
+                    width: 81%;
+                    max-width: 1200px;
+                }
             }
         }
 
-        p.send-an-email {
-            font-size: 1.5rem;
-            line-height: 42px;
+        & > p.send-an-email {
+            color: #4A4A4A;
             text-align: center;
-            margin-top: 10em;
-            @include phone {
+            @media (max-width: 767px) {
                 font-size: 1rem;
                 line-height: 24px;
                 width: 76%;
                 margin: 96px auto 12px auto;
             }
+            @media (min-width: 768px) {
+                margin-top: 152px;
+                font-size: 1.5rem;
+                line-height: 42px;
+            }
 
-            span {
+            & > span {
                 font-weight: bold;
             }
         }
