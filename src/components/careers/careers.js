@@ -2,7 +2,6 @@ import React from 'react'
 import { withRouteData } from 'react-static'
 import Hero from '../hero/hero'
 import Cta from '../layout/page-section/cta'
-import backgroundImage from '../../../public/assets/images/main-pages/bg_careers.jpg'
 import AngledSection from '../layout/page-section/angled-section'
 import JobOpening from '../job-opening/job-opening'
 import './careers.scss'
@@ -15,12 +14,13 @@ export default withRouteData(({ careers, jobs }) => {
         <React.Fragment>
 
             <Hero title={ careers.title } 
-                    heroType='image' 
-                    backgroundImage={ backgroundImage } 
-                    className='angle--bottom-right' />
+                heroType='image' 
+                smallImage='/assets/images/main-pages/bg_top_careers.png'
+                largeImage='/assets/images/main-pages/bg_top_careers@2x.png'
+                className='angle--bottom-right' />
 
-            <AngledSection className='careers-wrapper' mask='angle--both-left-right'>
-                <div className='careers content-wrapper'>
+            <AngledSection className='careers' mask='angle--both-left-right'>
+                <div className='content-wrapper'>
 
                     <Cta heading='About Appstem' className='about-appstem'>
                         <p>Our mission is to make purpose-built apps that serve real needs in people’s lives. We use metrics-driven mobile strategies, human-centered design and efficient development to create apps that people want to use.</p>
