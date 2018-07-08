@@ -30,7 +30,7 @@ export default (props) => {
                 </div>
             
                 <div className='skills'>
-                    <h2 className='all-caps'>DESIRED SKILLS AND EXPERIENCE</h2>
+                    <h2 className='all-caps'>DESIRED SKILLS & EXPERIENCE</h2>
                     <div className='skill-wrapper'>
                         <ul>
                         {
