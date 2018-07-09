@@ -19,13 +19,7 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
             className='angle--bottom-right'/>
 
       
-      <AngledSection className='section-1' mask='angle--both-left-right'>
-      <svg className='icon' width='100px' height='200px'>
-        <use xlinkHref='/assets/images/icons/sprites-logos.svg#def-sprite-logo-cambia' />
-        <use xlinkHref='/assets/images/icons/sprites-logos.svg#def-sprite-logo-johnson-johnson' />
-        <use xlinkHref='/assets/images/icons/sprites-logos.svg#def-sprite-logo-dufl' />
-        <use xlinkHref='/assets/images/icons/sprites-logos.svg#def-sprite-logo-hubbub-lg' />
-      </svg>
+      <AngledSection className='section-1' mask='angle--both-left-right' style={{ background: 'url(/assets/images/icons/logocloud.svg)' }}>
         <div className='content-wrapper home-text-wrapper'>
           { home.mainParagraph }
           <LinkOutlined linkTo="/contact" className="contact-link">Contact Us</LinkOutlined>
