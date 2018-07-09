@@ -159,7 +159,7 @@ class ContactForm extends React.Component {
           </form>
           <ReactModal
             ref={this.modalRef}
-            appElement={document.body}
+            // appElement={body}
             isOpen={ this.state.showModal }
             contentLabel='confirmation - contact form sucessfully submitted'
             onRequestClose={ this.handleCloseModal }
