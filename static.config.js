@@ -38,11 +38,11 @@ export default {
 
     const caseStudiesForHomePage = work.filter( (homeCaseStudy, i) => homeCaseStudy.slug === 'hubbub' || homeCaseStudy.slug === 'jetsuite-x' || homeCaseStudy.slug === 'tesla-motors' )
     const caseStudiesForNav = work.map( (navCaseStudy, i) => ({ index: i, title: navCaseStudy.title, slug: navCaseStudy.slug }))
-    const cases = work.map(study => ({
-      path: `/${ study.slug }`,
-      component: 'src/components/case-study/case-study',
-      getData: () => ({ study, caseStudiesForNav })
-    }))
+    // const cases = work.map(study => ({
+    //   path: `/${ study.slug }`,
+    //   component: 'src/components/case-study/case-study',
+    //   getData: () => ({ study, caseStudiesForNav })
+    // }))
 
     return [
       {
@@ -95,7 +95,11 @@ export default {
         getData: () => ({
           work
         }),
-        children: cases,
+        children: work.map(caseStudy => ({
+          path: `/${ caseStudy.slug }`,
+          component: 'src/components/case-study/case-study',
+          getData: () => ({ caseStudy, caseStudiesForNav })
+        })),
       },
       {
         path: '/blog',
