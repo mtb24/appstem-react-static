@@ -1,15 +1,5 @@
 @import '../../styles/styles.scss';
 
-$featureblocks-bg-color: #1C1819;
-
-[class^=section-] {
-    .feature-block {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-}
 .section-1 {
     background-size: 2rem;
     background-color: #f8f8f8;
@@ -130,9 +120,9 @@ $featureblocks-bg-color: #1C1819;
                 left: 12em;
             }
         }
-        @include phone {
+        @media (max-width: 767px) {
             .feature-block-image {
-                width: 80%;
+                width: 85%;
             }
         }
     }
@@ -146,6 +136,8 @@ $featureblocks-bg-color: #1C1819;
     background-color: #1C1819;
     @media (max-width: 767px) {
         margin-top: -7.2%;
+        height: auto;
+        padding-bottom: 5em;
     }
     @media (min-width: 768px) {
         margin-top: -7.2%;
@@ -154,10 +146,6 @@ $featureblocks-bg-color: #1C1819;
     @include tablet {
         height: auto;
         padding-bottom: 10em;
-    }
-    @include phone {
-        height: auto;
-        padding-bottom: 5em;
     }
 
     & > .case-study-3 {
@@ -188,21 +176,37 @@ $featureblocks-bg-color: #1C1819;
         }
     }
 
-    .view-portfolio-link {
-        display: block;
+    & > .view-portfolio-link {
+        display: flex;
+        place-content: center;
+        place-items: center;
         margin: 0 auto;
         text-decoration: none;
-        height: 24px;
-        width: 380px;
-        color: #FFFFFF;
-        font-size: 1rem;
-        font-weight: bold;
-        letter-spacing: 3.29px;
-        line-height: 24px;
-        text-align: center;
-        padding: 1.75em 0;
-        @include phone {
+        // padding: 1.75em 0;
+        @media (max-width: 767px) {
+            height: 64px;
+            width: 266px;
+            color: #FFFFFF;
+            font-size: 0.9375rem;
+            font-weight: bold;
+            letter-spacing: 3.08px;
+            line-height: 24px;
+            text-align: center;
             margin-bottom: 7em;
+            padding: 0;
+        }
+        @media (min-width: 768px) {
+            height: 80px;
+            width: 380px;
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 3.29px;
+            line-height: 24px;
+            text-align: center;
+            padding: 0;
+            margin-top: 89px;
+            margin-bottom: 62px;
         }
     }
 }
@@ -215,4 +219,24 @@ $featureblocks-bg-color: #1C1819;
     @media (min-width: 768px) {
         margin-top: -7.2%;
     }
+}
+div.angled-section {
+    & > .feature-block {
+        width: 100%;
+        margin: 0 auto;
+        @media (max-width: 767px) {
+            height: 650px;
+            justify-content: center;
+        }
+        @media (min-width: 768px) {
+            max-width: 1200px;
+        }
+
+        & > .feature-block-details {
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+    }
+
 }
