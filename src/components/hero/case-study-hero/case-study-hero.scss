@@ -4,10 +4,10 @@
     height: auto;
     position: relative;
     @media (max-width: 767px) {
-        max-height: 320px;
+        height: 320px;
     }
     @media (min-width: 768px) {
-        max-height: 848px;
+        height: 848px;
     }
 
     & > .content-wrapper {
@@ -17,7 +17,7 @@
             width: 100%;
             position: relative;
             max-width: 1200px;
-            margin: 0 auto; 
+            margin: 192px auto 0; 
 
         & > .prev-next-arrows {
             @media (max-width: 767px) {
