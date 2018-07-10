@@ -89,7 +89,9 @@
                     text-align: center;
                     margin-top: 2em;
                 }
-                @media (min-width: 768px) {}
+                @media (min-width: 768px) {
+                    margin-top: 67px;
+                }
             }
         }
     }
