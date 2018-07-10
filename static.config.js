@@ -31,7 +31,7 @@ export default {
       jobs,
       home,
       contact,
-      culture,
+      about,
       services,
       careers
     } = await jdown('content')
@@ -62,9 +62,9 @@ export default {
       },
       {
         path: '/about',
-        component: 'src/components/culture/culture',
+        component: 'src/components/about/about',
         getData: () => ({
-          culture,
+          about,
         }),
       },
       {

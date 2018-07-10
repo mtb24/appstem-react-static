@@ -1,7 +1,7 @@
 @import "~video-react/styles/scss/video-react";
 @import '../../styles/styles.scss';
 
-.culture {
+.about {
     color: #fafafa;
     background-color: #1e1e1e;
     margin-top: -7%;
@@ -20,7 +20,7 @@
             margin-top: 260px;
         }
 
-        & > .culture-who-we-are {
+        & > .about-who-we-are {
             @media (max-width: 767px) {
                 margin-bottom: 0;
             }
@@ -85,7 +85,7 @@
             }
         }
     
-        & > .culture-work-as-team {
+        & > .about-work-as-team {
             @media (max-width: 767px) {
                 margin-top: 55px;
             }
@@ -152,7 +152,7 @@
             }
         }
     
-        & > .culture-our-team {
+        & > .about-our-team {
             // @include tablet {
             //     margin-top: 7em;
             // }
@@ -185,7 +185,7 @@
                 }
             }
     
-            & > .culture-team-images {
+            & > .about-team-images {
                 width: 100%;
                 margin: 0 auto;
                 display: grid;
@@ -243,10 +243,10 @@
                 
             }
         }
-        & > .culture-join-us-wrapper {
+        & > .about-join-us-wrapper {
             background-color: rgba(0,0,0,0.25);
             
-            & > .culture-join-us {
+            & > .about-join-us {
                 text-align: center;
                 @media (max-width: 767px) {
                     margin-top: 114px;
