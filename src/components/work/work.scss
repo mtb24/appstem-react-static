@@ -1,50 +1,134 @@
+@import '../../styles/viewport-sizes.scss';
 
 .work {
     color: #fafafa;
     background: #1e1e1e;
-    @media (max-width: 767px) { margin-top: -7.5%; }
-    @media (min-width: 768px) { margin-top: -7.1%; }
+    @include phone { margin-top: -9.5%; }
+    @media (min-width: 768px) { margin-top: -9.1%; }
     
     & > .case-study-section {
         margin: -7% auto;
-        @media (max-width: 767px) {}
-        @media (min-width: 768px) and (max-width: 1024px) { height: 876.28px; }
-        @media (min-width: 1025px) { height: 876.28px; }
+        @include phone { padding: 85px 0; }
+        @include tablet { 
+            height: 876.28px;
+            padding: 150px 0;
+        }
+        @include desktop { height: 876.28px; }
         &:first-of-type {
             margin-top: 0;
         }
+        &:nth-of-type(2) {
+            @include tablet {
+                padding: 100px 0 200px;
+            }
+        }
+        &:nth-of-type(3) {
+            @include tablet { 
+                padding: 150px 0 200px;
+            }
+        }
+        &:nth-of-type(4) {
+            @include tablet { 
+                padding: 100px 0 200px;
+            }
+        }
+        &:nth-of-type(5) {
+            @include tablet { 
+                padding: 100px 0 200px;
+            }
+        }
+        &:nth-of-type(6) {
+            @include tablet { 
+                padding: 100px 0 200px;
+            }
+        }
+        &:nth-of-type(7) {
+            @include tablet { 
+                padding: 100px 0 200px;
+            }
+        }
+        &:nth-of-type(8) {
+            @include phone {
+                padding-top: 135px;
+            }
+            @include tablet { 
+                padding: 100px 0 100px;
+            }
+        }
+        &:nth-of-type(9) {
+            @include tablet { 
+                padding-bottom: 200px;
+            }
+        }
+        &:nth-of-type(10) {
+            @include tablet { 
+                padding-bottom: 200px;
+            }
+        }
+        &:nth-of-type(11) {
+            @include phone {
+                padding-top: 135px;
+            }
+            @include tablet { 
+                padding-bottom: 200px;
+            }
+        }
+        &:nth-of-type(13) {
+            @include tablet { 
+                padding: 75px 0 150px;
+            }
+        }
+        &:nth-of-type(14) {
+            @include phone {
+                padding-top: 135px;
+            }
+            @include tablet { 
+                padding: 75px 0 150px;
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+            @include tablet { 
+                padding-bottom: 200px;
+            }
+        }
 
         & > .feature-block {
-            overflow: hidden;
             @media (min-width: 768px) {
                 width: 100%;
-                height: 100%;
+            }
+            @include tablet {
+                max-width: 95vw;
+            }
+            @include desktop {}
+            @media (min-width: 1200px) {
                 max-width: 1200px;
-            }
-            @media (min-width: 768px) and (max-width: 1024px) {
-                grid-gap: 60px;
-            }
-            @media (min-width: 1025px) {
-                grid-gap: 118px;
             }
 
             & > .feature-block-image {
     
-                @media (max-width: 767px) {}
-                @media (min-width: 768px) and (max-width: 1024px) {
-                    max-width: 500px;
+                @include phone {
+                    max-width: 360px;
                 }
-                @media (min-width: 1025px) {
+                @include tablet {
+                    max-width: 500px;
+                    margin-bottom: 50px;
+                }
+                @include desktop {
                     max-width: 500px;
                 }
             }
             & > .feature-block-details {
-                @media (max-width: 767px) {}
-                @media (min-width: 768px) and (max-width: 1024px) {}
-                @media (min-width: 1025px) {}
+                @include phone {
+                    width: 100%;
+                }
+                @include tablet {
+                    width: 85%;
+                }
+                @include desktop {}
     
                 & > h2 {
-                    @media (max-width: 767px) {
+                    @include phone {
                         color: #FFFFFF;
                         font-size: 1.6rem;
                         line-height: 37px;
@@ -59,7 +143,7 @@
                     }
                 }
                 & > .feature-block-project-type {
-                    @media (max-width: 767px) {
+                    @include phone {
                         color: #9B9B9B;
                         font-size: 1.125rem;
                         line-height: 26px;
@@ -72,7 +156,7 @@
                     }
                 }
                 & > .feature-block-project-description {
-                    @media (max-width: 767px) {
+                    @include phone {
                         font-size: 1.125rem;
                         color: #FFFFFF;
                         letter-spacing: 4.06px;
@@ -86,7 +170,7 @@
                     }
                 }
                 & > a {
-                    @media (max-width: 767px) {
+                    @include phone {
                         font-size: 0.8125rem;
                     }
                     @media (min-width: 768px) {
@@ -102,43 +186,194 @@
             &.case-0 {
                 & > img {
                     position: relative;
-                    // max-width: unset;
-                    // margin-right: unset;
+                    @include phone {
+                        transform: scale(.85);
+                    }
+                    @include tablet {
+                        max-width: unset;
+                        transform: scale(.85);
+                    }
+                    @include desktop {
+                        // max-width: unset;
+                        // left: 50px;
+                        // transform: scale(.85);
+                    }
+                }
+                & > .feature-block-details {
+                    @include tablet {
+                        // width: unset;
+                    }
+                }
+            }
+            &.case-1 {
+                @include tablet {
+                    // margin-bottom: 100px;
+                }
+                & > img {
+                    position: relative;
+                    @include phone {
+                        transform: scale(.85);
+                    }
+                    @include tablet {
+                        max-width: unset;
+                        transform: scale(0.5);
+                    }
+                    @include desktop {
+                        // max-width: unset;
+                        // right: 235px;
+                        // transform: scale(0.73);
+                    }
+                }
+                & > .feature-block-details {
+                    @include tablet {
+                        // width: unset;
+                        margin-top: -115px;
+                    }
+                }
+            }
+            &.case-2 {
+                & > img {
+                    position: relative;
+                    @include phone {
+                        transform: scale(.7);
+                    }
+                    @include tablet {
+                        transform: scale(.8);
+                        // left: 48px;
+                    }
+                    @include desktop {
+                        justify-self: baseline;
+                    }
+                }
+            }
+            &.case-3 {
+                & > img {
+                    position: relative;
+                    @include phone {
+                        transform: scale(.7);
+                    }
+                    @include tablet {
+                        transform: scale(.75);
+                        // right: 70px;
+                    }
+                }
+            }
+            &.case-4 {
+                & > img {
+                    position: relative;
+                    @include phone {
+                        transform: scale(.80);
+                    }
+                    @include tablet {
+                        max-width: unset;
+                        // left: 90px;
+                        transform: scale(.75);
+                    }
+                    @include desktop {
+                        // max-width: unset;
+                        // left: 90px;
+                        // transform: scale(.85);
+                    }
                 }
                 & > .feature-block-details {}
             }
-            &.case-1 {
+            &.case-5 {
                 & > img {
                     position: relative;
-                    // max-width: unset;
-                    // margin-left: unset;
-                    // transform: scale(0.8);
+                    @include phone {
+                        transform: scale(.7);
+                    }
+                    @include tablet {
+                        transform: scale(.75);
+                        // right: 100px;
+                    }
                 }
-                & > .feature-block-details {
-                    // margin-right: unset;
+            }
+            &.case-6 {
+                & > img {
+                    position: relative;
+                    @include phone {
+                        transform: scale(.95);
+                    }
+                    @include tablet {
+                        max-width: unset;
+                        // left: 100px;
+                        transform: scale(.65);
+                        // left: 170px;
+                    }
+                    @include desktop {
+                        // max-width: unset;
+                        // left: 100px;
+                        // transform: scale(.8);
+                    }
                 }
+                & > .feature-block-details {}
             }
             &.case-7 {
                 & > img {
                     position: relative;
-                    // right: -180px;
-                    // max-width: unset;
-                    // margin-left: unset;
-                    // transform: scale(1.1);
+                    @include phone {
+                        // transform: scale(1.1);
+                    }
+                    @include tablet {
+                        max-width: unset;
+                        transform: scale(.75);
+                        // left: -185px;
+                    }
+                    @include desktop {
+                        max-width: unset;
+                        left: 45px;
+                    }
                 }
             }
             &.case-8 {
+                margin: 0;
                 & > img {
-                    // transform: scale(0.85);
+                    position: relative;
+                    @include phone {
+                        transform: scale(.6);
+                    }
+                    @include tablet {
+                        // left: 25px;
+                        transform: scale(.80);
+                    }
+                    @include desktop {
+                        // right: 145px;
+                        transform: scale(.80);
+                    }
+                }
+            }
+            &.case-9 {
+                & > img {
+                    position: relative;
+                    @include phone {
+                        transform: scale(.80);
+                    }
+                    @include tablet {
+                        // right: 100px;
+                        transform: scale(.80);
+                    }
+                    @include desktop {
+                        right: 25px;
+                    }
                 }
             }
             &.case-10 {
                 & > img {
                     position: relative;
-                    // left: -215px;
-                    // max-width: unset;
-                    // margin-right: unset;
-                    // top: 200px;
+                    @include phone {
+                        transform: scale(1.1);
+                    }
+                    @include tablet {
+                        max-width: unset;
+                        transform: scale(.7);
+                    }
+                    @include desktop {
+                        max-width: unset;
+                        transform: scale(0.7);
+                        justify-self: center;
+                        right: 70px;
+                    }
                 }
                 & > .feature-block-details {
                     // margin-left: -345px;
@@ -146,16 +381,42 @@
             }
             &.case-11 {
                 & > img {
-                    // transform: scale(.8);
+                    position: relative;
+                    @include phone {
+                        transform: scale(.80);
+                    }
+                    @include tablet {
+                        transform: scale(0.8);
+                        // right: 135px;
+                    }
+                    @include desktop {
+                        right: 68px;
+                        max-width: unset;
+                        transform: scale(0.9);
+                    }
+                }
+                & > .feature-block-details {
+                    // margin-left: -345px;
                 }
             }
             &.case-12 {
                 & > img {
                     position: relative;
-                    // left: -248px;
-                    // max-width: unset;
-                    // margin-right: unset;
-                    // top: 0;
+                    @include phone {
+                        transform: scale(1.05);
+                    }
+                    @include tablet {
+                        max-width: unset;
+                        transform: scale(0.6);
+                        // left: 250px;
+                    }
+                    @include desktop {
+                        max-width: unset;
+                        position: relative;
+                        margin: unset;
+                        right: 375px;
+                        transform: scale(0.90);
+                    }
                 }
                 & > .feature-block-details {
                     // margin-left: -182px;
@@ -164,9 +425,18 @@
             &.case-13 {
                 & > img {
                     position: relative;
-                    // right: -180px;
-                    // max-width: unset;
-                    // margin-left: unset;
+                    @include phone {
+                        transform: scale(1.1);
+                    }
+                    @include tablet {
+                        max-width: unset;
+                        transform: scale(0.6);
+                        // right: 250px;
+                    }
+                    @include desktop {
+                        max-width: unset;
+                        right: 50px;
+                    }
                 }
                 & > .feature-block-details {
                     // margin-right: 0;
@@ -175,10 +445,19 @@
             &.case-14 {
                 & > img {
                     position: relative;
-                    // left: 0;
-                    // max-width: unset;
-                    // margin-right: unset;
-                    // top: -105px;
+                    @include phone {
+                        transform: scale(.7);
+                    }
+                    @include tablet {
+                        max-width: unset;
+                        transform: scale(0.8);
+                        top: 0;
+                        // left: 45px;
+                    }
+                    @include desktop {
+                        max-width: unset;
+                        top: -90px;
+                    }
                 }
             }
         }
