@@ -68,7 +68,12 @@
         @include desktop {
             border: 1px solid $link-color;
             padding: 20px;
-            margin-right: 0;
+        }
+        @media (min-width: 1025px) and (max-width: 1240px) {
+          margin-right: 40px;
+        }
+        @media (min-width: 1241px) {
+          margin-right: 0;
         }
     }
   }
@@ -89,7 +94,13 @@
       @include desktop {
           border: 1px solid $link-color;
           padding: 7px 17px;
-          margin-right: 0;
+          // margin-right: 0;
+      }
+      @media (min-width: 1025px) and (max-width: 1240px) {
+        margin-right: 40px;
+      }
+      @media (min-width: 1241px) {
+        margin-right: 0;
       }
   }
 }
