@@ -1,21 +1,28 @@
-@import '../../styles/styles.scss';
+@import '../../styles/viewport-sizes.scss';
 
 .section-1 {
     background-size: 2rem;
     background-color: #f8f8f8;
+    @include phone {
+        height: 341px;
+        margin-top: -9.1%;
+    }
     @media (min-width: 768px) {
         height: 727.5px;
         padding: 3em 0;
-        margin-top: -7.2%;
-    }
-    @include phone {
-        height: 341px;
-        margin-top: -7.1%;
+        margin-top: -9.2%;
     }
     
     .home-text-wrapper {
         background: #f8f8f8;
         padding-top: 0;
+        @include phone {
+            width: 89%;
+            font-size: 1.25rem;
+            color: #1B252F;
+            line-height: 32px;
+            margin: 2em auto;
+        }
         @media (min-width: 768px) {
             width: 60%;
             color: #333333;
@@ -24,13 +31,7 @@
             text-align: center;
             margin: 0 auto;
         }
-        @include phone {
-            width: 89%;
-            font-size: 1.25rem;
-            color: #1B252F;
-            line-height: 32px;
-            margin: 2em auto;
-        }
+
         & > .contact-link {
             margin: 3em auto;
             height: 72px;
@@ -46,132 +47,156 @@
             letter-spacing: 3.29px;
             line-height: 24px;
             text-align: center;
-            @media (max-width: 767px) {
+            @include phone {
                 display: none;
             }
         }
         
     }
 }
+
 .section-2 {
     background: radial-gradient(circle, #6A6A6A 0%, rgba(12,12,12,0) 100%);
     background-color: #1C1819;
-    // top: -129px;
-    @media (max-width: 767px) {
-        margin-top: -7.2%;
+    margin-top: -9.2%;
+    @include phone {
+        padding-bottom: 91px;
     }
     @media (min-width: 768px) {
-        margin-top: -7.2%;
+        height: 876.28px;
+    }
+    @include tablet {
+        padding-top: 135px;
+        padding-bottom: 135px;
+    }
+    @include desktop {
+        padding-top: 135px;
+        padding-bottom: 135px;
     }
 
-    .case-study-1 {
-
-            .feature-block-image {
-                justify-items: center;
-
-                @include desktop {
-                    // width: 100% !important;
-                }
-                @include tablet {
-                    width: 40%;
-                }
-                @include phone {
-                    width: 48%;
-                }   
+    & > .case-study-1 {
+        @include phone {
+            margin-bottom: 0;
+        }
+        @include tablet {
+            padding: 5em 0;
+        }
+        & > .feature-block-image {
+            @include phone {
+                transform: scale(.45);
+                position: relative;
+                top: -75px;
             }
+            @include tablet {}
+        }
+        & > .feature-block-details {
+            @include phone {
+                margin: -267px auto 0;
+            }
+            @include tablet {
+                width: 70%;
+            }
+        }
     }
 }
 .section-3 {
     background: radial-gradient(circle, rgba(62,62,62,0.52) 0%, rgba(12,12,12,0.38) 100%);
     background-color: #1C1819;
-    @media (max-width: 767px) {
-        margin-top: -7.2%;
+    margin-top: -9.2%;
+    @include phone {
+        padding-bottom: 91px;
     }
-    @media (min-width: 768px) {
-        margin-top: -7.2%;
+    @include tablet {
+        height: 876.28px;
+    }
+    @include desktop {
+        height: 876.28px;
+        padding: 100px 0;
     }
 
-    .case-study-2 {
-
-        @include desktop {
-            padding: 10em 0;
-            justify-items: center;
-            max-width: 1200px;
-
-            .feature-block-image {
-                margin-left: 0;
-                position: relative;
-                left: 15.5%;
-            }
-            .feature-block-details {
-                position: relative;
-                left: 6em;
-            }
+    & > .case-study-2 {
+        @include phone {
+            margin-bottom: 0;
         }
         @include tablet {
-            .feature-block-image {
-                // width: 80%;
-                margin-left: 0;
-                position: relative;
-                left: 12em;
+            padding: 5em 0;
+        }
+        & > .feature-block-image {
+            @include phone {
+                transform: scale(.45);
+                margin-top: -50px;
             }
-            .feature-block-details {
+            @include tablet {
+                transform: scale(.75);
+            }
+            @include desktop {
                 position: relative;
-                left: 12em;
+                left: 15px;
+                transform: scale(1.15);
             }
         }
-        @media (max-width: 767px) {
-            .feature-block-image {
-                width: 85%;
+        & > .feature-block-details {
+            @include phone {
+                margin-top: -120px;
             }
+            @include tablet {
+                max-width: 70%;
+            }
+            @include desktop {}
         }
     }
 
 }
 .section-4 {
-    flex-direction: column;
-    height: 876.28px;
-    padding-bottom: 20em;
     background: radial-gradient(circle, rgba(255,255,255,0.52) 0%, rgba(86,86,86,0.52) 45.07%, rgba(12,12,12,0) 100%);
     background-color: #1C1819;
-    @media (max-width: 767px) {
-        margin-top: -7.2%;
-        height: auto;
-        padding-bottom: 5em;
-    }
-    @media (min-width: 768px) {
-        margin-top: -7.2%;
-    }
-
-    @include tablet {
+    margin-top: -9.2%;
+    @include phone {
+        flex-direction: column;
         height: auto;
         padding-bottom: 10em;
     }
+    @include tablet {
+        flex-direction: column;
+        height: 876.28px;
+        padding: 135px 0 255px;
+    }
+    @include desktop {
+        flex-direction: column;
+        height: 876.28px;
+        padding-top: 135px;
+        padding-bottom: 135px;
+    }
 
     & > .case-study-3 {
-
-        @include desktop {
-            &.feature-block {
-                &.feature-image-left {
-                    position: relative;
-                    left: -270px !important;
-                }
-                
-                & > .feature-block-image {
-                    position: relative;
-                    margin: unset;
-                    left: -100px;
-                }
-                & > .feature-block-details {
-                    position: relative;
-                    margin-left: 94px;
-                }
+        @include phone {
+            margin-bottom: 140px;
+        }
+        @include tablet {
+            margin-bottom: 200px;
+            padding: 5em 0;
+        }
+        & > .feature-block-image {
+            @include phone {
+                transform: scale(.45);
+                margin-top: -81px;
+            }
+            @include tablet {
+                transform: scale(.65);
+            }
+            @include desktop {
+                position: relative;
+                margin: unset;
+                right: 375px;
+                transform: scale(.93);
             }
         }
-        @include phone {
-            .feature-block-image {
-                width: 120%;
-                justify-items: center;
+        & > .feature-block-details {
+            @include phone {
+                margin-top: -135px;
+            }
+            @include tablet {
+                width: 70%;
             }
         }
     }
@@ -182,8 +207,7 @@
         place-items: center;
         margin: 0 auto;
         text-decoration: none;
-        // padding: 1.75em 0;
-        @media (max-width: 767px) {
+        @include phone {
             height: 64px;
             width: 266px;
             color: #FFFFFF;
@@ -192,7 +216,6 @@
             letter-spacing: 3.08px;
             line-height: 24px;
             text-align: center;
-            margin-bottom: 7em;
             padding: 0;
         }
         @media (min-width: 768px) {
@@ -204,39 +227,17 @@
             letter-spacing: 3.29px;
             line-height: 24px;
             text-align: center;
-            padding: 0;
-            margin-top: 89px;
-            margin-bottom: 62px;
+            padding: .5em 0;
+        }
+        @include tablet {
+            margin-bottom: unset;
         }
     }
 }
 .section-5 {
     background-color: #FFFFFF;
-    @media (max-width: 767px) {
-        margin-top: -7.2%;
-        padding: 123px 0 100px;
+    margin-top: -9.2%;
+    @include phone {
+        padding: 45px 0 0;
     }
-    @media (min-width: 768px) {
-        margin-top: -7.2%;
-    }
-}
-div.angled-section {
-    & > .feature-block {
-        width: 100%;
-        margin: 0 auto;
-        @media (max-width: 767px) {
-            height: 650px;
-            justify-content: center;
-        }
-        @media (min-width: 768px) {
-            max-width: 1200px;
-        }
-
-        & > .feature-block-details {
-            @media (max-width: 767px) {
-                width: 100%;
-            }
-        }
-    }
-
 }
