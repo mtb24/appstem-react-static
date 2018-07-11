@@ -1,6 +1,6 @@
 import React from 'react'
 import InstantImage from '../../../instant-image/instant-image'
-import { Player, BigPlayButton, PosterImage } from 'video-react';
+// import { Player, BigPlayButton, PosterImage } from 'video-react';
 import Section from '../../../layout/page-section/section'
 import AngledSection from '../../../layout/page-section/angled-section'
 import FullWidthImage from '../../../layout/page-section/full-width-image-section'
@@ -8,10 +8,11 @@ import Cta from '../../../layout/page-section/cta'
 import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
 import LinkOutlined from '../../../buttons/link-outlined/link-outlined'
-import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
+// import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
 import FeatureBlock from '../../../feature-block/feature-block'
 import Branding from '../../../branding/branding'
 import Wireframe from '../../../wireframe/wireframe'
+import './couchcritic.scss'
 
 export default (props) => {
 
@@ -41,20 +42,20 @@ return (
             mask='angle--both-left-right'
             imagePath={ imagePath + props.fullImages[0] } />
 
-        <Section className='why-appstem' style={{ background: '#ffffff', width: '100vw' }}>
+        <Section className='why-appstem angle--top-left' style={{ background: '#ffffff', width: '100vw', marginTop: '-7.3%' }}>
             <Cta heading='Why Appstem'>
                 <Paragrapher paragraphs={ props.whyAppstem }/>
             </Cta>
         </Section>
-
-        <Player
-            fluid={ true }
-            preload='auto'
-            poster={ posterImage }
-            src={ videoPath + props.videos[0] || '' }>
-            <BigPlayButton position="center" />
-        </Player>
-
+{//
+//         <Player
+//             fluid={ true }
+//             preload='auto'
+//             poster={ posterImage }
+//             src={ videoPath + props.videos[0] || '' }>
+//             <BigPlayButton position="center" />
+//         </Player>
+}
         <Section className='challenges' style={{ background: '#ffffff', width: '100vw' }}>
             <Cta heading='Challenges'>
                 <Paragrapher paragraphs={ props.challenges }/>
@@ -74,7 +75,7 @@ return (
 
         <FullWidthImage 
             className='styleguide' 
-            mask='angle--both-left-right'
+            mask='none'
             imagePath={ imagePath + props.fullImages[1] }
             style={{ background: '#f8f8f8' }}
             alt={ props.imageAlt || `an image for ${ props.slug }` } />
@@ -103,7 +104,7 @@ return (
 
         <FullWidthImage 
             className='second-full-image' 
-            mask='angle--both-left-right'
+            mask='none'
             imagePath={ imagePath + props.fullImages[2] }
             style={{ background: '#f8f8f8' }}
             alt={ props.imageAlt || `an image for ${ props.slug }` } />

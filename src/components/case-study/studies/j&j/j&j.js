@@ -4,10 +4,10 @@ import AngledSection from '../../../layout/page-section/angled-section'
 import FullWidthImage from '../../../layout/page-section/full-width-image-section'
 import Cta from '../../../layout/page-section/cta'
 import InstantImage from '../../../instant-image/instant-image'
-import { Player, BigPlayButton, PosterImage } from 'video-react';
+// import { Player, BigPlayButton, PosterImage } from 'video-react';
 import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
-import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
+// import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
 import FeatureBlock from '../../../feature-block/feature-block'
 import Wireframe from '../../../wireframe/wireframe'
 
@@ -33,20 +33,20 @@ return (
             mask='angle--both-left-right'
             imagePath={ imagePath + props.fullImages[0] } />
 
-        <Section className='why-appstem' style={{ background: '#ffffff', width: '100vw' }}>
+        <Section className='why-appstem angle--top-left' style={{ background: '#ffffff', width: '100vw', marginTop: '-7.2%' }}>
             <Cta heading='Why Appstem'>
                 <Paragrapher paragraphs={ props.whyAppstem }/>
             </Cta>
         </Section>
-
-        <Player
-            fluid={ true }
-            preload='auto'
-            poster={ posterImage }
-            src={ videoPath + props.videos[0] || '' }>
-            <BigPlayButton position="center" />
-        </Player>
-
+{
+        // <Player
+        //     fluid={ true }
+        //     preload='auto'
+        //     poster={ posterImage }
+        //     src={ videoPath + props.videos[0] || '' }>
+        //     <BigPlayButton position="center" />
+        // </Player>
+}
         <Section className='challenges' style={{ background: '#ffffff', width: '100vw' }}>
             <Cta heading='Challenges'>
                 <Paragrapher paragraphs={ props.challenges }/>

@@ -1,6 +1,6 @@
 import React from 'react'
 import InstantImage from '../../../instant-image/instant-image'
-import { Player, BigPlayButton, PosterImage } from 'video-react';
+// import { Player, BigPlayButton, PosterImage } from 'video-react';
 import Section from '../../../layout/page-section/section'
 import AngledSection from '../../../layout/page-section/angled-section'
 import FullWidthImage from '../../../layout/page-section/full-width-image-section'
@@ -8,10 +8,11 @@ import Cta from '../../../layout/page-section/cta'
 import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
 import LinkOutlined from '../../../buttons/link-outlined/link-outlined'
-import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
+// import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
 import FeatureBlock from '../../../feature-block/feature-block'
 import Branding from '../../../branding/branding'
 import Wireframe from '../../../wireframe/wireframe'
+import './draftmates.scss'
 
 export default (props) => {
 
@@ -46,15 +47,15 @@ return (
                 <Paragrapher paragraphs={ props.whyAppstem }/>
             </Cta>
         </Section>
-
-        <Player
-            fluid={ true }
-            preload='auto'
-            poster={ posterImage }
-            src={ videoPath + props.videos[0] || '' }>
-            <BigPlayButton position="center" />
-        </Player>
-
+{
+        // <Player
+        //     fluid={ true }
+        //     preload='auto'
+        //     poster={ posterImage }
+        //     src={ videoPath + props.videos[0] || '' }>
+        //     <BigPlayButton position="center" />
+        // </Player>
+}
         <Section className='challenges' style={{ background: '#fafafa', width: '100vw' }}>
             <Cta heading='Challenges'>
                 <Paragrapher paragraphs={ props.challenges }/>

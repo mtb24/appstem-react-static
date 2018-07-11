@@ -1,14 +1,15 @@
 import React from 'react'
 import InstantImage from '../../../instant-image/instant-image'
-import { Player, BigPlayButton, PosterImage } from 'video-react'
+// import { Player, BigPlayButton, PosterImage } from 'video-react'
 import Section from '../../../layout/page-section/section'
 import AngledSection from '../../../layout/page-section/angled-section'
 import FullWidthImage from '../../../layout/page-section/full-width-image-section'
 import Cta from '../../../layout/page-section/cta'
 import Heading from '../../../layout/page-section/heading'
-import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
+// import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
 import Paragrapher from '../../../layout/page-section/paragrapher'
 import Wireframe from '../../../wireframe/wireframe'
+import './uc-davis.scss'
 
 export default (props) => {
 
@@ -31,20 +32,20 @@ export default (props) => {
                 mask='angle--both-left-right'
                 imagePath={ imagePath + props.fullImages[0] } />
 
-            <Section className='why-appstem' style={{ background: '#ffffff', width: '100vw' }}>
+            <Section className='why-appstem angle--top-left' style={{ background: '#ffffff', width: '100vw', marginTop: '-7.2%' }}>
                 <Cta heading='Why Appstem'>
                     <Paragrapher paragraphs={ props.whyAppstem } />
                 </Cta>
             </Section>
-
-            <Player
-                fluid={ true }
-                preload='auto'
-                poster={ posterImage }
-                src={ `/assets/videos/${props.video || ''}` } >
-                <BigPlayButton position="center" />
-            </Player>
-
+{
+            // <Player
+            //     fluid={ true }
+            //     preload='auto'
+            //     poster={ posterImage }
+            //     src={ `/assets/videos/${props.video || ''}` } >
+            //     <BigPlayButton position="center" />
+            // </Player>
+}
             <Section className='challenges' style={{ background: '#f8f8f8', width: '100vw' }}>
                 <Cta heading='Challenges'>
                     <Paragrapher paragraphs={ props.challenges } />
@@ -60,7 +61,7 @@ export default (props) => {
 
             <FullWidthImage 
                 className='second-full-image' 
-                mask='angle--both-left-right'
+                mask='none'
                 imagePath={ imagePath + props.fullImages[1] } />
 
             <Section className='company-blurb-section' style={{ background: '#ffffff', width: '100vw' }}>
