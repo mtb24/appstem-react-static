@@ -25,6 +25,12 @@ body {
       flex-direction: column;
       align-items: center;
       z-index: 0;
+      @media screen and (min-width: 1400px) {
+        max-width: 1400px;
+        margin: 0 auto;
+        overflow: hidden;
+        
+      }
       
 
       // page gutter
