@@ -39,10 +39,10 @@ return (
 
         <FullWidthImage 
             className='first-full-image' 
-            mask='angle--top-left'
+            mask='angle--both-left-right'
             imagePath={ imagePath + props.fullImages[0] } />
 
-        <Section className='why-appstem' style={{ background: '#fafafa', width: '100vw' }}>
+        <Section className='why-appstem angle--top-left' style={{ background: '#fafafa', width: '100vw', marginTop: '-7.3%' }}>
             <Cta heading='Why Appstem'>
                 <Paragrapher paragraphs={ props.whyAppstem }/>
             </Cta>

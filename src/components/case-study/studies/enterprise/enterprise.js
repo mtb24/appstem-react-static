@@ -6,6 +6,7 @@ import FullWidthImage from '../../../layout/page-section/full-width-image-sectio
 import Cta from '../../../layout/page-section/cta'
 import Heading from '../../../layout/page-section/heading'
 import Paragrapher from '../../../layout/page-section/paragrapher'
+import './enterprise.scss'
 
 export default (props) => {
 
@@ -28,7 +29,7 @@ return (
             mask='angle--both-left-right'
             imagePath={ imagePath + props.fullImages[0] } />
 
-        <Section className='why-appstem' style={{ background: '#ffffff', width: '100vw' }}>
+        <Section className='why-appstem angle--top-left' style={{ background: '#ffffff', width: '100vw', marginTop: '-7.2%' }}>
             <Cta heading='Why Appstem'>
                 <Paragrapher paragraphs={ props.whyAppstem }/>
             </Cta>
@@ -36,7 +37,7 @@ return (
 
         <FullWidthImage 
             className='second-full-image' 
-            mask='angle--both-left-right'
+            mask='none'
             imagePath={ imagePath + props.fullImages[1] }
             style={{ background: '#f8f8f8' }}
             alt={ props.imageAlt || `an image for ${ props.slug }` } />
