@@ -10,6 +10,7 @@ import Paragrapher from '../../../layout/page-section/paragrapher'
 // import posterImage from '../../../../../public/assets/images/posterimage-home-bw.jpg'
 import FeatureBlock from '../../../feature-block/feature-block'
 import Wireframe from '../../../wireframe/wireframe'
+import './j-and-j.scss'
 
 export default (props) => {
 

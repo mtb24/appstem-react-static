@@ -1,6 +1,6 @@
 ---
 title: Johnson & Johnson
-slug: j&j
+slug: j-and-j
 projectType: UX/UI Design, iOS Development
 featureBlockProjectDesc: An entire wedding planning marketplace matching planners with trusted vendors - all on in one iOS app.
 featureBlockImage: J&J_loading.png

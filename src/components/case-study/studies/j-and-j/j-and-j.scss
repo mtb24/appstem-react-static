@@ -1,0 +1,35 @@
+@import '../../../../styles/viewport-sizes.scss';
+
+.case-study-hero.j-and-j > .content-wrapper > .case-study-hero-featureblock .feature-block-details > h2 {
+    @include phone {
+        top: -200px;
+    }
+}
+.case-study-hero.j-and-j > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 355px;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+}
+
+.j-and-j {
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+    }
+}
+.j-and-j > .development-features > .feature-block > img {
+    @include phone {
+        transform: scale(.67);
+    }
+}
+.j-and-j > .development-features > .feature-block > .feature-block-details > h2 {color: #1B252F !important;}
+.j-and-j > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {color: #1B252F !important;}
+.j-and-j > .development-features > .feature-block {
+    @include phone {
+        width: 89%;
+    }
+}
