@@ -44,11 +44,11 @@ export default withRouteData(({ caseStudy, caseStudiesForNav }) => {
 
             <Hero heroType='case-study' 
                 caseStudy={ caseStudy }
-                className=''
+                className={ caseStudy.slug }
                 prevLink={ prevLink } 
                 nextLink={ nextLink } />
 
-            <div className='case-study'>
+            <div className={`case-study ${caseStudy.slug}`}>
                 <CaseStudyTemplate {...caseStudy} />
             </div>
 
