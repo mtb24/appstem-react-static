@@ -1,0 +1,15 @@
+@import '../../../../styles/viewport-sizes.scss';
+
+.actelion {
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+    }
+}
+.case-study-hero.actelion > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    width: 320px;
+    position: absolute;
+    top: 25px;
+    right: -8px;
+}

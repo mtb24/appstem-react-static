@@ -1,4 +1,48 @@
+@import '../../../../styles/viewport-sizes.scss';
 
-.first-full-image {
-    margin-bottom: -5px;
+.case-study-hero.draftmates > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 175px;
+        position: absolute;
+        top: 32px;
+        right: 25px;
+    }
+}
+.draftmates > .interaction > .feature-block > img {
+    width: 60%;
+}
+.draftmates > .development > .cta-wrapper > .wireframes > img {
+    @include phone {
+        &:first-of-type {
+            width: 60%;
+        }
+        &:nth-of-type(2) {
+            width: 80%;
+            margin: 3em auto;
+        }
+        &:last-of-type {
+            width: 100%;
+        }
+    }
+}
+.draftmates > .development-features {
+    @include phone {
+        margin-top: -5px;
+    }
+}
+.draftmates > .development-features > .feature-block {
+    @include phone {
+        padding: 2em 0;
+        width: 89%;
+    }
+}
+.draftmates > .company-blurb-section {
+    @include phone {
+        margin-top: -5px;
+    }
+}
+.draftmates {
+    .first-full-image {
+        margin-bottom: -5px;
+    }
 }

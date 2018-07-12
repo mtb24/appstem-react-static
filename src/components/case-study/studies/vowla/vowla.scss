@@ -1,5 +1,28 @@
+@import '../../../../styles/viewport-sizes.scss';
 
-// @import '../../case-study.scss';
-.styleguide {
-    margin-bottom: -5px;
+.case-study-hero.vowla > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 180px;
+        position: absolute;
+        top: 0px;
+        right: -9px;
+    }
+}
+.vowla > .development-features > .feature-block > .feature-block-details > h2 {color: #1B252F !important;}
+.vowla > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {color: #1B252F !important;}
+.vowla > .development-features > .feature-block {
+    @include phone {
+        width: 89%;
+    }
+}
+
+.vowla {
+    .styleguide {
+        margin-bottom: -5px;
+    }
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+    }
 }

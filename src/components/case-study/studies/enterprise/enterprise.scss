@@ -1,2 +1,17 @@
+@import '../../../../styles/viewport-sizes.scss';
 
-@import '../../case-study.scss';
+.case-study-hero.enterprise > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 275px;
+        position: absolute;
+        top: 8px;
+        right: 25px;
+    }
+}
+.enterprise {
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+    }
+}

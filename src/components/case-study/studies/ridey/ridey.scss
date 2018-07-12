@@ -1,3 +1,32 @@
+@import '../../../../styles/viewport-sizes.scss';
 
-.development-features > .feature-block > .feature-block-details > h2 {color: #ffffff !important;}
-.development-features > .feature-block > .feature-block-details > .feature-block-project-description {color: #e7e7e7 !important;}
+.ridey > .development-features > .feature-block > .feature-block-details > h2 {color: #ffffff !important;}
+.ridey > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {color: #e7e7e7 !important;}
+.case-study-hero.ridey > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 375px;
+        position: absolute;
+        top: 20px;
+        right: 16px;
+    }
+}
+
+.ridey > .interaction > .feature-block {
+    @include phone {
+        padding: 2em 0;
+        width: 89%;
+    }
+}
+.ridey > .interaction > .feature-block > img {
+    width: 80%;
+}
+.ridey > .development > .cta-wrapper > .wireframes > img {
+    width: 100%;
+}
+.ridey {
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+    }
+}

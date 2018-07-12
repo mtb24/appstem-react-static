@@ -1,1 +1,36 @@
-@import '../../case-study.scss';
+@import '../../../../styles/viewport-sizes.scss';
+
+.tesla-motors > .development-features > .feature-block > .feature-block-details > h2 {color: #ffffff !important;}
+.tesla-motors > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {color: #e7e7e7 !important;}
+.tesla-motors > .development-features > .feature-block {
+    @include phone {
+        margin: 5em auto;
+        width: 89%;
+    }
+}
+
+.tesla-motors > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {
+    @include phone {
+        margin-bottom: 2em;
+    }
+}
+.case-study-hero.tesla-motors > .content-wrapper > .case-study-hero-featureblock .feature-block-details > h2 {
+    @include phone {
+        top: -200px;
+    }
+}
+.case-study-hero.tesla-motors > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 380px;
+        position: absolute;
+        top: 65px;
+        right: 13px;
+    }
+}
+.tesla-motors {
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+    }
+}

@@ -1,6 +1,16 @@
-// @import '../../case-study.scss';
+@import '../../../../styles/viewport-sizes.scss';
 
-.second-full-image {
-    background: #f8f8f8;
-    margin-bottom: -5px;
+.case-study-hero.uc-davis > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 380px;
+        position: absolute;
+        top: 40px;
+        right: -35px;
+    }
+}
+.uc-davis {
+    .second-full-image {
+        background: #f8f8f8;
+        margin-bottom: -5px;
+    }
 }

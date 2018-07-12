@@ -1,6 +1,28 @@
-@import '../../case-study.scss';
+@import '../../../../styles/viewport-sizes.scss';
 
-.styleguide,
-.second-full-image {
-    margin-bottom: -5px;
+
+.couchcritic > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 250px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+}
+.couchcritic {
+    .interaction > .feature-block {
+        @include phone {
+            width: 89%;
+        }
+    }
+    .development-features > .feature-block {
+        @include phone {
+            padding: 5em 0;
+            width: 89%;
+        }
+    }
+    .styleguide,
+    .second-full-image {
+        margin-bottom: -5px;
+    }
 }

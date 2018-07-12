@@ -1,25 +1,36 @@
-@import '../../case-study.scss';
+@import '../../../../styles/viewport-sizes.scss';
 
-.development-features {
+.hubbub > .development-features > .feature-block > .feature-block-details > h2 {color: #ffffff !important;}
+.hubbub > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {color: #e7e7e7 !important;}
+.hubbub > .development-features > .feature-block {
+    @include phone {
+        padding: 2em 0;
+        width: 89%;
+    }
+}
 
-    & > .feature-block {
-        margin: 0 auto;
-        align-items: flex-start;
-
-        & > .feature-block-details {
-            
-            h1, h2 {
-                color: #ffffff;
-                font-size: 2.188rem;
-                font-weight: bold;
-                letter-spacing: 7px;
-                line-height: 50px;
-            }
-            .feature-block-project-description {
-                color: #e7e7e7;
-                font-size: 1.125rem;
-                line-height: 36px;
-            }
-        } 
+.case-study-hero.hubbub > .content-wrapper > .case-study-hero-featureblock .feature-block-details > h2 {
+    @include phone {
+        top: -200px;
+    }
+}
+.case-study-hero.hubbub > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 200px;
+        position: absolute;
+        top: 45px;
+        right: 7px;
+    }
+}
+.hubbub {
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+    }
+    .second-full-image {
+        @include phone {
+            margin-bottom: -5px;
+        }
     }
 }

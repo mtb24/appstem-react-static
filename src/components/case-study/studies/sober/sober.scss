@@ -1,1 +1,16 @@
-@import '../../case-study.scss';
+@import '../../../../styles/viewport-sizes.scss';
+
+.case-study-hero.sober > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 200px;
+        position: absolute;
+        top: 20px;
+        right: 22px;
+    }
+}
+.sober > .development-features > .feature-block {
+    @include phone {
+        margin: 5em auto;
+        width: 89%;
+    }
+}

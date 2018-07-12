@@ -1,1 +1,28 @@
-@import '../../case-study.scss';
+@import '../../../../styles/viewport-sizes.scss';
+
+.case-study-hero.dufl > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 200px;
+        position: absolute;
+        top: 32px;
+        right: 7px;
+    }
+}
+.dufl > .second-full-image > img {
+    @include phone {
+        margin-bottom: -5px;
+    }
+}
+.dufl {
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+    }
+}
+.dufl > .development-features > .feature-block {
+    @include phone {
+        padding: 1em 0;
+        width: 89%;
+    }
+}

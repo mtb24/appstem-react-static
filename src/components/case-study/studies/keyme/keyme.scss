@@ -1,1 +1,34 @@
-@import '../../case-study.scss';
+@import '../../../../styles/viewport-sizes.scss';
+
+.case-study-hero.keyme > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
+    @include phone {
+        width: 200px;
+        position: absolute;
+        top: 24px;
+        right: 2px;
+    }
+}
+
+.keyme > .development-features > .feature-block {
+    @include phone {
+        padding: 2em 0;
+        width: 89%;
+    }
+}
+.keyme > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {
+    @include phone {
+        margin-bottom: 2em;
+    }
+}
+.keyme {
+    .second-full-image {
+        @include phone {
+            margin-bottom: -5px;
+        }
+    }
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+    }
+}
