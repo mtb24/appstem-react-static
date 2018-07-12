@@ -1,9 +1,10 @@
+@import '../../../styles/viewport-sizes.scss';
 
 .case-study-hero {
     height: auto;
     position: relative;
-    @media (max-width: 767px) {
-        height: 320px;
+    @include phone {
+        height: 350px;
     }
     @media (min-width: 768px) {
         height: 848px;
@@ -12,7 +13,7 @@
     & > .content-wrapper {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            // align-items: center;
             width: 100%;
             position: relative;
             @media (min-width: 768px) and (max-width: 799px) {
@@ -27,7 +28,7 @@
                 
 
         & > .prev-next-arrows {
-            @media (max-width: 767px) {
+            @include phone {
                 display: none;
             }
             @media (min-width: 768px) and (max-width: 799px) {
@@ -38,28 +39,30 @@
 
         & > .case-study-hero-featureblock {
             display: flex;
-            flex-direction: row-reverse;
-            align-items: flex-start;
-            justify-content: space-between;
-            width: 100%;
-            @media (max-width: 767px) {
-                padding: 3em 1em;
-            }
-            @media (min-width: 768px) and (max-width: 799px) {
+            @include phone {
                 flex-direction: column-reverse;
-                align-items: center;
-                justify-content: center;
-                width: 70%;
-                margin-top: -10px;
+                margin-top: 68.91px;
+                position: relative;
             }
+            @include tablet {
+                flex-direction: column-reverse;
+                width: 70%;
+            }
+            @include desktop {
+                flex-direction: row-reverse;
+                align-items: flex-start;
+                justify-content: space-between;
+                width: 100%;
+            }
+            @media (min-width: 768px) and (max-width: 799px) {}
             
     
             & .feature-block-image {
                 z-index: 10;
-                @media (max-width: 767px) {
-                    max-width: 45%;
-                    padding-top: 4em;
-                    margin-right: 1.5em;
+                @include phone {
+                    margin-top: 170px;
+                    margin-left: 160px;
+                    width: 60%;
                 }
                 @media (min-width: 768px) and (max-width: 799px) {
                     margin-top: 50px;
@@ -73,14 +76,23 @@
     
             }
             & .feature-block-details {
-                @media (max-width: 767px) {}
+                @include phone {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    width: 70%;
+                }
                 @media (min-width: 768px) {
                     justify-self: start;
                 }
     
                 & > h2 {
                     color: #FAFAFA;
-                    @media (max-width: 767px) {
+                    @include phone {
+                        position: relative;
+                        top: -150px;
                         font-size: 24px;
                         font-weight: bold;
                         letter-spacing: 3.64px;
@@ -95,7 +107,9 @@
                     }
                 }
                 & > .feature-block-project-type {
-                    @media (max-width: 767px) {
+                    @include phone {
+                        position: relative;
+                        top: 5px;
                         color: #FFFFFF;
                         font-size: 0.65rem;
                         letter-spacing: 3.22px;
@@ -111,9 +125,10 @@
                 }
                 & > .feature-block-project-description {
                     color: #E7E7E7;
-                    @media (max-width: 767px) {
-                            font-size: 1rem;
-                            line-height: 24px;
+                    @include phone {
+                        margin-top: 88.81px;
+                        font-size: 1rem;
+                        line-height: 24px;
                     }
                     @media (min-width: 768px) {
                         font-size: 1.125rem;
