@@ -68,6 +68,7 @@
         }
         & > .feature-block-project-type {
             color: #9B9B9B;
+            text-transform: uppercase;
 
             @include phone {
                 font-size: 1.125rem;
