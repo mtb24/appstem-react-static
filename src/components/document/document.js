@@ -1,4 +1,7 @@
-/* TODO: icon paths and google tag code */
+/* 
+ *  TODO: add google tag code 
+ * 
+ */
 import React from 'react';
 import {any, node, object} from 'prop-types';
 import JsonLd from './jsonld'
@@ -15,7 +18,7 @@ const websiteData = {
         target: 'https:\/\/appstem.com\/?s={search_term_string}',
         'query-input': 'required name=search_term_string'
     }
-};
+}
 const organizationData = {
     '@context': 'http:\/\/schema.org',
     '@type': 'Organization',
@@ -29,12 +32,12 @@ const organizationData = {
     ],
     '@id': '#organization',
     name: 'Appstem',
-    //logo: 'https:\/\/appstem.com\/Appstem_Sq_280x280.jpg'
-};
+    logo: 'https:\/\/appstem.com\/fav_appstem_144x144.png',
+}
 
-const Document = ({Html, Head, Body, children, renderMeta}) => (
-    <html>
-        <head>
+const Document = ({ Html, Head, Body, children }) => (
+    <Html>
+        <Head>
             <title>Appstem | Mobile App Design &amp; Development Company | Welcome</title>
             <meta name="description" content="Appstem is a full-service mobile strategy, design and development agency focused on creating apps that serve a purpose. Based in San Francisco, Appstem has delivered over 200 apps with a team of experts specializing in strategy, QA, development and UI/UX design." />
             <meta charSet="UTF-8" />
@@ -42,9 +45,9 @@ const Document = ({Html, Head, Body, children, renderMeta}) => (
 			<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
             
             <link rel="icon" type="image/png" href="/favicon.png" />
-            <link rel="apple-touch-icon" sizes="180x180" href="/fav_appstem_16x16.png" />
 			<link rel="icon" type="image/png" sizes="32x32" href="/fav_appstem_32x32.png" />
 			<link rel="icon" type="image/png" sizes="16x16" href="/fav_appstem_16x16.png" />
+            <link rel="apple-touch-icon" sizes="144x144" href="/fav_appstem_144x144.png" />
 			<link rel="mask-icon" href="" color="#000000" />
 			<meta name="msapplication-TileColor" content="#000000" />
             <meta name="theme-color" content="#000000" />
@@ -75,7 +78,7 @@ const Document = ({Html, Head, Body, children, renderMeta}) => (
             <meta name="google-site-verification" content="wY0uEHHwBDWzSrZn-UNN-JKxO7R8QLKG8n4aFgG42RA" />
             <meta name="google-site-verification" content="nXCLiqgUTODqYXt4VXSqFgnTQAyNSPI_ZNm9o0AbhBk" />
             
-            { /* <script async src="https://www.google-analytics.com/analytics.js"></script> */}
+            <script async src="https://www.google-analytics.com/analytics.js" />
             
             { /* <link rel="dns-prefetch" href="//use.typekit.net"> */}
             { /* <link rel="dns-prefetch" href="//cdn.jsdelivr.net"> */}
@@ -84,28 +87,25 @@ const Document = ({Html, Head, Body, children, renderMeta}) => (
             { /* <script type="text/javascript" src="https://use.typekit.net/qup8peu.js"></script> */}
             { /* <script type="text/javascript">
                 try {
-                    Typekit.load();
+                    Typekit.load()
                 } catch (e) {}
             </script> */}
             
             <JsonLd data={ websiteData } />
             <JsonLd data={ organizationData } />
-            
-            { renderMeta.styleTags }
 
-        </head>
+        </Head>
 
-        <body>{ children }</body>
+        <Body>{ children }</Body>
 
-    </html>
-);
+    </Html>
+)
 
 Document.propTypes = {
 	Html: any.isRequired,
 	Head: any.isRequired,
 	Body: any.isRequired,
-	children: node.isRequired,
-	renderMeta: object.isRequired
-};
+	children: node.isRequired
+}
 
-export default Document;
+export default Document
