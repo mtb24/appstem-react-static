@@ -5,7 +5,7 @@ projectType: React.JS & Back-end Development
 featureBlockImage: JetSuiteX_Homepage.png
 heroFeaturedimage: Jetsuite_showcase.png
 heroBgImage: bg_top_jetsuite.jpg
-fullImages: ['Jetsuite_Lifestyle_img.png','JetSuiteX_Homepage.png','Arrow.png','iphone_Dev_Jetsuite.png','bg_top_jetsuite.jpg','jetsuite_lifestyle_img_02.png']
+fullImages: ['Jetsuite_Lifestyle_img.png','','','iphone_Dev_Jetsuite.png','bg_top_jetsuite.jpg','jetsuite_lifestyle_img_02.png']
 imageAlt: Image showing Jetsuite X app on mobile device
 companyLogo: sym-JSX LOGO.png
 videos: ['appstem_hero.mp4']
