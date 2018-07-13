@@ -7,7 +7,6 @@ import AngledSection from '../layout/page-section/angled-section'
 import './case-study.scss'
 
 export default withRouteData(({ caseStudy, caseStudiesForNav }) => {
-
     const currentPage = caseStudy.slug !== 'undefined' ? caseStudy.slug : ''
     let prevLink = {}
     let nextLink = {}
