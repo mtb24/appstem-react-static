@@ -31,7 +31,7 @@ return (
             mask='angle--both-left-right'
             imagePath={ imagePath + props.fullImages[0] } />
 
-        <Section className='why-appstem angle--top-left' style={{ background: '#ffffff', width: '100vw', marginTop: '-7.2%' }}>
+        <Section className='why-appstem angle--top-left' style={{ background: '#f8f8f8', width: '100vw', marginTop: '-7.2%' }}>
             <Cta heading='Why Appstem'>
                 <Paragrapher paragraphs={ props.whyAppstem }/>
             </Cta>
