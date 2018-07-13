@@ -7,6 +7,16 @@
         top: 32px;
         right: 25px;
     }
+    @include tablet {
+        position: absolute;
+        top: 95px;
+        right: -66px;
+        transform: scale(.55);
+    }
+    @include desktop {
+        position: relative;
+        right: 60px;
+    }
 }
 .draftmates > .interaction > .feature-block > img {
     width: 60%;

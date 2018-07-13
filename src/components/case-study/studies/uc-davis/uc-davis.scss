@@ -7,8 +7,45 @@
         top: 40px;
         right: -35px;
     }
+    @include tablet {
+        position: absolute;
+        top: 315px;
+        right: -35px;
+        margin: 0;
+        padding: 0;
+    }
+    @include desktop {
+        position: absolute;
+        top: 127px;
+        right: -92px;
+        margin: 0;
+        padding: 0;
+        max-width: unset;
+    }
 }
 .uc-davis {
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+        @include tablet {
+            margin: 15px auto 25px auto;
+        }
+        @include desktop {
+            margin: 40px auto 60px auto;
+        }
+    }
+    .first-full-image {
+        @include tablet {
+            margin: -7.2% auto;
+        }
+        @include desktop {
+            margin: -7.2% auto;
+        }
+    }
+    .why-appstem {
+        margin-bottom: -3px;
+    }
     .second-full-image {
         background: #f8f8f8;
         margin-bottom: -5px;

@@ -21,12 +21,29 @@
         top: 45px;
         right: 7px;
     }
+    @include tablet {
+        position: absolute;
+        top: 152px;
+        right: -97px;
+        margin: 0;
+        padding: 0;
+        transform: scale(.55);
+    }
+    @include desktop {
+        position: absolute;
+        top: 0;
+        right: 115px;
+        margin: 0;
+        padding: 0;
+        max-width: unset;
+    }
 }
 .hubbub {
+    .why-appstem {
+
+    }
     .cta-wrapper > hr {
-        @include phone {
-            margin: 15px auto 25px auto;
-        }
+        margin: 15px auto 25px auto;
     }
     .second-full-image {
         @include phone {

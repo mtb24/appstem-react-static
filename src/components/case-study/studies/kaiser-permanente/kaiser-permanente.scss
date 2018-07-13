@@ -1,5 +1,10 @@
 @import '../../../../styles/viewport-sizes.scss';
 
+.case-study-hero > .content-wrapper > .case-study-hero-featureblock {
+    @include desktop {
+        top: -16px;
+    }
+}
 .case-study-hero.kaiser-permanente > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
     @include phone {
         width: 165px;
@@ -7,11 +12,37 @@
         top: 0px;
         right: 0px;
     }
+    @include tablet {
+        position: absolute;
+        top: 65px;
+        right: -81px;
+        margin: 0;
+        padding: 0;
+        transform: scale(.55);
+    }
+    @include desktop {
+        position: absolute;
+        top: 105px;
+        right: 120px;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .kaiser-permanente {
+    & > .big-picture-wrapper > .cta-wrapper {
+        padding: 11.5% 0 19%;
+    }
+    & > .big-picture-wrapper > .cta-wrapper > p {
+        @include desktop {
+            margin-top: 80px;
+        }
+    }
     .second-full-image {
         @include phone {
+            margin-bottom: -5px;
+        }
+        @include tablet {
             margin-bottom: -5px;
         }
     }
@@ -19,5 +50,26 @@
         @include phone {
             margin: 15px auto 25px auto;
         }
+        @include tablet {
+            margin: 15px auto 25px auto;
+        }
+        @include desktop {
+            margin: 15px auto 60px auto;
+        }
+    }
+    & > .content-wrapper > .case-study-hero-featureblock .feature-block-details > h2 {
+        @include tablet {
+            font-size: 2.188rem;
+            font-weight: bold;
+            letter-spacing: 7px;
+            line-height: 50px;
+            margin-bottom: 0;
+        }
+    }
+    & > .challenges {
+        padding-top: 0;
+    }
+    & > .development > .cta-wrapper > .wireframes > img {
+        transform: scale(.9);
     }
 }

@@ -1,8 +1,18 @@
 @import '../../../../styles/viewport-sizes.scss';
 
+.case-study-hero.j-and-j > .content-wrapper > .case-study-hero-featureblock {
+    grid-template-areas: 'image details';
+}
 .case-study-hero.j-and-j > .content-wrapper > .case-study-hero-featureblock .feature-block-details > h2 {
     @include phone {
         top: -200px;
+    }
+    @include tablet {
+        font-size: 2.188rem;
+        font-weight: bold;
+        letter-spacing: 7px;
+        line-height: 50px;
+        margin-bottom: 0;
     }
 }
 .case-study-hero.j-and-j > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
@@ -12,12 +22,69 @@
         top: 10px;
         right: 15px;
     }
+    @include tablet {
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        margin: 0;
+        padding: 0;
+        max-width: unset;
+        transform: scale(0.45);
+    }
+    @include desktop {
+        position: absolute;
+        top: 60px;
+        right: -130px;
+        margin: 0;
+        padding: 0;
+        max-width: unset;
+        transform: scale(.95);
+    }
 }
 
 .j-and-j {
     .cta-wrapper > hr {
-        @include phone {
-            margin: 15px auto 25px auto;
+        margin: 15px auto 25px auto;
+    }
+    .why-appstem {
+        @include desktop {
+            margin-bottom: -5px;
+        }
+    }
+    .development-features > .feature-block {
+        @include tablet {
+            max-width: 100%;
+        }
+        @include desktop {
+            max-width: 1200px;
+        }
+        &.feature-image-left {
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            & > .feature-block-details {
+                @include tablet {
+                    margin-left: unset;
+                    padding: 0 1em;
+                    text-align: center;
+                }
+            }
+        }
+        &.feature-image-right {
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            & > .feature-block-details {
+                @include tablet {
+                    margin-right: unset;
+                    padding: 0 1em;
+                    text-align: center;
+                }
+            }
         }
     }
 }
@@ -26,8 +93,12 @@
         transform: scale(.67);
     }
 }
-.j-and-j > .development-features > .feature-block > .feature-block-details > h2 {color: #1B252F !important;}
-.j-and-j > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {color: #1B252F !important;}
+.j-and-j > .development-features > .feature-block > .feature-block-details > h2 {
+    color: #1B252F !important;
+}
+.j-and-j > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {
+    color: #1B252F !important;
+}
 .j-and-j > .development-features > .feature-block {
     @include phone {
         width: 89%;

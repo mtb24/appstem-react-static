@@ -1,36 +1,131 @@
 @import '../../../../styles/viewport-sizes.scss';
 
-.tesla-motors > .development-features > .feature-block > .feature-block-details > h2 {color: #ffffff !important;}
-.tesla-motors > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {color: #e7e7e7 !important;}
-.tesla-motors > .development-features > .feature-block {
-    @include phone {
-        margin: 5em auto;
-        width: 89%;
+.case-study-hero.tesla-motors > .content-wrapper > .case-study-hero-featureblock {
+    @include tablet {
+        width: 100%;
+        // margin: 0 20px 0 0;
     }
-}
-
-.tesla-motors > .development-features > .feature-block > .feature-block-details > .feature-block-project-description {
-    @include phone {
-        margin-bottom: 2em;
+    @include desktop {
+        grid-template-areas: 'image details';
+        left: unset;
+        grid-gap: 40px;
     }
-}
-.case-study-hero.tesla-motors > .content-wrapper > .case-study-hero-featureblock .feature-block-details > h2 {
-    @include phone {
-        top: -200px;
+    & > .feature-block-details {
+        @include tablet {
+            width: 65%;
+            align-self: flex-end;
+            // margin-right: 40px;
+        }
+        @include desktop {
+            width: 100%;
+        }
+        h2 {
+            @include phone {
+                top: -200px;
+            }
+            @include desktop {
+                margin: 0;
+            }
+        }
+        & > .feature-block-project-description {
+            @include tablet {
+                width: 88%;
+            }
+            @include desktop {
+                width: 80%;
+            }
+        }
     }
-}
-.case-study-hero.tesla-motors > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
-    @include phone {
-        width: 380px;
-        position: absolute;
-        top: 65px;
-        right: 13px;
+    & > .feature-block-image {
+        @include phone {
+            width: 380px;
+            position: absolute;
+            top: 65px;
+            right: 13px;
+        }
+        @include tablet {
+            position: absolute;
+            top: 310px;
+            left: -4px;
+            margin: 0;
+            padding: 0;
+        }
+        @include desktop {
+            position: absolute;
+            top: 83px;
+            left: -401px;
+            margin: 0;
+            padding: 0;
+            max-width: unset;
+        }
     }
 }
 .tesla-motors {
     .cta-wrapper > hr {
         @include phone {
             margin: 15px auto 25px auto;
+        }
+        @include tablet {
+            margin: 15px auto 25px auto;
+        }
+        @include desktop {
+            margin: 40px auto 60px auto;
+        }
+    }
+    .first-full-image {
+        @include tablet {
+            margin: -7.2% auto;
+        }
+        @include desktop {
+            margin: -7.2% auto;
+        }
+    }
+    .development-features {
+        & > .feature-block {
+            @include phone {
+                margin: 5em auto;
+                width: 89%;
+            }
+            @include tablet {
+                align-self: center;
+                width: 65%;
+                &.feature-image-right {
+                    flex-direction: column;
+                    & > .feature-block-details {
+                        @include tablet {
+                            text-align: center;
+                            margin: 0;
+                        }
+                    }
+                }
+                &.feature-image-left {
+                    flex-direction: column;
+                    & > .feature-block-details {
+                        @include tablet {
+                            text-align: center;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            @include desktop {
+                width: 100%;
+                max-width: 1200px;
+            }
+
+            & > .feature-block-details {
+                h2 {
+                    color: #ffffff !important;
+                }
+                & > .feature-block-project-description {
+                    color: #e7e7e7 !important;
+                    
+                    @include phone {
+                        margin-bottom: 2em;
+                    }
+                    @include desktop {}
+                }
+            }
         }
     }
 }

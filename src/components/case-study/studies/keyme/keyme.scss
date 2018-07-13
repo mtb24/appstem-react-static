@@ -7,6 +7,21 @@
         top: 24px;
         right: 2px;
     }
+    @include tablet {
+        position: absolute;
+        top: 110px;
+        right: -85px;
+        margin: 0;
+        padding: 0;
+        transform: scale(.6);
+    }
+    @include desktop {
+        position: absolute;
+        top: 110px;
+        right: 110px;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .keyme > .development-features > .feature-block {
@@ -21,14 +36,41 @@
     }
 }
 .keyme {
+    .why-appstem {
+        @include tablet {
+            margin-bottom: -5px;
+        }
+    }
     .second-full-image {
         @include phone {
+            margin-bottom: -5px;
+        }
+        @include tablet {
+            margin-bottom: -5px;
+        }
+        @include desktop {
             margin-bottom: -5px;
         }
     }
     .cta-wrapper > hr {
         @include phone {
             margin: 15px auto 25px auto;
+        }
+        @include tablet {
+            margin: 15px auto 25px auto;
+        }
+        @include desktop {
+            margin: 30px auto 75px auto;
+        }
+    }
+    .development {
+        @include desktop {
+            padding-top: 210px;
+        }
+        & > .cta-wrapper > hr {
+            @include desktop {
+                margin: 30px auto 40px auto;
+            }
         }
     }
 }

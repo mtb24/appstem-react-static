@@ -7,9 +7,25 @@
         top: 32px;
         right: 7px;
     }
+    @include tablet {
+        position: absolute;
+        top: 95px;
+        right: -66px;
+        transform: scale(.55);
+    }
+    @include desktop {
+        position: relative;
+        right: -10px;
+    }
 }
-.dufl > .second-full-image > img {
+.case-study.dufl > .second-full-image > img {
     @include phone {
+        margin-bottom: -5px;
+    }
+    @include tablet {
+        margin-bottom: -5px;
+    }
+    @include desktop {
         margin-bottom: -5px;
     }
 }

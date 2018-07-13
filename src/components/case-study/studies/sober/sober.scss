@@ -1,16 +1,98 @@
 @import '../../../../styles/viewport-sizes.scss';
 
-.case-study-hero.sober > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
-    @include phone {
-        width: 200px;
-        position: absolute;
-        top: 20px;
-        right: 22px;
+.case-study-hero.sober > .content-wrapper > .case-study-hero-featureblock {
+    @include tablet {
+        width: 100%;
+        margin: 0 20px 0 0;
+    }
+    @include desktop {
+        grid-template-areas: 'image details';
+    }
+
+    & > .feature-block-image {
+        @include phone {
+            width: 200px;
+            position: absolute;
+            top: 20px;
+            right: 22px;
+        }
+        @include tablet {
+            position: absolute;
+            top: 100px;
+            left: -67px;
+            margin: 0;
+            padding: 0;
+            transform: scale(.65);
+        }
+        @include desktop {
+            position: absolute;
+            top: -132px;
+            left: -71px;
+            margin: 0;
+            padding: 0;
+            max-width: unset;
+        }
+    }
+    & > .feature-block-details {
+        @include tablet {
+            align-self: flex-end;
+            width: 65%;
+        }
     }
 }
-.sober > .development-features > .feature-block {
-    @include phone {
-        margin: 5em auto;
-        width: 89%;
+
+.sober {
+
+    .cta-wrapper > hr {
+        @include phone {
+            margin: 15px auto 25px auto;
+        }
+        @include tablet {
+            margin: 15px auto 25px auto;
+        }
+        @include desktop {
+            margin: 40px auto 60px auto;
+        }
+    }
+    .first-full-image {
+        margin-top: -7.2%;
+    }
+    .second-full-image {
+        margin-bottom: -7.2%;
+    }
+    & > .development-features > .feature-block {
+        @include phone {
+            margin: 5em auto;
+            width: 89%;
+        }
+        @include tablet {
+            width: 95%;
+            &.feature-image-right {
+                margin: 105px auto;
+            }
+        }
+        @include desktop {
+            width: 100%;
+        }
+        &:first-of-type > .feature-block-details {
+            align-self: baseline;
+            h2 {
+                margin-top: 0;
+            }
+        }
+        &:nth-of-type(2) > .feature-block-details {
+            align-self: center;
+            h2 {
+                margin-top: 0;
+            }
+        }
+        & > .feature-block-details {
+            h2 {
+                color: #ffffff;
+            }
+            .feature-block-project-description {
+                color: #e7e7e7;
+            }
+        }
     }
 }

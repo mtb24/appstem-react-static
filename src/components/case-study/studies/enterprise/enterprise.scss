@@ -7,11 +7,29 @@
         top: 8px;
         right: 25px;
     }
+    @include tablet {
+        max-width: unset;
+        transform: scale(.55);
+        right: -120px;
+        position: absolute;
+        margin: 0;
+        top: 135px;
+    }
+    @include desktop {
+        max-width: unset;
+        position: absolute;
+        top: -66px;
+        right: 75px;
+        margin: 0;
+        padding: 0;
+        transform: scale(.9);
+    }
+}
+.case-study.enterprise > .second-full-image > img {
+    margin-bottom: -5px;
 }
 .enterprise {
     .cta-wrapper > hr {
-        @include phone {
-            margin: 15px auto 25px auto;
-        }
+        margin: 15px auto 25px auto;
     }
 }

@@ -8,6 +8,19 @@
         top: 25px;
         right: 25px;
     }
+    @include tablet {
+        position: absolute;
+        top: 155px;
+        right: -35px;
+        transform: scale(.7);
+    }
+    @include desktop {
+        max-width: unset;
+        position: absolute;
+        top: -137px;
+        right: -5px;
+        transform: scale(.8);
+    }
 }
 .couchcritic {
     .interaction > .feature-block {

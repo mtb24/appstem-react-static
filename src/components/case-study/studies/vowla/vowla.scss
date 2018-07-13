@@ -1,11 +1,31 @@
 @import '../../../../styles/viewport-sizes.scss';
 
-.case-study-hero.vowla > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
-    @include phone {
-        width: 180px;
-        position: absolute;
-        top: 0px;
-        right: -9px;
+.case-study-hero.vowla > .content-wrapper > .case-study-hero-featureblock {
+    @include tablet {
+        width: 63%;
+    }
+    .feature-block-image {
+        @include phone {
+            width: 180px;
+            position: absolute;
+            top: 0px;
+            right: -9px;
+        }
+        @include tablet {
+            position: absolute;
+            top: 110px;
+            right: -75px;
+            margin: 0;
+            padding: 0;
+            transform: scale(.65);
+        }
+        @include desktop {
+            position: absolute;
+            top: -46px;
+            right: 96px;
+            margin: 0;
+            padding: 0;
+        }
     }
 }
 .vowla > .development-features > .feature-block > .feature-block-details > h2 {color: #1B252F !important;}
@@ -23,6 +43,20 @@
     .cta-wrapper > hr {
         @include phone {
             margin: 15px auto 25px auto;
+        }
+        @include tablet {
+            margin: 15px auto 25px auto;
+        }
+        @include desktop {
+            margin: 40px auto 60px auto;
+        }
+    }
+    .first-full-image {
+        margin-top: -7.2%;
+    }
+    .development > .cta-wrapper > .wireframes > img {
+        @include tablet {
+            transform: scale(.7);
         }
     }
 }

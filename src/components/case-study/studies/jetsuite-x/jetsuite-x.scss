@@ -1,25 +1,41 @@
 @import '../../../../styles/viewport-sizes.scss';
 
 .case-study.jetsuite-x > .development-features > .feature-block {
-    @include phone {
-        padding: 2em 0;
-        width: 89%;
-    }
+    
 }
-.case-study.jetsuite-x > .development-features > .feature-block > img {
-    // transform: scale(.6);
-}
-.jetsuite-x {
-    .cta-wrapper > hr {
+.case-study.jetsuite-x > .development-features {
+    & > .feature-block {
         @include phone {
-            margin: 15px auto 25px auto;
+            padding: 2em 0;
+            width: 89%;
+        }
+        &.feature-image-left {
+            @include tablet {
+                flex-direction: column;
+            }
         }
     }
 }
+.jetsuite-x {
+    .cta-wrapper > hr {
+        margin: 15px auto 25px auto;
+    }
+}
 .case-study-hero.jetsuite-x > .content-wrapper > .case-study-hero-featureblock .feature-block-image {
-    width: 325px;
-    position: absolute;
-    top: 215px;
-    right: -5px;
-    margin: 0;
+    @include phone {
+        width: 325px;
+        position: absolute;
+        top: 215px;
+        right: -5px;
+        margin: 0;
+    }
+    @include tablet {
+        position: absolute;
+        top: 300px;
+        right: -2px;
+        margin: 0;
+        padding: 0;
+    }
+    @include desktop {}
+    
 }

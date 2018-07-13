@@ -9,8 +9,23 @@
         top: 20px;
         right: 16px;
     }
+    @include tablet {
+        position: absolute;
+        top: 295px;
+        right: 35px;
+        margin: 0;
+        padding: 0;
+    }
+    @include desktop {
+        position: absolute;
+        top: -100px;
+        left: -332px;
+        margin: 0;
+        padding: 0;
+        max-width: unset;
+    }
 }
-
+// .case-study > .big-picture-wrapper > .cta-wrapper > hr
 .ridey > .interaction > .feature-block {
     @include phone {
         padding: 2em 0;
@@ -27,6 +42,28 @@
     .cta-wrapper > hr {
         @include phone {
             margin: 15px auto 25px auto;
+        }
+        @include tablet {
+            margin: 15px auto 25px auto;
+        }
+        @include desktop {
+            margin: 40px auto 60px auto;
+        }
+    }
+    .why-appstem {
+        @include tablet {
+            margin-bottom: -3px;
+        }
+    }
+    .styleguide {
+        @include tablet {
+            padding-top: 50px;
+        }
+        & > img {
+            @include tablet {
+                // transform: scale(.7);
+                max-width: 100%;
+            }
         }
     }
 }

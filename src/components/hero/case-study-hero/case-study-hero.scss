@@ -6,7 +6,10 @@
     @include phone {
         height: 350px;
     }
-    @media (min-width: 768px) {
+    @include tablet {
+        height: 640px;
+    }
+    @include desktop {
         height: 848px;
     }
 
@@ -38,24 +41,25 @@
         }
 
         & > .case-study-hero-featureblock {
-            display: flex;
+            
             @include phone {
+                // display: flex;
                 flex-direction: column-reverse;
                 margin-top: 68.91px;
                 position: relative;
             }
             @include tablet {
+                margin-left: 20px;
                 flex-direction: column-reverse;
                 width: 70%;
             }
             @include desktop {
-                flex-direction: row-reverse;
-                align-items: flex-start;
-                justify-content: space-between;
-                width: 100%;
+                align-items: unset;
+                justify-content: unset;
+                top: 75px;
+                left: 20px;
+                position: relative;
             }
-            @media (min-width: 768px) and (max-width: 799px) {}
-            
     
             & .feature-block-image {
                 z-index: 10;
@@ -64,14 +68,14 @@
                     margin-left: 160px;
                     width: 60%;
                 }
-                @media (min-width: 768px) and (max-width: 799px) {
+                @include tablet {
                     margin-top: 50px;
                     max-width: 65%;
                 }
-                @media (min-width: 800px) {
-                    justify-self: end;
-                    padding-top: 80px;
-                    max-width: 45%;
+                @include desktop {
+                    justify-self: center;
+                    padding-top: 0;
+                    max-width: 80%;
                 }
     
             }
@@ -98,7 +102,14 @@
                         letter-spacing: 3.64px;
                         line-height: 34px;
                     }
-                    @media (min-width: 768px) {
+                    @include tablet {
+                        font-size: 2.188rem;
+                        font-weight: bold;
+                        letter-spacing: 7px;
+                        line-height: 50px;
+                        margin-bottom: 0;
+                    }
+                    @include desktop {
                         font-size: 3.938rem;
                         font-weight: bold;
                         letter-spacing: 9.56px;
@@ -121,6 +132,9 @@
                         font-weight: bold;
                         letter-spacing: 5px;
                         line-height: 25px;
+                    }
+                    @include desktop {
+                        margin-bottom: 22px;
                     }
                 }
                 & > .feature-block-project-description {
