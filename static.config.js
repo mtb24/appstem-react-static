@@ -8,7 +8,7 @@ chokidar.watch('content').on('all', () => reloadRoutes())
 
 export default {
   /* bundleAnalyzer: true, // use with 'yarn build' */
-  siteRoot: 'http://localhost:3000',
+  siteRoot: 'https://appstem.com',
 
   //Document,
 
@@ -38,12 +38,7 @@ export default {
 
     const caseStudiesForHomePage = work.filter( (homeCaseStudy, i) => homeCaseStudy.slug === 'hubbub' || homeCaseStudy.slug === 'jetsuite-x' || homeCaseStudy.slug === 'tesla-motors' )
     const caseStudiesForNav = work.map( (navCaseStudy, i) => ({ index: i, title: navCaseStudy.title, slug: navCaseStudy.slug }))
-    // const cases = work.map(study => ({
-    //   path: `/${ study.slug }`,
-    //   component: 'src/components/case-study/case-study',
-    //   getData: () => ({ study, caseStudiesForNav })
-    // }))
-
+    
     return [
       {
         path: '/',
@@ -89,18 +84,11 @@ export default {
           jobs,
         }),
       },
-      {
-        path: '/portfolio',
+      ...work.map(caseStudy => ({
+        path: `/portfolio/${ caseStudy.slug }`,
         component: 'src/components/case-study/case-study',
-        getData: () => ({
-          work
-        }),
-        children: work.map(caseStudy => ({
-          path: `/${ caseStudy.slug }`,
-          component: 'src/components/case-study/case-study',
-          getData: () => ({ caseStudy, caseStudiesForNav })
-        })),
-      },
+        getData: () => ({ caseStudy, caseStudiesForNav })
+      })),
       {
         path: '/blog',
         component: 'src/components/blog/blog',
