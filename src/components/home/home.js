@@ -19,7 +19,7 @@ export default withRouteData(({ home, caseStudiesForHomePage }) => {
             className='angle--bottom-right'/>
 
       
-      <AngledSection className='section-1' mask='angle--both-left-right' style={{ background: 'url(/assets/images/icons/logocloud.svg)' }}>
+      <AngledSection className='section-1' mask='angle--both-left-right'>
         <div className='content-wrapper home-text-wrapper'>
           { home.mainParagraph }
           <LinkOutlined linkTo="/contact" className="contact-link">Contact Us</LinkOutlined>
