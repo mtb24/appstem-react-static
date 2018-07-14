@@ -1,8 +1,11 @@
 @import '../../styles/viewport-sizes.scss';
 
 .section-1 {
-    background-size: 2rem;
-    background-color: #f8f8f8;
+    background: url('/assets/images/company-logos/logo-cloud.png');
+    background-size: contain;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: center center;
     @include phone {
         height: 341px;
         margin-top: -9.1%;
@@ -14,7 +17,7 @@
     }
     
     .home-text-wrapper {
-        background: #f8f8f8;
+        background: transparent;
         padding-top: 0;
         @include phone {
             width: 89%;
@@ -42,6 +45,7 @@
             place-items: center;
             border: 1px solid #1B252F;
             color: #1B252F;
+            background-color: #ffffff;
             font-size: 1rem;
             font-weight: bold;
             letter-spacing: 3.29px;
