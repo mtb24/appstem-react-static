@@ -5,7 +5,6 @@ import Hero from '../hero/hero'
 import Testimonials from '../testimonials/testimonials'
 import AngledSection from '../layout/page-section/angled-section'
 import ImageBox from '../image-box/image-box'
-import posterImage from '../../../public/assets/images/about-video-poster.png'
 import Cta from '../layout/page-section/cta'
 import LinkOutlined from '../buttons/link-outlined/link-outlined'
 import './about.scss'
@@ -50,7 +49,7 @@ export default withRouteData(({ about }) => {
         <Player
             fluid={ true }
             preload='auto'
-            poster={ posterImage }
+            poster='/assets/images/about-video-poster.png'
             src={ videos.length && `assets/videos/${videos[0]}` }>
             <BigPlayButton position="center" />
         </Player>
