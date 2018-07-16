@@ -4,7 +4,7 @@
     color: #fafafa;
     background: #1e1e1e;
     @include phone { margin-top: -9.5%; }
-    @media (min-width: 768px) { margin-top: -9.1%; }
+    @media (min-width: 768px) { margin-top: -9.5%; }
     
     & > .case-study-section {
         margin: -7% auto;
